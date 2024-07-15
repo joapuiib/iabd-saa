@@ -21,7 +21,7 @@ div.cover div.content {
     gap: 1.5rem;
     width: 100%;
     padding: 1rem;
-    padding-left: 75px;
+    padding-left: 100px;
     /*
     background-image:
         url("../img/cover/horizontal_rect.svg"),
@@ -71,7 +71,8 @@ div.cover .details {
 }
 
 div.cover .license {
-    text-align: center;
+    text-align: left;
+    padding-left: 50px;
 }
 div.cover .license-img {
     margin-top: 0.5rem;
