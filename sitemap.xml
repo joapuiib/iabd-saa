@@ -7,21 +7,33 @@
         <xhtml:link rel="alternate" hreflang="ca" href="None"/>
     </url>
     <url>
-        <loc>None01_introduccio/01_conceptes_generals/</loc>
+        <loc>Noneguia_didactica/</loc>
         <lastmod>2024-07-15</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ca" href="None01_introduccio/01_conceptes_generals/"/>
+        <xhtml:link rel="alternate" hreflang="ca" href="Noneguia_didactica/"/>
     </url>
     <url>
-        <loc>None02_manipulacio_dades/01_pandas/</loc>
+        <loc>Noneapunts/01_introduccio/</loc>
         <lastmod>2024-07-15</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ca" href="None02_manipulacio_dades/01_pandas/"/>
+        <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/01_introduccio/"/>
     </url>
     <url>
-        <loc>None02_manipulacio_dades/02_plotnine/</loc>
+        <loc>Noneapunts/01_introduccio/01_conceptes_generals/</loc>
         <lastmod>2024-07-15</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ca" href="None02_manipulacio_dades/02_plotnine/"/>
+        <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/01_introduccio/01_conceptes_generals/"/>
+    </url>
+    <url>
+        <loc>Noneapunts/02_manipulacio_dades/01_pandas/</loc>
+        <lastmod>2024-07-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/02_manipulacio_dades/01_pandas/"/>
+    </url>
+    <url>
+        <loc>Noneapunts/02_manipulacio_dades/02_plotnine/</loc>
+        <lastmod>2024-07-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/02_manipulacio_dades/02_plotnine/"/>
     </url>
 </urlset>
