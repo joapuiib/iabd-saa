@@ -1,1 +1,4 @@
-# Conceptes generals
+---
+template: document.html
+title: Conceptes generals
+---
