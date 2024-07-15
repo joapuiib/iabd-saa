@@ -1,11 +1,23 @@
 site_name: "IABD-SAA: Sistemes d'aprenentatge automàtic"
+site_author: "Joan Puigcerver Ibáñez"
+site_email: "j.puigcerveribanez@edu.gva.es"
 dev_addr: 127.0.0.1:4567
+
+repo_name: joapuiib/iabd-saa
+repo_url: https://github.com/joapuiib/iabd-saa
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/joapuiib
+      name: joapuiib a GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/joanpuigcerver/
+      name: Joan Puigcerver a LinkedIn
 
 theme:
   name: material-joapuiib
   cover: cipfp-mislata
-  author: Joan Puigcerver Ibáñez
-  email: j.puigcerveribanez@edu.gva.es
   icon:
     logo: fontawesome/solid/brain
 
