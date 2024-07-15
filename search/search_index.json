@@ -1,0 +1,1 @@
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"IABD-SAA: Sistemes d'Aprenentatge Autom\u00e0tic","text":""},{"location":"02_manipulacio_dades/01_pandas/","title":"Pandas","text":""},{"location":"02_manipulacio_dades/02_plotnine/","title":"Visualitzaci\u00f3 de les dades","text":""}]}
