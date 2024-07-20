@@ -3,7 +3,7 @@
 function print {
     GREEN="\033[0;32m"
     RESET="\033[0m"
-    echo "${GREEN}$1${RESET}"
+    echo -e "${GREEN}$1${RESET}"
 }
 
 BUILD=0
