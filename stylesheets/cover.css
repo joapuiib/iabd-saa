@@ -23,7 +23,7 @@ div.cover div.content {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     width: 100%;
     padding: 1rem;
     padding-left: 100px;
