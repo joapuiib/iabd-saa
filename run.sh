@@ -8,6 +8,7 @@ function print {
 
 BUILD=0
 INSTALL_VENV=0
+ARGS=''
 while [ $# -gt 0 ] ; do
     case $1 in
         -b)
@@ -15,6 +16,9 @@ while [ $# -gt 0 ] ; do
             ;;
         --install-venv)
             INSTALL_VENV=1
+            ;;
+        *)
+            ARGS="$ARGS $1"
             ;;
     esac
     shift
@@ -37,4 +41,4 @@ if [ $BUILD -eq 1 ]; then
     COMMAND="build"
 fi
 
-./venv/bin/mkdocs $COMMAND
+./venv/bin/mkdocs $COMMAND $ARGS
