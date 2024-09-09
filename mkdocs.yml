@@ -3,8 +3,8 @@ site_author: "Joan Puigcerver Ibáñez"
 site_email: "j.puigcerveribanez@edu.gva.es"
 dev_addr: 127.0.0.1:4567
 
-repo_name: joapuiib/iabd-saa
-repo_url: https://github.com/joapuiib/iabd-saa
+repo_name: joapuiib/dam-psp
+repo_url: https://github.com/joapuiib/dam-psp
 
 extra:
   social:
@@ -15,16 +15,57 @@ extra:
       link: https://www.linkedin.com/in/joanpuigcerver/
       name: Joan Puigcerver a LinkedIn
 
+draft_docs: |
+  *_unpublished.md
+  *_draft.md
+
+exclude_docs: |
+  *_excluded.md
+  _*
+
 theme:
   name: material-joapuiib
+  under_construction: true
   icon:
     logo: fontawesome/solid/brain
+
+  comments:
+    repo: joapuiib/fp
+    repo_id: R_kgDOH-vwrw
+    category: General
+    category_id: DIC_kwDOH-vwr84CiOsU
+    mapping: url
+
+  # cover:
+  #   logo: false
+
+  # Palette toggle for light mode
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: 'deep purple'
+      scheme: default
+      toggle:
+        # icon: material/toggle-switch
+        icon: material/weather-sunny
+        name: Canvia a mode fosc
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: 'deep purple'
+      scheme: slate
+      toggle:
+        # icon: material/toggle-switch-off-outline
+        icon: material/weather-night
+        name: Canvia a mode clar
 
 plugins:
   - material/search
   - material-joapuiib/enviorment
   - awesome-pages # Navegació
+  - alias
+  - drawio_file
   - macros
+  - material/tags
   - i18n:
       languages:
         - locale: ca
@@ -43,29 +84,43 @@ plugins:
             quote: Cita
             docs: Documentació
             solution: Solució
-  - git-revision-date-localized
+            important: Important
+            notice: Fixa't
+            prep: Preparació
+  - git-revision-date-localized # Després de i18n o falla
 
 markdown_extensions:
   - abbr
   - admonition
-  - pymdownx.details
-  - pymdownx.superfences
   - attr_list
+  - def_list
+  - footnotes
+  - markdown_grid_tables
   - md_in_html
-  - pymdownx.superfences
+  - sane_lists
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material_joapuiib.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
   - pymdownx.snippets
-  - pymdownx.superfences
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material_joapuiib.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.arithmatex:
-      generic: true
-  - def_list
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - markdown_captions
+  - toc:
+      permalink: true
+      toc_depth: 4

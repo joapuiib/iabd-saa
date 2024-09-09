@@ -1,6 +1,8 @@
 ---
 template: document.html
 title: Introducció a la Intel·ligència Artificial
+icon: fontawesome/solid/book-open
+comments: true
 ---
 
 ## Què és la Intel·ligència Artificial?
