@@ -1,7 +1,7 @@
 ---
 template: document.html
 title: Introducció a la Intel·ligència Artificial
-icon: fontawesome/solid/book-open
+icon: material/book-open-variant
 comments: true
 ---
 
@@ -30,6 +30,7 @@ La més estesa és la de John McCarthy (1995):
 
 Hi ha molts programes que es comporten de manera intel·ligent,
 però hui en dia es dóna molta importància a les següents característiques:
+
 - __Capacitat d'aprenentatge__: Les màquines poden apendre i millorar el seu rendiment (semblant a com ho fem els humans).
 - __Autonomia__: Les màquines poden prendre decisions i realitzar tasques en entors complexos sense la intervenció humana.
 - __Adaptabilitat__: Les màquines poden adaptar-se a nous entorns i situacions.
@@ -93,6 +94,7 @@ per a les quals no ha estat dissenyada, és a dir, estan __orientades a un objec
     profundes (_Deep Neural Networks_ o _DNN_).
 
 Altres conceptes relacionats són:
+
 - __Big Data__: és la disciplina que es basa en l'anàlisi de grans volums de dades, que poden ser utilitzats —o no—,
     en sistemes d'IA.
 - __Data Science__: és la disciplina que es basa en l'anàlisi de dades per a obtenir coneixement i informació útil.
