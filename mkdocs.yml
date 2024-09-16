@@ -27,7 +27,7 @@ theme:
   name: material-joapuiib
   under_construction: true
   icon:
-    logo: fontawesome/solid/brain
+    logo: material/robot-happy
 
   comments:
     repo: joapuiib/fp

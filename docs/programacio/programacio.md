@@ -4,6 +4,8 @@ title: Programació didàctica
 subtitle:
 - "5072 - Sistemes d'Aprenentatge Automàtic"
 - "Curs d'especialitazció: Intel·ligència Artificial i Big Data"
+icon: material/book
+alias: programacio
 ---
 
 ## Normativa
