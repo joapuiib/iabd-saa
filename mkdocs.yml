@@ -94,6 +94,7 @@ markdown_extensions:
   - admonition
   - attr_list
   - def_list
+  - fancylists
   - footnotes
   - markdown_grid_tables
   - md_in_html

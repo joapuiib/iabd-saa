@@ -162,24 +162,54 @@ de dificultat.
 Els resultats d'aprenentatge i els seus corresponents criteris d'avaluació del mòdul professional són:
 
 1. Caracteritza la Intel·ligència Artificial forta i dèbil, determinant-ne els usos i possibilitats.
-    a) S'han determinat les especificitats de la Intel·ligència Artificial forta i dèbil.
-    b) S'han establert les barreres entre la Intel·ligència Artificial i l'aprenentatge automàtic (Machine Learning).
-    c) S'han diferenciat els àmbits d'aplicació de la Intel·ligència Artificial forta i dèbil.
-    d) S'han identificat els problemes als quals pot fer front la Intel·ligència Artificial dèbil.
-    e) S'han identificat els problemes als quals pot fer front la Intel·ligència Artificial forta.
-    f) S'han reconegut els avantatges que proporciona cada tipus en la resolució de problemes.
+
+    a. S'han determinat les especificitats de la Intel·ligència Artificial forta i dèbil.
+    b. S'han establert les barreres entre la Intel·ligència Artificial i l'aprenentatge automàtic (Machine Learning).
+    c. S'han diferenciat els àmbits d'aplicació de la Intel·ligència Artificial forta i dèbil.
+    d. S'han identificat els problemes als quals pot fer front la Intel·ligència Artificial dèbil.
+    e. S'han identificat els problemes als quals pot fer front la Intel·ligència Artificial forta.
+    f. S'han reconegut els avantatges que proporciona cada tipus en la resolució de problemes.
 
 2. Determina tècniques i eines de sistemes d'aprenentatge automàtic (Machine Learning), testant-ne l'aplicabilitat per a la resolució de problemes.
-    a) S'han identificat els principis dels sistemes d'aprenentatge automàtic.
-    b) S'han determinat tipus i usos dels sistemes d'aprenentatge automàtic.
-    c) S'han determinat tècniques i eines de sistemes d'aprenentatge automàtic.
-    d) S'han trobat diferències entre els tipus de sistemes d'aprenentatge automàtic.
-    e) S'han associat tècniques i eines a cada tipus de sistema d'aprenentatge automàtic.
+
+    a. S'han identificat els principis dels sistemes d'aprenentatge automàtic.
+    b. S'han determinat tipus i usos dels sistemes d'aprenentatge automàtic.
+    c. S'han determinat tècniques i eines de sistemes d'aprenentatge automàtic.
+    d. S'han trobat diferències entre els tipus de sistemes d'aprenentatge automàtic.
+    e. S'han associat tècniques i eines a cada tipus de sistema d'aprenentatge automàtic.
 
 3. Aplica algoritmes d'aprenentatge supervisat, optimitzant el resultat del model i minimitzant els riscos associats.
-    a) S'han proporcionat les dades etiquetades al model.
-    b) S'han seleccionat les dades d'entrada, ja siguin per a la fase d'entrenament, fase de validació o fase de test, entre altres.
-    c) S'han utilitzat les dades en la fase d'entrenament per a la construcció del model aplicant les característiques rellevants obtingudes.
+
+    a. S'han proporcionat les dades etiquetades al model.
+    b. S'han seleccionat les dades d'entrada, ja siguin per a la fase d'entrenament, fase de validació o fase de test, entre altres.
+    c. S'han utilitzat les dades en la fase d'entrenament per a la construcció del model aplicant les característiques rellevants obtingudes.
+    d. S'ha avaluat el model amb les dades obtingudes en la fase de validació.
+    e. S'han ajustat les dades d'aprenentatge supervisat en la fase d'ajust per millorar el rendiment de les diferents característiques o paràmetres.
+    f. S'ha implementat el model per fer prediccions sobre noves dades.
+    g. S'han detectat i minimitzat els riscos associats al model.
+    h. S'ha optimitzat el model d'aprenentatge supervisat validant dades de prova.
+
+4. Aplica tècniques d'aprenentatge no supervisat relacionant-les amb els tipus de problemes que tracten de resoldre.
+
+    a. S'han caracteritzat els tipus de problemes que l'aprenentatge no supervisat tracta de resoldre.
+    b. S'han caracteritzat les tècniques d'aprenentatge no supervisat utilitzades per a la resolució d'aquests tipus de problemes.
+    c. S'han aplicat algoritmes utilitzats en l'aprenentatge no supervisat.
+    d. S'ha optimitzat el model d'aprenentatge no supervisat validant dades de prova.
+
+5. Aplica models computacionals de xarxes neuronals comparant-los amb altres mètodes d'intel·ligència artificial.
+
+    a. S'han avaluat els models neuronals per triar el més adequat per a cada classe de problema.
+    b. S'han aplicat tècniques d'aprenentatge profund (deep learning) per entrenar xarxes neuronals.
+    c. S'han comparat les xarxes neuronals artificials amb altres mètodes d'intel·ligència artificial.
+    d. S'ha reconegut una xarxa neuronal entrenada a partir d'un conjunt de dades.
+
+6. Valora la qualitat dels resultats obtinguts en la pràctica amb sistemes d'aprenentatge automàtic integrant els principis fonamentals de la computació.
+
+    a. S'ha valorat la conveniència dels algoritmes proposats per resoldre els problemes plantejats.
+    b. S'ha avaluat l'aplicació pràctica dels principis i tècniques bàsiques dels sistemes intel·ligents.
+    c. S'han integrat els principis fonamentals de la computació en la pràctica per seleccionar, valorar i crear nous desenvolupaments tecnològics.
+    d. S'han desenvolupat sistemes i aplicacions informàtiques que utilitzen tècniques dels sistemes intel·ligents.
+    e. S'han desenvolupat tècniques d'aprenentatge computacional dedicades a l'extracció automàtica d'informació a partir de grans volums de dades.
 
 
 ### 8.2. Procediments i instruments de qualificació
