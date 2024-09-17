@@ -11,9 +11,9 @@ alias: programacio
 {% set examens = 70 %}
 {% set practiques = 30 %}
 
-## Normativa
-
+{% if false %}
 ## Unitats didàctiques
+##### 1a avaluació
 - __UD1__: Introducció a la Intel·ligència Artificial
     - IA forta i IA dèbil
     - IA vs Machine Learning
@@ -21,22 +21,32 @@ alias: programacio
         - Tipus (regressió, classificació, clustering)
         - Supervisat, no supervisat, reforç
         - Conjunts de dades
-- __UD2__: Manipulació i visualicació de dades
+- __UD2__: Estadística
+- __UD3__: Manipulació i visualicació de dades
     - Pandas
     - Numpy
     - Plotnine
-- __UD3__: Estadística
+    - Anàlisi de les dades
 - __UD4__: Regressió
-- __UD5__: Normalització i reducció de la dimensionalitat
+
+##### 2a avaluació
+- __UD5__: Preprocessament de dades
+    - Normalització
+    - Reducció de la dimensionalitat
+    - Regularització
 - __UD6__: Classificació
+    - Validació
+    - Mètriques
+    - Tipus de classificadors
+    - Models
 - __UD7__: Clustering
+{% endif %}
 
 _Control de versions:_
 
 | Data | Descripció |
 | --- | --- |
 | 2024-09-09 | Primera versió |
-| 2024-09-10 | Adaptació a programació per competències |
 
 ## 1. Propostes de millora del curs anterior
 Les propostes de millora del curs anterior i les accions realitzades són les següents:
