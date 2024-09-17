@@ -8,6 +8,9 @@ icon: material/book
 alias: programacio
 ---
 
+{% set examens = 70 %}
+{% set practiques = 30 %}
+
 ## Normativa
 
 ## Unitats didàctiques
@@ -214,9 +217,6 @@ Els resultats d'aprenentatge i els seus corresponents criteris d'avaluació del 
 
 ### 8.2. Procediments i instruments de qualificació
 
-!!! warning
-    El límit del 15% de faltes no justificades no aplica als alumnes dels cursos semipresencials.
-
 <figure id="figure-1">
     <img src="../img/diagrama_convocatories.png" alt="Diagrama de convocatòries">
     <figcaption class="attribution">CIPFP Mislata</figcaption>
@@ -230,8 +230,6 @@ L’avaluació es realitzarà amb els següents instruments d'avaliació:
     els continguts de cada avaluació.
 - __Pràctiques__: Treball teòric o pràctic, on s’avalua el 
     treball diari i els continguts que s’estan treballant.
-    En la modalitat semipresencial, es programaran vàries pràctiques
-    al llarg de cada avaluació.
 
 Tots els instruments d'avaluació s'han d'entregar a temps i ha de complir amb els requisits d'entrega.
 Si aquest no s'entrega en temps i forma, es considerarà com a no presentat.
@@ -330,7 +328,7 @@ Per poder superar el mòdul, l’alumnat haurà de:
 - Ordinadors amb Windows.
 - Accès a internet.
 - Correu corporatiu.
-- Entorns de desenvolupament integrats: __IntelliJ__
+- Entorns de desenvolupament integrats: __PyCharm__, __Google Colab__.
 - Eines de control de versions: __Git__
 - Llocs d'allotjament de repositoris Git: __GitHub__
 
