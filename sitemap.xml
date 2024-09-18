@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>None./</loc>
-        <lastmod>2024-09-17</lastmod>
+        <lastmod>2024-09-18</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="None"/>
     </url>
     <url>
         <loc>Noneapunts/01_introduccio/01_conceptes_generals/</loc>
-        <lastmod>2024-09-17</lastmod>
+        <lastmod>2024-09-18</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/01_introduccio/01_conceptes_generals/"/>
     </url>
     <url>
         <loc>Noneapunts/02_manipulacio_dades/01_pandas/</loc>
-        <lastmod>2024-09-17</lastmod>
+        <lastmod>2024-09-18</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/02_manipulacio_dades/01_pandas/"/>
     </url>
     <url>
         <loc>Noneapunts/02_manipulacio_dades/02_plotnine/</loc>
-        <lastmod>2024-09-17</lastmod>
+        <lastmod>2024-09-18</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/02_manipulacio_dades/02_plotnine/"/>
     </url>
     <url>
         <loc>Noneprogramacio/</loc>
-        <lastmod>2024-09-17</lastmod>
+        <lastmod>2024-09-18</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="Noneprogramacio/"/>
     </url>
     <url>
         <loc>Noneprogramacio/programacio/</loc>
-        <lastmod>2024-09-17</lastmod>
+        <lastmod>2024-09-18</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="Noneprogramacio/programacio/"/>
     </url>
