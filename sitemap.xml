@@ -7,6 +7,12 @@
         <xhtml:link rel="alternate" hreflang="ca" href="None"/>
     </url>
     <url>
+        <loc>Noneapunts/</loc>
+        <lastmod>2024-09-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/"/>
+    </url>
+    <url>
         <loc>Noneapunts/01_introduccio/01_conceptes_generals/</loc>
         <lastmod>2024-09-18</lastmod>
         <changefreq>daily</changefreq>
@@ -29,6 +35,12 @@
         <lastmod>2024-09-18</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ca" href="Noneprogramacio/"/>
+    </url>
+    <url>
+        <loc>Noneprogramacio/presentacio/</loc>
+        <lastmod>2024-09-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="Noneprogramacio/presentacio/"/>
     </url>
     <url>
         <loc>Noneprogramacio/programacio/</loc>
