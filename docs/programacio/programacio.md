@@ -8,8 +8,8 @@ icon: material/book
 alias: programacio
 ---
 
-{% set examens = 70 %}
-{% set practiques = 30 %}
+{% set examens = 40 %}
+{% set practiques = 60 %}
 
 {% if false %}
 ## Unitats didàctiques
@@ -24,10 +24,12 @@ alias: programacio
 - __UD2__: Estadística
 - __UD3__: Manipulació i visualicació de dades
     - Pandas
-    - Numpy
+    - Numpy (?)
     - Plotnine
     - Anàlisi de les dades
 - __UD4__: Regressió
+    - Regressió linial
+    - Regressió ML
 
 ##### 2a avaluació
 - __UD5__: Preprocessament de dades
@@ -46,7 +48,7 @@ _Control de versions:_
 
 | Data | Descripció |
 | --- | --- |
-| 2024-09-09 | Primera versió |
+| 2024-09-18 | Primera versió |
 
 ## 1. Propostes de millora del curs anterior
 Les propostes de millora del curs anterior i les accions realitzades són les següents:
@@ -303,7 +305,7 @@ En la convocatòria, es mantindran les notes de les avaluacions
 __aprovades__ en l'avalaució contínua. Per a superar la convocatòria ordinària:
 
 - La mitjana total de les notes de les avaluacions ha de ser __superior o igual a 5__.
-- La nota de cada avalucio ha de ser __superior o igual a 4__.
+- La nota de cada avalucio ha de ser __superior o igual a 5__.
 
 
 #### 8.2.3 Convocatòria extraordinària
@@ -320,7 +322,10 @@ Per poder superar el mòdul, l’alumnat haurà de:
 
 - Superar els __exàmens__ que es realitzaran en cada de les avaluacions. 
   Per poder superar cada avaluació, __la mitjana dels exàmens
-  haurà de ser major o igual que 4.__
+  haurà de ser major o igual que 5.__
+- Superar les __pràctiques__ realitzades en cada avaluació. 
+  Per poder superar cada avaluació, __la mitjana de les pràctiques
+  haurà de ser major o igual que 5.__
 - Tindre un comportament adequat a l’aula i complir les 
   normes de convivència.
 - __Superar cada avaluació per separat.__
