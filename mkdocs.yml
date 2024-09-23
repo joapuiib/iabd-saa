@@ -62,12 +62,13 @@ theme:
         name: Canvia a mode clar
 
 plugins:
+  - alias
+  - awesome-pages # Navegació
+  - drawio_file
+  - glightbox
+  - macros
   - material/search
   - material-joapuiib/enviorment
-  - awesome-pages # Navegació
-  - alias
-  - drawio_file
-  - macros
     # - material/social
   - material/tags
   - i18n:
