@@ -6,6 +6,8 @@ subtitle:
 - "Curs d'especialitazció: Intel·ligència Artificial i Big Data"
 icon: material/book
 alias: programacio
+# title: "IABD - Sistemes d'Aprenentatge Automàtic"
+# description: Intel·ligència Artificial i Big Data
 ---
 
 {% set examens = 40 %}
