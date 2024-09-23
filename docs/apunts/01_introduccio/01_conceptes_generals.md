@@ -3,7 +3,21 @@ template: document.html
 title: Introducció a la Intel·ligència Artificial
 icon: material/book-open-variant
 comments: true
+tags:
+    - aprenentatge automàtic
+    - machine learning (ML)
+    - intel·ligència artificial (IA)
+    - IA feble
+    - IA forta
 ---
+
+*[DNN]: Deep Neural Networks
+*[IA]: Intel·ligència Artificial
+*[ML]: Machine Learning
+*[NN]: Neural Networks
+*[SL]: Supervised Learning
+*[UNS]: Unsupervised Learning
+
 
 ## Què és la Intel·ligència Artificial?
 La __Intel·ligència Artificial (IA)__ consisteix en un programa informàtic capaç d'executar
@@ -99,9 +113,85 @@ Altres conceptes relacionats són:
     en sistemes d'IA.
 - __Data Science__: és la disciplina que es basa en l'anàlisi de dades per a obtenir coneixement i informació útil.
 
+
 ## Aprenentatge Automàtic
+L'__Aprenentatge Automàtic (*Machine Learning o ML*)__ és un camp de la IA
+que es basa en la idea que les màquines poden aprendre de les dades per si mateixes,
+sense ser programades explícitament per a realitzar una tasca concreta.
+
+### Aprenentatge Supervisat
+L'__Aprenentatge Supervisat (*Supervised Learning o SL*)__ és un tipus de ML en el qual
+l'aprenentatge es basa en un conjunt de dades etiquetades, de les quals es coneix el resultat esperat.
+
+<figure>
+  <img src="../img/supervised-learning.jpg" alt="Supervised Learning">
+  <figcaption class="attribution">Autor desconegut</figcaption>
+</figure>
+
+Dins del SL, trobem dos principals tipus de problemes: __classificació__ i __regressió__.
+
+!!! example
+    En aquest example de __classificació__, el model ha segut entrenat amb imatges de gats, gossos i gallines,
+    indicant-li al model l'animal (__etiqueta__) que apareix en cada imatge.
+
+    El model __aprén__ a diferenciar entre aquests animals.
+
+    Després, el model pot ser utilitzat per a predir l'animal en una imatge que no ha vist abans.
+
+#### Classificació
+En un problema de __classificació__, el model ha de predir a quina categoria o classe (valors discrets)
+pertany una observació (imatge, text, etc.).
+
+Durant el procés d'entrenament, el model aprén a diferenciar entre les diferents classes
+a partir de les dades d'entrenament i les etiquetes associades.
+
+<figure>
+  <img src="../img/classificacio.png" alt="Classificació">
+  <figcaption class="attribution">Autor desconegut</figcaption>
+</figure>
+
+Alguns exemples de classificació són:
+
+- __Correu no desitjat__: classificar els correus electrònics en _spam_ o _no spam_.
+- __Anàlisi de sentiments__: classificar els textos en _positius_, _negatius_ o _neutres_ respecte a un tema.
+- __Classificació d'imatges__: classificar les imatges en diferents categories.
+    - Imatge mèdica, reconeixement facial, conducció autònoma, ...
+- __Reconeixement de veu__: classificar les paraules pronunciades en diferents categories.
+
+#### Regressió
+En un problema de __regressió__, el model ha de predir un valor numèric (valors contínus)
+a partir de les dades d'entrada.
+
+Durant el procés d'entrenament, el model aprén a predir aquest valor numèric a partir de les característiques
+de les dades d'entrenament.G
+
+<figure>
+  <img src="../img/regressio.png" alt="Regressió">
+  <figcaption class="attribution">Autor desconegut</figcaption>
+</figure>
+
+Alguns exemples de regressió són:
+
+- __Preu d'una casa__: predir el preu d'una casa a partir de les seves característiques (_m², nº habitacions, ..._).
+- __Assegurances, crèdits, hipoteques...__: predir el risc associat a un client.
+- __Sistemes de recomanació__: predir la puntuació que un usuari donarà a un producte o l'interès que tindrà en ell.
+
+### Aprenentatge No Supervisat
+D'un altre costat, l'__Aprenentatge No Supervisat (*Unsupervised Learning o UNS*)__ és un tipus de ML en el qual
+l'aprenentatge es basa en un conjunt de dades sense etiquetar, és a dir, sense saber el resultat esperat.
+
+<figure>
+  <img src="../img/unsupervised-learning.png" alt="Unsupervised Learning">
+  <figcaption class="attribution">Autor desconegut</figcaption>
+</figure>
+
 
 
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/) de César Guijarro Rosaleny
 - Material del curs "Iniciació a la Intel·ligència Artificial amb Python" impartit per David Campoy Miñarro
+- Artificial general intelligence, Wikipedia: https://en.wikipedia.org/wiki/Artificial_general_intelligence
+- Weak artificial intelligence, Wikipedia: https://en.wikipedia.org/wiki/Weak_artificial_intelligence
+- Aprenentatge Automàtic, Viquipèdia: https://ca.wikipedia.org/wiki/Aprenentatge_autom%C3%A0tic
+- Supervised learning, Wikipedia: https://en.wikipedia.org/wiki/Supervised_learning
+- Unsupervised learning, Wikipedia: https://en.wikipedia.org/wiki/Unsupervised_learning
