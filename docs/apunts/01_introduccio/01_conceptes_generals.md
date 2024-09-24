@@ -5,10 +5,14 @@ icon: material/book-open-variant
 comments: true
 tags:
     - aprenentatge automàtic
-    - machine learning (ML)
+    - aprenentatge supervisat
+    - aprenentatge no supervisat
     - intel·ligència artificial (IA)
     - IA feble
     - IA forta
+    - machine learning (ML)
+    - overfitting
+    - underfitting
 ---
 
 *[DNN]: Deep Neural Networks
