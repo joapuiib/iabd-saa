@@ -28,7 +28,7 @@ __4 hores setmanals__
 
 - Andreas Lloyd
 
-    a.mathewlloyd@edu.gva.es
+    alloyd@fpmislata.com
 
 ---
 
