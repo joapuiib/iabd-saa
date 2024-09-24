@@ -6,8 +6,8 @@ site_author: "Joan Puigcerver Ibáñez"
 site_email: "j.puigcerveribanez@edu.gva.es"
 dev_addr: 127.0.0.1:4567
 
-repo_name: joapuiib/dam-psp
-repo_url: https://github.com/joapuiib/dam-psp
+  # repo_name: joapuiib/dam-psp
+  # repo_url: https://github.com/joapuiib/iabd-saa
 
 extra:
   social:
