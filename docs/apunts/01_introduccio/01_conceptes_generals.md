@@ -380,7 +380,8 @@ de les dades de prova comença a empitjorar.
 </figure>
 
 ## Recursos addicionals
-- [¿Qué es el Machine Learning?, DotCSV](https://www.youtube.com/watch?v=KytW151dpqU)
+- [¿Qué es el Machine Learning? | DotCSV](https://www.youtube.com/watch?v=KytW151dpqU)
+- [¿Qué es el Aprendizaje Supervisado y No Supervisado? | DotCSV](https://www.youtube.com/watch?v=oT3arRRB2Cw)
 
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/) de César Guijarro Rosaleny
