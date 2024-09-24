@@ -379,14 +379,17 @@ de les dades de prova comença a empitjorar.
     <figcaption>Figura 17: Validació Sobreajustament i Subajustament</figcaption>
 </figure>
 
+## Recursos addicionals
+- [¿Qué es el Machine Learning?, DotCSV](https://www.youtube.com/watch?v=KytW151dpqU)
+
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/) de César Guijarro Rosaleny
 - Material del curs "Iniciació a la Intel·ligència Artificial amb Python" impartit per David Campoy Miñarro
-- Artificial general intelligence, Wikipedia: https://en.wikipedia.org/wiki/Artificial_general_intelligence
-- Weak artificial intelligence, Wikipedia: https://en.wikipedia.org/wiki/Weak_artificial_intelligence
-- Aprenentatge Automàtic, Viquipèdia: https://ca.wikipedia.org/wiki/Aprenentatge_autom%C3%A0tic
-- Supervised learning, Wikipedia: https://en.wikipedia.org/wiki/Supervised_learning
-- Unsupervised learning, Wikipedia: https://en.wikipedia.org/wiki/Unsupervised_learning
-- Reinforcement learning, Wikipedia: https://en.wikipedia.org/wiki/Reinforcement_learning
-- Online machine learning, Wikipedia: https://en.wikipedia.org/wiki/Online_machine_learning
-- Mostra esbiaixada, Viquipèdia: https://ca.wikipedia.org/wiki/Mostra_esbiaixada
+- [Artificial general intelligence, Wikipedia](https://en.wikipedia.org/wiki/Artificial_general_intelligence)
+- [Weak artificial intelligence, Wikipedia](https://en.wikipedia.org/wiki/Weak_artificial_intelligence)
+- [Aprenentatge Automàtic, Viquipèdia](https://ca.wikipedia.org/wiki/Aprenentatge_autom%C3%A0tic)
+- [Supervised learning, Wikipedia](https://en.wikipedia.org/wiki/Supervised_learning)
+- [Unsupervised learning, Wikipedia](https://en.wikipedia.org/wiki/Unsupervised_learning)
+- [Reinforcement learning, Wikipedia](https://en.wikipedia.org/wiki/Reinforcement_learning)
+- [Online machine learning, Wikipedia](https://en.wikipedia.org/wiki/Online_machine_learning)
+- [Mostra esbiaixada, Viquipèdia](https://ca.wikipedia.org/wiki/Mostra_esbiaixada)
