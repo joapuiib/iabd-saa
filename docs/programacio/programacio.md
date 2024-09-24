@@ -51,6 +51,7 @@ _Control de versions:_
 | Data | Descripció |
 | --- | --- |
 | 2024-09-18 | Primera versió |
+| 2024-09-24 | Correccions a l'apartat Avaluació |
 
 ## 1. Propostes de millora del curs anterior
 Les propostes de millora del curs anterior i les accions realitzades són les següents:
@@ -269,7 +270,7 @@ La __nota de cada avaluació ($A_i$)__ es calcularà de la següent manera:
     Comptarà un __{{ practiques }}%__.
 
 $$
-A_i = 0.7 \times E_i + 0.3 \times P_i
+A_i = 0.4 \times E_i + 0.6 \times P_i
 $$
 
 Perquè un alumne supere una avaluació, la qualificació 
@@ -284,7 +285,7 @@ de la nota de totes les avaluacions. En cas que alguna avaluació
 no estiga superada, la qualificació del mòdul serà com a màxim un 4.
 
 $$
-M = \frac{A_1 + A_2 + A_3}{3}\\\
+M = \frac{A_1 + A_2}{2}\\\
 $$
 
 Per norma general les notes s'arredoniran amb la fòrmula general: __>.5__.
