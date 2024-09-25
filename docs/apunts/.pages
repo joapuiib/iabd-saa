@@ -1,8 +1,8 @@
 nav:
     - ...
     - "UD1: Introducció a la Intel·ligència Artificial": 01_introduccio
-    - "UD2: Manipulació i visualització de dades": 02_manipulacio_dades
-    # - "UD3: Estadística": 03_estadistica
+    - "UD2: Estadística": 02_estadistica
+    - "UD3: Manipulació i visualització de dades": 03_manipulacio_dades
     # - "UD4: Regressió": 04_regressio
     # - "UD5: Normalització i reducció de la dimensionalitat": 05_normalitzacio
     # - "UD6: Classificació": 06_classificacio
