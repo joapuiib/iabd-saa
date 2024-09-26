@@ -37,20 +37,20 @@ $$
 !!! example "Exemple amb Pandas"
     ```python
     import pandas as pd
-     
-    df = pd.DataFrame({"A":[12, 4, 5, 44, 1],
-                       "B":[5, 2, 54, 3, 2], 
-                       "C":[20, 16, 7, 3, 8],
-                       "D":[14, 3, 17, 2, 6]})
+
+    df = pd.DataFrame({"A":[12,  4,  5, 44,  1],
+                       "B":[ 5,  2, 54,  3,  2],
+                       "C":[20, 16,  7,  3,  8],
+                       "D":[14,  3, 14,  3, 14]})
 
     print("DataFrame:")
     print(df)
-     
+
     # axis = 0 calculará la mitjana de cada columna (A, B, C, D)
     column_mean = df.mean(axis = 0)
     print("Mitjana de cada columna:")
     print(column_mean)
-     
+
     # axis = 1 calculará la mitjana de cada fila (0, 1, 2, 3, 4)
     row_mean = df.mean(axis = 1)
     print("Mitjana de cada fila:")
@@ -69,14 +69,14 @@ $$
     A    13.2
     B    13.2
     C    10.8
-    D     8.4
+    D    10.2
     dtype: float64
     Mitjana de cada fila:
     0    12.75
-    1     7.75
+    1     6.25
     2    20.75
-    3    12.75
-    4     4.25
+    3    13.00
+    4     6.25
     dtype: float64
     ```
     ///
@@ -87,10 +87,12 @@ $$
 
     ```python
     mean = df.iloc[0].mean()
+    print("Mitjana de la primera fila:")
     print(mean)
     ```
     /// html | div.result
     ```text
+    Mitjana de la primera fila:
     12.75
     ```
 
@@ -99,10 +101,12 @@ $$
 
     ```python
     mean = df.loc[:,"A"].mean()
+    print("Mitjana de la columna A:")
     print(mean)
     ```
     /// html | div.result
     ```text
+    Mitjana de la columna A:
     13.2
     ```
     ///
@@ -132,10 +136,10 @@ Per a calcular la mediana, primer s'ordenen els valors de la mostra de menor a m
     /// html | div.result
     ```text
     Mediana de cada columna:
-    A    5.0
-    B    3.0
-    C    8.0
-    D    6.0
+    A     5.0
+    B     3.0
+    C     8.0
+    D    14.0
     dtype: float64
     ```
     ///
@@ -165,12 +169,12 @@ La __moda__ és el valor que més vegades apareix en una mostra.
     /// html | div.result
     ```text
     Moda de cada columna:
-       A  B  C  D
-    0  1  2  3  2
-    1  4  3  7  3
-    2  5  5  8  6
-    3 12 54 16 14
-    4 44 NaN 20 17
+        A    B   C     D
+    0   1  2.0   3   3.0
+    1   4  NaN   7  14.0
+    2   5  NaN   8   NaN
+    3  12  NaN  16   NaN
+    4  44  NaN  20   NaN
     ```
     ///
 
@@ -204,10 +208,10 @@ $$
     /// html | div.result
     ```text
     Variança de cada columna:
-    A    340.8
-    B    281.2
-    C    116.0
-    D     46.0
+    A    312.7
+    B    521.7
+    C     48.7
+    D     44.7
     dtype: float64
     ```
     ///
@@ -237,10 +241,10 @@ $$
     /// html | div.result
     ```text
     Desviació estàndard de cada columna:
-    A    18.457537
-    B    16.778211
-    C    10.770330
-    D     6.782330
+    A    17.683325
+    B    22.840753
+    C     6.978539
+    D     6.685806
     dtype: float64
     ```
     ///
