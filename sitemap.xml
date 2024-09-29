@@ -37,6 +37,12 @@
         <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/02_estadistica/01_estadistica_basica/"/>
     </url>
     <url>
+        <loc>Noneapunts/02_estadistica/02_distribucions/</loc>
+        <lastmod>2024-09-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/02_estadistica/02_distribucions/"/>
+    </url>
+    <url>
         <loc>Noneapunts/03_manipulacio_dades/01_pandas/</loc>
         <lastmod>2024-09-29</lastmod>
         <changefreq>daily</changefreq>
