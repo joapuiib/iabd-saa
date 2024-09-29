@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import pandas as pd
 
 df = pd.DataFrame({"A":[12,  4,  5, 44,  1],
