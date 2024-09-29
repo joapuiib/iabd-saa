@@ -6,9 +6,6 @@ comments: true
 tags:
 ---
 
-@TODO: Revisar exemples amb Pandas
-
-
 ## Estadística bàsica
 L'__aprenentatge automàtic__ està basat en models matemàtics i estàditics.
 Per això, és important tindre una base sòlida en estadística per entendre el funcionament dels algoritmes d'aprenentatge automàtic
