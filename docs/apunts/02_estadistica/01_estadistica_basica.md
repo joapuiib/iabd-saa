@@ -256,10 +256,44 @@ que una proporció determinada de valors queda a cada costat del quantil.
 
 Els quantils més importants són els __quartils__, __decils__ i __percentils__.
 
+### Percentils
+Els __percentils__ divideixen la mostra en cent parts iguals, cadascuna amb el 1% dels valors.
+
+És una de les mesures més utilitzades en estadística per a comparar valors.
+
+!!! example "Quartils en Pandas"
+    ```python
+    import numpy as np
+    import pandas as pd
+
+    edats = [
+        34, 48, 48, 55, 39, 39, 39, 35, 18, 54, 53, 29, 40, 37, 38,  23, 38,
+        51, 71, 49, 46, 40, 39, 54, 48, 38, 34, 43, 39, 45, 42, 49,  32, 56,
+        73, 57, 47, 54, 35, 29, 78, 63, 54, 59, 56, 71, 76, 80, 80,  78, 67,
+        62, 52, 82, 67, 65, 83, 59, 79, 73, 57, 68, 81, 79, 87, 73, 108, 59,
+        12, 15,  3, 26, 24, 16, 11,  2,  9, 23, 14, 12, 21, 27, 18,  19, 29,
+        18, 13, 22, 13, 12, 28, 13, 19, 12, 13, 20, 14, 18
+    ]
+
+    df = pd.DataFrame(edats, columns=['edat'])
+
+    percentils = df.quantile([0.20, 0.85])
+    print(percentils)
+    ```
+    /// html | div.result
+    ```text
+    Percentils:
+          edat
+    0.20  18.4
+    0.85  71.9
+    ```
+    ///
+
+
 ### Quartils
 Els __quartils__ divideixen la mostra en quatre parts iguals.
 
-Per tant, obtenim tres punts de tall: $Q_1$, $Q_2$ i $Q_3$, corresponents al 25%, 50% i 75% de la mostra.
+Per tant, obtenim tres punts de tall: $Q_1$, $Q_2$ i $Q_3$, corresponents als percentils 25%, 50% i 75%.
 
 <figure id=figure-1>
     <img src="../img/quartils.png" alt="Quartils">
@@ -268,7 +302,21 @@ Per tant, obtenim tres punts de tall: $Q_1$, $Q_2$ i $Q_3$, corresponents al 25%
 </figure>
 
 !!! example "Quartils en Pandas"
-    @TODO: Exemple amb Pandas
+    ```python
+    quartils = df.quantile([0.25, 0.5, 0.75])
+    print("Quartils:")
+    print(quartils)
+    ```
+    /// html | div.result
+    ```text
+    Quartils:
+           edat
+    0.25  22.25
+    0.50  40.00
+    0.75  59.00
+    ```
+    ///
+
 
 ### Decils
 Els __decils__ divideixen la mostra en deu parts iguals, cadascuna amb el 10% dels valors.
@@ -279,16 +327,44 @@ Els __decils__ divideixen la mostra en deu parts iguals, cadascuna amb el 10% de
     <figcaption>Figura 2: Decils</figcaption>
 </figure>
 
-### Percentils
-Els __percentils__ divideixen la mostra en cent parts iguals, cadascuna amb el 1% dels valors.
+!!! example "Decils en Pandas"
+    ```python
+    percentils = df.quantile(np.arange(0.1, 1, 0.1))
+    print("Decils:")
+    print(percentils)
+    ```
+    /// html | div.result
+    ```text
+    Decils:
+         edat
+    0.1  13.0
+    0.2  18.4
+    0.3  27.1
+    0.4  36.6
+    0.5  40.0
+    0.6  49.0
+    0.7  55.9
+    0.8  66.2
+    0.9  78.0
+    ```
+    ///
 
-És una de les mesures més utilitzades en estadística per a comparar valors.
+## Codi font
+- [estadistica_basica.py](../../files/ud2/estadistica_basica.py){: download="estadistica_basica.py"}
 
-!!! example
-    @TODO: Exemple
+    /// collapse-code
+    ```python
+    --8<-- "docs/files/ud2/estadistica_basica.py"
+    ```
+    ///
 
-!!! example "Percentils en Pandas"
-    @TODO: Exemple amb Pandas
+- [quantils.py](../../files/ud2/quantils.py){: download="quantils.py"}
+
+    /// collapse-code
+    ```python
+    --8<-- "docs/files/ud2/quantils.py"
+    ```
+    ///
 
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/) de César Guijarro Rosaleny
