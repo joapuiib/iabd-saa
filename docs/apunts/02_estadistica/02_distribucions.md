@@ -252,8 +252,22 @@ Alguna de les propietats de la distribució normal són:
     - L'interval $[\mu - 2\sigma, \mu + 2\sigma]$ conté el 95.45% dels valors.
     - L'interval $[\mu - 3\sigma, \mu + 3\sigma]$ conté el 99.73% dels valors.
 
+
+A partir de la versió 3.8 de Python, la llibreria estàndard `statistics` inclou la classe
+[`NormalDist`](https://docs.python.org/3.8/library/statistics.html?highlight=normaldist#statistics.NormalDist)
+que permet treballar amb distribucions normals.
+
+
 !!! example "Alçada d'una població"
     L'alçada d'una població segueix una distribució normal amb una mitjana de 170 cm i una desviació estàndard de 10 cm.
+
+    ```mermaid
+    xychart-beta
+        title "Distribució de probabilitat de l'alçada d'una població"
+        x-axis "Alçada en cm" [140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 190, 195, 200]
+        y-axis "" 0 --> 5
+        line [0.044318, 0.175283, 0.539910, 1.295176, 2.419707, 3.520653, 3.989423, 3.520653, 2.419707, 1.295176, 0.539910, 0.175283, 0.044318]
+    ```
 
     !!! note
         Aquest càlcul es pot fer mitjançant [__unitats tipificades (standard-score)__](#unitat-tipificada-standard-score)
@@ -263,17 +277,31 @@ Alguna de les propietats de la distribució normal són:
 
     $$P(160 \leq X \leq 180) = 0.6826$$
 
-    La probabilitat que una persona triada a l'atzar tinga una alçada entre 150 i 190 cm és:
+    La probabilitat que una persona triada a l'atzar tinga una alçada més gran que 190 cm és:
 
-    $$P(150 \leq X \leq 190) = 0.9544$$
+    $$P(X > 190) = 1 - P(X \leq 190) = 1 - 0.9772 = 0.0228$$
 
-    ```mermaid
-    xychart-beta
-        title "Distribució de probabilitat de l'alçada d'una població"
-        x-axis "Alçada en cm" [140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 190, 195, 200]
-        y-axis "" 0 --> 5
-        line [0.044318, 0.175283, 0.539910, 1.295176, 2.419707, 3.520653, 3.989423, 3.520653, 2.419707, 1.295176, 0.539910, 0.175283, 0.044318]
+    ```python
+    from statistics import NormalDist
+
+    height_dist = NormalDist(mu=170, sigma=10)
+
+    # Probability of a person being taller than 160 cm and shorter than 180 cm
+    p = height_dist.cdf(180) - height_dist.cdf(160)
+    print("Probability of a person being taller than 160 cm and shorter than 180 cm:", p)
+
+    # Probability of a person being taller than 190 cm
+    p = 1 - height_dist.cdf(190)
+    print("Probability of a person being taller than 190 cm:", p)
     ```
+    /// html | div.result
+    ```text
+    Probability of a person being taller than 160 cm and shorter than 180 cm: 0.6826
+    Probability of a person being taller than 190 cm: 0.02275
+    ```
+    ///
+
+
 
 #### Unitat tipificada (standard-score)
 La __unitat tipificada (*standard-score o z-score*)__
@@ -306,12 +334,30 @@ i una desviació estàndard $\sigma = 1$.
 
 $$X \sim N(0, 1)$$
 
+A Python, inicialitzar una distribució normal estàndard es fa amb la classe `NormalDist` sense paràmetres.
+
+```python
+from statistics import NormalDist
+
+std_normal_dist = NormalDist() # mu=0, sigma=1
+```
+
 Aquesta distribució és molt important en estadística, ja que permet calcular
 la probabilitat acumulada de qualsevol distribució normal utilitzant les [__unitats tipificades__](#unitat-tipificada-standard-score)
 i consultat la [__taula de la distribució normal__](https://en.wikipedia.org/wiki/Standard_normal_table#Cumulative_(less_than_Z)){:target="_blank"}.
 
 Aquesta taula indica la __probabilitat acumulada__ de trobar un valor menor que $z$
 en una distribució normal estàndard.
+
+$$P(Z \leq z)$$
+
+El mètode `cdf` de la classe `NormalDist` permet calcular la probabilitat acumulada
+de trobar un valor menor o igual que $z$ en una distribució normal.
+
+```python
+std_normal_dist.cdf(z)
+```
+
 
 !!! example "Càlcul de probabilitats alçada d'una població"
     Calculem la probabilitat que una persona tinga una alçada entre 160 i 180 cm.
@@ -331,12 +377,42 @@ en una distribució normal estàndard.
 
     $$P(-1 \leq Z \leq 1) = 0.8413 - 0.1587 = 0.6826$$
 
+    ```python
+    # Probability of a person being taller than 160 cm and shorter than 180 cm
+    z1 = (160 - 170) / 10
+    z2 = (180 - 170) / 10
+    p = std_normal_dist.cdf(z2) - std_normal_dist.cdf(z1)
+    print("Probability of a person being taller than 160 cm and shorter than 180 cm:", p)
+    ```
+    /// html | div.result
+    ```text
+    Probability of a person being taller than 160 cm and shorter than 180 cm: 0.6826
+    ```
+    ///
 
+## Distribució conjunta i mostral
+### Distribució conjunta
+La __distribució conjunta__ és la distribució de probabilitat de tots
+els possibles valors d'una variable aleatòria en una població.
 
+En la pràctica, la distribució poblacional és desconeguda, ja que no es molt
+dificil o impossible obtenir tots els valors d'una població.
+
+### Distribució mostral
+La __distribució mostral__ és la distribució de probabilitat d'una estadística
+calculada a partir d'una mostra aleatòria d'una població.
+
+Les distribucions mostrals són importants en les estadístiques perquè proporcionen una
+important simplificació abans d'utilitzar la inferència estadística, quan
+obtindre tots els valors d'una població és molt difícil o impossible.
+
+Normalment, quan major és la mida de la mostra, més s'assembla
+a la distribució la distribució poblacional.
 
 
 
 ## Bibliografia
+- [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/) de César Guijarro Rosaleny
 - [Distribució de probabilitat, Viquipèdia](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_probabilitat)
 - [Variable aleatòria, Viquipèdia](https://ca.wikipedia.org/wiki/Variable_aleat%C3%B2ria)
 - [Distribució de Bernoulli, Viquipèdia](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_Bernoulli)
@@ -344,3 +420,5 @@ en una distribució normal estàndard.
 - [Distribució de Poisson, Viquipèdia](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_Poisson)
 - [Distribució uniforme contínua, Viquipèdia](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_uniforme_cont%C3%ADnua)
 - [Distribució normal, Viquipèdia](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_normal)
+- [Joint Probability Distribution, Wikipedia](https://en.wikipedia.org/wiki/Joint_probability_distribution)
+- [Sampling Distribution, Wikipedia](https://en.wikipedia.org/wiki/Sampling_distribution)
