@@ -398,6 +398,23 @@ els possibles valors d'una variable aleatòria en una població.
 En la pràctica, la distribució poblacional és desconeguda, ja que no es molt
 dificil o impossible obtenir tots els valors d'una població.
 
+!!! example "Edats d'una població"
+    Donada una població de 10000 persones, la distribució de les edats és la següent.
+
+    ```python
+    # Distribució conjunta (totes les dades)
+    df_edats = pd.read_csv('generated_edats.csv', header=None, index_col=False, names=['edat'])
+    mean = df_edats.mean().values[0].round(2)
+    std = df_edats.std().values[0].round(2)
+    ```
+    /// html | div.result
+    ```text
+    # Distribució conjunta
+    Mitjana de les edats: 44.14
+    Desviació estàndard de les edats: 22.39
+    ```
+    ///
+
 ### Distribució mostral
 La __distribució mostral__ és la distribució de probabilitat d'una estadística
 calculada a partir d'una mostra aleatòria d'una població.
@@ -409,7 +426,150 @@ obtindre tots els valors d'una població és molt difícil o impossible.
 Normalment, quan major és la mida de la mostra, més s'assembla
 a la distribució la distribució poblacional.
 
+!!! example "Mostres en edats d'una població"
+    Realitzem tres mostres de 10, 100 i 1000 persones de la població anterior.
 
+    Vegem com varien les mitjanes i les desviacions estàndard de les mostres,
+    que segons augmenta el tamany de la mostra, s'assemblen més a la distribució poblacional.
+
+    ```python
+    # Distribució mostral I (agafem 1 mostra de 10 dades)
+    sample1 = df_edats.sample(10, random_state=42)
+    mean = sample1.mean().values[0].round(2)
+    std = sample1.std().values[0].round(2)
+
+    print("Distribució mostral I")
+    print("Mitjana de la mostra 1:", mean)
+    print("Desviació estàndard de la mostra 1:", std)
+    print()
+
+    # Distribució mostral II (agafem 1 mostra de 100 dades)
+    sample2 = df_edats.sample(100, random_state=42)
+    mean = sample2.mean().values[0].round(2)
+    std = sample2.std().values[0].round(2)
+
+    print("Distribució mostral II")
+    print("Mitjana de la mostra 2:", mean)
+    print("Desviació estàndard de la mostra 2:", std)
+    print()
+
+    # Distribució mostral III (agafem 1 mostra de 1000 dades)
+    sample3 = df_edats.sample(1000, random_state=42)
+    mean = sample3.mean().values[0].round(2)
+    std = sample3.std().values[0].round(2)
+
+    print("Distribució mostral III")
+    print("Mitjana de la mostra 3:", mean)
+    print("Desviació estàndard de la mostra 3:", std)
+    ```
+    /// html | div.result
+    ```text
+    Distribució mostral I
+    Mitjana de la mostra 1: 36.5
+    Desviació estàndard de la mostra 1: 26.38
+
+    Distribució mostral II
+    Mitjana de la mostra 2: 45.59
+    Desviació estàndard de la mostra 2: 24.78
+
+    Distribució mostral III
+    Mitjana de la mostra 3: 43.46
+    Desviació estàndard de la mostra 3: 22.23
+    ```
+    ///
+
+### Distribució mostral de la mitjana
+La __distribució mostral de la mitjana__ és una distribució de probabilitat
+calculada a partir de les mitjanes de __distribucions mostrals__.
+
+Segons el [__teorema del límit central__](https://ca.wikipedia.org/wiki/Teorema_del_l%C3%ADmit_central),
+aquesta distribució s'assembla més a la __distribució conjunta__ a mesura que s'utilitzen més mostres.
+
+!!! example "Mitjana de mostres en edats d'una població"
+    Realitzem tres grups de mostres de 1, 10 i 100 grups de 10 persones de la població anterior.
+
+    Vegem com varien les mitjanes i les desviacions estàndard de les mostres,
+    que segons augmenta el nombre de mostres, s'assemblen més a la distribució poblacional.
+
+    ```python
+    # Distribució mostral de la mitjana I (agafem 1 mostra de 10 dades)
+    sample1 = df_edats.sample(10, random_state=42)
+    mean = sample1.mean().values[0].round(2)
+    std = sample1.std().values[0].round(2)
+
+    print("Distribució mostral de la mitjana I")
+    print("Mitjana de la mostra 1:", mean)
+    print("Desviació estàndard de la mostra 1:", std)
+    print()
+
+    # Distribució mostral de la mitjana II (agafem 10 mostres de 10 dades)
+    means = []
+    stds = []
+    for i in range(10):
+        sample = df_edats.sample(10, random_state=i)
+        means.append(sample.mean().values[0])
+        stds.append(sample.std().values[0])
+
+    mean = pd.Series(means).mean().round(2)
+    std = pd.Series(stds).mean().round(2)
+
+    print("Distribució mostral de la mitjana II")
+    print("Mitjana de les mitjanes:", mean)
+    print("Desviació estàndard de les mitjanes:", std)
+    print()
+
+    # Distribució mostral de la mitjana III (agafem 100 mostres de 10 dades)
+    means = []
+    stds = []
+    for i in range(100):
+        sample = df_edats.sample(10, random_state=i)
+        means.append(sample.mean().values[0])
+        stds.append(sample.std().values[0])
+
+    mean = pd.Series(means).mean().round(2)
+    std = pd.Series(stds).mean().round(2)
+
+    print("Distribució mostral de la mitjana III")
+    print("Mitjana de les mitjanes:", mean)
+    print("Desviació estàndard de les mitjanes:", std)
+    ```
+    /// html | div.result
+    ```text
+    Distribució mostral de la mitjana I
+    Mitjana de la mostra 1: 36.5
+    Desviació estàndard de la mostra 1: 26.38
+
+    Distribució mostral de la mitjana II
+    Mitjana de les mitjanes: 45.11
+    Desviació estàndard de les mitjanes: 23.27
+
+    Distribució mostral de la mitjana III
+    Mitjana de les mitjanes: 44.26
+    Desviació estàndard de les mitjanes: 21.41
+    ```
+    ///
+
+## Contrast d'hipòtesis
+
+## Covariància i correlació
+
+## Codi font
+- [normal.py](../../files/ud2/normal.py){: download="normal.py"}
+
+    /// collapse-code
+    ```python
+    --8<-- "docs/files/ud2/normal.py"
+    ```
+    ///
+
+- [generated_edats.csv](../../files/ud2/generated_edats.csv){: download="generated_edats.csv"}
+- [distribucio_mostral.py](../../files/ud2/distribucio_mostral.py){: download="distribucio_mostral.py"}
+
+    /// collapse-code
+    ```python
+    --8<-- "docs/files/ud2/distribucio_mostral.py"
+    ```
+    ///
 
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/) de César Guijarro Rosaleny
@@ -422,3 +582,4 @@ a la distribució la distribució poblacional.
 - [Distribució normal, Viquipèdia](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_normal)
 - [Joint Probability Distribution, Wikipedia](https://en.wikipedia.org/wiki/Joint_probability_distribution)
 - [Sampling Distribution, Wikipedia](https://en.wikipedia.org/wiki/Sampling_distribution)
+- [Teorema del límit central, Viquipèdia](https://ca.wikipedia.org/wiki/Teorema_del_l%C3%ADmit_central)

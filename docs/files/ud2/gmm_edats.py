@@ -9,7 +9,7 @@ df = pd.read_csv('edats.csv', header=None, names=['age', 'persons'])
 df['proportion'] = df['persons'] / df['persons'].sum()
 df['downsampled'] = (df['proportion'] * 100000).round().astype(int)
 
-print(df)
+# print(df)
 
 
 plot = (
@@ -27,7 +27,7 @@ downsampled_plot = (
     theme_minimal()
 )
 
-plot.show()
+# plot.show()
 # downsampled_plot.show()
 
 n_components = 3
@@ -41,7 +41,7 @@ gmm.fit(downsampled_ages)
 # print(gmm.covariances_)
 
 # Generate 100 random samples from the model
-samples, _ = gmm.sample(100)
+samples, _ = gmm.sample(10000)
 
 
 # Histogram of the samples
@@ -52,7 +52,7 @@ samples_df = samples_df.round().astype(int)
 generated_df = samples_df.value_counts().sort_index().reset_index()
 generated_df.columns = ['age', 'count']
 
-print(generated_df)
+# print(generated_df)
 
 generated_plot = (
     ggplot(generated_df, aes(x='age', y='count')) +
@@ -61,8 +61,8 @@ generated_plot = (
     theme_minimal()
 )
 
-generated_plot.show()
+# generated_plot.show()
 
 # print all generated samples separated by commas
-samples_str = ', '.join([str(x[0]) for x in samples_df.values])
+samples_str = ',\n'.join([str(x[0]) for x in samples_df.values])
 print(samples_str)
