@@ -905,6 +905,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#distribucio-conjunta-i-mostral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribució conjunta i mostral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Distribució conjunta i mostral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distribucio-conjunta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribució conjunta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribucio-mostral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribució mostral
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bibliografia" class="md-nav__link">
     <span class="md-ellipsis">
       Bibliografia
@@ -1167,6 +1200,39 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribucio-conjunta-i-mostral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribució conjunta i mostral
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Distribució conjunta i mostral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distribucio-conjunta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribució conjunta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribucio-mostral" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribució mostral
+    </span>
+  </a>
   
 </li>
         
@@ -1744,9 +1810,17 @@ sobre el qual el 50% dels valors queda a cada costat, i una <strong>desviació e
 </ul>
 </li>
 </ul>
+<p>A partir de la versió 3.8 de Python, la llibreria estàndard <code>statistics</code> inclou la classe
+<a href="https://docs.python.org/3.8/library/statistics.html?highlight=normaldist#statistics.NormalDist"><code>NormalDist</code></a>
+que permet treballar amb distribucions normals.</p>
 <div class="admonition example">
 <p class="admonition-title">Alçada d'una població</p>
 <p>L'alçada d'una població segueix una distribució normal amb una mitjana de 170 cm i una desviació estàndard de 10 cm.</p>
+<pre class="mermaid"><code>xychart-beta
+    title "Distribució de probabilitat de l'alçada d'una població"
+    x-axis "Alçada en cm" [140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 190, 195, 200]
+    y-axis "" 0 --&gt; 5
+    line [0.044318, 0.175283, 0.539910, 1.295176, 2.419707, 3.520653, 3.989423, 3.520653, 2.419707, 1.295176, 0.539910, 0.175283, 0.044318]</code></pre>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Aquest càlcul es pot fer mitjançant <a href="#unitat-tipificada-standard-score"><strong>unitats tipificades (standard-score)</strong></a>
@@ -1754,13 +1828,25 @@ i la <a href="https://en.wikipedia.org/wiki/Standard_normal_table#Cumulative_(le
 </div>
 <p>La probabilitat que una persona triada a l'atzar tinga una alçada entre 160 i 180 cm és:</p>
 <div class="arithmatex">\[P(160 \leq X \leq 180) = 0.6826\]</div>
-<p>La probabilitat que una persona triada a l'atzar tinga una alçada entre 150 i 190 cm és:</p>
-<div class="arithmatex">\[P(150 \leq X \leq 190) = 0.9544\]</div>
-<pre class="mermaid"><code>xychart-beta
-    title "Distribució de probabilitat de l'alçada d'una població"
-    x-axis "Alçada en cm" [140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 190, 195, 200]
-    y-axis "" 0 --&gt; 5
-    line [0.044318, 0.175283, 0.539910, 1.295176, 2.419707, 3.520653, 3.989423, 3.520653, 2.419707, 1.295176, 0.539910, 0.175283, 0.044318]</code></pre>
+<p>La probabilitat que una persona triada a l'atzar tinga una alçada més gran que 190 cm és:</p>
+<div class="arithmatex">\[P(X &gt; 190) = 1 - P(X \leq 190) = 1 - 0.9772 = 0.0228\]</div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">NormalDist</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">height_dist</span> <span class="o">=</span> <span class="n">NormalDist</span><span class="p">(</span><span class="n">mu</span><span class="o">=</span><span class="mi">170</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># Probability of a person being taller than 160 cm and shorter than 180 cm</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">p</span> <span class="o">=</span> <span class="n">height_dist</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span> <span class="o">-</span> <span class="n">height_dist</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">160</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Probability of a person being taller than 160 cm and shorter than 180 cm:&quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># Probability of a person being taller than 190 cm</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">p</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">height_dist</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">190</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Probability of a person being taller than 190 cm:&quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="result">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Probability of a person being taller than 160 cm and shorter than 180 cm: 0.6826
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Probability of a person being taller than 190 cm: 0.02275
+</span></code></pre></div>
+</div>
 </div>
 <h4 id="unitat-tipificada-standard-score">Unitat tipificada (standard-score)<a class="headerlink" href="#unitat-tipificada-standard-score" title="Permanent link">&para;</a></h4>
 <p>La <strong>unitat tipificada (<em>standard-score o z-score</em>)</strong>
@@ -1789,11 +1875,21 @@ calculem les unitats tipificades de les alçades 160 i 180 cm.</p>
 <p>La <strong>distribució normal estàndard</strong> és cas especial d'una distribució normal, que té una mitjana <span class="arithmatex">\(\mu = 0\)</span>
 i una desviació estàndard <span class="arithmatex">\(\sigma = 1\)</span>.</p>
 <div class="arithmatex">\[X \sim N(0, 1)\]</div>
+<p>A Python, inicialitzar una distribució normal estàndard es fa amb la classe <code>NormalDist</code> sense paràmetres.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">NormalDist</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">std_normal_dist</span> <span class="o">=</span> <span class="n">NormalDist</span><span class="p">()</span> <span class="c1"># mu=0, sigma=1</span>
+</span></code></pre></div>
 <p>Aquesta distribució és molt important en estadística, ja que permet calcular
 la probabilitat acumulada de qualsevol distribució normal utilitzant les <a href="#unitat-tipificada-standard-score"><strong>unitats tipificades</strong></a>
 i consultat la <a href="https://en.wikipedia.org/wiki/Standard_normal_table#Cumulative_(less_than_Z)" target="_blank"><strong>taula de la distribució normal</strong></a>.</p>
 <p>Aquesta taula indica la <strong>probabilitat acumulada</strong> de trobar un valor menor que <span class="arithmatex">\(z\)</span>
 en una distribució normal estàndard.</p>
+<div class="arithmatex">\[P(Z \leq z)\]</div>
+<p>El mètode <code>cdf</code> de la classe <code>NormalDist</code> permet calcular la probabilitat acumulada
+de trobar un valor menor o igual que <span class="arithmatex">\(z\)</span> en una distribució normal.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">std_normal_dist</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</span></code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Càlcul de probabilitats alçada d'una població</p>
 <p>Calculem la probabilitat que una persona tinga una alçada entre 160 i 180 cm.</p>
@@ -1805,9 +1901,34 @@ podem calcular la probabilitat acumulada de trobar un valor entre <span class="a
 <div class="arithmatex">\[P(Z \leq -1) = 0.1587\]</div>
 <p>Per tant:</p>
 <div class="arithmatex">\[P(-1 \leq Z \leq 1) = 0.8413 - 0.1587 = 0.6826\]</div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Probability of a person being taller than 160 cm and shorter than 180 cm</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">z1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">160</span> <span class="o">-</span> <span class="mi">170</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">z2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">180</span> <span class="o">-</span> <span class="mi">170</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">p</span> <span class="o">=</span> <span class="n">std_normal_dist</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">z2</span><span class="p">)</span> <span class="o">-</span> <span class="n">std_normal_dist</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">z1</span><span class="p">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Probability of a person being taller than 160 cm and shorter than 180 cm:&quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="result">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Probability of a person being taller than 160 cm and shorter than 180 cm: 0.6826
+</span></code></pre></div>
 </div>
+</div>
+<h2 id="distribucio-conjunta-i-mostral">Distribució conjunta i mostral<a class="headerlink" href="#distribucio-conjunta-i-mostral" title="Permanent link">&para;</a></h2>
+<h3 id="distribucio-conjunta">Distribució conjunta<a class="headerlink" href="#distribucio-conjunta" title="Permanent link">&para;</a></h3>
+<p>La <strong>distribució conjunta</strong> és la distribució de probabilitat de tots
+els possibles valors d'una variable aleatòria en una població.</p>
+<p>En la pràctica, la distribució poblacional és desconeguda, ja que no es molt
+dificil o impossible obtenir tots els valors d'una població.</p>
+<h3 id="distribucio-mostral">Distribució mostral<a class="headerlink" href="#distribucio-mostral" title="Permanent link">&para;</a></h3>
+<p>La <strong>distribució mostral</strong> és la distribució de probabilitat d'una estadística
+calculada a partir d'una mostra aleatòria d'una població.</p>
+<p>Les distribucions mostrals són importants en les estadístiques perquè proporcionen una
+important simplificació abans d'utilitzar la inferència estadística, quan
+obtindre tots els valors d'una població és molt difícil o impossible.</p>
+<p>Normalment, quan major és la mida de la mostra, més s'assembla
+a la distribució la distribució poblacional.</p>
 <h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
+<li><a href="https://cesguiro.es/">Material del mòdul "Sistemes d'Aprenentatge Automàtic"</a> de César Guijarro Rosaleny</li>
 <li><a href="https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_probabilitat">Distribució de probabilitat, Viquipèdia</a></li>
 <li><a href="https://ca.wikipedia.org/wiki/Variable_aleat%C3%B2ria">Variable aleatòria, Viquipèdia</a></li>
 <li><a href="https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_Bernoulli">Distribució de Bernoulli, Viquipèdia</a></li>
@@ -1815,6 +1936,8 @@ podem calcular la probabilitat acumulada de trobar un valor entre <span class="a
 <li><a href="https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_Poisson">Distribució de Poisson, Viquipèdia</a></li>
 <li><a href="https://ca.wikipedia.org/wiki/Distribuci%C3%B3_uniforme_cont%C3%ADnua">Distribució uniforme contínua, Viquipèdia</a></li>
 <li><a href="https://ca.wikipedia.org/wiki/Distribuci%C3%B3_normal">Distribució normal, Viquipèdia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Joint_probability_distribution">Joint Probability Distribution, Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sampling_distribution">Sampling Distribution, Wikipedia</a></li>
 </ul>
     
 
