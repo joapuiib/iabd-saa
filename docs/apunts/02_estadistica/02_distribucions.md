@@ -255,13 +255,17 @@ Alguna de les propietats de la distribució normal són:
 !!! example "Alçada d'una població"
     L'alçada d'una població segueix una distribució normal amb una mitjana de 170 cm i una desviació estàndard de 10 cm.
 
+    !!! note
+        Aquest càlcul es pot fer mitjançant [__unitats tipificades (standard-score)__](#unitat-tipificada-standard-score)
+        i la [__taula de la distribució normal__](https://en.wikipedia.org/wiki/Standard_normal_table#Cumulative_(less_than_Z)){:target="_blank"}.
+
     La probabilitat que una persona triada a l'atzar tinga una alçada entre 160 i 180 cm és:
 
-    $$P(160 \leq X \leq 180) = @TODO = 0.6826$$
+    $$P(160 \leq X \leq 180) = 0.6826$$
 
     La probabilitat que una persona triada a l'atzar tinga una alçada entre 150 i 190 cm és:
 
-    $$P(150 \leq X \leq 190) = @TODO = 0.9772 - 0.0228 = 0.9544$$
+    $$P(150 \leq X \leq 190) = 0.9544$$
 
     ```mermaid
     xychart-beta
@@ -270,6 +274,66 @@ Alguna de les propietats de la distribució normal són:
         y-axis "" 0 --> 5
         line [0.044318, 0.175283, 0.539910, 1.295176, 2.419707, 3.520653, 3.989423, 3.520653, 2.419707, 1.295176, 0.539910, 0.175283, 0.044318]
     ```
+
+#### Unitat tipificada (standard-score)
+La __unitat tipificada (*standard-score o z-score*)__
+és una mesura que serveix per comparar una observació
+dins d'una distribució estadística.
+
+Aquesta unitat indiquen el nombre de desviacions típiques que una observació
+està per damunt o per davall de la mitjana.
+
+La unitat tipificada es calcula com:
+
+$$z = \frac{x - \mu}{\sigma}$$
+
+!!! example "Unitat tipificada de l'alçada"
+    Donada una població amb una mitjana de 170 cm i una desviació estàndard de 10 cm,
+    calculem les unitats tipificades de les alçades 160 i 180 cm.
+
+    1. Per a $x = 160$ cm:
+
+        $$z_1 = \frac{160 - 170}{10} = -1$$
+
+    2. Per a $x = 180$ cm:
+        
+        $$z_2 = \frac{180 - 170}{10} = 1$$
+    
+
+#### Distribució normal estàndard
+La __distribució normal estàndard__ és cas especial d'una distribució normal, que té una mitjana $\mu = 0$
+i una desviació estàndard $\sigma = 1$.
+
+$$X \sim N(0, 1)$$
+
+Aquesta distribució és molt important en estadística, ja que permet calcular
+la probabilitat acumulada de qualsevol distribució normal utilitzant les [__unitats tipificades__](#unitat-tipificada-standard-score)
+i consultat la [__taula de la distribució normal__](https://en.wikipedia.org/wiki/Standard_normal_table#Cumulative_(less_than_Z)){:target="_blank"}.
+
+Aquesta taula indica la __probabilitat acumulada__ de trobar un valor menor que $z$
+en una distribució normal estàndard.
+
+!!! example "Càlcul de probabilitats alçada d'una població"
+    Calculem la probabilitat que una persona tinga una alçada entre 160 i 180 cm.
+
+    Utilitzant les unitats tipificades $z_1 = -1$ i $z_2 = 1$,
+    podem calcular la probabilitat acumulada de trobar un valor entre $z_1$ i $z_2$:
+
+    $$P(-1 \leq Z \leq 1) = P(Z \leq 1) - P(Z \leq -1)$$
+
+    Consultem la taula de la distribució normal estàndard:
+
+    $$P(Z \leq 1) = 0.8413$$
+
+    $$P(Z \leq -1) = 0.1587$$
+
+    Per tant:
+
+    $$P(-1 \leq Z \leq 1) = 0.8413 - 0.1587 = 0.6826$$
+
+
+
+
 
 
 ## Bibliografia
