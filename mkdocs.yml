@@ -106,6 +106,8 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.blocks.html
+  - pymdownx.caret
+  - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:material_joapuiib.extensions.emoji.twemoji
@@ -119,6 +121,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink
+  - pymdownx.mark
   - pymdownx.saneheaders
   - pymdownx.snippets
   - pymdownx.superfences:
@@ -130,6 +133,7 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tilde
   - toc:
       permalink: true
       toc_depth: 4

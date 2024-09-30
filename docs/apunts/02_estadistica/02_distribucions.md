@@ -351,7 +351,14 @@ en una distribució normal estàndard.
 
 $$P(Z \leq z)$$
 
-El mètode `cdf` de la classe `NormalDist` permet calcular la probabilitat acumulada
+<figure>
+    <img src="../img/normal_cdf.jpg" alt="CDF de la distribució normal estàndard" style="max-height: 300px">
+    <figcaption class="attribution">www.a-levelmathstutor.com</figcaption>
+    <figcaption>CDF de la distribució normal estàndard</figcaption>
+</figure>
+
+El mètode [`cdf`](https://docs.python.org/3.8/library/statistics.html?highlight=normaldist#statistics.NormalDist.cdf){:target="_blank"}
+de la classe `NormalDist` permet calcular la probabilitat acumulada
 de trobar un valor menor o igual que $z$ en una distribució normal.
 
 ```python
@@ -550,8 +557,134 @@ aquesta distribució s'assembla més a la __distribució conjunta__ a mesura que
     ///
 
 ## Contrast d'hipòtesis
+En molts estudis estadístics, l'objectiu és comprovar si una afirmació sobre una població és certa o no.
+
+En general, és impossible provar que una afirmació és certa al 100%, ja que caldria conèixer tots els valors de la població.
+
+Per tant, el que es fa és __contrastar hipòtesis__ sobre la població, on es tracta de comprovar si una afirmació és probable o no.
+
+Aquest procés tracta de pendre una decisió sobre dues hipòtesis:
+
+- __Hipòtesi nul·la ($H_0$)__: És la hipòtesi que s'accepta provisionalment.
+- __Hipòtesi alternativa ($H_1$)__: És la hipòtesi contrària.
+
+
+!!! example "Hores d'esport a la setmana"
+    Un estudi afirma que la població dedica més de 5 hores setmana a fer esport, amb una desviació estàndard de 4 hores.
+
+    Sospitem que aquesta afirmació és falsa, i volem contrastar-la amb una mostra de 20 persones.
+
+    $$X = \{7, 6, 4, 3, 1, 9, 8, 7, 3, 1, 1,0, 9, 4, 3, 2, 1, 5, 5, 6, 4\}$$
+
+    Les hipòtesis són:
+
+    - $H_0 = \mu \geq 5$: La mitjana de les hores d'esport és major o igual a 5.
+    - $H_1 = \mu < 5$: La mitjana de les hores d'esport és menor que 5.
+
+    Per comprovar-ho, primer hem de triar un [__nivell de significació__ $\alpha$](https://ca.wikipedia.org/wiki/Significaci%C3%B3_estad%C3%ADstica){:target="_blank"},
+    que marcarà els límits entre la regió d'__acceptació__ i la regió de __rebuig__.
+
+    Un valor comú és $\alpha = 0.05$.
+
+    Calculem la `z-score` de $\alpha$, que marcarà el límit de la regió de rebuig en una [distribució normal estàndard](#distribucio-normal-estandard).
+
+    ```python
+    #!/usr/bin/env python3
+
+    from statistics import NormalDist
+
+    alpha = 0.05
+    z_alpha = round(NormalDist().inv_cdf(alpha), 2)
+    print("Z-score de alpha:", z_alpha)
+    ```
+    /// html | div.result
+    ```text
+    Z-score de alpha: -1.64
+    ```
+    ///
+
+    ![Regions d'accetació i rebuig](img/hypothesis_test.png){: .center style="max-height: 300px"}
+
+    El següent pas és calcular la `z-score` de la mitjana de la mostra, que ens indicarà si la mitjana de la mostra
+    és dins de la regió d'acceptació o de rebuig.
+
+    !!! note
+        S'utilitza la [desviació estàndard de la mostra](https://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean){:target="_blank"}.
+
+        $$\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}$$
+
+        Per tant, el càlcul de la `z-score` de la mitjana de la mostra és:
+
+        $$Z_{\bar{X}} = \frac{\bar{X} - \mu}{\sigma_{\bar{X}}} = \frac{\bar{X} - \mu}{\frac{\sigma}{\sqrt{n}}}$$
+
+    ```python
+    import numpy as np
+
+    # Mostra
+    X = np.array([7, 6, 4, 3, 1, 9, 8, 7, 3, 1, 1, 0, 9, 4, 3, 2, 1, 5, 5, 6, 4])
+
+    # Mitjana i desviació estàndard de la mostra
+    mean = X.mean()
+    std = X.std()
+
+    # Z-score de la mitjana de la mostra
+    z = (mean - 5) / (std / np.sqrt(len(X)))
+    print("Mitjana de la mostra:", mean)
+    print("Z-score de la mitjana de la mostra:", round(z, 2))
+    ```
+    /// html | div.result
+    ```text
+    Mitjana de la mostra: 4.238095238095238
+    Z-score de la mitjana de la mostra: -1.3
+    ```
+    ///
+
+    Per últim, comparem la `z-score` de la mitjana de la mostra amb la `z-score` de $\alpha$.
+
+    Si la `z-score` de la mitjana de la mostra és menor que la `z-score` de $\alpha$, rebutgem la hipòtesi nul·la.
+
+    ```python
+    # Comprovació de la hipòtesi
+    p_value = NormalDist().cdf(z)
+    print(f"Z-score de la mitjana de la mostra: {round(z, 2)} (p_value: {round(p_value, 4)})")
+    print(f"Z-score de alpha: {z_alpha} (significancia: {alpha})")
+    if z < z_alpha:
+        print("Rebutgem la hipòtesi nul·la")
+    else:
+        print("Acceptem la hipòtesi nul·la")
+    ```
+    /// html | div.result
+    ```text
+    Z-score de la mitjana de la mostra: -1.3 (p_value: 0.097)
+    Z-score de alpha: -1.64 (0.05)
+    Acceptem la hipòtesi nul·la
+    ```
+    ///
+
+    Com que la $Z_{\bar{X}}$
+    i el [valor p](https://ca.wikipedia.org/wiki/Valor_p){:target="_blank"}
+    són majors que la de $Z_\alpha$ i $\alpha$ respectivament,
+    acceptem la hipòtesi nul·la, és a dir, la mitjana de les hores d'esport és major o igual a 5.
+
+!!! warning
+    Existeixen moltes proves estadístiques de contrast d'hipòtesis,
+    segons les dades i la naturalesa del problema.
+
+!!! danger
+    El [valor p](https://ca.wikipedia.org/wiki/Valor_p){:target="_blank"} no indica el percentatge de certesa de la hipòtesi.
+
+    En l'exemple anterior, no podem afirmar amb un 90.3% de certesa que la mitjana de les hores d'esport és major o igual a 5,
+
+    Realment, el valor p indica la probabilitat de trobar la mitjana que hem obtingut
+    ^^__assumint que la hipòtesi nul·la és certa__^^.
+
+    Per tant, si el valor p és molt baix, podem rebutjar la hipòtesi nul·la.
+
 
 ## Covariància i correlació
+
+
+
 
 ## Codi font
 - [normal.py](../../files/ud2/normal.py){: download="normal.py"}
@@ -571,6 +704,14 @@ aquesta distribució s'assembla més a la __distribució conjunta__ a mesura que
     ```
     ///
 
+- [contrast_hipotesi.py](../../files/ud2/contrast_hipotesi.py){: download="contrast_hipotesi.py"}
+
+    /// collapse-code
+    ```python
+    --8<-- "docs/files/ud2/contrast_hipotesi.py"
+    ```
+    ///
+
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/) de César Guijarro Rosaleny
 - [Distribució de probabilitat, Viquipèdia](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_probabilitat)
@@ -583,3 +724,5 @@ aquesta distribució s'assembla més a la __distribució conjunta__ a mesura que
 - [Joint Probability Distribution, Wikipedia](https://en.wikipedia.org/wiki/Joint_probability_distribution)
 - [Sampling Distribution, Wikipedia](https://en.wikipedia.org/wiki/Sampling_distribution)
 - [Teorema del límit central, Viquipèdia](https://ca.wikipedia.org/wiki/Teorema_del_l%C3%ADmit_central)
+- [Significació estadística, Viquipèdia](https://ca.wikipedia.org/wiki/Significaci%C3%B3_estad%C3%ADstica)
+- [Valor p, Viquipèdia](https://ca.wikipedia.org/wiki/Valor_p)
