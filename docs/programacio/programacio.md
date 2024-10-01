@@ -52,13 +52,14 @@ _Control de versions:_
 | --- | --- |
 | 2024-09-18 | Primera versió |
 | 2024-09-24 | Correccions a l'apartat Avaluació |
+| 2024-10-01 | Proposta de millora del curs anterior |
 
 ## 1. Propostes de millora del curs anterior
 Les propostes de millora del curs anterior i les accions realitzades són les següents:
 
 - __Incorporar conceptes d'estadística bayesiana, sobretot en les mètriques dels models de classificació.__
 
-    @TODO
+    En la mesura del possible, es tractarà d'introduïr algun concepte d'estadística bayesiana.
 
 ## 2. Marc normatiu
 - [Llei Orgànica 3/2022, de 31 de març, d'ordenació i integració de la Formació
