@@ -867,6 +867,66 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#unitat-tipificada-standard-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unitat tipificada (standard-score)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#covariancia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Covariància
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlació
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Correlació">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correlacio-de-pearson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlació de Pearson
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlacio-de-spearman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlació de Spearman
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlacio-de-kendall" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlació de Kendall
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#codi-font" class="md-nav__link">
     <span class="md-ellipsis">
       Codi font
@@ -1150,6 +1210,66 @@
   <a href="#decils" class="md-nav__link">
     <span class="md-ellipsis">
       Decils
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unitat-tipificada-standard-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unitat tipificada (standard-score)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#covariancia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Covariància
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correlacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlació
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Correlació">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#correlacio-de-pearson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlació de Pearson
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlacio-de-spearman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlació de Spearman
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlacio-de-kendall" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlació de Kendall
     </span>
   </a>
   
@@ -1809,90 +1929,268 @@ que una proporció determinada de valors queda a cada costat del quantil.</p>
 </span></code></pre></div>
 </div>
 </div>
+<h2 id="unitat-tipificada-standard-score">Unitat tipificada (standard-score)<a class="headerlink" href="#unitat-tipificada-standard-score" title="Permanent link">&para;</a></h2>
+<p>La <strong>unitat tipificada (<em>standard-score o z-score</em>)</strong>
+és una mesura que serveix per comparar una observació
+dins d'una distribució estadística.</p>
+<p>Aquesta unitat indiquen el nombre de desviacions típiques
+que una observació està per damunt o per davall de la mitjana.</p>
+<p>És molt útil per a comparar observacions de diferents distribucions,
+ja que el seu valor no depén de les unitats de les variables.</p>
+<p>La unitat tipificada es calcula com:</p>
+<div class="arithmatex">\[z = \frac{x - \mu}{\sigma}\]</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Donada la població de persones <span class="arithmatex">\(X={20,20,50,60,80}\)</span>:</p>
+<ul>
+<li>La mitjana és <span class="arithmatex">\(\mu = 46\)</span>.</li>
+<li>La desviació estàndard és <span class="arithmatex">\(\sigma = 23.9\)</span>.</li>
+</ul>
+<p>Per cada observació de la població, calculem la unitat tipificada:</p>
+<div class="arithmatex">\[
+z_i = \frac{x_i - \mu}{\sigma}
+\]</div>
+<p>La població amb les seues unitats tipificades és:</p>
+<div class="arithmatex">\[
+Z = \{ -1.087, -1.087, 0.1673, 0.5858, 1.4226 \}
+\]</div>
+</div>
+<h2 id="covariancia">Covariància<a class="headerlink" href="#covariancia" title="Permanent link">&para;</a></h2>
+<p>La <strong>covariància</strong> és una mesura de la relació entre dues variables.</p>
+<div class="arithmatex">\[
+S_{XY} = \frac{1}{N - ddof} \sum_{i=1}^{N} (x_i - \bar{X}) (y_i - \bar{Y})
+\]</div>
+<p>on <span class="arithmatex">\(ddof\)</span> és el grau de llibertat, que normalment és 1.</p>
+<p>Aquesta mesura indica si les dues variables són independents o si tenen una relació lineal.</p>
+<ul>
+<li>Si <span class="arithmatex">\(S_{XY} \gt 0\)</span> és <strong>positiva</strong>, les dues variables són <strong>directament proporcionals</strong>.</li>
+<li>Si <span class="arithmatex">\(S_{XY} \lt 0\)</span> és <strong>negativa</strong>, les dues variables són <strong>inversament proporcionals</strong>.</li>
+<li>Si <span class="arithmatex">\(S_{XY} \approx 0\)</span> és <strong>zero</strong>, les dues variables són <strong>independents</strong>.</li>
+</ul>
+<figure id=figure-3>
+    <a class="glightbox" href="../img/cov_positiu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/cov_positiu.png" alt="Dues variables directament proporcionals"></a>
+    <figcaption class="attribution">Autor desconegut</figcaption>
+    <figcaption>Figura 3: Dues variables directament proporcionals</figcaption>
+</figure>
+
+<figure id=figure-4>
+    <a class="glightbox" href="../img/cov_negatiu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/cov_negatiu.png" alt="Dues variables inversament proporcionals"></a>
+    <figcaption class="attribution">Autor desconegut</figcaption>
+    <figcaption>Figura 4: Dues variables inversament proporcionals</figcaption>
+</figure>
+
+<p>La <a href="https://ca.wikipedia.org/wiki/Matriu_de_covari%C3%A0ncia"><strong>matriu de covariància</strong></a>
+és una taula que conté les covariàncies entre totes les parelles de variables d'un conjunt de dades.</p>
+<p>En Python, podem utilitzar la funció <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.cov.html" target="_blank"><code>cov()</code></a>
+de Pandas per a calcular la covariància entre les <strong>columnes</strong> d'un DataFrame.</p>
+<p>Per defecte, <code>cov()</code> utilitza el grau de llibertat <code>ddof</code> igual a 1.</p>
+<div class="admonition example">
+<p class="admonition-title">Covariància en Python</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>        <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame:&quot;</span><span class="p">)</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="n">cov</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">cov</span><span class="p">()</span>
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriu de covariància:&quot;</span><span class="p">)</span>
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">cov</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="result">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>DataFrame:
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>   0  1  2
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>0  5  6  7
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>1  2  6  9
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>Matriu de covariància:
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>     0    1    2
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>0  4.5  0.0 -3.0
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>1  0.0  0.0  0.0
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>2 -3.0  0.0  2.0
+</span></code></pre></div>
+</div>
+<div class="arithmatex">\[
+M_{0,0} = \frac{1}{2 - 1}((5 - 3.5)(5 - 3.5) + (2 - 5)(2 - 5)) = 4.5 \\
+M_{0,1} = \frac{1}{2 - 1}((5 - 3.5)(6 - 6) + (2 - 5)(6 - 6)) = 0.0 \\
+M_{0,2} = \frac{1}{2 - 1}((5 - 3.5)(7 - 6.5) + (2 - 5)(9 - 6.5)) = -3.0 \\
+...
+\]</div>
+</div>
+<h2 id="correlacio">Correlació<a class="headerlink" href="#correlacio" title="Permanent link">&para;</a></h2>
+<p>Similar a la covariància, la <strong>correlació</strong> és una mesura <strong>normalitzada</strong>
+de la relació entre dues variables.</p>
+<p>La diferència principal és que el valor de la covariància depèn
+de les unitats de les variables, i té una difícil interpretació.</p>
+<p>En canvi, la correlació <span class="arithmatex">\(r\)</span> és un valor que oscil·la entre -1 i 1 en qualsevol cas,
+que facilita la seua interpretació.</p>
+<ul>
+<li>Si <span class="arithmatex">\(r = 1\)</span> les dues variables tenen una <strong>correlació positiva perfecta</strong>.</li>
+<li>Si <span class="arithmatex">\(r = -1\)</span> les dues variables tenen una <strong>correlació negativa perfecta</strong>.</li>
+<li>Si <span class="arithmatex">\(r = 0\)</span> les dues variables són <strong>independents</strong>.</li>
+</ul>
+<p>Quan <span class="arithmatex">\(r\)</span> més s'aproxima a 1 o -1, més forta és la relació entre les dues variables.</p>
+<p>Els tipus de correlació més comuns són <strong>Pearson</strong>, <strong>Rho de Spearman</strong> i <strong>Tau de Kendall</strong>.</p>
+<h3 id="correlacio-de-pearson">Correlació de Pearson<a class="headerlink" href="#correlacio-de-pearson" title="Permanent link">&para;</a></h3>
+<p>La <strong>correlació de Pearson</strong> és la covariància calculada
+a partir de les puntuacions estandarditzades de les variables.</p>
+<p>Aquesta mesura funciona bé amb variables quantitatives que tenen una distribució normal
+o similar. És més sensible als valors extremos que les altres dues alternatives.</p>
+<div class="arithmatex">\[
+r_{xy} = S(z_x, z_y)
+\]</div>
+<p>Aquesta expressió s'expandeix com:</p>
+<div class="arithmatex">\[
+r_{xy} = \frac{1}{N} \sum_{i=1}^{N} \left( \frac{x_i - \bar{X}}{\sigma_X} \right) \left( \frac{y_i - \bar{Y}}{\sigma_Y} \right) \\
+r_{xy} = \frac{1}{N} \frac{\sum_{i=1}^{N} (x_i - \bar{X})(y_i - \bar{Y})}{\sigma_X \sigma_Y}
+\]</div>
+<p>Arribant a la simplificació:</p>
+<div class="arithmatex">\[
+r_{xy} = \frac{S_{XY}}{\sigma_X \sigma_Y}
+\]</div>
+<p>Aquesta fórmula pots ser interpretada com la covariància dividida
+pel producte de les desviacions estàndard de les dues variables.</p>
+<p>En Python, podem utilitzar la funció <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html" target="_blank"><code>corr()</code></a>
+amb l'argument <code>method='pearson'</code> (valor per defecte) per a calcular la correlació de Pearson.</p>
+<div class="admonition example">
+<p class="admonition-title">Correlació de Pearson en Python</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">corr</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Correlació de Pearson:&quot;</span><span class="p">)</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">corr</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="result">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Correlació de Pearson:
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>     0   1    2
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>0  1.0 NaN -1.0
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>1  NaN NaN  NaN
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>2 -1.0 NaN  1.0
+</span></code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><code>NaN</code> indica que no es pot calcular la correlació
+quan una de les variables té desviació estàndard zero,
+és a dir, és constant.</p>
+</div>
+</div>
+<h3 id="correlacio-de-spearman">Correlació de Spearman<a class="headerlink" href="#correlacio-de-spearman" title="Permanent link">&para;</a></h3>
+<p>La <strong>correlació de Spearman</strong> és </p>
+<p>@TODO</p>
+<h3 id="correlacio-de-kendall">Correlació de Kendall<a class="headerlink" href="#correlacio-de-kendall" title="Permanent link">&para;</a></h3>
+<p>@TODO</p>
 <h2 id="codi-font">Codi font<a class="headerlink" href="#codi-font" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><a download="estadistica_basica.py" href="../../../files/ud2/estadistica_basica.py">estadistica_basica.py</a></p>
-<div class="collapse-code"><input checked="checked" id="__collapse0" name="__collapse0" type="checkbox" /><div class="language-python highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="ch">#!/usr/bin/env python3</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;A&quot;</span><span class="p">:[</span><span class="mi">12</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span>  <span class="mi">1</span><span class="p">],</span>
-</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>                   <span class="s2">&quot;B&quot;</span><span class="p">:[</span> <span class="mi">5</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">2</span><span class="p">],</span>
-</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>                   <span class="s2">&quot;C&quot;</span><span class="p">:[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">8</span><span class="p">],</span>
-</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>                   <span class="s2">&quot;D&quot;</span><span class="p">:[</span><span class="mi">14</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">14</span><span class="p">]})</span>
-</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>
-</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame:&quot;</span><span class="p">)</span>
-</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>
-</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="c1"># axis = 0 calculará la mitjana de cada columna (A, B, C, D)</span>
-</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="n">column_mean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
-</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mitjana de cada columna:&quot;</span><span class="p">)</span>
-</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">column_mean</span><span class="p">)</span>
-</span><span id="__span-20-17"><a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>
-</span><span id="__span-20-18"><a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a><span class="c1"># axis = 1 calculará la mitjana de cada fila (0, 1, 2, 3, 4)</span>
-</span><span id="__span-20-19"><a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a><span class="n">row_mean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-20-20"><a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mitjana de cada fila:&quot;</span><span class="p">)</span>
-</span><span id="__span-20-21"><a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a><span class="nb">print</span><span class="p">(</span><span class="n">row_mean</span><span class="p">)</span>
-</span><span id="__span-20-22"><a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a>
-</span><span id="__span-20-23"><a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a><span class="n">mean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</span><span id="__span-20-24"><a id="__codelineno-20-24" name="__codelineno-20-24" href="#__codelineno-20-24"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mitjana de la primera fila:&quot;</span><span class="p">)</span>
-</span><span id="__span-20-25"><a id="__codelineno-20-25" name="__codelineno-20-25" href="#__codelineno-20-25"></a><span class="nb">print</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
-</span><span id="__span-20-26"><a id="__codelineno-20-26" name="__codelineno-20-26" href="#__codelineno-20-26"></a>
-</span><span id="__span-20-27"><a id="__codelineno-20-27" name="__codelineno-20-27" href="#__codelineno-20-27"></a><span class="n">mean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s2">&quot;A&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</span><span id="__span-20-28"><a id="__codelineno-20-28" name="__codelineno-20-28" href="#__codelineno-20-28"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mitjana de la columna A:&quot;</span><span class="p">)</span>
-</span><span id="__span-20-29"><a id="__codelineno-20-29" name="__codelineno-20-29" href="#__codelineno-20-29"></a><span class="nb">print</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
-</span><span id="__span-20-30"><a id="__codelineno-20-30" name="__codelineno-20-30" href="#__codelineno-20-30"></a>
-</span><span id="__span-20-31"><a id="__codelineno-20-31" name="__codelineno-20-31" href="#__codelineno-20-31"></a><span class="n">median</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
-</span><span id="__span-20-32"><a id="__codelineno-20-32" name="__codelineno-20-32" href="#__codelineno-20-32"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mediana de cada columna:&quot;</span><span class="p">)</span>
-</span><span id="__span-20-33"><a id="__codelineno-20-33" name="__codelineno-20-33" href="#__codelineno-20-33"></a><span class="nb">print</span><span class="p">(</span><span class="n">median</span><span class="p">)</span>
-</span><span id="__span-20-34"><a id="__codelineno-20-34" name="__codelineno-20-34" href="#__codelineno-20-34"></a>
-</span><span id="__span-20-35"><a id="__codelineno-20-35" name="__codelineno-20-35" href="#__codelineno-20-35"></a><span class="n">mode</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
-</span><span id="__span-20-36"><a id="__codelineno-20-36" name="__codelineno-20-36" href="#__codelineno-20-36"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moda de cada columna:&quot;</span><span class="p">)</span>
-</span><span id="__span-20-37"><a id="__codelineno-20-37" name="__codelineno-20-37" href="#__codelineno-20-37"></a><span class="nb">print</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span>
-</span><span id="__span-20-38"><a id="__codelineno-20-38" name="__codelineno-20-38" href="#__codelineno-20-38"></a>
-</span><span id="__span-20-39"><a id="__codelineno-20-39" name="__codelineno-20-39" href="#__codelineno-20-39"></a><span class="n">variance</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
-</span><span id="__span-20-40"><a id="__codelineno-20-40" name="__codelineno-20-40" href="#__codelineno-20-40"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variança de cada columna:&quot;</span><span class="p">)</span>
-</span><span id="__span-20-41"><a id="__codelineno-20-41" name="__codelineno-20-41" href="#__codelineno-20-41"></a><span class="nb">print</span><span class="p">(</span><span class="n">variance</span><span class="p">)</span>
-</span><span id="__span-20-42"><a id="__codelineno-20-42" name="__codelineno-20-42" href="#__codelineno-20-42"></a>
-</span><span id="__span-20-43"><a id="__codelineno-20-43" name="__codelineno-20-43" href="#__codelineno-20-43"></a><span class="n">std</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-</span><span id="__span-20-44"><a id="__codelineno-20-44" name="__codelineno-20-44" href="#__codelineno-20-44"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Desviació estàndard de cada columna:&quot;</span><span class="p">)</span>
-</span><span id="__span-20-45"><a id="__codelineno-20-45" name="__codelineno-20-45" href="#__codelineno-20-45"></a><span class="nb">print</span><span class="p">(</span><span class="n">std</span><span class="p">)</span>
+<div class="collapse-code"><input checked="checked" id="__collapse0" name="__collapse0" type="checkbox" /><div class="language-python highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="ch">#!/usr/bin/env python3</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;A&quot;</span><span class="p">:[</span><span class="mi">12</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span>  <span class="mi">1</span><span class="p">],</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>                   <span class="s2">&quot;B&quot;</span><span class="p">:[</span> <span class="mi">5</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">2</span><span class="p">],</span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>                   <span class="s2">&quot;C&quot;</span><span class="p">:[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">8</span><span class="p">],</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>                   <span class="s2">&quot;D&quot;</span><span class="p">:[</span><span class="mi">14</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">14</span><span class="p">]})</span>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame:&quot;</span><span class="p">)</span>
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a><span class="c1"># axis = 0 calculará la mitjana de cada columna (A, B, C, D)</span>
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a><span class="n">column_mean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mitjana de cada columna:&quot;</span><span class="p">)</span>
+</span><span id="__span-24-16"><a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">column_mean</span><span class="p">)</span>
+</span><span id="__span-24-17"><a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a>
+</span><span id="__span-24-18"><a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a><span class="c1"># axis = 1 calculará la mitjana de cada fila (0, 1, 2, 3, 4)</span>
+</span><span id="__span-24-19"><a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a><span class="n">row_mean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-24-20"><a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mitjana de cada fila:&quot;</span><span class="p">)</span>
+</span><span id="__span-24-21"><a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a><span class="nb">print</span><span class="p">(</span><span class="n">row_mean</span><span class="p">)</span>
+</span><span id="__span-24-22"><a id="__codelineno-24-22" name="__codelineno-24-22" href="#__codelineno-24-22"></a>
+</span><span id="__span-24-23"><a id="__codelineno-24-23" name="__codelineno-24-23" href="#__codelineno-24-23"></a><span class="n">mean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-24-24"><a id="__codelineno-24-24" name="__codelineno-24-24" href="#__codelineno-24-24"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mitjana de la primera fila:&quot;</span><span class="p">)</span>
+</span><span id="__span-24-25"><a id="__codelineno-24-25" name="__codelineno-24-25" href="#__codelineno-24-25"></a><span class="nb">print</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
+</span><span id="__span-24-26"><a id="__codelineno-24-26" name="__codelineno-24-26" href="#__codelineno-24-26"></a>
+</span><span id="__span-24-27"><a id="__codelineno-24-27" name="__codelineno-24-27" href="#__codelineno-24-27"></a><span class="n">mean</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s2">&quot;A&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-24-28"><a id="__codelineno-24-28" name="__codelineno-24-28" href="#__codelineno-24-28"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mitjana de la columna A:&quot;</span><span class="p">)</span>
+</span><span id="__span-24-29"><a id="__codelineno-24-29" name="__codelineno-24-29" href="#__codelineno-24-29"></a><span class="nb">print</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
+</span><span id="__span-24-30"><a id="__codelineno-24-30" name="__codelineno-24-30" href="#__codelineno-24-30"></a>
+</span><span id="__span-24-31"><a id="__codelineno-24-31" name="__codelineno-24-31" href="#__codelineno-24-31"></a><span class="n">median</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</span><span id="__span-24-32"><a id="__codelineno-24-32" name="__codelineno-24-32" href="#__codelineno-24-32"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mediana de cada columna:&quot;</span><span class="p">)</span>
+</span><span id="__span-24-33"><a id="__codelineno-24-33" name="__codelineno-24-33" href="#__codelineno-24-33"></a><span class="nb">print</span><span class="p">(</span><span class="n">median</span><span class="p">)</span>
+</span><span id="__span-24-34"><a id="__codelineno-24-34" name="__codelineno-24-34" href="#__codelineno-24-34"></a>
+</span><span id="__span-24-35"><a id="__codelineno-24-35" name="__codelineno-24-35" href="#__codelineno-24-35"></a><span class="n">mode</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+</span><span id="__span-24-36"><a id="__codelineno-24-36" name="__codelineno-24-36" href="#__codelineno-24-36"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moda de cada columna:&quot;</span><span class="p">)</span>
+</span><span id="__span-24-37"><a id="__codelineno-24-37" name="__codelineno-24-37" href="#__codelineno-24-37"></a><span class="nb">print</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span>
+</span><span id="__span-24-38"><a id="__codelineno-24-38" name="__codelineno-24-38" href="#__codelineno-24-38"></a>
+</span><span id="__span-24-39"><a id="__codelineno-24-39" name="__codelineno-24-39" href="#__codelineno-24-39"></a><span class="n">variance</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
+</span><span id="__span-24-40"><a id="__codelineno-24-40" name="__codelineno-24-40" href="#__codelineno-24-40"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variança de cada columna:&quot;</span><span class="p">)</span>
+</span><span id="__span-24-41"><a id="__codelineno-24-41" name="__codelineno-24-41" href="#__codelineno-24-41"></a><span class="nb">print</span><span class="p">(</span><span class="n">variance</span><span class="p">)</span>
+</span><span id="__span-24-42"><a id="__codelineno-24-42" name="__codelineno-24-42" href="#__codelineno-24-42"></a>
+</span><span id="__span-24-43"><a id="__codelineno-24-43" name="__codelineno-24-43" href="#__codelineno-24-43"></a><span class="n">std</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</span><span id="__span-24-44"><a id="__codelineno-24-44" name="__codelineno-24-44" href="#__codelineno-24-44"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Desviació estàndard de cada columna:&quot;</span><span class="p">)</span>
+</span><span id="__span-24-45"><a id="__codelineno-24-45" name="__codelineno-24-45" href="#__codelineno-24-45"></a><span class="nb">print</span><span class="p">(</span><span class="n">std</span><span class="p">)</span>
 </span></code></pre></div>
 <div class="code-footer"><label class="expand" for="__collapse0" tabindex="0"></label><label class="collapse" for="__collapse0" tabindex="0"></label></div>
 </div>
 </li>
 <li>
 <p><a download="quantils.py" href="../../../files/ud2/quantils.py">quantils.py</a></p>
-<div class="collapse-code"><input checked="checked" id="__collapse1" name="__collapse1" type="checkbox" /><div class="language-python highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="ch">#!/usr/bin/env python3</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
-</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="n">edats</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>    <span class="mi">34</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span>  <span class="mi">23</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span>
-</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>    <span class="mi">51</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span>  <span class="mi">32</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span>
-</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>    <span class="mi">73</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span>  <span class="mi">78</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span>
-</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>    <span class="mi">62</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span>
-</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>    <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span>  <span class="mi">19</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span>
-</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>    <span class="mi">18</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">18</span>
-</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="p">]</span>
-</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>
-</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">edats</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;edat&#39;</span><span class="p">])</span>
-</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="n">percentils</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">])</span>
-</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Percentils:&quot;</span><span class="p">)</span>
-</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">percentils</span><span class="p">)</span>
-</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>
-</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>
-</span><span id="__span-21-21"><a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a><span class="n">quartils</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">])</span>
-</span><span id="__span-21-22"><a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Quartils:&quot;</span><span class="p">)</span>
-</span><span id="__span-21-23"><a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a><span class="nb">print</span><span class="p">(</span><span class="n">quartils</span><span class="p">)</span>
-</span><span id="__span-21-24"><a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a>
-</span><span id="__span-21-25"><a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a><span class="n">decils</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">))</span>
-</span><span id="__span-21-26"><a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Decils:&quot;</span><span class="p">)</span>
-</span><span id="__span-21-27"><a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a><span class="nb">print</span><span class="p">(</span><span class="n">decils</span><span class="p">)</span>
+<div class="collapse-code"><input checked="checked" id="__collapse1" name="__collapse1" type="checkbox" /><div class="language-python highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="ch">#!/usr/bin/env python3</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="n">edats</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>    <span class="mi">34</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span>  <span class="mi">23</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>    <span class="mi">51</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span>  <span class="mi">32</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span>
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>    <span class="mi">73</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span>  <span class="mi">78</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span>
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>    <span class="mi">62</span><span class="p">,</span> <span class="mi">52</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">108</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span>
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>    <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span>  <span class="mi">19</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span>
+</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>    <span class="mi">18</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">18</span>
+</span><span id="__span-25-13"><a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a><span class="p">]</span>
+</span><span id="__span-25-14"><a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>
+</span><span id="__span-25-15"><a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">edats</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;edat&#39;</span><span class="p">])</span>
+</span><span id="__span-25-16"><a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a><span class="n">percentils</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.20</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">])</span>
+</span><span id="__span-25-17"><a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Percentils:&quot;</span><span class="p">)</span>
+</span><span id="__span-25-18"><a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">percentils</span><span class="p">)</span>
+</span><span id="__span-25-19"><a id="__codelineno-25-19" name="__codelineno-25-19" href="#__codelineno-25-19"></a>
+</span><span id="__span-25-20"><a id="__codelineno-25-20" name="__codelineno-25-20" href="#__codelineno-25-20"></a>
+</span><span id="__span-25-21"><a id="__codelineno-25-21" name="__codelineno-25-21" href="#__codelineno-25-21"></a><span class="n">quartils</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">])</span>
+</span><span id="__span-25-22"><a id="__codelineno-25-22" name="__codelineno-25-22" href="#__codelineno-25-22"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Quartils:&quot;</span><span class="p">)</span>
+</span><span id="__span-25-23"><a id="__codelineno-25-23" name="__codelineno-25-23" href="#__codelineno-25-23"></a><span class="nb">print</span><span class="p">(</span><span class="n">quartils</span><span class="p">)</span>
+</span><span id="__span-25-24"><a id="__codelineno-25-24" name="__codelineno-25-24" href="#__codelineno-25-24"></a>
+</span><span id="__span-25-25"><a id="__codelineno-25-25" name="__codelineno-25-25" href="#__codelineno-25-25"></a><span class="n">decils</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">))</span>
+</span><span id="__span-25-26"><a id="__codelineno-25-26" name="__codelineno-25-26" href="#__codelineno-25-26"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Decils:&quot;</span><span class="p">)</span>
+</span><span id="__span-25-27"><a id="__codelineno-25-27" name="__codelineno-25-27" href="#__codelineno-25-27"></a><span class="nb">print</span><span class="p">(</span><span class="n">decils</span><span class="p">)</span>
 </span></code></pre></div>
 <div class="code-footer"><label class="expand" for="__collapse1" tabindex="0"></label><label class="collapse" for="__collapse1" tabindex="0"></label></div>
+</div>
+</li>
+<li>
+<p><a download="covariancia.py" href="../../../files/ud2/covariancia.py">covariancia.py</a></p>
+<div class="collapse-code"><input checked="checked" id="__collapse2" name="__collapse2" type="checkbox" /><div class="language-python highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="ch">#!/usr/bin/env python3</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>        <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame:&quot;</span><span class="p">)</span>
+</span><span id="__span-26-10"><a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span><span id="__span-26-11"><a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-26-12"><a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a>
+</span><span id="__span-26-13"><a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a><span class="n">cov</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">cov</span><span class="p">()</span>
+</span><span id="__span-26-14"><a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriu de covariància:&quot;</span><span class="p">)</span>
+</span><span id="__span-26-15"><a id="__codelineno-26-15" name="__codelineno-26-15" href="#__codelineno-26-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">cov</span><span class="p">)</span>
+</span><span id="__span-26-16"><a id="__codelineno-26-16" name="__codelineno-26-16" href="#__codelineno-26-16"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-26-17"><a id="__codelineno-26-17" name="__codelineno-26-17" href="#__codelineno-26-17"></a>
+</span><span id="__span-26-18"><a id="__codelineno-26-18" name="__codelineno-26-18" href="#__codelineno-26-18"></a><span class="n">pearson</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;pearson&#39;</span><span class="p">)</span>
+</span><span id="__span-26-19"><a id="__codelineno-26-19" name="__codelineno-26-19" href="#__codelineno-26-19"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Correlació de Pearson:&quot;</span><span class="p">)</span>
+</span><span id="__span-26-20"><a id="__codelineno-26-20" name="__codelineno-26-20" href="#__codelineno-26-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">pearson</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="code-footer"><label class="expand" for="__collapse2" tabindex="0"></label><label class="collapse" for="__collapse2" tabindex="0"></label></div>
 </div>
 </li>
 </ul>
@@ -1900,6 +2198,8 @@ que una proporció determinada de valors queda a cada costat del quantil.</p>
 <ul>
 <li><a href="https://cesguiro.es/">Material del mòdul "Sistemes d'Aprenentatge Automàtic"</a> de César Guijarro Rosaleny</li>
 <li><a href="https://ca.wikipedia.org/wiki/Quantil">Quantil, Viquipèdia</a></li>
+<li><a href="https://ca.wikipedia.org/wiki/Covari%C3%A0ncia">Covalència, Viquipèdia</a></li>
+<li><a href="https://ca.wikipedia.org/wiki/Matriu_de_covari%C3%A0ncia">Matriu de covariància, Viquipèdia</a></li>
 </ul>
     
 
@@ -1921,7 +2221,7 @@ que una proporció determinada de valors queda a cada costat del quantil.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">29 de setembre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">1 d’octubre del 2024</span>
   </span>
 
     
