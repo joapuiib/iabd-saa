@@ -270,7 +270,7 @@ que permet treballar amb distribucions normals.
     ```
 
     !!! note
-        Aquest càlcul es pot fer mitjançant [__unitats tipificades (standard-score)__](#unitat-tipificada-standard-score)
+        Aquest càlcul es pot fer mitjançant [__unitats tipificades (standard-score)__](01_estadistica_basica.md#unitat-tipificada-standard-score){:target="_blank"}
         i la [__taula de la distribució normal__](https://en.wikipedia.org/wiki/Standard_normal_table#Cumulative_(less_than_Z)){:target="_blank"}.
 
     La probabilitat que una persona triada a l'atzar tinga una alçada entre 160 i 180 cm és:
@@ -301,33 +301,6 @@ que permet treballar amb distribucions normals.
     ```
     ///
 
-
-
-#### Unitat tipificada (standard-score)
-La __unitat tipificada (*standard-score o z-score*)__
-és una mesura que serveix per comparar una observació
-dins d'una distribució estadística.
-
-Aquesta unitat indiquen el nombre de desviacions típiques que una observació
-està per damunt o per davall de la mitjana.
-
-La unitat tipificada es calcula com:
-
-$$z = \frac{x - \mu}{\sigma}$$
-
-!!! example "Unitat tipificada de l'alçada"
-    Donada una població amb una mitjana de 170 cm i una desviació estàndard de 10 cm,
-    calculem les unitats tipificades de les alçades 160 i 180 cm.
-
-    1. Per a $x = 160$ cm:
-
-        $$z_1 = \frac{160 - 170}{10} = -1$$
-
-    2. Per a $x = 180$ cm:
-        
-        $$z_2 = \frac{180 - 170}{10} = 1$$
-    
-
 #### Distribució normal estàndard
 La __distribució normal estàndard__ és cas especial d'una distribució normal, que té una mitjana $\mu = 0$
 i una desviació estàndard $\sigma = 1$.
@@ -343,7 +316,7 @@ std_normal_dist = NormalDist() # mu=0, sigma=1
 ```
 
 Aquesta distribució és molt important en estadística, ja que permet calcular
-la probabilitat acumulada de qualsevol distribució normal utilitzant les [__unitats tipificades__](#unitat-tipificada-standard-score)
+la probabilitat acumulada de qualsevol distribució normal utilitzant les [__unitats tipificades__](01_estadistica_basica.md#unitat-tipificada-standard-score){:target="_blank"}.
 i consultat la [__taula de la distribució normal__](https://en.wikipedia.org/wiki/Standard_normal_table#Cumulative_(less_than_Z)){:target="_blank"}.
 
 Aquesta taula indica la __probabilitat acumulada__ de trobar un valor menor que $z$
@@ -365,10 +338,17 @@ de trobar un valor menor o igual que $z$ en una distribució normal.
 std_normal_dist.cdf(z)
 ```
 
-
 !!! example "Càlcul de probabilitats alçada d'una població"
     Calculem la probabilitat que una persona tinga una alçada entre 160 i 180 cm.
 
+    1. Per a $x = 160$ cm:
+
+        $$z_1 = \frac{160 - 170}{10} = -1$$
+
+    2. Per a $x = 180$ cm:
+        
+        $$z_2 = \frac{180 - 170}{10} = 1$$
+    
     Utilitzant les unitats tipificades $z_1 = -1$ i $z_2 = 1$,
     podem calcular la probabilitat acumulada de trobar un valor entre $z_1$ i $z_2$:
 
@@ -679,12 +659,6 @@ Aquest procés tracta de pendre una decisió sobre dues hipòtesis:
     ^^__assumint que la hipòtesi nul·la és certa__^^.
 
     Per tant, si el valor p és molt baix, podem rebutjar la hipòtesi nul·la.
-
-
-## Covariància i correlació
-
-
-
 
 ## Codi font
 - [normal.py](../../files/ud2/normal.py){: download="normal.py"}

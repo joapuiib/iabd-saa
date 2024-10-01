@@ -346,6 +346,191 @@ Els __decils__ divideixen la mostra en deu parts iguals, cadascuna amb el 10% de
     ```
     ///
 
+## Unitat tipificada (standard-score)
+La __unitat tipificada (*standard-score o z-score*)__
+és una mesura que serveix per comparar una observació
+dins d'una distribució estadística.
+
+Aquesta unitat indiquen el nombre de desviacions típiques
+que una observació està per damunt o per davall de la mitjana.
+
+És molt útil per a comparar observacions de diferents distribucions,
+ja que el seu valor no depén de les unitats de les variables.
+
+La unitat tipificada es calcula com:
+
+$$z = \frac{x - \mu}{\sigma}$$
+
+!!! example 
+    Donada la població de persones $X={20,20,50,60,80}$:
+
+    - La mitjana és $\mu = 46$.
+    - La desviació estàndard és $\sigma = 23.9$.
+
+    Per cada observació de la població, calculem la unitat tipificada:
+
+    $$
+    z_i = \frac{x_i - \mu}{\sigma}
+    $$
+
+    La població amb les seues unitats tipificades és:
+
+    $$
+    Z = \{ -1.087, -1.087, 0.1673, 0.5858, 1.4226 \}
+    $$
+
+
+## Covariància
+La __covariància__ és una mesura de la relació entre dues variables.
+
+$$
+S_{XY} = \frac{1}{N - ddof} \sum_{i=1}^{N} (x_i - \bar{X}) (y_i - \bar{Y})
+$$
+
+on $ddof$ és el grau de llibertat, que normalment és 1.
+
+Aquesta mesura indica si les dues variables són independents o si tenen una relació lineal.
+
+- Si $S_{XY} \gt 0$ és __positiva__, les dues variables són __directament proporcionals__.
+- Si $S_{XY} \lt 0$ és __negativa__, les dues variables són __inversament proporcionals__.
+- Si $S_{XY} \approx 0$ és __zero__, les dues variables són __independents__.
+
+<figure id=figure-3>
+    <img src="../img/cov_positiu.png" alt="Dues variables directament proporcionals">
+    <figcaption class="attribution">Autor desconegut</figcaption>
+    <figcaption>Figura 3: Dues variables directament proporcionals</figcaption>
+</figure>
+
+<figure id=figure-4>
+    <img src="../img/cov_negatiu.png" alt="Dues variables inversament proporcionals">
+    <figcaption class="attribution">Autor desconegut</figcaption>
+    <figcaption>Figura 4: Dues variables inversament proporcionals</figcaption>
+</figure>
+
+La [__matriu de covariància__](https://ca.wikipedia.org/wiki/Matriu_de_covari%C3%A0ncia)
+és una taula que conté les covariàncies entre totes les parelles de variables d'un conjunt de dades.
+
+En Python, podem utilitzar la funció [`cov()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.cov.html){:target="_blank"}
+de Pandas per a calcular la covariància entre les __columnes__ d'un DataFrame.
+
+Per defecte, `cov()` utilitza el grau de llibertat `ddof` igual a 1.
+
+!!! example "Covariància en Python"
+    ```python
+    import pandas as pd
+
+    data = [[5, 6, 7],
+            [2, 6, 9]]
+
+    df = pd.DataFrame(data)
+    print("DataFrame:")
+    print(df)
+    print()
+
+    cov = df.cov()
+    print("Matriu de covariància:")
+    print(cov)
+    ```
+    /// html | div.result
+    ```text
+    DataFrame:
+       0  1  2
+    0  5  6  7
+    1  2  6  9
+
+    Matriu de covariància:
+         0    1    2
+    0  4.5  0.0 -3.0
+    1  0.0  0.0  0.0
+    2 -3.0  0.0  2.0
+    ```
+    ///
+
+    $$
+    M_{0,0} = \frac{1}{2 - 1}((5 - 3.5)(5 - 3.5) + (2 - 5)(2 - 5)) = 4.5 \\
+    M_{0,1} = \frac{1}{2 - 1}((5 - 3.5)(6 - 6) + (2 - 5)(6 - 6)) = 0.0 \\
+    M_{0,2} = \frac{1}{2 - 1}((5 - 3.5)(7 - 6.5) + (2 - 5)(9 - 6.5)) = -3.0 \\
+    ...
+    $$
+
+## Correlació
+Similar a la covariància, la __correlació__ és una mesura __normalitzada__
+de la relació entre dues variables.
+
+La diferència principal és que el valor de la covariància depèn
+de les unitats de les variables, i té una difícil interpretació.
+
+En canvi, la correlació $r$ és un valor que oscil·la entre -1 i 1 en qualsevol cas,
+que facilita la seua interpretació.
+
+- Si $r = 1$ les dues variables tenen una __correlació positiva perfecta__.
+- Si $r = -1$ les dues variables tenen una __correlació negativa perfecta__.
+- Si $r = 0$ les dues variables són __independents__.
+
+Quan $r$ més s'aproxima a 1 o -1, més forta és la relació entre les dues variables.
+
+Els tipus de correlació més comuns són __Pearson__, __Rho de Spearman__ i __Tau de Kendall__.
+
+### Correlació de Pearson
+La __correlació de Pearson__ és la covariància calculada
+a partir de les puntuacions estandarditzades de les variables.
+
+Aquesta mesura funciona bé amb variables quantitatives que tenen una distribució normal
+o similar. És més sensible als valors extremos que les altres dues alternatives.
+
+$$
+r_{xy} = S(z_x, z_y)
+$$
+
+Aquesta expressió s'expandeix com:
+
+$$
+r_{xy} = \frac{1}{N} \sum_{i=1}^{N} \left( \frac{x_i - \bar{X}}{\sigma_X} \right) \left( \frac{y_i - \bar{Y}}{\sigma_Y} \right) \\
+r_{xy} = \frac{1}{N} \frac{\sum_{i=1}^{N} (x_i - \bar{X})(y_i - \bar{Y})}{\sigma_X \sigma_Y}
+$$
+
+Arribant a la simplificació:
+
+$$
+r_{xy} = \frac{S_{XY}}{\sigma_X \sigma_Y}
+$$
+
+Aquesta fórmula pots ser interpretada com la covariància dividida
+pel producte de les desviacions estàndard de les dues variables.
+
+En Python, podem utilitzar la funció [`corr()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html){:target="_blank"}
+amb l'argument `method='pearson'` (valor per defecte) per a calcular la correlació de Pearson.
+
+!!! example "Correlació de Pearson en Python"
+    ```python
+    corr = df.corr()
+    print("Correlació de Pearson:")
+    print(corr)
+    ```
+    /// html | div.result
+    ```text
+    Correlació de Pearson:
+         0   1    2
+    0  1.0 NaN -1.0
+    1  NaN NaN  NaN
+    2 -1.0 NaN  1.0
+    ```
+    ///
+
+    !!! info
+        `NaN` indica que no es pot calcular la correlació
+        quan una de les variables té desviació estàndard zero,
+        és a dir, és constant.
+
+### Correlació de Spearman
+La __correlació de Spearman__ és 
+
+@TODO
+
+### Correlació de Kendall
+@TODO
+
+
 ## Codi font
 - [estadistica_basica.py](../../files/ud2/estadistica_basica.py){: download="estadistica_basica.py"}
 
@@ -363,6 +548,16 @@ Els __decils__ divideixen la mostra en deu parts iguals, cadascuna amb el 10% de
     ```
     ///
 
+- [covariancia.py](../../files/ud2/covariancia.py){: download="covariancia.py"}
+
+    /// collapse-code
+    ```python
+    --8<-- "docs/files/ud2/covariancia.py"
+    ```
+    ///
+
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/) de César Guijarro Rosaleny
 - [Quantil, Viquipèdia](https://ca.wikipedia.org/wiki/Quantil)
+- [Covalència, Viquipèdia](https://ca.wikipedia.org/wiki/Covari%C3%A0ncia)
+- [Matriu de covariància, Viquipèdia](https://ca.wikipedia.org/wiki/Matriu_de_covari%C3%A0ncia)
