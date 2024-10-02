@@ -526,6 +526,8 @@ amb l'argument `method='pearson'` (valor per defecte) per a calcular la correlac
 La __correlació de Spearman__ $\rho$ (rho) és una mesura de la relació
 que utilitza __la posició dels valors__ quan han sigut ordenats.
 
+Aquesta mesura és útil quan les dades no són lineals.
+
 La fórmula de la correlació de Spearman és:
 
 $$
@@ -551,41 +553,17 @@ on $d_i$ és la diferència entre les posicions de les dues variables.
     ///
 
 !!! example "Correlació de Spearman"
-    Utilitzant les dades $X = \{5, 2\} i $Y = \{7, 9\}$ que corresponen
+    Utilitzant les dades $X = \{5, 2\}$ i $Y = \{7, 9\}$ que corresponen
     a les columnes 0 i 2 del DataFrame.
 
     Les posicions de les variables ordenades són:
 
-    <table class="md-datatable sortable">
-        <thead>
-            <tr>
-                <th>$X$</th>
-                <th>$Y$</th>
-                <th>$O_X$</th>
-                <th>$O_Y$</th>
-                <th>$d$</th>
-                <th>$d^2$</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>2</td>
-                <td>9</td>
-                <td>1</td>
-                <td>2</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>7</td>
-                <td>2</td>
-                <td>1</td>
-                <td>-1</td>
-                <td>1</td>
-            </tr>
-        </tbody>
-    </table>
+    /// html | div.table-sortable
+    | $X$ | $Y$ | $O_X$ | $O_Y$ | $d_i$ | $d_i^2$ |
+    |-----|-----|-------|-------|-----|-------|
+    | 2   | 9   | 1     | 2     | 1   | 1     |
+    | 5   | 7   | 2     | 1     | -1  | 1     |
+    ///
 
     La correlació de Spearman és:
 
@@ -596,7 +574,25 @@ on $d_i$ és la diferència entre les posicions de les dues variables.
 
 
 ### Correlació de Kendall
-@TODO
+La __correlació de Kendall__ $\tau$ (tau) és una mesura de la relació
+que utilitza __els rangs__ de les variables per a calcular la correlació.
+
+Aquesta mesura és preferible a la de Spearman quan hi ha molt poques dades
+i a més hi ha molts empats.
+
+La fórmula de la correlació de Kendall és:
+
+$$
+\tau = \frac{C - D}{C + D}
+$$
+
+on:
+
+- $C$ és el nombre de parelles concordants.
+- $D$ és el nombre de parelles discordants.
+
+!!! info
+    Vegeu el vídeo [Kendall's Tau Easily Explained](https://www.youtube.com/watch?v=Pm8KV5f3JM0&t=3s){:target="_blank"} per a una explicació detallada.
 
 
 ## Codi font
@@ -624,8 +620,16 @@ on $d_i$ és la diferència entre les posicions de les dues variables.
     ```
     ///
 
+## Recursos addicionals
+- [Kendall's Tau Easily Explained](https://www.youtube.com/watch?v=Pm8KV5f3JM0&t=3s){:target="_blank"}
+
 ## Bibliografia
-- [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/) de César Guijarro Rosaleny
-- [Quantil, Viquipèdia](https://ca.wikipedia.org/wiki/Quantil)
-- [Covalència, Viquipèdia](https://ca.wikipedia.org/wiki/Covari%C3%A0ncia)
-- [Matriu de covariància, Viquipèdia](https://ca.wikipedia.org/wiki/Matriu_de_covari%C3%A0ncia)
+- [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
+- [Quantil, Viquipèdia](https://ca.wikipedia.org/wiki/Quantil){:target="_blank"}
+- [Covalència, Viquipèdia](https://ca.wikipedia.org/wiki/Covari%C3%A0ncia){:target="_blank"}
+- [Matriu de covariància, Viquipèdia](https://ca.wikipedia.org/wiki/Matriu_de_covari%C3%A0ncia){:target="_blank"}
+- [Correlació, Viquipèdia](https://ca.wikipedia.org/wiki/Correlaci%C3%B3){:target="_blank"}
+- [Correlació de Pearson, Viquipèdia](https://ca.wikipedia.org/wiki/Coeficient_de_correlaci%C3%B3_de_Pearson){:target="_blank"}
+- [Correlació de Spearman, Viquipèdia](https://ca.wikipedia.org/wiki/Coeficient_de_correlaci%C3%B3_de_Spearman){:target="_blank"}
+- [Kendall rank correlation coefficient, Wikipedia](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient){:target="_blank"}
+- [A comparison of the Pearson and Spearman correlation](https://support.minitab.com/en-us/minitab/help-and-how-to/statistics/basic-statistics/supporting-topics/correlation-and-covariance/a-comparison-of-the-pearson-and-spearman-correlation-methods/){:target="_blank"}
