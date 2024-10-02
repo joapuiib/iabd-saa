@@ -11,42 +11,39 @@
       
       
       
-        <link rel="prev" href="../presentacio/">
+        <link rel="prev" href="../00_preparacio_entorn/">
       
       
-        <link rel="next" href="../../apunts/">
+        <link rel="next" href="../02_estadistica_basica/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>Programació didàctica - IABD-SAA: Sistemes d'aprenentatge automàtic</title>
+        <title>Introducció a Pandas - IABD-SAA: Sistemes d'aprenentatge automàtic</title>
       
     
     
     
     
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
 
     
-    <link rel="stylesheet" href="../../stylesheets/site.css">
-    <link rel="stylesheet" href="../../stylesheets/admonitions.css">
-    <link rel="stylesheet" href="../../stylesheets/highlight.css">
-    <link rel="stylesheet" href="../../stylesheets/collapse-code.css">
+    <link rel="stylesheet" href="../../../stylesheets/site.css">
+    <link rel="stylesheet" href="../../../stylesheets/admonitions.css">
+    <link rel="stylesheet" href="../../../stylesheets/highlight.css">
+    <link rel="stylesheet" href="../../../stylesheets/collapse-code.css">
     <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
 
-    <link rel="stylesheet" href="../../stylesheets/cover.css">
-
-    <link rel="stylesheet" href="../../stylesheets/programacio.css">
+    <link rel="stylesheet" href="../../../stylesheets/cover.css">
 
     
       
@@ -61,18 +58,18 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    .gslide-image img { background: white; }</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -91,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-propostes-de-millora-del-curs-anterior" class="md-skip">
+        <a href="#introduccio-a-pandas" class="md-skip">
           Salta el contingut
         </a>
       
@@ -124,7 +121,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Capçalera">
-    <a href="../.." title="IABD-SAA: Sistemes d&#39;aprenentatge automàtic" class="md-header__button md-logo" aria-label="IABD-SAA: Sistemes d'aprenentatge automàtic" data-md-component="logo">
+    <a href="../../.." title="IABD-SAA: Sistemes d&#39;aprenentatge automàtic" class="md-header__button md-logo" aria-label="IABD-SAA: Sistemes d'aprenentatge automàtic" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 14h-1c0-3.87-3.13-7-7-7h-1V5.73A2 2 0 1 0 10 4c0 .74.4 1.39 1 1.73V7h-1c-3.87 0-7 3.13-7 7H2c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h1v1a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2v-1h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1M9.79 16.5C9.4 15.62 8.53 15 7.5 15s-1.9.62-2.29 1.5c-.13-.31-.21-.64-.21-1a2.5 2.5 0 0 1 5 0c0 .36-.08.69-.21 1m9 0c-.39-.88-1.29-1.5-2.29-1.5s-1.9.62-2.29 1.5c-.13-.31-.21-.64-.21-1a2.5 2.5 0 0 1 5 0c0 .36-.08.69-.21 1"/></svg>
@@ -144,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Programació didàctica
+              Introducció a Pandas
             
           </span>
         </div>
@@ -239,7 +236,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -254,13 +251,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../programacio/" class="md-tabs__link">
           
   
     
@@ -276,11 +271,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../apunts/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -315,7 +312,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegació" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="IABD-SAA: Sistemes d&#39;aprenentatge automàtic" class="md-nav__button md-logo" aria-label="IABD-SAA: Sistemes d'aprenentatge automàtic" data-md-component="logo">
+    <a href="../../.." title="IABD-SAA: Sistemes d&#39;aprenentatge automàtic" class="md-nav__button md-logo" aria-label="IABD-SAA: Sistemes d'aprenentatge automàtic" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 14h-1c0-3.87-3.13-7-7-7h-1V5.73A2 2 0 1 0 10 4c0 .74.4 1.39 1 1.73V7h-1c-3.87 0-7 3.13-7 7H2c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h1v1a2 2 0 0 0 2 2h14c1.11 0 2-.89 2-2v-1h1c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1M9.79 16.5C9.4 15.62 8.53 15 7.5 15s-1.9.62-2.29 1.5c-.13-.31-.21-.64-.21-1a2.5 2.5 0 0 1 5 0c0 .36-.08.69-.21 1m9 0c-.39-.88-1.29-1.5-2.29-1.5s-1.9.62-2.29 1.5c-.13-.31-.21-.64-.21-1a2.5 2.5 0 0 1 5 0c0 .36-.08.69-.21 1"/></svg>
@@ -334,7 +331,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -353,8 +350,6 @@
       
   
   
-    
-  
   
   
     
@@ -371,22 +366,19 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../../programacio/" class="md-nav__link ">
               
   
   
@@ -399,13 +391,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Programació didàctica
@@ -422,7 +414,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../presentacio/" class="md-nav__link">
+      <a href="../../../programacio/presentacio/" class="md-nav__link">
         
   
   
@@ -444,32 +436,11 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
+    <li class="md-nav__item">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
-  
-  
-  <span class="md-ellipsis">
-    Programació didàctica
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="../../../programacio/programacio/" class="md-nav__link">
         
   
   
@@ -482,207 +453,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Taula de continguts
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-propostes-de-millora-del-curs-anterior" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Propostes de millora del curs anterior
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-marc-normatiu" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Marc normatiu
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-contextualitzacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Contextualització
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-continguts" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Continguts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-distribucio-temporal" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Distribució temporal
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-metodologia-didactica" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Metodologia didàctica
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-avaluacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Avaluació
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="8. Avaluació">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#81-criteris-davaluacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.1. Criteris d'avaluació
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#82-procediments-i-instruments-de-qualificacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.2. Procediments i instruments de qualificació
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="8.2. Procediments i instruments de qualificació">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#821-avaluacio-continua" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.2.1. Avaluació contínua
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#822-convocatoria-ordinaria" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.2.2. Convocatòria ordinària
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#823-convocatoria-extraordinaria" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.2.3 Convocatòria extraordinària
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#824-avaluacio-de-la-practica-docent" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.2.4 Avaluació de la pràctica docent
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#83-criteris-davaluacio-minims-per-superar-el-modul" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.3 Criteris d’avaluació mínims per superar el mòdul
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#84-quadre-resum" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.4. Quadre resum
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-materials-i-recursos-didactics" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. Materials i recursos didàctics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-activitats-complementaries-i-extraescolars" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. Activitats complementàries i extraescolars
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#11-temes-transversals" class="md-nav__link">
-    <span class="md-ellipsis">
-      11. Temes transversals
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12-mesures-de-resposta-educativa-per-a-la-inclusio" class="md-nav__link">
-    <span class="md-ellipsis">
-      12. Mesures de resposta educativa per a la inclusió
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -699,6 +469,8 @@
       
   
   
+    
+  
   
   
     
@@ -717,19 +489,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../apunts/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -742,13 +517,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Apunts
@@ -811,7 +586,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../../apunts/01_introduccio/01_conceptes_generals/" class="md-nav__link">
+      <a href="../../01_introduccio/01_conceptes_generals/" class="md-nav__link">
         
   
   
@@ -837,7 +612,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../../apunts/01_introduccio/02_xarxes_neuronals/" class="md-nav__link">
+      <a href="../../01_introduccio/02_xarxes_neuronals/" class="md-nav__link">
         
   
   
@@ -867,8 +642,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -886,11 +663,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -906,7 +683,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             UD2: Estadística
@@ -921,7 +698,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../../apunts/02_estadistica/00_preparacio_entorn/" class="md-nav__link">
+      <a href="../00_preparacio_entorn/" class="md-nav__link">
         
   
   
@@ -943,11 +720,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
+  
+    <li class="md-nav__item md-nav__item--active">
       
-      <a href="../../apunts/02_estadistica/01_introduccio_pandas/" class="md-nav__link">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    Introducció a Pandas
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -960,6 +758,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccio-a-pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducció a Pandas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -973,7 +798,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../../apunts/02_estadistica/02_estadistica_basica/" class="md-nav__link">
+      <a href="../02_estadistica_basica/" class="md-nav__link">
         
   
   
@@ -999,7 +824,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../../apunts/02_estadistica/03_distribucions/" class="md-nav__link">
+      <a href="../03_distribucions/" class="md-nav__link">
         
   
   
@@ -1079,7 +904,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../../apunts/03_manipulacio_dades/01_pandas/" class="md-nav__link">
+      <a href="../../03_manipulacio_dades/01_pandas/" class="md-nav__link">
         
   
   
@@ -1105,7 +930,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../../apunts/03_manipulacio_dades/02_plotnine/" class="md-nav__link">
+      <a href="../../03_manipulacio_dades/02_plotnine/" class="md-nav__link">
         
   
   
@@ -1163,183 +988,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-propostes-de-millora-del-curs-anterior" class="md-nav__link">
+  <a href="#introduccio-a-pandas" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Propostes de millora del curs anterior
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-marc-normatiu" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Marc normatiu
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-contextualitzacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Contextualització
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-continguts" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Continguts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-distribucio-temporal" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Distribució temporal
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-metodologia-didactica" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Metodologia didàctica
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-avaluacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Avaluació
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="8. Avaluació">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#81-criteris-davaluacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.1. Criteris d'avaluació
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#82-procediments-i-instruments-de-qualificacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.2. Procediments i instruments de qualificació
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="8.2. Procediments i instruments de qualificació">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#821-avaluacio-continua" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.2.1. Avaluació contínua
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#822-convocatoria-ordinaria" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.2.2. Convocatòria ordinària
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#823-convocatoria-extraordinaria" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.2.3 Convocatòria extraordinària
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#824-avaluacio-de-la-practica-docent" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.2.4 Avaluació de la pràctica docent
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#83-criteris-davaluacio-minims-per-superar-el-modul" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.3 Criteris d’avaluació mínims per superar el mòdul
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#84-quadre-resum" class="md-nav__link">
-    <span class="md-ellipsis">
-      8.4. Quadre resum
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-materials-i-recursos-didactics" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. Materials i recursos didàctics
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-activitats-complementaries-i-extraescolars" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. Activitats complementàries i extraescolars
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#11-temes-transversals" class="md-nav__link">
-    <span class="md-ellipsis">
-      11. Temes transversals
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12-mesures-de-resposta-educativa-per-a-la-inclusio" class="md-nav__link">
-    <span class="md-ellipsis">
-      12. Mesures de resposta educativa per a la inclusió
+      Introducció a Pandas
     </span>
   </a>
   
@@ -1354,24 +1005,26 @@
             
           
           
-    <div class="md-content" data-md-component="content">
-
-        
-            <div class="md-content__header">
-                <img src="../../img/logo_mislata.png" alt="logo_mislata">
-                <img src="../../img/iso.png" alt="iso">
-            </div>
-        
-
-        <table class="md-content__print-layout">
-            <thead><tr><td>
-                <div class="md-content__header-space">&nbsp;</div>
-            </td></tr></thead>
-
-            <tbody><tr><td>
-                <article class="md-content__inner md-typeset">
-                    
-                        
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+    
+      
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">python</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">pandas</span>
+    
+  
+</nav>
     
     
 
@@ -1648,17 +1301,7 @@
   
 
 
-<h1>Programació didàctica</h1>
-
-
-
-  <div>
-  
-    <h2>5072 - Sistemes d'Aprenentatge Automàtic</h2>
-  
-    <h2>Curs d'especialitazció: Intel·ligència Artificial i Big Data</h2>
-  
-  </div>
+<h1>Introducció a Pandas</h1>
 
 
 
@@ -1684,7 +1327,7 @@
 
 <div class="cover__license-img">
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank">
-  <img class="" src="../../img/license/by-nc-sa.png" alt="Licence" height="50" />
+  <img class="" src="../../../img/license/by-nc-sa.png" alt="Licence" height="50" />
 </a>
 </div>
 
@@ -1695,494 +1338,8 @@
 
 
     
-    <p><em>Control de versions:</em></p>
-<table>
-<thead>
-<tr>
-<th>Data</th>
-<th>Descripció</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2024-09-18</td>
-<td>Primera versió</td>
-</tr>
-<tr>
-<td>2024-09-24</td>
-<td>Correccions a l'apartat Avaluació</td>
-</tr>
-<tr>
-<td>2024-10-01</td>
-<td>Proposta de millora del curs anterior</td>
-</tr>
-</tbody>
-</table>
-<h2 id="1-propostes-de-millora-del-curs-anterior">1. Propostes de millora del curs anterior<a class="headerlink" href="#1-propostes-de-millora-del-curs-anterior" title="Permanent link">&para;</a></h2>
-<p>Les propostes de millora del curs anterior i les accions realitzades són les següents:</p>
-<ul>
-<li>
-<p><strong>Incorporar conceptes d'estadística bayesiana, sobretot en les mètriques dels models de classificació.</strong></p>
-<p>En la mesura del possible, es tractarà d'introduïr algun concepte d'estadística bayesiana.</p>
-</li>
-</ul>
-<h2 id="2-marc-normatiu">2. Marc normatiu<a class="headerlink" href="#2-marc-normatiu" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p><a href="https://www.boe.es/eli/es/lo/2022/03/31/3">Llei Orgànica 3/2022, de 31 de març, d'ordenació i integració de la Formació
-    Professional</a></p>
-</li>
-<li>
-<p><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-7686">Reial decret 279/2021, de 20 d'abril, pel qual s'estableix el Curs d'especialització
-    en Intel·ligència Artificial i Big Data i es fixen els aspectes bàsics del
-    currículum.</a></p>
-</li>
-<li>
-<p><a href="https://dogv.gva.es/datos/2024/08/14/pdf/2024_8407_va.pdf">RESOLUCIÓ de 8 d’agost de 2024, de la Secretaria Autonòmica d’Educació, per la qual es dicten instruccions sobre
-    ordenació acadèmica i d’organització dels centres que impartixen Formació Professional durant el curs 2024-2025 a la
-    Comunitat Valenciana</a></p>
-</li>
-</ul>
-<h2 id="3-contextualitzacio">3. Contextualització<a class="headerlink" href="#3-contextualitzacio" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Codi</strong>: 5072</li>
-<li><strong>Durada</strong>: 90 hores</li>
-<li><strong>Crèdits ECTS</strong>: 5</li>
-</ul>
-<p>Aquest mòdul professional conté la informació necessària per a dur a terme les funcions d'analitzar i
- relacionar les tècniques d'aprenentatge automàtic amb la predicció de comportaments futurs que
- permeten a les organitzacions i empreses l'eficiència operativa.</p>
-<p>Les funcions esmentades anteriorment inclouen aspectes com ara:</p>
-<ul>
-<li>Caracteritzar sistemes d'aprenentatge automàtic.</li>
-<li>Fer prediccions de comportaments futurs utilitzant models d'aprenentatge automàtic.</li>
-</ul>
-<p>La formació del mòdul contribueix a assolir els objectius generals
-a), b), c), d), e), f), g), j), k), m), n), ñ), o) i p),
-així com les competències professionals i socials
-a), c), d), e), f), g), j), k), m), n), ñ), o), p), q), r) i s) del curs d'especialització.</p>
-<p>Les línies d'actuació en el procés d'ensenyament-aprenentatge que permeten assolir els objectius del mòdul estan relacionades amb:</p>
-<ul>
-<li>La caracterització de sistemes d'aprenentatge automàtic.</li>
-<li>L'aplicació d'aquests sistemes d'aprenentatge automàtic en la presa de decisions a les organitzacions i empreses.</li>
-</ul>
-<h2 id="5-continguts">5. Continguts<a class="headerlink" href="#5-continguts" title="Permanent link">&para;</a></h2>
-<h5 id="bloc-1-caracteritzacio-de-la-intelligencia-artificial-forta-i-debil">Bloc 1 - Caracterització de la Intel·ligència Artificial forta i dèbil<a class="headerlink" href="#bloc-1-caracteritzacio-de-la-intelligencia-artificial-forta-i-debil" title="Permanent link">&para;</a></h5>
-<ul>
-<li>
-<p>Intel·ligència Artificial Dèbil:</p>
-<ul>
-<li>Característiques i aplicacions.</li>
-<li>Avantatges i inconvenients.</li>
-<li>Usos i possibilitats.</li>
-</ul>
-</li>
-<li>
-<p>Intel·ligència Artificial Forta:</p>
-<ul>
-<li>Característiques i aplicacions.</li>
-<li>Avantatges i inconvenients.</li>
-<li>Usos i possibilitats.</li>
-</ul>
-</li>
-</ul>
-<h5 id="bloc-2-determinacio-de-sistemes-daprenentatge-automatic-machine-learning">Bloc 2 Determinació de sistemes d'aprenentatge automàtic (Machine Learning):<a class="headerlink" href="#bloc-2-determinacio-de-sistemes-daprenentatge-automatic-machine-learning" title="Permanent link">&para;</a></h5>
-<ul>
-<li>Classificació de sistemes d'aprenentatge automàtic: Supervisat i no supervisat.</li>
-<li>Principals tècniques per desenvolupar l'aprenentatge automàtic:
-    Xarxes neuronals, aprenentatge inductiu, raonament basat en casos, entre altres.</li>
-<li>Algoritmes o models aplicats a l'aprenentatge automàtic:<ul>
-<li>Algoritmes de classificació.</li>
-<li>Algoritmes de detecció d'anomalies.</li>
-<li>Algoritmes de regressió.</li>
-<li>Algoritmes de clustering.</li>
-<li>Algoritmes de reforç de l'aprenentatge.</li>
-<li>Arbres i regles de decisió.</li>
-<li>Altres algoritmes relacionats amb l'aprenentatge automàtic.</li>
-</ul>
-</li>
-<li>Procediments del Machine Learning: Dades, identificació de patrons i presa de decisions.</li>
-<li>Eines d'aprenentatge automàtic.</li>
-<li>Aplicacions del Machine Learning.</li>
-</ul>
-<h5 id="bloc-3-algoritmes-aplicats-a-laprenentatge-supervisat-i-optimitzacio-del-model">Bloc 3: Algoritmes aplicats a l'aprenentatge supervisat i optimització del model:<a class="headerlink" href="#bloc-3-algoritmes-aplicats-a-laprenentatge-supervisat-i-optimitzacio-del-model" title="Permanent link">&para;</a></h5>
-<ul>
-<li>Determinació d'elements i eines d'aprenentatge supervisat.</li>
-<li>Dades etiquetades.</li>
-<li>Variables d'entrada (input data). Etiquetes de sortida.</li>
-<li>Plataformes d'aprenentatge automàtic supervisat.</li>
-<li>Fases de l'aprenentatge automàtic:<ul>
-<li>Selecció de l'algoritme d'aprenentatge supervisat.</li>
-<li>Selecció de dades.</li>
-<li>Construcció del model.</li>
-<li>Validació del model.</li>
-<li>Ajust de característiques o paràmetres.</li>
-<li>Implementació del model proposat.</li>
-<li>Verificació del model de prova.</li>
-<li>Optimització del model.</li>
-</ul>
-</li>
-</ul>
-<h5 id="bloc-4-aplicacio-de-tecniques-daprenentatge-no-supervisat">Bloc 4: Aplicació de tècniques d'aprenentatge no supervisat:<a class="headerlink" href="#bloc-4-aplicacio-de-tecniques-daprenentatge-no-supervisat" title="Permanent link">&para;</a></h5>
-<ul>
-<li>Tècniques d'aprenentatge no supervisat.</li>
-<li>Algoritmes d'aprenentatge no supervisat: Agrupació de clústers, reducció de dimensió, entre altres.</li>
-<li>Determinació d'elements i eines d'aprenentatge no supervisat.</li>
-<li>Plataformes d'aprenentatge automàtic no supervisat.</li>
-<li>Fases de l'aprenentatge automàtic no supervisat.</li>
-</ul>
-<h5 id="bloc-5-aplicacio-de-models-computacionals-de-xarxes-neuronals-i-comparacio-amb-altres-models">Bloc 5: Aplicació de models computacionals de xarxes neuronals i comparació amb altres models:<a class="headerlink" href="#bloc-5-aplicacio-de-models-computacionals-de-xarxes-neuronals-i-comparacio-amb-altres-models" title="Permanent link">&para;</a></h5>
-<ul>
-<li>Aprenentatge automàtic versus aprenentatge profund.</li>
-<li>Com aprèn una xarxa neuronal.</li>
-<li>Models de xarxes neuronals artificials: Xarxes neuronals convolucionals (CNN).</li>
-</ul>
-<h5 id="bloc-6-valoracio-de-la-qualitat-dels-resultats-obtinguts-en-la-practica-amb-sistemes-daprenentatge-automatic">Bloc 6: Valoració de la qualitat dels resultats obtinguts en la pràctica amb sistemes d'aprenentatge automàtic:<a class="headerlink" href="#bloc-6-valoracio-de-la-qualitat-dels-resultats-obtinguts-en-la-practica-amb-sistemes-daprenentatge-automatic" title="Permanent link">&para;</a></h5>
-<ul>
-<li>Capacitat de generalització.</li>
-<li>Test.</li>
-<li>Validació.</li>
-<li>Matriu de confusió.</li>
-</ul>
-<h2 id="6-distribucio-temporal">6. Distribució temporal<a class="headerlink" href="#6-distribucio-temporal" title="Permanent link">&para;</a></h2>
-<table class="distribucio-temporal">
-  <tbody><tr>
-    <th colspan="6">Blocs</th>
-    <th rowspan="2">Unitats didàctiques</th>
-    <th rowspan="2">Avaluació</th>
-  </tr>
-  <tr>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-  </tr>
-  <tr class="term1">
-      <td>X</td>
-      <td>X</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>X</td>
-      <td>UD1: Introducció a la Intel·ligència Artificial</td>
-      <td rowspan="4" class="center">1</td>
-  </tr>
-  <tr class="term1">
-      <td></td>
-      <td>X</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    <td>UD2: Estadísitica</td>
-  </tr>
-  <tr class="term1">
-      <td></td>
-      <td></td>
-      <td>X</td>
-      <td>X</td>
-      <td></td>
-      <td>X</td>
-      <td>UD3: Manipulació i visualització de dades</td>
-  </tr>
-  <tr class="term1">
-      <td></td>
-      <td></td>
-      <td>X</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>UD4: Regressió</td>
-  </tr>
-  <tr class="term2">
-      <td></td>
-      <td>X</td>
-      <td>X</td>
-      <td>X</td>
-      <td>X</td>
-      <td>X</td>
-      <td>UD5: Preprocessament de dades</td>
-      <td rowspan="2" class="center">2</td>
-  </tr>
-  <tr class="term2">
-      <td></td>
-      <td></td>
-      <td>X</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>UD6: Classificació</td>
-  </tr>
-</tbody></table>
-
-<h2 id="7-metodologia-didactica">7. Metodologia didàctica<a class="headerlink" href="#7-metodologia-didactica" title="Permanent link">&para;</a></h2>
-<p>Aquest mòdul és sobretot pràctic.
-Considerem que la manera millor manera d’aprendre és realitzant
-i resolguent els problemes de manera pràctica.</p>
-<p>Es realitzaran breus explicacions dels continguts combinats
-amb molts exemples resolts, afavorint la participació activa
-de l’alumnat (exposició participativa).</p>
-<p>A mesura que es va avançant en la unitat,
-es proporcionaran activitats que vagen augmentant progressivament
-de dificultat.</p>
-<h2 id="8-avaluacio">8. Avaluació<a class="headerlink" href="#8-avaluacio" title="Permanent link">&para;</a></h2>
-<h3 id="81-criteris-davaluacio">8.1. Criteris d'avaluació<a class="headerlink" href="#81-criteris-davaluacio" title="Permanent link">&para;</a></h3>
-<p>Els resultats d'aprenentatge i els seus corresponents criteris d'avaluació del mòdul professional són:</p>
-<ol class="fancylists-decimal" type="1">
-<li>
-<p>Caracteritza la Intel·ligència Artificial forta i dèbil, determinant-ne els usos i possibilitats.</p>
-<ol class="fancylists-lower-alpha" type="a">
-<li>S'han determinat les especificitats de la Intel·ligència Artificial forta i dèbil.</li>
-<li>S'han establert les barreres entre la Intel·ligència Artificial i l'aprenentatge automàtic (Machine Learning).</li>
-<li>S'han diferenciat els àmbits d'aplicació de la Intel·ligència Artificial forta i dèbil.</li>
-<li>S'han identificat els problemes als quals pot fer front la Intel·ligència Artificial dèbil.</li>
-<li>S'han identificat els problemes als quals pot fer front la Intel·ligència Artificial forta.</li>
-<li>S'han reconegut els avantatges que proporciona cada tipus en la resolució de problemes.</li>
-</ol>
-</li>
-<li>
-<p>Determina tècniques i eines de sistemes d'aprenentatge automàtic (Machine Learning), testant-ne l'aplicabilitat per a la resolució de problemes.</p>
-<ol class="fancylists-lower-alpha" type="a">
-<li>S'han identificat els principis dels sistemes d'aprenentatge automàtic.</li>
-<li>S'han determinat tipus i usos dels sistemes d'aprenentatge automàtic.</li>
-<li>S'han determinat tècniques i eines de sistemes d'aprenentatge automàtic.</li>
-<li>S'han trobat diferències entre els tipus de sistemes d'aprenentatge automàtic.</li>
-<li>S'han associat tècniques i eines a cada tipus de sistema d'aprenentatge automàtic.</li>
-</ol>
-</li>
-<li>
-<p>Aplica algoritmes d'aprenentatge supervisat, optimitzant el resultat del model i minimitzant els riscos associats.</p>
-<ol class="fancylists-lower-alpha" type="a">
-<li>S'han proporcionat les dades etiquetades al model.</li>
-<li>S'han seleccionat les dades d'entrada, ja siguin per a la fase d'entrenament, fase de validació o fase de test, entre altres.</li>
-<li>S'han utilitzat les dades en la fase d'entrenament per a la construcció del model aplicant les característiques rellevants obtingudes.</li>
-<li>S'ha avaluat el model amb les dades obtingudes en la fase de validació.</li>
-<li>S'han ajustat les dades d'aprenentatge supervisat en la fase d'ajust per millorar el rendiment de les diferents característiques o paràmetres.</li>
-<li>S'ha implementat el model per fer prediccions sobre noves dades.</li>
-<li>S'han detectat i minimitzat els riscos associats al model.</li>
-<li>S'ha optimitzat el model d'aprenentatge supervisat validant dades de prova.</li>
-</ol>
-</li>
-<li>
-<p>Aplica tècniques d'aprenentatge no supervisat relacionant-les amb els tipus de problemes que tracten de resoldre.</p>
-<ol class="fancylists-lower-alpha" type="a">
-<li>S'han caracteritzat els tipus de problemes que l'aprenentatge no supervisat tracta de resoldre.</li>
-<li>S'han caracteritzat les tècniques d'aprenentatge no supervisat utilitzades per a la resolució d'aquests tipus de problemes.</li>
-<li>S'han aplicat algoritmes utilitzats en l'aprenentatge no supervisat.</li>
-<li>S'ha optimitzat el model d'aprenentatge no supervisat validant dades de prova.</li>
-</ol>
-</li>
-<li>
-<p>Aplica models computacionals de xarxes neuronals comparant-los amb altres mètodes d'intel·ligència artificial.</p>
-<ol class="fancylists-lower-alpha" type="a">
-<li>S'han avaluat els models neuronals per triar el més adequat per a cada classe de problema.</li>
-<li>S'han aplicat tècniques d'aprenentatge profund (deep learning) per entrenar xarxes neuronals.</li>
-<li>S'han comparat les xarxes neuronals artificials amb altres mètodes d'intel·ligència artificial.</li>
-<li>S'ha reconegut una xarxa neuronal entrenada a partir d'un conjunt de dades.</li>
-</ol>
-</li>
-<li>
-<p>Valora la qualitat dels resultats obtinguts en la pràctica amb sistemes d'aprenentatge automàtic integrant els principis fonamentals de la computació.</p>
-<ol class="fancylists-lower-alpha" type="a">
-<li>S'ha valorat la conveniència dels algoritmes proposats per resoldre els problemes plantejats.</li>
-<li>S'ha avaluat l'aplicació pràctica dels principis i tècniques bàsiques dels sistemes intel·ligents.</li>
-<li>S'han integrat els principis fonamentals de la computació en la pràctica per seleccionar, valorar i crear nous desenvolupaments tecnològics.</li>
-<li>S'han desenvolupat sistemes i aplicacions informàtiques que utilitzen tècniques dels sistemes intel·ligents.</li>
-<li>S'han desenvolupat tècniques d'aprenentatge computacional dedicades a l'extracció automàtica d'informació a partir de grans volums de dades.</li>
-</ol>
-</li>
-</ol>
-<h3 id="82-procediments-i-instruments-de-qualificacio">8.2. Procediments i instruments de qualificació<a class="headerlink" href="#82-procediments-i-instruments-de-qualificacio" title="Permanent link">&para;</a></h3>
-<figure id="figure-1">
-    <a class="glightbox" href="../img/diagrama_convocatories.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/diagrama_convocatories.png" alt="Diagrama de convocatòries"></a>
-    <figcaption class="attribution">CIPFP Mislata</figcaption>
-    <figcaption>Figura 1: Diagrama de convocatòries</figcaption>
-</figure>
-
-<h4 id="821-avaluacio-continua">8.2.1. Avaluació contínua<a class="headerlink" href="#821-avaluacio-continua" title="Permanent link">&para;</a></h4>
-<p>L’avaluació es realitzarà amb els següents instruments d'avaliació:</p>
-<ul>
-<li><strong>Exàmens</strong>: Exàmens de caràcter pràctic sobre 
-    els continguts de cada avaluació.</li>
-<li><strong>Pràctiques</strong>: Treball teòric o pràctic, on s’avalua el 
-    treball diari i els continguts que s’estan treballant.</li>
-</ul>
-<p>Tots els instruments d'avaluació s'han d'entregar a temps i ha de complir amb els requisits d'entrega.
-Si aquest no s'entrega en temps i forma, es considerarà com a no presentat.</p>
-<p>La manca d'autenticitat en l'autoria o d'originalitat de les proves d'avaluació; la còpia o el plagi;
-l'intent fraudulent d'obtenir un resultat acadèmic millor; la col·laboració, l'encobriment o l'afavoriment de la còpia,
-o la utilització de material, aplicacions o dispositius no autoritzats durant l'avaluació, entre d'altres,
-són conductes irregulars que poden tenir conseqüències acadèmiques i disciplinàries greus. </p>
-<p>D'una banda, si es detecta alguna d'aquestes conductes irregulars, pot comportar el suspens en les activitats
-avaluables o en la qualificació final de l'assignatura. </p>
-<p>D'altra banda, i d'acord amb la normativa acadèmica, les conductes irregulars en l'avaluació, a més de comportar el suspens de l'assignatura,
-poden donar lloc a la incoació d'un procediment disciplinari i a l'aplicació, si escau, de la sanció corresponent.</p>
-<h5 id="qualificacio">Qualificació<a class="headerlink" href="#qualificacio" title="Permanent link">&para;</a></h5>
-<p>La <strong>nota de cada avaluació (<span class="arithmatex">\(A_i\)</span>)</strong> es calcularà de la següent manera:</p>
-<ul>
-<li><strong>Nota de l'examen (<span class="arithmatex">\(E_i\)</span>):</strong> Nota de l'exàmen realitzat
-    en l'avaluació. Comptara un <strong>40%</strong>.</li>
-<li><strong>Nota de pràctiques (<span class="arithmatex">\(P_i\)</span>):</strong> Nota mitjana de les 
-    pràctiques realitzades en l’avaluació.
-    Comptarà un <strong>60%</strong>.</li>
-</ul>
-<div class="arithmatex">\[
-A_i = 0.4 \times E_i + 0.6 \times P_i
-\]</div>
-<p>Perquè un alumne supere una avaluació, la qualificació 
-d’aquesta ha de ser igual o superior a 5.</p>
-<div class="arithmatex">\[
-A_i \ge 5
-\]</div>
-<p>La <strong>qualificació del mòdul (<span class="arithmatex">\(M\)</span>)</strong> es calcularà mitjançant la mitjana 
-de la nota de totes les avaluacions. En cas que alguna avaluació 
-no estiga superada, la qualificació del mòdul serà com a màxim un 4.</p>
-<div class="arithmatex">\[
-M = \frac{A_1 + A_2}{2}\\\
-\]</div>
-<p>Per norma general les notes s'arredoniran amb la fòrmula general: <strong>&gt;.5</strong>.
-No obstant això, en l'interval <span class="arithmatex">\([4, 5)\)</span> la nota s'arredonirà a 5 sols a partir de 4.75.</p>
-<h4 id="822-convocatoria-ordinaria">8.2.2. Convocatòria ordinària<a class="headerlink" href="#822-convocatoria-ordinaria" title="Permanent link">&para;</a></h4>
-<p>Abans de finalitzar el curs, els alumnes amb alguna avaluació
-suspesa tenen el dret a presentar-se a la examen de convocatòria
-ordinària. Aquesta examen té com a objectiu superar
-cada avaluació suspesa per separat.</p>
-<p>També es permet que estudiants que hagen aprovat un trimestre, es presenten
-a per millorar la seua nota. En aquest cas, la nota de la convocatòria ordinària
-serà la que es té en compte (on es pot donar el cas que baixe la nota o no s'aprove).
-Es donarà l'opció de no entregar la examen si es creu que aquesta empijorarà
-el resltat anterior.</p>
-<p>En la convocatòria, es mantindran les notes de les avaluacions
-<strong>aprovades</strong> en l'avalaució contínua. Per a superar la convocatòria ordinària:</p>
-<ul>
-<li>La mitjana total de les notes de les avaluacions ha de ser <strong>superior o igual a 5</strong>.</li>
-<li>La nota de cada avalucio ha de ser <strong>superior o igual a 5</strong>.</li>
-</ul>
-<h4 id="823-convocatoria-extraordinaria">8.2.3 Convocatòria extraordinària<a class="headerlink" href="#823-convocatoria-extraordinaria" title="Permanent link">&para;</a></h4>
-<p>L’alumnat que no supere el mòdul en la convocatòria ordinària, 
-té dret a la convocatòria extraordinària, que tractarà els continguts de tot el curs,
-independentment de les avaluacions aprovades anteriorment.</p>
-<h4 id="824-avaluacio-de-la-practica-docent">8.2.4 Avaluació de la pràctica docent<a class="headerlink" href="#824-avaluacio-de-la-practica-docent" title="Permanent link">&para;</a></h4>
-<p>Al final del curs es realitzarà un qüestionari per avaluar la pràctica docent i la qualitat dels materials i el procés d'aprenentatge.</p>
-<h3 id="83-criteris-davaluacio-minims-per-superar-el-modul">8.3 Criteris d’avaluació mínims per superar el mòdul<a class="headerlink" href="#83-criteris-davaluacio-minims-per-superar-el-modul" title="Permanent link">&para;</a></h3>
-<p>Per poder superar el mòdul, l’alumnat haurà de:</p>
-<ul>
-<li>Superar els <strong>exàmens</strong> que es realitzaran en cada de les avaluacions. 
-  Per poder superar cada avaluació, <strong>la mitjana dels exàmens
-  haurà de ser major o igual que 5.</strong></li>
-<li>Superar les <strong>pràctiques</strong> realitzades en cada avaluació. 
-  Per poder superar cada avaluació, <strong>la mitjana de les pràctiques
-  haurà de ser major o igual que 5.</strong></li>
-<li>Tindre un comportament adequat a l’aula i complir les 
-  normes de convivència.</li>
-<li><strong>Superar cada avaluació per separat.</strong></li>
-</ul>
-<h3 id="84-quadre-resum">8.4. Quadre resum<a class="headerlink" href="#84-quadre-resum" title="Permanent link">&para;</a></h3>
-<table class="quadre-resum">
-  <tbody><tr>
-    <th></th>
-    <th>Instruments de qualificació</th>
-    <th>%</th>
-    <th>Consideracions</th>
-  </tr>
-  <tr>
-    <td rowspan="2"><strong>1a Avaluació</strong></td>
-    <td>Exàmens</td>
-    <td>40%</td>
-<td rowspan="4">
-<p>En cada avaluació:</p>
-<ul>
-<li>La nota mitjana dels <strong>exàmens</strong> ha de ser <strong>igual o superior a 5.</strong></li>
-<li>La nota mitjana de les <strong>pràctiques</strong> ha de ser <strong>igual o superior a 5.</strong></li>
-<li>En el butlletí s'arredonirà la nota, però s'utilitzaran els decimals pel còmput de la nota del mòdul.</li>
-</ul>
-</td>
-  </tr>
-  <tr>
-    <td>Pràctiques</td>
-    <td>60%</td>
-  </tr>
-  <tr>
-    <td rowspan="2"><strong>2a Avaluació</strong></td>
-    <td>Exàmens</td>
-    <td>40%</td>
-  </tr>
-  <tr>
-    <td>Pràctiques</td>
-    <td>60%</td>
-  </tr>
-  <tr class="ordinaria">
-    <td rowspan="2"><strong>Ordinària</strong></td>
-    <td>
-      Examen de la màteria de la <strong>1a avaluació</strong>.
-    </td>
-    <td>50%</td>
-<td rowspan="2">
-<p>En cas d'haver aprovat alguna avaluació, es pot guardar aquesta qualificació en compte
-de realitzar l'examen corresponent.</p>
-<ul>
-<li>La nota de cada examen ha de ser <strong>igual o superior a 5</strong>.</li>
-</ul>
-</td>
-  </tr>
-  <tr class="ordinaria">
-    <td>
-      Examen de la màteria de la <strong>2a avaluació</strong>.
-    </td>
-    <td>50%</td>
-  </tr>
-  <tr class="extraordinaria">
-    <td><strong>Extraordinària</strong></td>
-    <td>
-      Examen de tota la matèria
-    </td>
-    <td>100</td>
-    <td>Examen de tota la matèria del mòdul. La nota obtinguda serà la nota del mòdul.</td>
-  </tr>
-</tbody></table>
-
-<h2 id="9-materials-i-recursos-didactics">9. Materials i recursos didàctics<a class="headerlink" href="#9-materials-i-recursos-didactics" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Pantalla digital</li>
-<li>Pissarra</li>
-<li>Plataforma educativa: <strong>Aules</strong>: Publicació de material, continguts, activitats, correccions i rúbriques.</li>
-<li>Ordinadors amb Windows.</li>
-<li>Accès a internet.</li>
-<li>Correu corporatiu.</li>
-<li>Entorns de desenvolupament integrats: <strong>PyCharm</strong>, <strong>Google Colab</strong>.</li>
-<li>Eines de control de versions: <strong>Git</strong></li>
-<li>Llocs d'allotjament de repositoris Git: <strong>GitHub</strong></li>
-</ul>
-<h2 id="10-activitats-complementaries-i-extraescolars">10. Activitats complementàries i extraescolars<a class="headerlink" href="#10-activitats-complementaries-i-extraescolars" title="Permanent link">&para;</a></h2>
-<p>No s'ha contemplat cap activitat complementaria específica per aquest mòdul professional.</p>
-<h2 id="11-temes-transversals">11. Temes transversals<a class="headerlink" href="#11-temes-transversals" title="Permanent link">&para;</a></h2>
-<p>Els temes transversals a tractar al mòdul professional al llarg del curs estan relacionats
-amb el desenvolupament de les capacitats de relacions socials i comunicatives dels alumnes,
-enteses com un complement necessari i important a incloure en qualsevol titulació de tipus tècnica.</p>
-<p>Els temes transversals concrets a tractar són els següents:</p>
-<ul>
-<li>Desenvolupar habilitats de relació social i interpersonal.</li>
-<li>Potenciar les actituds comunicatives, de negociació i de treball en grup.</li>
-<li>Fomentar la motivació.</li>
-<li>Saber afrontar conflictes provocats per les limitacions
-    tecnològiques sempre presents en un entorn tecnològic tan dinàmic i en continua evolució
-    com és el sector informàtic.</li>
-</ul>
-<h2 id="12-mesures-de-resposta-educativa-per-a-la-inclusio">12. Mesures de resposta educativa per a la inclusió<a class="headerlink" href="#12-mesures-de-resposta-educativa-per-a-la-inclusio" title="Permanent link">&para;</a></h2>
-<p>Es tindrà en compte a l'alumnat que necessite més atenció, de manera que
-es garantirà l'accessibilitat a tots els mitjans comuns.</p>
-<p>Accions que es portaran a terme:</p>
-<ul>
-<li>Elaboració d'<strong>exercicis complementaris</strong> per aquells estudiants que ho precisen,
-    tant de suport com d'aprofundiment en la matèria.</li>
-<li>Estimulació del treball en grup de manera remota. La composició dels grups
-    serà supervisada pel docent per aconseguir grups amb nivells heterogenis.</li>
-<li>Facilitar la accessibilitat dels materials i recursos didàctics.</li>
-<li>Flexibilització en les temporitzacions de les activitats
-    (realització d'exàmens, entrega de pràctiques, treball personal, etc.).</li>
-</ul>
+    <h2 id="introduccio-a-pandas">Introducció a Pandas<a class="headerlink" href="#introduccio-a-pandas" title="Permanent link">&para;</a></h2>
+<p>@TODO</p>
     
 
 
@@ -2203,7 +1360,7 @@ es garantirà l'accessibilitat a tots els mitjans comuns.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">1 d’octubre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2 d’octubre del 2024</span>
   </span>
 
     
@@ -2216,23 +1373,100 @@ es garantirà l'accessibilitat a tots els mitjans comuns.</p>
 
 
     
+  <h2 id="__comments">Comentaris</h2>
 
-                    
-                </article>
-            </td></tr></tbody>
 
-            <tfoot><tr><td>
-                <div class="md-content__footer-space">&nbsp;</div>
-            </td></tr></tfoot>
-        </table>
 
-        
-            <div class="md-content__footer">
-                <img src="../../img/fse.png" alt="Fons social europeu">
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+        data-repo="joapuiib/fp"
+        data-repo-id="R_kgDOH-vwrw"
+        data-category="General"
+        data-category-id="DIC_kwDOH-vwr84CiOsU"
+        data-mapping="url"
+        data-strict="1"
+        data-reactions-enabled="0"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="ca"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+  </script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+
+
+              </article>
             </div>
-        
-    </div>
-
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -2252,7 +1486,7 @@ es garantirà l'accessibilitat a tots els mitjans comuns.</p>
       <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
         
           
-          <a href="../presentacio/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Presentació del mòdul">
+          <a href="../00_preparacio_entorn/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Preparació de l&#39;entorn">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2262,20 +1496,20 @@ es garantirà l'accessibilitat a tots els mitjans comuns.</p>
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Presentació del mòdul
+                Preparació de l'entorn
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../apunts/" class="md-footer__link md-footer__link--next" aria-label="Següent: Apunts">
+          <a href="../02_estadistica_basica/" class="md-footer__link md-footer__link--next" aria-label="Següent: Estadística bàsica">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Següent
               </span>
               <div class="md-ellipsis">
-                Apunts
+                Estadística bàsica
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2349,14 +1583,14 @@ es garantirà l'accessibilitat a tots els mitjans comuns.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.copy", "content.code.annotate", "content.tooltips", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.tabs", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.code.copy", "content.code.annotate", "content.tooltips", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.tabs", "toc.follow"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
     
     
     
-      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
-    <script src="../../javascript/katex.js"></script>
+    <script src="../../../javascript/katex.js"></script>
     <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
     <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
 

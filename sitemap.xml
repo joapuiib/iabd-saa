@@ -25,22 +25,28 @@
         <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/01_introduccio/02_xarxes_neuronals/"/>
     </url>
     <url>
-        <loc>Noneapunts/02_estadistica/00_introduccio_pandas/</loc>
+        <loc>Noneapunts/02_estadistica/00_preparacio_entorn/</loc>
         <lastmod>2024-10-02</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/02_estadistica/00_introduccio_pandas/"/>
+        <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/02_estadistica/00_preparacio_entorn/"/>
     </url>
     <url>
-        <loc>Noneapunts/02_estadistica/01_estadistica_basica/</loc>
+        <loc>Noneapunts/02_estadistica/01_introduccio_pandas/</loc>
         <lastmod>2024-10-02</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/02_estadistica/01_estadistica_basica/"/>
+        <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/02_estadistica/01_introduccio_pandas/"/>
     </url>
     <url>
-        <loc>Noneapunts/02_estadistica/02_distribucions/</loc>
+        <loc>Noneapunts/02_estadistica/02_estadistica_basica/</loc>
         <lastmod>2024-10-02</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/02_estadistica/02_distribucions/"/>
+        <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/02_estadistica/02_estadistica_basica/"/>
+    </url>
+    <url>
+        <loc>Noneapunts/02_estadistica/03_distribucions/</loc>
+        <lastmod>2024-10-02</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/02_estadistica/03_distribucions/"/>
     </url>
     <url>
         <loc>Noneapunts/03_manipulacio_dades/01_pandas/</loc>

@@ -14,7 +14,7 @@
         <link rel="prev" href="../../01_introduccio/02_xarxes_neuronals/">
       
       
-        <link rel="next" href="../01_estadistica_basica/">
+        <link rel="next" href="../01_introduccio_pandas/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Introducció a Pandas - IABD-SAA: Sistemes d'aprenentatge automàtic</title>
+        <title>Preparació de l'entorn - IABD-SAA: Sistemes d'aprenentatge automàtic</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccio-a-pandas" class="md-skip">
+        <a href="#objectius" class="md-skip">
           Salta el contingut
         </a>
       
@@ -141,7 +141,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introducció a Pandas
+              Preparació de l'entorn
             
           </span>
         </div>
@@ -655,6 +655,8 @@
       
         
       
+        
+      
     
     
       
@@ -706,11 +708,11 @@
           
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M152.1 38.2c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 113c-9.3-9.4-9.3-24.6 0-34s24.6-9.4 33.9 0L63 101.1l55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zm0 160c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L63 261.2l55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zM224 96c0-17.7 14.3-32 32-32h224c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32m0 160c0-17.7 14.3-32 32-32h224c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32m-64 160c0-17.7 14.3-32 32-32h288c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-17.7 0-32-14.3-32-32M48 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96"/></svg>
   
   
   <span class="md-ellipsis">
-    Introducció a Pandas
+    Preparació de l'entorn
   </span>
   
 
@@ -721,11 +723,11 @@
         
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M152.1 38.2c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 113c-9.3-9.4-9.3-24.6 0-34s24.6-9.4 33.9 0L63 101.1l55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zm0 160c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L63 261.2l55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zM224 96c0-17.7 14.3-32 32-32h224c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32m0 160c0-17.7 14.3-32 32-32h224c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32m-64 160c0-17.7 14.3-32 32-32h288c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-17.7 0-32-14.3-32-32M48 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96"/></svg>
   
   
   <span class="md-ellipsis">
-    Introducció a Pandas
+    Preparació de l'entorn
   </span>
   
 
@@ -745,9 +747,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccio-a-pandas" class="md-nav__link">
+  <a href="#objectius" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducció a Pandas
+      Objectius
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python 3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pycharm" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyCharm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacio-de-projecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació de projecte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-de-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació de dependències
     </span>
   </a>
   
@@ -770,7 +808,33 @@
   
     <li class="md-nav__item">
       
-      <a href="../01_estadistica_basica/" class="md-nav__link">
+      <a href="../01_introduccio_pandas/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    Introducció a Pandas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <a href="../02_estadistica_basica/" class="md-nav__link">
         
   
   
@@ -796,7 +860,7 @@
   
     <li class="md-nav__item">
       
-      <a href="../02_distribucions/" class="md-nav__link">
+      <a href="../03_distribucions/" class="md-nav__link">
         
   
   
@@ -960,9 +1024,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccio-a-pandas" class="md-nav__link">
+  <a href="#objectius" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducció a Pandas
+      Objectius
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python 3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pycharm" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyCharm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacio-de-projecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació de projecte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio-de-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació de dependències
     </span>
   </a>
   
@@ -993,7 +1093,7 @@
     
     
     
-      <span class="md-tag">pandas</span>
+      <span class="md-tag">pycharm</span>
     
   
 </nav>
@@ -1273,7 +1373,7 @@
   
 
 
-<h1>Introducció a Pandas</h1>
+<h1>Preparació de l'entorn</h1>
 
 
 
@@ -1310,8 +1410,71 @@
 
 
     
-    <h2 id="introduccio-a-pandas">Introducció a Pandas<a class="headerlink" href="#introduccio-a-pandas" title="Permanent link">&para;</a></h2>
-<p>@TODO</p>
+    <h2 id="objectius">Objectius<a class="headerlink" href="#objectius" title="Permanent link">&para;</a></h2>
+<p>L'objectiu d'aquest material és configurar l'entorn de desenvolupament
+en ordinadors amb sistema operatiu Windows o distribucions de Linux basades en Debian,
+com Ubuntu o Linux Mint.</p>
+<p>En aquest manual s'instal·larà i es configuraran les següent eines:</p>
+<ul>
+<li><a href="https://www.python.org/" target="_blank">Python 3</a>: Llenguatge de programació.</li>
+<li><a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a>: Entorn de desenvolupament integrat.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Podeu utilitzar l'entorn de desenvolupament que vulgueu,
+però heu de saber configurar-lo per a Python 3.</p>
+<p>El professorat no donarà suport a altres entorns de desenvolupament.</p>
+</div>
+<h2 id="python-3">Python 3<a class="headerlink" href="#python-3" title="Permanent link">&para;</a></h2>
+<p>Python 3 està disponible a <a href="https://www.python.org/">https://www.python.org/</a> per a Windows, macOS i Linux.</p>
+<p>A Linux, Python 3 ja ve instal·lat per defecte a pràcticament totes les distribucions.</p>
+<h2 id="pycharm">PyCharm<a class="headerlink" href="#pycharm" title="Permanent link">&para;</a></h2>
+<p>PyCharm està disponible a <a href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a> per a Windows, macOS i Linux.</p>
+<p>Cal descarregar la versió <strong>Community</strong>, que és de codi obert i gratuïta.</p>
+<h2 id="creacio-de-projecte">Creació de projecte<a class="headerlink" href="#creacio-de-projecte" title="Permanent link">&para;</a></h2>
+<p>Per a començar a treballar, heu de crear un projecte a PyCharm.</p>
+<p>Jo he triat les següents opcions:</p>
+<ul>
+<li><strong>Project type</strong>: Pure Python</li>
+<li><strong>Nome del projecte</strong>: <code>CognomNom-SAA</code></li>
+<li><strong>Location</strong>: Per defecte.</li>
+<li><strong>Interpreter</strong>: Python 3.12</li>
+<li><strong>Interpreter type</strong>: Virtualenv</li>
+<li><strong>Create Git repository</strong>: Sí</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>S'utilitzara un <strong>entorn virtual</strong> per a aïllar les dependències del projecte
+respecte de les del sistema.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Consell</p>
+<p>Vos recomane crear un repositori de <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2.6 10.59 8.38 4.8l1.69 1.7c-.24.85.15 1.78.93 2.23v5.54c-.6.34-1 .99-1 1.73a2 2 0 0 0 2 2 2 2 0 0 0 2-2c0-.74-.4-1.39-1-1.73V9.41l2.07 2.09c-.07.15-.07.32-.07.5a2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2c-.18 0-.35 0-.5.07L13.93 7.5a1.98 1.98 0 0 0-1.15-2.34c-.43-.16-.88-.2-1.28-.09L9.8 3.38l.79-.78c.78-.79 2.04-.79 2.82 0l7.99 7.99c.79.78.79 2.04 0 2.82l-7.99 7.99c-.78.79-2.04.79-2.82 0L2.6 13.41c-.79-.78-.79-2.04 0-2.82"/></svg></span> Git per gestionar el vostre codi.</p>
+</div>
+<p><a class="glightbox" href="../../img/entorn/pycharm_creacio_projecte.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Creació de projecte" src="../../img/entorn/pycharm_creacio_projecte.png" /></a></p>
+<h2 id="installacio-de-dependencies">Instal·lació de dependències<a class="headerlink" href="#installacio-de-dependencies" title="Permanent link">&para;</a></h2>
+<p>En aquest mòdul farem servir les llibreries especificades al fitxer <code>requirements.txt</code>,
+que hauràs de situar a l'arrel del projecte.</p>
+<div class="language-text highlight"><span class="filename">requirements.txt</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pandas
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>numpy
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>plotnine
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>scikit-learn
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Consell</p>
+<p>En el meu cas, s'ha situat a <code>PuigcerverJoan-SAA/requirements.txt</code>.</p>
+</div>
+<p>Per instal·lar les dependències, obriu un terminal a PyCharm
+i executeu la següent comanda:</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp-ve">(.venv)</span><span class="w"> </span><span class="gp-uh">jpuigcerver@fedora</span><span class="gp">:</span><span class="gp-d">~/PuigcerverJoan-SAA</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span></code></pre></div>
+<div class="admonition notice">
+<p class="admonition-title">Fixa't</p>
+<p>Fixeu-vos que el <strong>entorn virtual</strong> està activat: <code>(.venv)</code>.</p>
+<p>Si no ho està, el podeu activar amb la següent comanda:</p>
+<div class="language-shellconsole highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp-uh">jpuigcerver@fedora</span><span class="gp">:</span><span class="gp-d">~/PuigcerverJoan-SAA</span><span class="w"> </span><span class="gp-gb">(main)</span><span class="w"> </span><span class="gp">$</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+</span></code></pre></div>
+</div>
     
 
 
@@ -1332,7 +1495,7 @@
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">29 de setembre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2 d’octubre del 2024</span>
   </span>
 
     
@@ -1475,13 +1638,13 @@
         
         
           
-          <a href="../01_estadistica_basica/" class="md-footer__link md-footer__link--next" aria-label="Següent: Estadística bàsica">
+          <a href="../01_introduccio_pandas/" class="md-footer__link md-footer__link--next" aria-label="Següent: Introducció a Pandas">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Següent
               </span>
               <div class="md-ellipsis">
-                Estadística bàsica
+                Introducció a Pandas
               </div>
             </div>
             <div class="md-footer__button md-icon">
