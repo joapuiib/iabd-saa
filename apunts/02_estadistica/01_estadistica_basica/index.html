@@ -936,6 +936,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#recursos-addicionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos addicionals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bibliografia" class="md-nav__link">
     <span class="md-ellipsis">
       Bibliografia
@@ -1284,6 +1293,15 @@
   <a href="#codi-font" class="md-nav__link">
     <span class="md-ellipsis">
       Codi font
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-addicionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos addicionals
     </span>
   </a>
   
@@ -2079,6 +2097,7 @@ quan una de les variables té desviació estàndard zero,
 <h3 id="correlacio-de-spearman">Correlació de Spearman<a class="headerlink" href="#correlacio-de-spearman" title="Permanent link">&para;</a></h3>
 <p>La <strong>correlació de Spearman</strong> <span class="arithmatex">\(\rho\)</span> (rho) és una mesura de la relació
 que utilitza <strong>la posició dels valors</strong> quan han sigut ordenats.</p>
+<p>Aquesta mesura és útil quan les dades no són lineals.</p>
 <p>La fórmula de la correlació de Spearman és:</p>
 <div class="arithmatex">\[
 \rho = 1 - \frac{6 \sum_{i=1}^{N} d_i^2}{N(N^2 - 1)}
@@ -2101,46 +2120,64 @@ que utilitza <strong>la posició dels valors</strong> quan han sigut ordenats.</
 </div>
 <div class="admonition example">
 <p class="admonition-title">Correlació de Spearman</p>
-<p>Utilitzant les dades $X = {5, 2} i <span class="arithmatex">\(Y = \{7, 9\}\)</span> que corresponen
+<p>Utilitzant les dades <span class="arithmatex">\(X = \{5, 2\}\)</span> i <span class="arithmatex">\(Y = \{7, 9\}\)</span> que corresponen
 a les columnes 0 i 2 del DataFrame.</p>
 <p>Les posicions de les variables ordenades són:</p>
-<p><table class="md-datatable sortable">
-    <thead>
-        <tr>
-            <th><span class="arithmatex">\(X\)</span></th>
-            <th><span class="arithmatex">\(Y\)</span></th>
-            <th><span class="arithmatex">\(O_X\)</span></th>
-            <th><span class="arithmatex">\(O_Y\)</span></th>
-            <th><span class="arithmatex">\(d\)</span></th>
-            <th><span class="arithmatex">\(d^2\)</span></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>2</td>
-            <td>9</td>
-            <td>1</td>
-            <td>2</td>
-            <td>1</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>7</td>
-            <td>2</td>
-            <td>1</td>
-            <td>-1</td>
-            <td>1</td>
-        </tr>
-    </tbody>
-</table></p>
+<div class="table-sortable">
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(X\)</span></th>
+<th><span class="arithmatex">\(Y\)</span></th>
+<th><span class="arithmatex">\(O_X\)</span></th>
+<th><span class="arithmatex">\(O_Y\)</span></th>
+<th><span class="arithmatex">\(d_i\)</span></th>
+<th><span class="arithmatex">\(d_i^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>9</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>1</td>
+<td>-1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>La correlació de Spearman és:</p>
 <div class="arithmatex">\[
 \rho_{02} = 1 - \frac{6(1^2 + 1^2)}{2(2^2 - 1)} = 1 - \frac{12}{6} = 1 - 2 = -1
 \]</div>
 </div>
 <h3 id="correlacio-de-kendall">Correlació de Kendall<a class="headerlink" href="#correlacio-de-kendall" title="Permanent link">&para;</a></h3>
-<p>@TODO</p>
+<p>La <strong>correlació de Kendall</strong> <span class="arithmatex">\(\tau\)</span> (tau) és una mesura de la relació
+que utilitza <strong>els rangs</strong> de les variables per a calcular la correlació.</p>
+<p>Aquesta mesura és preferible a la de Spearman quan hi ha molt poques dades
+i a més hi ha molts empats.</p>
+<p>La fórmula de la correlació de Kendall és:</p>
+<div class="arithmatex">\[
+\tau = \frac{C - D}{C + D}
+\]</div>
+<p>on:</p>
+<ul>
+<li><span class="arithmatex">\(C\)</span> és el nombre de parelles concordants.</li>
+<li><span class="arithmatex">\(D\)</span> és el nombre de parelles discordants.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Vegeu el vídeo <a href="https://www.youtube.com/watch?v=Pm8KV5f3JM0&amp;t=3s" target="_blank">Kendall's Tau Easily Explained</a> per a una explicació detallada.</p>
+</div>
 <h2 id="codi-font">Codi font<a class="headerlink" href="#codi-font" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -2260,12 +2297,21 @@ a les columnes 0 i 2 del DataFrame.</p>
 </div>
 </li>
 </ul>
+<h2 id="recursos-addicionals">Recursos addicionals<a class="headerlink" href="#recursos-addicionals" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Pm8KV5f3JM0&amp;t=3s" target="_blank">Kendall's Tau Easily Explained</a></li>
+</ul>
 <h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://cesguiro.es/">Material del mòdul "Sistemes d'Aprenentatge Automàtic"</a> de César Guijarro Rosaleny</li>
-<li><a href="https://ca.wikipedia.org/wiki/Quantil">Quantil, Viquipèdia</a></li>
-<li><a href="https://ca.wikipedia.org/wiki/Covari%C3%A0ncia">Covalència, Viquipèdia</a></li>
-<li><a href="https://ca.wikipedia.org/wiki/Matriu_de_covari%C3%A0ncia">Matriu de covariància, Viquipèdia</a></li>
+<li><a href="https://cesguiro.es/" target="_blank">Material del mòdul "Sistemes d'Aprenentatge Automàtic"</a> de César Guijarro Rosaleny</li>
+<li><a href="https://ca.wikipedia.org/wiki/Quantil" target="_blank">Quantil, Viquipèdia</a></li>
+<li><a href="https://ca.wikipedia.org/wiki/Covari%C3%A0ncia" target="_blank">Covalència, Viquipèdia</a></li>
+<li><a href="https://ca.wikipedia.org/wiki/Matriu_de_covari%C3%A0ncia" target="_blank">Matriu de covariància, Viquipèdia</a></li>
+<li><a href="https://ca.wikipedia.org/wiki/Correlaci%C3%B3" target="_blank">Correlació, Viquipèdia</a></li>
+<li><a href="https://ca.wikipedia.org/wiki/Coeficient_de_correlaci%C3%B3_de_Pearson" target="_blank">Correlació de Pearson, Viquipèdia</a></li>
+<li><a href="https://ca.wikipedia.org/wiki/Coeficient_de_correlaci%C3%B3_de_Spearman" target="_blank">Correlació de Spearman, Viquipèdia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient" target="_blank">Kendall rank correlation coefficient, Wikipedia</a></li>
+<li><a href="https://support.minitab.com/en-us/minitab/help-and-how-to/statistics/basic-statistics/supporting-topics/correlation-and-covariance/a-comparison-of-the-pearson-and-spearman-correlation-methods/" target="_blank">A comparison of the Pearson and Spearman correlation</a></li>
 </ul>
     
 
