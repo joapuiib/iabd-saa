@@ -473,9 +473,9 @@ Els tipus de correlació més comuns són __Pearson__, __Rho de Spearman__ i __T
 
 ### Correlació de Pearson
 La __correlació de Pearson__ és la covariància calculada
-a partir de les puntuacions estandarditzades de les variables.
+a partir de les unitats tipificades de les dues variables.
 
-Aquesta mesura funciona bé amb variables quantitatives que tenen una distribució normal
+Aquesta mesura funciona bé amb variables quantitatives que tenen una [distribució normal](02_distribucions.md#distribucio-normal),
 o similar. És més sensible als valors extremos que les altres dues alternatives.
 
 $$
@@ -523,9 +523,77 @@ amb l'argument `method='pearson'` (valor per defecte) per a calcular la correlac
         és a dir, és constant.
 
 ### Correlació de Spearman
-La __correlació de Spearman__ és 
+La __correlació de Spearman__ $\rho$ (rho) és una mesura de la relació
+que utilitza __la posició dels valors__ quan han sigut ordenats.
 
-@TODO
+La fórmula de la correlació de Spearman és:
+
+$$
+\rho = 1 - \frac{6 \sum_{i=1}^{N} d_i^2}{N(N^2 - 1)}
+$$
+
+on $d_i$ és la diferència entre les posicions de les dues variables.
+
+!!! example "Correlació de Spearman en Python"
+    ```python
+    spearman = df.corr(method='spearman')
+    print("Correlació de Spearman:")
+    print(spearman)
+    ```
+    /// html | div.result
+    ```text
+    Correlació de Spearman:
+         0   1    2
+    0  1.0 NaN -1.0
+    1  NaN NaN  NaN
+    2 -1.0 NaN  1.0
+    ```
+    ///
+
+!!! example "Correlació de Spearman"
+    Utilitzant les dades $X = \{5, 2\} i $Y = \{7, 9\}$ que corresponen
+    a les columnes 0 i 2 del DataFrame.
+
+    Les posicions de les variables ordenades són:
+
+    <table class="md-datatable sortable">
+        <thead>
+            <tr>
+                <th>$X$</th>
+                <th>$Y$</th>
+                <th>$O_X$</th>
+                <th>$O_Y$</th>
+                <th>$d$</th>
+                <th>$d^2$</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2</td>
+                <td>9</td>
+                <td>1</td>
+                <td>2</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>7</td>
+                <td>2</td>
+                <td>1</td>
+                <td>-1</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    La correlació de Spearman és:
+
+    $$
+    \rho_{02} = 1 - \frac{6(1^2 + 1^2)}{2(2^2 - 1)} = 1 - \frac{12}{6} = 1 - 2 = -1
+    $$
+
+
 
 ### Correlació de Kendall
 @TODO
