@@ -3,6 +3,7 @@ template: document.html
 title: Estadística bàsica
 icon: material/book-open-variant
 comments: true
+alias: estadistica-basica
 tags:
 ---
 
@@ -475,7 +476,8 @@ Els tipus de correlació més comuns són __Pearson__, __Rho de Spearman__ i __T
 La __correlació de Pearson__ és la covariància calculada
 a partir de les unitats tipificades de les dues variables.
 
-Aquesta mesura funciona bé amb variables quantitatives que tenen una [distribució normal](02_distribucions.md#distribucio-normal),
+Aquesta mesura funciona bé amb variables quantitatives que tenen una
+[[distribucions#distribucio-normal|distibució normal]]{:target="_blank"}
 o similar. És més sensible als valors extremos que les altres dues alternatives.
 
 $$

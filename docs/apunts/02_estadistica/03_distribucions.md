@@ -3,6 +3,7 @@ template: document.html
 title: Distribucions de probabilitat
 icon: material/book-open-variant
 comments: true
+alias: distribucions
 tags:
 ---
 
@@ -270,7 +271,8 @@ que permet treballar amb distribucions normals.
     ```
 
     !!! note
-        Aquest càlcul es pot fer mitjançant [__unitats tipificades (standard-score)__](01_estadistica_basica.md#unitat-tipificada-standard-score){:target="_blank"}
+        Aquest càlcul es pot fer mitjançant 
+        [[estadistica-basica#unitat-tipificada-standard-score|__unitats tipificades (standard-score)__]]{: target="_blank"}
         i la [__taula de la distribució normal__](https://en.wikipedia.org/wiki/Standard_normal_table#Cumulative_(less_than_Z)){:target="_blank"}.
 
     La probabilitat que una persona triada a l'atzar tinga una alçada entre 160 i 180 cm és:
@@ -316,7 +318,8 @@ std_normal_dist = NormalDist() # mu=0, sigma=1
 ```
 
 Aquesta distribució és molt important en estadística, ja que permet calcular
-la probabilitat acumulada de qualsevol distribució normal utilitzant les [__unitats tipificades__](01_estadistica_basica.md#unitat-tipificada-standard-score){:target="_blank"}.
+la probabilitat acumulada de qualsevol distribució normal utilitzant les 
+[[estadistica-basica#unitat-tipificada-standard-score|__unitats tipificades (standard-score)__]]{: target="_blank"}
 i consultat la [__taula de la distribució normal__](https://en.wikipedia.org/wiki/Standard_normal_table#Cumulative_(less_than_Z)){:target="_blank"}.
 
 Aquesta taula indica la __probabilitat acumulada__ de trobar un valor menor que $z$
