@@ -81,3 +81,15 @@ i executeu la següent comanda:
     ```shellconsole
     jpuigcerver@fedora:~/PuigcerverJoan-SAA (main) $ source .venv/bin/activate
     ```
+
+## Execució de codi
+En Python, el codi està estrucurat en mòduls, que són directoris amb un fitxer `__init__.py`.
+Podeu crear un mòdul amb __Botó dret > New > Python Package__.
+
+- Crea el package `ud2`.
+
+Després, còpia l'exemple [@TODO](){: target="_blank"} a aquest package.
+
+Tracta d'executar el codi amb :intellij-run: Run. Comprova la consola
+per veure si s'ha executat correctament.
+
