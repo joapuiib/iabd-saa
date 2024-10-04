@@ -194,5 +194,170 @@ df = pd.DataFrame(data, index=index, columns=columns)
     ```
     ///
 
+## Operacions de lectura i escriptura
+`pandas` permet llegir i escriure dades de diferents formats,
+com ara CSV o JSON.
+
+!!! docs
+    Capítol __"2.4. IO Tools"__ del llibre [Practical Tutorial on Data Manipulation with Numpy and Pandas in Python][llibre-git]{:target="_blank"}.
+
+### Carregar dades
+Per carregar dades, es fa servir la funció `read_<tipus>()`,
+on `<tipus>` pot ser `csv`, `json` o altres.
+
+En el cas de carregar dades d'un fitxer CSV, es fa servir la funció
+[`read_csv()`](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html){:target="_blank"}.
+
+!!! example "Carregar dades d'un fitxer CSV"
+
+    ```python
+    # Crear un DataFrame a partir d'un fitxer CSV
+    df = pd.read_csv('cotxes.csv')
+    print("DataFrame a partir d'un fitxer CSV")
+    print(df)
+    ```
+    /// html | div.result
+    ```text
+    DataFrame a partir d'un fitxer CSV
+             marca     km data_matriculacio
+    0         Ford  39031        08/12/2000
+    1         Seat  10542        02/01/2001
+    2   Volkswagen   8065        02/04/2001
+    ...
+    56        Fiat  18358        06/11/2002
+    57     Porsche  19791        02/01/2012
+    58      Nissan  18722        02/04/2001
+    59    Mercedes  48813        10/03/2005
+    ```
+    ///
+
+### Guardar dades
+Per guardar dades, es fa servir la funció `to_<tipus>()`,
+on `<tipus>` pot ser `csv`, `json` o altres.
+
+En el cas de guardar dades en un fitxer CSV, es fa servir la funció
+[`to_csv()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html){:target="_blank"}.
+
+!!! example "Guardar dades en un fitxer CSV"
+    !!! info
+        `index=False` evita que s'afegisca
+        una columna amb l'índex de les files (0, 1, 2, ...).
+
+    ```python
+    # Guardar un DataFrame en un fitxer CSV
+    df = pd.DataFrame({
+        'nom': ['Aina', 'Mar', 'Pere'],
+        'edat': [25, 30, 35],
+        'ciutat': ['València', 'Mislata', 'Alboraia']
+    })
+    df.to_csv('persones.csv', index=False)
+    ```
+    /// html | div.result
+    ```shellconsole
+    jpuigcerver@fp:~/pandas $ cat persones.csv
+    nom,edat,ciutat
+    Aina,25,València
+    Mar,30,Mislata
+    Pere,35,Alboraia
+    ```
+    ///
+
+## Informació de les dades
+`pandas` proporciona diverses funcions per a obtindre
+informació de les dades.
+
+El mètode [`df.info()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.info.html){:target="_blank"}
+mostra informació bàsica del `DataFrame`,
+com ara el nombre de files, columnes, tipus de dades, etc.
+
+!!! example
+    ```python
+    # Mostrar informació bàsica del DataFrame cotxes_df
+    print("Informació bàsica del DataFrame cotxes_df")
+    cotxes_df.info()
+    ```
+    /// html | div.result
+    ```text
+    Informació bàsica del DataFrame cotxes_df
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 60 entries, 0 to 59
+    Data columns (total 3 columns):
+     #   Column             Non-Null Count  Dtype 
+    ---  ------             --------------  ----- 
+     0   marca              60 non-null     object
+     1   km                 60 non-null     int64 
+     2   data_matriculacio  60 non-null     object
+    dtypes: int64(1), object(2)
+    memory usage: 1.5+ KB
+    ```
+    ///
+
+El mètode [`df.head()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.head.html){:target="_blank"}
+les primeres files del `DataFrame`.
+
+- El paràmetre `n` indica el nombre de files a mostrar,
+    que per defecte és 5.
+
+!!! example
+    ```python
+    # Mostrar les primeres files del DataFrame cotxes_df
+    print("Primeres files del DataFrame cotxes_df")
+    print(cotxes_df.head())
+    ```
+    /// html | div.result
+    ```text
+    Primeres files del DataFrame cotxes_df
+    Primeres files del DataFrame cotxes_df
+        marca     km data_matriculacio
+    0        Ford  39031        08/12/2000
+    1        Seat  10542        02/01/2001
+    2  Volkswagen   8065        02/04/2001
+    3     Peugeot  48623        28/11/2001
+    4        Audi  57737        05/12/2001
+    ```
+    ///
+
+El mètode [`df.tail()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.tail.html){:target="_blank"}
+les últimes files del `DataFrame`.
+
+- El paràmetre `n` indica el nombre de files a mostrar,
+    que per defecte és 5.
+
+!!! example
+    ```python
+    # Mostrar les últimes files del DataFrame cotxes_df
+    print("Últimes files del DataFrame cotxes_df")
+    print(cotxes_df.tail())
+    ```
+    /// html | div.result
+    ```text
+    Últimes files del DataFrame cotxes_df
+           marca     km data_matriculacio
+    55      Seat  15734        15/07/2015
+    56      Fiat  18358        06/11/2002
+    57   Porsche  19791        02/01/2012
+    58    Nissan  18722        02/04/2001
+    59  Mercedes  48813        10/03/2005
+    ```
+    ///
+
+## Accés a les dades
+
+## Filtratge de les dades
+
+## Modificació de les dades
+
+## Agrupació de les dades
+
+## Codi font
+- [cotxes.csv](../../files/ud3/cotxes.csv){: download="cotxes.csv"}
+- [exemples_pandas.py](../../files/ud3/exemples_pandas.py){: download="exemples_pandas.py"}
+
+    /// collapse-code
+    ```python
+    --8<-- "docs/files/ud3/exemples_pandas.py"
+    ```
+    ///
+
 
 [llibre-git]: https://pandas.pydata.org/pandas-docs/version/1.4.4/pandas.pdf
