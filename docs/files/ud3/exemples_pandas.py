@@ -69,4 +69,43 @@ print()
 # Mostrar les últimes files del DataFrame cotxes_df
 print("Últimes files del DataFrame cotxes_df")
 print(cotxes_df.tail())
+print()
+
+# Accedir a la columna 'marca' del DataFrame cotxes_df
+print("Columna 'marca' del DataFrame cotxes_df")
+print("Amb []")
+print(cotxes_df['marca'].head(2))
+print("Com atribut")
+print(cotxes_df.marca.head(2))
+print()
+
+# Accedir a les columnes 'marca' i 'km' del DataFrame cotxes_df
+print("Columnes 'marca' i 'km' del DataFrame cotxes_df")
+print(cotxes_df[['marca', 'km']].head(2))
+print()
+
+# Accedir a la fila amb índex 0 del DataFrame cotxes_df
+print("Fila amb índex 0 del DataFrame cotxes_df")
+print(cotxes_df.loc[0])
+print()
+
+# Accedir a les files amb índex 0 i 2 del DataFrame cotxes_df
+print("Files amb índex 0 i 2 del DataFrame cotxes_df")
+print(cotxes_df.loc[[0, 2]])
+print()
+
+# Accedir a les files amb índex 0 i 2 i a les columnes 'marca' i 'km' del DataFrame cotxes_df
+print("Files amb índex 0 fins 2 i columnes 'marca' i 'km' del DataFrame cotxes_df")
+print(cotxes_df.loc[0:2, ['marca', 'km']])
+print()
+
+# Filtrar els cotxes amb 'km' major que 70000
+print("Cotxes amb més de 100000 km")
+print(cotxes_df.loc[cotxes_df['km'] > 70000])
+print()
+
+# Filtrar els cotxes de la marca 'Ford' amb 'km' menor que 50000
+print("Cotxes de la marca 'Ford' amb menys de 50000 km")
+print(cotxes_df.loc[(cotxes_df['marca'] == 'Ford') & (cotxes_df['km'] < 50000)])
+print()
 
