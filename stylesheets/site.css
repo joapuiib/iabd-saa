@@ -1,5 +1,5 @@
-.md-typeset .md-code__content {
-  border-radius: 3mm;
+[data-md-color-primary=brown] {
+    --md-typeset-a-color: #c1775c;
 }
 
 .md-typeset figcaption {
