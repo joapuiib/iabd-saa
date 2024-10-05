@@ -523,17 +523,119 @@ df.drop(0, axis=0, inplace=True)
 ```
 
 ### Afegir una fila
-@TODO: revisar
-
 Es pot afegir una fila al `DataFrame` amb el mètode [`df.concat()`](https://pandas.pydata.org/docs/reference/api/pandas.concat.html){:target="_blank"}.
 
 ```python
-# Afegir una fila al final del DataFrame
+files = pd.Series()
+# o bé
+files = pd.DataFrame()
+
+# Afegir les files al final del DataFrame
+df = pd.concat([df, files], axis=0)
 ```
 
+!!! info
+    També es poden afegir columnes amb `axis=1`.
 
+
+## Funcions d'agregació
+`pandas` incorpora diverses funcions d'agregació per a realitzar càlculs sobre les dades.
+
+El mètode [`max()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.max.html){:target="_blank"}
+retorna el valor màxim de cada columna.
+
+El mètode [`min()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.min.html){:target="_blank"}
+retorna el valor mínim de cada columna.
+
+```python
+# Valor mínim i màxim de cada columna
+df.min()
+df.max()
+
+# Valor mínim i màxim d'una columna concreta
+df['nom_columna'].min()
+df['nom_columna'].max()
+```
+
+El mètode [`sum()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sum.html){:target="_blank"}
+retorna la suma de cada columna.
+
+```python
+# Suma de cada columna
+df.sum()
+
+# Suma d'una columna concreta
+df['nom_columna'].sum()
+```
+
+El mètode [`mean()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.mean.html){:target="_blank"}
+retorna la mitjana aritmètica de cada columna.
+
+```python
+# Mitjana de cada columna
+df.mean()
+
+# Mitjana d'una columna concreta
+df['nom_columna'].mean()
+```
 
 ## Agrupació de les dades
+`pandas` permet agrupar les dades segons els valors d'una o més columnes, mitjançant el mètode
+[`df.groupby()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html){:target="_blank"}.
+
+Després, és possible aplicar [funcions d'agregació](#funcions-dagregació) per a obtindre
+informació de les dades agrupades.
+
+!!! example
+    ```python
+    # Agrupar les dades per la columna 'marca' i calcular la mitjana dels 'km'
+    mean = cotxes_df.groupby('marca')['km'].mean()
+    print("Mitjana dels km per marca")
+    print(mean)
+    ```
+    /// html | div.result
+    ```text
+    Mitjana dels km per marca
+    marca
+    Alfa Romeo    45899.857143
+    Audi          60097.333333
+    BMW           35245.000000
+    Ferrari       34201.000000
+    Fiat          35642.333333
+    Ford          39031.000000
+    Kia           44016.500000
+    Mercedes      49078.000000
+    Nissan        21125.333333
+    Peugeot       48423.125000
+    Porsche       28426.400000
+    Renault       51360.666667
+    Seat          29210.666667
+    Toyota        33753.000000
+    Volkswagen    18710.333333
+    Name: km, dtype: float64
+    ```
+    ///
+
+
+## Dades nul·les o invàlides
+`pandas` proporciona funcions per a tractar les dades nul·les o invàlides (com `NaN`).
+
+El mètode [`isnull()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.isnull.html){:target="_blank"}
+retorna `True` si la dada és nul·la o invàlida.
+
+```python
+# Comprovar el nombre de dades nul·les per columna
+df.isnull().sum()
+```
+
+El mètode [`dropna()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html){:target="_blank"}
+permet eliminar les files amb dades nul·les.
+
+```python
+# Eliminar les files amb dades nul·les
+df.dropna(inplace=True)
+```
+
 
 ## Codi font
 - [cotxes.csv](../../files/ud3/cotxes.csv){: download="cotxes.csv"}
