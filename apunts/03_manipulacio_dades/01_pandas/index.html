@@ -1090,9 +1090,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#funcions-dagregacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcions d'agregació
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#agrupacio-de-les-dades" class="md-nav__link">
     <span class="md-ellipsis">
       Agrupació de les dades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dades-nulles-o-invalides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dades nul·les o invàlides
     </span>
   </a>
   
@@ -1404,9 +1422,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#funcions-dagregacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcions d'agregació
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#agrupacio-de-les-dades" class="md-nav__link">
     <span class="md-ellipsis">
       Agrupació de les dades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dades-nulles-o-invalides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dades nul·les o invàlides
     </span>
   </a>
   
@@ -2245,126 +2281,215 @@ utilitzant el paràmetre <code>axis=0</code> (per defecte).</p>
 </span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></code></pre></div>
 <h3 id="afegir-una-fila">Afegir una fila<a class="headerlink" href="#afegir-una-fila" title="Permanent link">&para;</a></h3>
-<p>@TODO: revisar</p>
 <p>Es pot afegir una fila al <code>DataFrame</code> amb el mètode <a href="https://pandas.pydata.org/docs/reference/api/pandas.concat.html" target="_blank"><code>df.concat()</code></a>.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="c1"># Afegir una fila al final del DataFrame</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">files</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">()</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="c1"># o bé</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="n">files</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="c1"># Afegir les files al final del DataFrame</span>
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span> <span class="n">files</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>També es poden afegir columnes amb <code>axis=1</code>.</p>
+</div>
+<h2 id="funcions-dagregacio">Funcions d'agregació<a class="headerlink" href="#funcions-dagregacio" title="Permanent link">&para;</a></h2>
+<p><code>pandas</code> incorpora diverses funcions d'agregació per a realitzar càlculs sobre les dades.</p>
+<p>El mètode <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.max.html" target="_blank"><code>max()</code></a>
+retorna el valor màxim de cada columna.</p>
+<p>El mètode <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.min.html" target="_blank"><code>min()</code></a>
+retorna el valor mínim de cada columna.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># Valor mínim i màxim de cada columna</span>
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="n">df</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="n">df</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="c1"># Valor mínim i màxim d&#39;una columna concreta</span>
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="n">df</span><span class="p">[</span><span class="s1">&#39;nom_columna&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="n">df</span><span class="p">[</span><span class="s1">&#39;nom_columna&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</span></code></pre></div>
+<p>El mètode <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sum.html" target="_blank"><code>sum()</code></a>
+retorna la suma de cada columna.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="c1"># Suma de cada columna</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="c1"># Suma d&#39;una columna concreta</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="n">df</span><span class="p">[</span><span class="s1">&#39;nom_columna&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</span></code></pre></div>
+<p>El mètode <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.mean.html" target="_blank"><code>mean()</code></a>
+retorna la mitjana aritmètica de cada columna.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="c1"># Mitjana de cada columna</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="c1"># Mitjana d&#39;una columna concreta</span>
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="n">df</span><span class="p">[</span><span class="s1">&#39;nom_columna&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </span></code></pre></div>
 <h2 id="agrupacio-de-les-dades">Agrupació de les dades<a class="headerlink" href="#agrupacio-de-les-dades" title="Permanent link">&para;</a></h2>
+<p><code>pandas</code> permet agrupar les dades segons els valors d'una o més columnes, mitjançant el mètode
+<a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html" target="_blank"><code>df.groupby()</code></a>.</p>
+<p>Després, és possible aplicar <a href="#funcions-dagregació">funcions d'agregació</a> per a obtindre
+informació de les dades agrupades.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="c1"># Agrupar les dades per la columna &#39;marca&#39; i calcular la mitjana dels &#39;km&#39;</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="n">mean</span> <span class="o">=</span> <span class="n">cotxes_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;marca&#39;</span><span class="p">)[</span><span class="s1">&#39;km&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mitjana dels km per marca&quot;</span><span class="p">)</span>
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="result">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>Mitjana dels km per marca
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>marca
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>Alfa Romeo    45899.857143
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>Audi          60097.333333
+</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>BMW           35245.000000
+</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>Ferrari       34201.000000
+</span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>Fiat          35642.333333
+</span><span id="__span-35-8"><a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>Ford          39031.000000
+</span><span id="__span-35-9"><a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>Kia           44016.500000
+</span><span id="__span-35-10"><a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a>Mercedes      49078.000000
+</span><span id="__span-35-11"><a id="__codelineno-35-11" name="__codelineno-35-11" href="#__codelineno-35-11"></a>Nissan        21125.333333
+</span><span id="__span-35-12"><a id="__codelineno-35-12" name="__codelineno-35-12" href="#__codelineno-35-12"></a>Peugeot       48423.125000
+</span><span id="__span-35-13"><a id="__codelineno-35-13" name="__codelineno-35-13" href="#__codelineno-35-13"></a>Porsche       28426.400000
+</span><span id="__span-35-14"><a id="__codelineno-35-14" name="__codelineno-35-14" href="#__codelineno-35-14"></a>Renault       51360.666667
+</span><span id="__span-35-15"><a id="__codelineno-35-15" name="__codelineno-35-15" href="#__codelineno-35-15"></a>Seat          29210.666667
+</span><span id="__span-35-16"><a id="__codelineno-35-16" name="__codelineno-35-16" href="#__codelineno-35-16"></a>Toyota        33753.000000
+</span><span id="__span-35-17"><a id="__codelineno-35-17" name="__codelineno-35-17" href="#__codelineno-35-17"></a>Volkswagen    18710.333333
+</span><span id="__span-35-18"><a id="__codelineno-35-18" name="__codelineno-35-18" href="#__codelineno-35-18"></a>Name: km, dtype: float64
+</span></code></pre></div>
+</div>
+</div>
+<h2 id="dades-nulles-o-invalides">Dades nul·les o invàlides<a class="headerlink" href="#dades-nulles-o-invalides" title="Permanent link">&para;</a></h2>
+<p><code>pandas</code> proporciona funcions per a tractar les dades nul·les o invàlides (com <code>NaN</code>).</p>
+<p>El mètode <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.isnull.html" target="_blank"><code>isnull()</code></a>
+retorna <code>True</code> si la dada és nul·la o invàlida.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="c1"># Comprovar el nombre de dades nul·les per columna</span>
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</span></code></pre></div>
+<p>El mètode <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html" target="_blank"><code>dropna()</code></a>
+permet eliminar les files amb dades nul·les.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="c1"># Eliminar les files amb dades nul·les</span>
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="codi-font">Codi font<a class="headerlink" href="#codi-font" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a download="cotxes.csv" href="../../../files/ud3/cotxes.csv">cotxes.csv</a></li>
 <li>
 <p><a download="exemples_pandas.py" href="../../../files/ud3/exemples_pandas.py">exemples_pandas.py</a></p>
-<div class="collapse-code"><input checked="checked" id="__collapse0" name="__collapse0" type="checkbox" /><div class="language-python highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="ch">#!/usr/bin/env python</span>
-</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
-</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>
-</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="c1"># Crear una Series amb una llista</span>
-</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Series amb una llista&quot;</span><span class="p">)</span>
-</span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span><span id="__span-31-10"><a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-11"><a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>
-</span><span id="__span-31-12"><a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a><span class="c1"># Crear una Series amb un diccionari</span>
-</span><span id="__span-31-13"><a id="__codelineno-31-13" name="__codelineno-31-13" href="#__codelineno-31-13"></a><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">}</span>
-</span><span id="__span-31-14"><a id="__codelineno-31-14" name="__codelineno-31-14" href="#__codelineno-31-14"></a><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-</span><span id="__span-31-15"><a id="__codelineno-31-15" name="__codelineno-31-15" href="#__codelineno-31-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Series amb un diccionari&quot;</span><span class="p">)</span>
-</span><span id="__span-31-16"><a id="__codelineno-31-16" name="__codelineno-31-16" href="#__codelineno-31-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span><span id="__span-31-17"><a id="__codelineno-31-17" name="__codelineno-31-17" href="#__codelineno-31-17"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-18"><a id="__codelineno-31-18" name="__codelineno-31-18" href="#__codelineno-31-18"></a>
-</span><span id="__span-31-19"><a id="__codelineno-31-19" name="__codelineno-31-19" href="#__codelineno-31-19"></a><span class="c1"># Crear una Series amb un valor escalar</span>
-</span><span id="__span-31-20"><a id="__codelineno-31-20" name="__codelineno-31-20" href="#__codelineno-31-20"></a><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
-</span><span id="__span-31-21"><a id="__codelineno-31-21" name="__codelineno-31-21" href="#__codelineno-31-21"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Series amb un valor escalar&quot;</span><span class="p">)</span>
-</span><span id="__span-31-22"><a id="__codelineno-31-22" name="__codelineno-31-22" href="#__codelineno-31-22"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span><span id="__span-31-23"><a id="__codelineno-31-23" name="__codelineno-31-23" href="#__codelineno-31-23"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-24"><a id="__codelineno-31-24" name="__codelineno-31-24" href="#__codelineno-31-24"></a>
-</span><span id="__span-31-25"><a id="__codelineno-31-25" name="__codelineno-31-25" href="#__codelineno-31-25"></a><span class="c1"># Crear un DataFrame amb una llista</span>
-</span><span id="__span-31-26"><a id="__codelineno-31-26" name="__codelineno-31-26" href="#__codelineno-31-26"></a><span class="n">a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
-</span><span id="__span-31-27"><a id="__codelineno-31-27" name="__codelineno-31-27" href="#__codelineno-31-27"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</span><span id="__span-31-28"><a id="__codelineno-31-28" name="__codelineno-31-28" href="#__codelineno-31-28"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame amb una llista&quot;</span><span class="p">)</span>
-</span><span id="__span-31-29"><a id="__codelineno-31-29" name="__codelineno-31-29" href="#__codelineno-31-29"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-</span><span id="__span-31-30"><a id="__codelineno-31-30" name="__codelineno-31-30" href="#__codelineno-31-30"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-31"><a id="__codelineno-31-31" name="__codelineno-31-31" href="#__codelineno-31-31"></a>
-</span><span id="__span-31-32"><a id="__codelineno-31-32" name="__codelineno-31-32" href="#__codelineno-31-32"></a><span class="c1"># Crear un Dataframe amb una llista, indicant els noms de les columnes</span>
-</span><span id="__span-31-33"><a id="__codelineno-31-33" name="__codelineno-31-33" href="#__codelineno-31-33"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">])</span>
-</span><span id="__span-31-34"><a id="__codelineno-31-34" name="__codelineno-31-34" href="#__codelineno-31-34"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame amb una llista i noms de columnes&quot;</span><span class="p">)</span>
-</span><span id="__span-31-35"><a id="__codelineno-31-35" name="__codelineno-31-35" href="#__codelineno-31-35"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-</span><span id="__span-31-36"><a id="__codelineno-31-36" name="__codelineno-31-36" href="#__codelineno-31-36"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-37"><a id="__codelineno-31-37" name="__codelineno-31-37" href="#__codelineno-31-37"></a>
-</span><span id="__span-31-38"><a id="__codelineno-31-38" name="__codelineno-31-38" href="#__codelineno-31-38"></a><span class="c1"># Crear un DataFrame amb un diccionari</span>
-</span><span id="__span-31-39"><a id="__codelineno-31-39" name="__codelineno-31-39" href="#__codelineno-31-39"></a><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">]}</span>
-</span><span id="__span-31-40"><a id="__codelineno-31-40" name="__codelineno-31-40" href="#__codelineno-31-40"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-</span><span id="__span-31-41"><a id="__codelineno-31-41" name="__codelineno-31-41" href="#__codelineno-31-41"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame amb un diccionari&quot;</span><span class="p">)</span>
-</span><span id="__span-31-42"><a id="__codelineno-31-42" name="__codelineno-31-42" href="#__codelineno-31-42"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-</span><span id="__span-31-43"><a id="__codelineno-31-43" name="__codelineno-31-43" href="#__codelineno-31-43"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-44"><a id="__codelineno-31-44" name="__codelineno-31-44" href="#__codelineno-31-44"></a>
-</span><span id="__span-31-45"><a id="__codelineno-31-45" name="__codelineno-31-45" href="#__codelineno-31-45"></a><span class="c1"># Crear un DataFrame a partir d&#39;un fitxer CSV</span>
-</span><span id="__span-31-46"><a id="__codelineno-31-46" name="__codelineno-31-46" href="#__codelineno-31-46"></a><span class="n">cotxes_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;cotxes.csv&#39;</span><span class="p">)</span>
-</span><span id="__span-31-47"><a id="__codelineno-31-47" name="__codelineno-31-47" href="#__codelineno-31-47"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame a partir d&#39;un fitxer CSV&quot;</span><span class="p">)</span>
-</span><span id="__span-31-48"><a id="__codelineno-31-48" name="__codelineno-31-48" href="#__codelineno-31-48"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="p">)</span>
-</span><span id="__span-31-49"><a id="__codelineno-31-49" name="__codelineno-31-49" href="#__codelineno-31-49"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-50"><a id="__codelineno-31-50" name="__codelineno-31-50" href="#__codelineno-31-50"></a>
-</span><span id="__span-31-51"><a id="__codelineno-31-51" name="__codelineno-31-51" href="#__codelineno-31-51"></a><span class="c1"># Guardar un DataFrame en un fitxer CSV</span>
-</span><span id="__span-31-52"><a id="__codelineno-31-52" name="__codelineno-31-52" href="#__codelineno-31-52"></a><span class="n">persones_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-</span><span id="__span-31-53"><a id="__codelineno-31-53" name="__codelineno-31-53" href="#__codelineno-31-53"></a>    <span class="s1">&#39;nom&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Aina&#39;</span><span class="p">,</span> <span class="s1">&#39;Mar&#39;</span><span class="p">,</span> <span class="s1">&#39;Pere&#39;</span><span class="p">],</span>
-</span><span id="__span-31-54"><a id="__codelineno-31-54" name="__codelineno-31-54" href="#__codelineno-31-54"></a>    <span class="s1">&#39;edat&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">],</span>
-</span><span id="__span-31-55"><a id="__codelineno-31-55" name="__codelineno-31-55" href="#__codelineno-31-55"></a>    <span class="s1">&#39;ciutat&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;València&#39;</span><span class="p">,</span> <span class="s1">&#39;Mislata&#39;</span><span class="p">,</span> <span class="s1">&#39;Alboraia&#39;</span><span class="p">]</span>
-</span><span id="__span-31-56"><a id="__codelineno-31-56" name="__codelineno-31-56" href="#__codelineno-31-56"></a><span class="p">})</span>
-</span><span id="__span-31-57"><a id="__codelineno-31-57" name="__codelineno-31-57" href="#__codelineno-31-57"></a><span class="n">persones_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;persones.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span><span id="__span-31-58"><a id="__codelineno-31-58" name="__codelineno-31-58" href="#__codelineno-31-58"></a>
-</span><span id="__span-31-59"><a id="__codelineno-31-59" name="__codelineno-31-59" href="#__codelineno-31-59"></a><span class="c1"># Mostrar informació bàsica del DataFrame cotxes_df</span>
-</span><span id="__span-31-60"><a id="__codelineno-31-60" name="__codelineno-31-60" href="#__codelineno-31-60"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Informació bàsica del DataFrame cotxes_df&quot;</span><span class="p">)</span>
-</span><span id="__span-31-61"><a id="__codelineno-31-61" name="__codelineno-31-61" href="#__codelineno-31-61"></a><span class="n">cotxes_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</span><span id="__span-31-62"><a id="__codelineno-31-62" name="__codelineno-31-62" href="#__codelineno-31-62"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-63"><a id="__codelineno-31-63" name="__codelineno-31-63" href="#__codelineno-31-63"></a>
-</span><span id="__span-31-64"><a id="__codelineno-31-64" name="__codelineno-31-64" href="#__codelineno-31-64"></a><span class="c1"># Mostrar les primeres files del DataFrame cotxes_df</span>
-</span><span id="__span-31-65"><a id="__codelineno-31-65" name="__codelineno-31-65" href="#__codelineno-31-65"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Primeres files del DataFrame cotxes_df&quot;</span><span class="p">)</span>
-</span><span id="__span-31-66"><a id="__codelineno-31-66" name="__codelineno-31-66" href="#__codelineno-31-66"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-</span><span id="__span-31-67"><a id="__codelineno-31-67" name="__codelineno-31-67" href="#__codelineno-31-67"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-68"><a id="__codelineno-31-68" name="__codelineno-31-68" href="#__codelineno-31-68"></a>
-</span><span id="__span-31-69"><a id="__codelineno-31-69" name="__codelineno-31-69" href="#__codelineno-31-69"></a><span class="c1"># Mostrar les últimes files del DataFrame cotxes_df</span>
-</span><span id="__span-31-70"><a id="__codelineno-31-70" name="__codelineno-31-70" href="#__codelineno-31-70"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Últimes files del DataFrame cotxes_df&quot;</span><span class="p">)</span>
-</span><span id="__span-31-71"><a id="__codelineno-31-71" name="__codelineno-31-71" href="#__codelineno-31-71"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">tail</span><span class="p">())</span>
-</span><span id="__span-31-72"><a id="__codelineno-31-72" name="__codelineno-31-72" href="#__codelineno-31-72"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-73"><a id="__codelineno-31-73" name="__codelineno-31-73" href="#__codelineno-31-73"></a>
-</span><span id="__span-31-74"><a id="__codelineno-31-74" name="__codelineno-31-74" href="#__codelineno-31-74"></a><span class="c1"># Accedir a la columna &#39;marca&#39; del DataFrame cotxes_df</span>
-</span><span id="__span-31-75"><a id="__codelineno-31-75" name="__codelineno-31-75" href="#__codelineno-31-75"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Columna &#39;marca&#39; del DataFrame cotxes_df&quot;</span><span class="p">)</span>
-</span><span id="__span-31-76"><a id="__codelineno-31-76" name="__codelineno-31-76" href="#__codelineno-31-76"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Amb []&quot;</span><span class="p">)</span>
-</span><span id="__span-31-77"><a id="__codelineno-31-77" name="__codelineno-31-77" href="#__codelineno-31-77"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="p">[</span><span class="s1">&#39;marca&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
-</span><span id="__span-31-78"><a id="__codelineno-31-78" name="__codelineno-31-78" href="#__codelineno-31-78"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Com atribut&quot;</span><span class="p">)</span>
-</span><span id="__span-31-79"><a id="__codelineno-31-79" name="__codelineno-31-79" href="#__codelineno-31-79"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">marca</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
-</span><span id="__span-31-80"><a id="__codelineno-31-80" name="__codelineno-31-80" href="#__codelineno-31-80"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-81"><a id="__codelineno-31-81" name="__codelineno-31-81" href="#__codelineno-31-81"></a>
-</span><span id="__span-31-82"><a id="__codelineno-31-82" name="__codelineno-31-82" href="#__codelineno-31-82"></a><span class="c1"># Accedir a les columnes &#39;marca&#39; i &#39;km&#39; del DataFrame cotxes_df</span>
-</span><span id="__span-31-83"><a id="__codelineno-31-83" name="__codelineno-31-83" href="#__codelineno-31-83"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Columnes &#39;marca&#39; i &#39;km&#39; del DataFrame cotxes_df&quot;</span><span class="p">)</span>
-</span><span id="__span-31-84"><a id="__codelineno-31-84" name="__codelineno-31-84" href="#__codelineno-31-84"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="p">[[</span><span class="s1">&#39;marca&#39;</span><span class="p">,</span> <span class="s1">&#39;km&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
-</span><span id="__span-31-85"><a id="__codelineno-31-85" name="__codelineno-31-85" href="#__codelineno-31-85"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-86"><a id="__codelineno-31-86" name="__codelineno-31-86" href="#__codelineno-31-86"></a>
-</span><span id="__span-31-87"><a id="__codelineno-31-87" name="__codelineno-31-87" href="#__codelineno-31-87"></a><span class="c1"># Accedir a la fila amb índex 0 del DataFrame cotxes_df</span>
-</span><span id="__span-31-88"><a id="__codelineno-31-88" name="__codelineno-31-88" href="#__codelineno-31-88"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fila amb índex 0 del DataFrame cotxes_df&quot;</span><span class="p">)</span>
-</span><span id="__span-31-89"><a id="__codelineno-31-89" name="__codelineno-31-89" href="#__codelineno-31-89"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</span><span id="__span-31-90"><a id="__codelineno-31-90" name="__codelineno-31-90" href="#__codelineno-31-90"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-91"><a id="__codelineno-31-91" name="__codelineno-31-91" href="#__codelineno-31-91"></a>
-</span><span id="__span-31-92"><a id="__codelineno-31-92" name="__codelineno-31-92" href="#__codelineno-31-92"></a><span class="c1"># Accedir a les files amb índex 0 i 2 del DataFrame cotxes_df</span>
-</span><span id="__span-31-93"><a id="__codelineno-31-93" name="__codelineno-31-93" href="#__codelineno-31-93"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Files amb índex 0 i 2 del DataFrame cotxes_df&quot;</span><span class="p">)</span>
-</span><span id="__span-31-94"><a id="__codelineno-31-94" name="__codelineno-31-94" href="#__codelineno-31-94"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
-</span><span id="__span-31-95"><a id="__codelineno-31-95" name="__codelineno-31-95" href="#__codelineno-31-95"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-96"><a id="__codelineno-31-96" name="__codelineno-31-96" href="#__codelineno-31-96"></a>
-</span><span id="__span-31-97"><a id="__codelineno-31-97" name="__codelineno-31-97" href="#__codelineno-31-97"></a><span class="c1"># Accedir a les files amb índex 0 i 2 i a les columnes &#39;marca&#39; i &#39;km&#39; del DataFrame cotxes_df</span>
-</span><span id="__span-31-98"><a id="__codelineno-31-98" name="__codelineno-31-98" href="#__codelineno-31-98"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Files amb índex 0 fins 2 i columnes &#39;marca&#39; i &#39;km&#39; del DataFrame cotxes_df&quot;</span><span class="p">)</span>
-</span><span id="__span-31-99"><a id="__codelineno-31-99" name="__codelineno-31-99" href="#__codelineno-31-99"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;marca&#39;</span><span class="p">,</span> <span class="s1">&#39;km&#39;</span><span class="p">]])</span>
-</span><span id="__span-31-100"><a id="__codelineno-31-100" name="__codelineno-31-100" href="#__codelineno-31-100"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-101"><a id="__codelineno-31-101" name="__codelineno-31-101" href="#__codelineno-31-101"></a>
-</span><span id="__span-31-102"><a id="__codelineno-31-102" name="__codelineno-31-102" href="#__codelineno-31-102"></a><span class="c1"># Filtrar els cotxes amb &#39;km&#39; major que 70000</span>
-</span><span id="__span-31-103"><a id="__codelineno-31-103" name="__codelineno-31-103" href="#__codelineno-31-103"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cotxes amb més de 100000 km&quot;</span><span class="p">)</span>
-</span><span id="__span-31-104"><a id="__codelineno-31-104" name="__codelineno-31-104" href="#__codelineno-31-104"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cotxes_df</span><span class="p">[</span><span class="s1">&#39;km&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">70000</span><span class="p">])</span>
-</span><span id="__span-31-105"><a id="__codelineno-31-105" name="__codelineno-31-105" href="#__codelineno-31-105"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-31-106"><a id="__codelineno-31-106" name="__codelineno-31-106" href="#__codelineno-31-106"></a>
-</span><span id="__span-31-107"><a id="__codelineno-31-107" name="__codelineno-31-107" href="#__codelineno-31-107"></a><span class="c1"># Filtrar els cotxes de la marca &#39;Ford&#39; amb &#39;km&#39; menor que 50000</span>
-</span><span id="__span-31-108"><a id="__codelineno-31-108" name="__codelineno-31-108" href="#__codelineno-31-108"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cotxes de la marca &#39;Ford&#39; amb menys de 50000 km&quot;</span><span class="p">)</span>
-</span><span id="__span-31-109"><a id="__codelineno-31-109" name="__codelineno-31-109" href="#__codelineno-31-109"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">cotxes_df</span><span class="p">[</span><span class="s1">&#39;marca&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Ford&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">cotxes_df</span><span class="p">[</span><span class="s1">&#39;km&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">50000</span><span class="p">)])</span>
-</span><span id="__span-31-110"><a id="__codelineno-31-110" name="__codelineno-31-110" href="#__codelineno-31-110"></a><span class="nb">print</span><span class="p">()</span>
+<div class="collapse-code"><input checked="checked" id="__collapse0" name="__collapse0" type="checkbox" /><div class="language-python highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="ch">#!/usr/bin/env python</span>
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a><span class="c1"># Crear una Series amb una llista</span>
+</span><span id="__span-38-6"><a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</span><span id="__span-38-7"><a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span><span id="__span-38-8"><a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Series amb una llista&quot;</span><span class="p">)</span>
+</span><span id="__span-38-9"><a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span><span id="__span-38-10"><a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-11"><a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a>
+</span><span id="__span-38-12"><a id="__codelineno-38-12" name="__codelineno-38-12" href="#__codelineno-38-12"></a><span class="c1"># Crear una Series amb un diccionari</span>
+</span><span id="__span-38-13"><a id="__codelineno-38-13" name="__codelineno-38-13" href="#__codelineno-38-13"></a><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">}</span>
+</span><span id="__span-38-14"><a id="__codelineno-38-14" name="__codelineno-38-14" href="#__codelineno-38-14"></a><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</span><span id="__span-38-15"><a id="__codelineno-38-15" name="__codelineno-38-15" href="#__codelineno-38-15"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Series amb un diccionari&quot;</span><span class="p">)</span>
+</span><span id="__span-38-16"><a id="__codelineno-38-16" name="__codelineno-38-16" href="#__codelineno-38-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span><span id="__span-38-17"><a id="__codelineno-38-17" name="__codelineno-38-17" href="#__codelineno-38-17"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-18"><a id="__codelineno-38-18" name="__codelineno-38-18" href="#__codelineno-38-18"></a>
+</span><span id="__span-38-19"><a id="__codelineno-38-19" name="__codelineno-38-19" href="#__codelineno-38-19"></a><span class="c1"># Crear una Series amb un valor escalar</span>
+</span><span id="__span-38-20"><a id="__codelineno-38-20" name="__codelineno-38-20" href="#__codelineno-38-20"></a><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</span><span id="__span-38-21"><a id="__codelineno-38-21" name="__codelineno-38-21" href="#__codelineno-38-21"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Series amb un valor escalar&quot;</span><span class="p">)</span>
+</span><span id="__span-38-22"><a id="__codelineno-38-22" name="__codelineno-38-22" href="#__codelineno-38-22"></a><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span><span id="__span-38-23"><a id="__codelineno-38-23" name="__codelineno-38-23" href="#__codelineno-38-23"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-24"><a id="__codelineno-38-24" name="__codelineno-38-24" href="#__codelineno-38-24"></a>
+</span><span id="__span-38-25"><a id="__codelineno-38-25" name="__codelineno-38-25" href="#__codelineno-38-25"></a><span class="c1"># Crear un DataFrame amb una llista</span>
+</span><span id="__span-38-26"><a id="__codelineno-38-26" name="__codelineno-38-26" href="#__codelineno-38-26"></a><span class="n">a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
+</span><span id="__span-38-27"><a id="__codelineno-38-27" name="__codelineno-38-27" href="#__codelineno-38-27"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span><span id="__span-38-28"><a id="__codelineno-38-28" name="__codelineno-38-28" href="#__codelineno-38-28"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame amb una llista&quot;</span><span class="p">)</span>
+</span><span id="__span-38-29"><a id="__codelineno-38-29" name="__codelineno-38-29" href="#__codelineno-38-29"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span><span id="__span-38-30"><a id="__codelineno-38-30" name="__codelineno-38-30" href="#__codelineno-38-30"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-31"><a id="__codelineno-38-31" name="__codelineno-38-31" href="#__codelineno-38-31"></a>
+</span><span id="__span-38-32"><a id="__codelineno-38-32" name="__codelineno-38-32" href="#__codelineno-38-32"></a><span class="c1"># Crear un Dataframe amb una llista, indicant els noms de les columnes</span>
+</span><span id="__span-38-33"><a id="__codelineno-38-33" name="__codelineno-38-33" href="#__codelineno-38-33"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">])</span>
+</span><span id="__span-38-34"><a id="__codelineno-38-34" name="__codelineno-38-34" href="#__codelineno-38-34"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame amb una llista i noms de columnes&quot;</span><span class="p">)</span>
+</span><span id="__span-38-35"><a id="__codelineno-38-35" name="__codelineno-38-35" href="#__codelineno-38-35"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span><span id="__span-38-36"><a id="__codelineno-38-36" name="__codelineno-38-36" href="#__codelineno-38-36"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-37"><a id="__codelineno-38-37" name="__codelineno-38-37" href="#__codelineno-38-37"></a>
+</span><span id="__span-38-38"><a id="__codelineno-38-38" name="__codelineno-38-38" href="#__codelineno-38-38"></a><span class="c1"># Crear un DataFrame amb un diccionari</span>
+</span><span id="__span-38-39"><a id="__codelineno-38-39" name="__codelineno-38-39" href="#__codelineno-38-39"></a><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">]}</span>
+</span><span id="__span-38-40"><a id="__codelineno-38-40" name="__codelineno-38-40" href="#__codelineno-38-40"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</span><span id="__span-38-41"><a id="__codelineno-38-41" name="__codelineno-38-41" href="#__codelineno-38-41"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame amb un diccionari&quot;</span><span class="p">)</span>
+</span><span id="__span-38-42"><a id="__codelineno-38-42" name="__codelineno-38-42" href="#__codelineno-38-42"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span><span id="__span-38-43"><a id="__codelineno-38-43" name="__codelineno-38-43" href="#__codelineno-38-43"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-44"><a id="__codelineno-38-44" name="__codelineno-38-44" href="#__codelineno-38-44"></a>
+</span><span id="__span-38-45"><a id="__codelineno-38-45" name="__codelineno-38-45" href="#__codelineno-38-45"></a><span class="c1"># Crear un DataFrame a partir d&#39;un fitxer CSV</span>
+</span><span id="__span-38-46"><a id="__codelineno-38-46" name="__codelineno-38-46" href="#__codelineno-38-46"></a><span class="n">cotxes_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;cotxes.csv&#39;</span><span class="p">)</span>
+</span><span id="__span-38-47"><a id="__codelineno-38-47" name="__codelineno-38-47" href="#__codelineno-38-47"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataFrame a partir d&#39;un fitxer CSV&quot;</span><span class="p">)</span>
+</span><span id="__span-38-48"><a id="__codelineno-38-48" name="__codelineno-38-48" href="#__codelineno-38-48"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="p">)</span>
+</span><span id="__span-38-49"><a id="__codelineno-38-49" name="__codelineno-38-49" href="#__codelineno-38-49"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-50"><a id="__codelineno-38-50" name="__codelineno-38-50" href="#__codelineno-38-50"></a>
+</span><span id="__span-38-51"><a id="__codelineno-38-51" name="__codelineno-38-51" href="#__codelineno-38-51"></a><span class="c1"># Guardar un DataFrame en un fitxer CSV</span>
+</span><span id="__span-38-52"><a id="__codelineno-38-52" name="__codelineno-38-52" href="#__codelineno-38-52"></a><span class="n">persones_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+</span><span id="__span-38-53"><a id="__codelineno-38-53" name="__codelineno-38-53" href="#__codelineno-38-53"></a>    <span class="s1">&#39;nom&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Aina&#39;</span><span class="p">,</span> <span class="s1">&#39;Mar&#39;</span><span class="p">,</span> <span class="s1">&#39;Pere&#39;</span><span class="p">],</span>
+</span><span id="__span-38-54"><a id="__codelineno-38-54" name="__codelineno-38-54" href="#__codelineno-38-54"></a>    <span class="s1">&#39;edat&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">],</span>
+</span><span id="__span-38-55"><a id="__codelineno-38-55" name="__codelineno-38-55" href="#__codelineno-38-55"></a>    <span class="s1">&#39;ciutat&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;València&#39;</span><span class="p">,</span> <span class="s1">&#39;Mislata&#39;</span><span class="p">,</span> <span class="s1">&#39;Alboraia&#39;</span><span class="p">]</span>
+</span><span id="__span-38-56"><a id="__codelineno-38-56" name="__codelineno-38-56" href="#__codelineno-38-56"></a><span class="p">})</span>
+</span><span id="__span-38-57"><a id="__codelineno-38-57" name="__codelineno-38-57" href="#__codelineno-38-57"></a><span class="n">persones_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;persones.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-38-58"><a id="__codelineno-38-58" name="__codelineno-38-58" href="#__codelineno-38-58"></a>
+</span><span id="__span-38-59"><a id="__codelineno-38-59" name="__codelineno-38-59" href="#__codelineno-38-59"></a><span class="c1"># Mostrar informació bàsica del DataFrame cotxes_df</span>
+</span><span id="__span-38-60"><a id="__codelineno-38-60" name="__codelineno-38-60" href="#__codelineno-38-60"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Informació bàsica del DataFrame cotxes_df&quot;</span><span class="p">)</span>
+</span><span id="__span-38-61"><a id="__codelineno-38-61" name="__codelineno-38-61" href="#__codelineno-38-61"></a><span class="n">cotxes_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</span><span id="__span-38-62"><a id="__codelineno-38-62" name="__codelineno-38-62" href="#__codelineno-38-62"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-63"><a id="__codelineno-38-63" name="__codelineno-38-63" href="#__codelineno-38-63"></a>
+</span><span id="__span-38-64"><a id="__codelineno-38-64" name="__codelineno-38-64" href="#__codelineno-38-64"></a><span class="c1"># Mostrar les primeres files del DataFrame cotxes_df</span>
+</span><span id="__span-38-65"><a id="__codelineno-38-65" name="__codelineno-38-65" href="#__codelineno-38-65"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Primeres files del DataFrame cotxes_df&quot;</span><span class="p">)</span>
+</span><span id="__span-38-66"><a id="__codelineno-38-66" name="__codelineno-38-66" href="#__codelineno-38-66"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</span><span id="__span-38-67"><a id="__codelineno-38-67" name="__codelineno-38-67" href="#__codelineno-38-67"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-68"><a id="__codelineno-38-68" name="__codelineno-38-68" href="#__codelineno-38-68"></a>
+</span><span id="__span-38-69"><a id="__codelineno-38-69" name="__codelineno-38-69" href="#__codelineno-38-69"></a><span class="c1"># Mostrar les últimes files del DataFrame cotxes_df</span>
+</span><span id="__span-38-70"><a id="__codelineno-38-70" name="__codelineno-38-70" href="#__codelineno-38-70"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Últimes files del DataFrame cotxes_df&quot;</span><span class="p">)</span>
+</span><span id="__span-38-71"><a id="__codelineno-38-71" name="__codelineno-38-71" href="#__codelineno-38-71"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">tail</span><span class="p">())</span>
+</span><span id="__span-38-72"><a id="__codelineno-38-72" name="__codelineno-38-72" href="#__codelineno-38-72"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-73"><a id="__codelineno-38-73" name="__codelineno-38-73" href="#__codelineno-38-73"></a>
+</span><span id="__span-38-74"><a id="__codelineno-38-74" name="__codelineno-38-74" href="#__codelineno-38-74"></a><span class="c1"># Accedir a la columna &#39;marca&#39; del DataFrame cotxes_df</span>
+</span><span id="__span-38-75"><a id="__codelineno-38-75" name="__codelineno-38-75" href="#__codelineno-38-75"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Columna &#39;marca&#39; del DataFrame cotxes_df&quot;</span><span class="p">)</span>
+</span><span id="__span-38-76"><a id="__codelineno-38-76" name="__codelineno-38-76" href="#__codelineno-38-76"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Amb []&quot;</span><span class="p">)</span>
+</span><span id="__span-38-77"><a id="__codelineno-38-77" name="__codelineno-38-77" href="#__codelineno-38-77"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="p">[</span><span class="s1">&#39;marca&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</span><span id="__span-38-78"><a id="__codelineno-38-78" name="__codelineno-38-78" href="#__codelineno-38-78"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Com atribut&quot;</span><span class="p">)</span>
+</span><span id="__span-38-79"><a id="__codelineno-38-79" name="__codelineno-38-79" href="#__codelineno-38-79"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">marca</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</span><span id="__span-38-80"><a id="__codelineno-38-80" name="__codelineno-38-80" href="#__codelineno-38-80"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-81"><a id="__codelineno-38-81" name="__codelineno-38-81" href="#__codelineno-38-81"></a>
+</span><span id="__span-38-82"><a id="__codelineno-38-82" name="__codelineno-38-82" href="#__codelineno-38-82"></a><span class="c1"># Accedir a les columnes &#39;marca&#39; i &#39;km&#39; del DataFrame cotxes_df</span>
+</span><span id="__span-38-83"><a id="__codelineno-38-83" name="__codelineno-38-83" href="#__codelineno-38-83"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Columnes &#39;marca&#39; i &#39;km&#39; del DataFrame cotxes_df&quot;</span><span class="p">)</span>
+</span><span id="__span-38-84"><a id="__codelineno-38-84" name="__codelineno-38-84" href="#__codelineno-38-84"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="p">[[</span><span class="s1">&#39;marca&#39;</span><span class="p">,</span> <span class="s1">&#39;km&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</span><span id="__span-38-85"><a id="__codelineno-38-85" name="__codelineno-38-85" href="#__codelineno-38-85"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-86"><a id="__codelineno-38-86" name="__codelineno-38-86" href="#__codelineno-38-86"></a>
+</span><span id="__span-38-87"><a id="__codelineno-38-87" name="__codelineno-38-87" href="#__codelineno-38-87"></a><span class="c1"># Accedir a la fila amb índex 0 del DataFrame cotxes_df</span>
+</span><span id="__span-38-88"><a id="__codelineno-38-88" name="__codelineno-38-88" href="#__codelineno-38-88"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fila amb índex 0 del DataFrame cotxes_df&quot;</span><span class="p">)</span>
+</span><span id="__span-38-89"><a id="__codelineno-38-89" name="__codelineno-38-89" href="#__codelineno-38-89"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span><span id="__span-38-90"><a id="__codelineno-38-90" name="__codelineno-38-90" href="#__codelineno-38-90"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-91"><a id="__codelineno-38-91" name="__codelineno-38-91" href="#__codelineno-38-91"></a>
+</span><span id="__span-38-92"><a id="__codelineno-38-92" name="__codelineno-38-92" href="#__codelineno-38-92"></a><span class="c1"># Accedir a les files amb índex 0 i 2 del DataFrame cotxes_df</span>
+</span><span id="__span-38-93"><a id="__codelineno-38-93" name="__codelineno-38-93" href="#__codelineno-38-93"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Files amb índex 0 i 2 del DataFrame cotxes_df&quot;</span><span class="p">)</span>
+</span><span id="__span-38-94"><a id="__codelineno-38-94" name="__codelineno-38-94" href="#__codelineno-38-94"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+</span><span id="__span-38-95"><a id="__codelineno-38-95" name="__codelineno-38-95" href="#__codelineno-38-95"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-96"><a id="__codelineno-38-96" name="__codelineno-38-96" href="#__codelineno-38-96"></a>
+</span><span id="__span-38-97"><a id="__codelineno-38-97" name="__codelineno-38-97" href="#__codelineno-38-97"></a><span class="c1"># Accedir a les files amb índex 0 i 2 i a les columnes &#39;marca&#39; i &#39;km&#39; del DataFrame cotxes_df</span>
+</span><span id="__span-38-98"><a id="__codelineno-38-98" name="__codelineno-38-98" href="#__codelineno-38-98"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Files amb índex 0 fins 2 i columnes &#39;marca&#39; i &#39;km&#39; del DataFrame cotxes_df&quot;</span><span class="p">)</span>
+</span><span id="__span-38-99"><a id="__codelineno-38-99" name="__codelineno-38-99" href="#__codelineno-38-99"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;marca&#39;</span><span class="p">,</span> <span class="s1">&#39;km&#39;</span><span class="p">]])</span>
+</span><span id="__span-38-100"><a id="__codelineno-38-100" name="__codelineno-38-100" href="#__codelineno-38-100"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-101"><a id="__codelineno-38-101" name="__codelineno-38-101" href="#__codelineno-38-101"></a>
+</span><span id="__span-38-102"><a id="__codelineno-38-102" name="__codelineno-38-102" href="#__codelineno-38-102"></a><span class="c1"># Filtrar els cotxes amb &#39;km&#39; major que 70000</span>
+</span><span id="__span-38-103"><a id="__codelineno-38-103" name="__codelineno-38-103" href="#__codelineno-38-103"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cotxes amb més de 100000 km&quot;</span><span class="p">)</span>
+</span><span id="__span-38-104"><a id="__codelineno-38-104" name="__codelineno-38-104" href="#__codelineno-38-104"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cotxes_df</span><span class="p">[</span><span class="s1">&#39;km&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">70000</span><span class="p">])</span>
+</span><span id="__span-38-105"><a id="__codelineno-38-105" name="__codelineno-38-105" href="#__codelineno-38-105"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-106"><a id="__codelineno-38-106" name="__codelineno-38-106" href="#__codelineno-38-106"></a>
+</span><span id="__span-38-107"><a id="__codelineno-38-107" name="__codelineno-38-107" href="#__codelineno-38-107"></a><span class="c1"># Filtrar els cotxes de la marca &#39;Ford&#39; amb &#39;km&#39; menor que 50000</span>
+</span><span id="__span-38-108"><a id="__codelineno-38-108" name="__codelineno-38-108" href="#__codelineno-38-108"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cotxes de la marca &#39;Ford&#39; amb menys de 50000 km&quot;</span><span class="p">)</span>
+</span><span id="__span-38-109"><a id="__codelineno-38-109" name="__codelineno-38-109" href="#__codelineno-38-109"></a><span class="nb">print</span><span class="p">(</span><span class="n">cotxes_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">cotxes_df</span><span class="p">[</span><span class="s1">&#39;marca&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Ford&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">cotxes_df</span><span class="p">[</span><span class="s1">&#39;km&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">50000</span><span class="p">)])</span>
+</span><span id="__span-38-110"><a id="__codelineno-38-110" name="__codelineno-38-110" href="#__codelineno-38-110"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-38-111"><a id="__codelineno-38-111" name="__codelineno-38-111" href="#__codelineno-38-111"></a>
+</span><span id="__span-38-112"><a id="__codelineno-38-112" name="__codelineno-38-112" href="#__codelineno-38-112"></a><span class="c1"># Agrupar les dades per la columna &#39;marca&#39; i calcular la mitjana dels &#39;km&#39;</span>
+</span><span id="__span-38-113"><a id="__codelineno-38-113" name="__codelineno-38-113" href="#__codelineno-38-113"></a><span class="n">mean</span> <span class="o">=</span> <span class="n">cotxes_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;marca&#39;</span><span class="p">)[</span><span class="s1">&#39;km&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-38-114"><a id="__codelineno-38-114" name="__codelineno-38-114" href="#__codelineno-38-114"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mitjana dels km per marca&quot;</span><span class="p">)</span>
+</span><span id="__span-38-115"><a id="__codelineno-38-115" name="__codelineno-38-115" href="#__codelineno-38-115"></a><span class="nb">print</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
+</span><span id="__span-38-116"><a id="__codelineno-38-116" name="__codelineno-38-116" href="#__codelineno-38-116"></a><span class="nb">print</span><span class="p">()</span>
 </span></code></pre></div>
 <div class="code-footer"><label class="expand" for="__collapse0" tabindex="0"></label><label class="collapse" for="__collapse0" tabindex="0"></label></div>
 </div>
@@ -2406,7 +2531,7 @@ utilitzant el paràmetre <code>axis=0</code> (per defecte).</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 d’octubre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">5 d’octubre del 2024</span>
   </span>
 
     

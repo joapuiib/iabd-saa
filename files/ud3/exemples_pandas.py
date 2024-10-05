@@ -109,3 +109,8 @@ print("Cotxes de la marca 'Ford' amb menys de 50000 km")
 print(cotxes_df.loc[(cotxes_df['marca'] == 'Ford') & (cotxes_df['km'] < 50000)])
 print()
 
+# Agrupar les dades per la columna 'marca' i calcular la mitjana dels 'km'
+mean = cotxes_df.groupby('marca')['km'].mean().sort_values(ascending=False)
+print("Mitjana dels km per marca")
+print(mean)
+print()
