@@ -86,10 +86,16 @@ i executeu la següent comanda:
 En Python, el codi està estrucurat en mòduls, que són directoris amb un fitxer `__init__.py`.
 Podeu crear un mòdul amb __Botó dret > New > Python Package__.
 
-- Crea el package `ud2`.
+- Crea el mòdul `ud2`.
 
-Després, còpia l'exemple [@TODO](){: target="_blank"} a aquest package.
+Després, còpia l'exemple [exemple_python.py](../../files/ud2/exemple_python.py){: download=exemple_python.py}
+a aquest mòdul.
+
+/// collapse-code
+```python
+--8<-- "docs/files/ud2/exemple_python.py"
+```
+///
 
 Tracta d'executar el codi amb :intellij-run: Run. Comprova la consola
 per veure si s'ha executat correctament.
-
