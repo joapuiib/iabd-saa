@@ -218,6 +218,12 @@ capacitat per a distingir entre les dades reals i les dades generades.
     <figcaption>Figura 9: Xarxa neuronal generativa adversària</figcaption>
 </figure>
 
+## Recursos addicionals
+- [¿Qué es una Red Neuronal? Parte 1 : La Neurona | DotCSV](https://www.youtube.com/watch?v=MRIv2IwFTPg&list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ){:target="_blank"}
+- [¿Qué es una Red Neuronal? Parte 2 : La Red | DotCSV](https://www.youtube.com/watch?v=uwbHOpp9xkc&list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ&index=2){:target="_blank"}
+- [Jugando con Redes Neuronales - Parte 2.5 | DotCSV](https://www.youtube.com/watch?v=FVozZVUNOOA&list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ&index=3){:target="_blank"}
+- [¿Qué es una Red Neuronal? Parte 3 : Backpropagation | DotCSV](https://www.youtube.com/watch?v=eNIqz_noix8&list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ&index=4){:target="_blank"}
+- [A Friendly Introduction to Generative Adversarial Networks (GANs)](https://www.youtube.com/watch?v=8L11aMN5KY8){:target="_blank"}
 
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/) de César Guijarro Rosaleny
