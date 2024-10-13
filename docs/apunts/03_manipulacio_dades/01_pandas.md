@@ -4,12 +4,12 @@ title: Manipulació de dades amb Pandas
 icon: material/book-open-variant
 comments: true
 tags:
-    - python
     - pandas
+    - manipulació de dades
 ---
 
 
-## Introducció a Pandas
+## Manipulació de dades amb Pandas
 [__`pandas`__](https://pandas.pydata.org/) és una llibreria de Python que proporciona
 estructures de dades (`Series` i `DataFrame`) i eines per a l'anàlisi de dades.
 
