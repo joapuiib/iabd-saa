@@ -106,6 +106,8 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.blocks.html
+  - pymdownx.blocks.caption:
+      auto: true
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
