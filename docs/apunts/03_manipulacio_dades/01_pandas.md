@@ -522,6 +522,17 @@ utilitzant el paràmetre `axis=0` (per defecte).
 df.drop(0, axis=0, inplace=True)
 ```
 
+
+
+### Modificar una cel·la
+Es pot modificar una cel·la concreta del `DataFrame` amb el mètode [`df.loc[]`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html){:target="_blank"},
+utilitzant l'índex de la fila i el nom de la columna.
+
+```python
+# Modificar la cel·la de la fila amb índex 0 i la columna 'A'
+df.loc[0, 'A'] = 'nou_valor'
+```
+
 ### Afegir una fila
 Es pot afegir una fila al `DataFrame` amb el mètode [`df.concat()`](https://pandas.pydata.org/docs/reference/api/pandas.concat.html){:target="_blank"}.
 
