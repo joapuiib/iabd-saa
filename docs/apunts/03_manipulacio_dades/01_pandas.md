@@ -198,9 +198,9 @@ En el cas de carregar dades d'un fitxer CSV, es fa servir la funció
 
     ```python
     # Crear un DataFrame a partir d'un fitxer CSV
-    df = pd.read_csv('cotxes.csv')
+    cotxes_df = pd.read_csv('../../files/ud3/cotxes.csv')
     print("DataFrame a partir d'un fitxer CSV")
-    print(df)
+    print(cotxes_df)
     ```
     /// html | div.result
     ```text
@@ -236,7 +236,7 @@ En el cas de guardar dades en un fitxer CSV, es fa servir la funció
         'edat': [25, 30, 35],
         'ciutat': ['València', 'Mislata', 'Alboraia']
     })
-    df.to_csv('persones.csv', index=False)
+    df.to_csv('../../files/ud3/persones.csv', index=False)
     ```
     /// html | div.result
     ```shellconsole
