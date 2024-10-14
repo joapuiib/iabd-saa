@@ -2,6 +2,18 @@
     --md-typeset-a-color: #c1775c;
 }
 
+.md-main__inner {
+    max-width: 84rem;
+    padding: 0 1.5rem;
+}
+
+.md-nav__title svg {
+    fill: currentcolor;
+    flex-shrink: 0;
+    height: 1.3em;
+    position: relative;
+}
+
 .md-typeset figcaption {
   color: var(--md-default-fg-color--light);
 }
@@ -11,6 +23,12 @@
   font-size: 0.75em;
   margin: unset;
   max-width: unset;
+}
+
+.mxgraph {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(26px + 1rem) !important;
 }
 
 .md-banner .twemoji {
@@ -84,3 +102,31 @@ p:has(img.center) {
 .fancylists-upper-alpha > li::marker {
     content: counter(list-item, upper-alpha) ") ";
 }
+
+@page {
+    size: A4;
+    margin: 10mm;
+}
+
+
+@media print {
+    .md-main__inner, .md-content__inner {
+      margin: unset;
+    }
+
+    .cover {
+      /* Substract 1.5rem (if not, license image goes to different page) */
+      height: calc(100vh - 1.5rem);
+    }
+
+    .break-page {
+        -webkit-column-break-before: avoid;
+        page-break-before: always;
+        break-before: always;
+    }
+    
+    .md-source-file {
+        display: none;
+    }
+}
+
