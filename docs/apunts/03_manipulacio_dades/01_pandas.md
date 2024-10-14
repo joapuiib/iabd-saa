@@ -649,12 +649,12 @@ df.dropna(inplace=True)
 
 
 ## Codi font
-- [cotxes.csv](../../files/ud3/cotxes.csv){: download="cotxes.csv"}
-- [exemples_pandas.py](../../files/ud3/exemples_pandas.py){: download="exemples_pandas.py"}
+- [cotxes.csv](../../files/files/ud3/cotxes.csv){: download="cotxes.csv"}
+- [pandas_example.py](../../files/ud3//examples/pandas_example.py){: download="pandas_example.py"}
 
     /// collapse-code
     ```python
-    --8<-- "docs/files/ud3/exemples_pandas.py"
+    --8<-- "docs/files/ud3/examples/pandas_example.py"
     ```
     ///
 

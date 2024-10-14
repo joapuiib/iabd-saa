@@ -218,6 +218,14 @@ Per a utilitzar un tema, s'ha d'afegir la funció `theme` al gràfic.
     Exemple amb tema fosc.
     ///
 
+## Codi font
+- [plotnine_example.py](../../files/ud3//examples/plotnine_example.py){: download="plotnine_example.py"}
+
+    /// collapse-code
+    ```python
+    --8<-- "docs/files/ud3/examples/plotnine_example.py"
+    ```
+    ///
 
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
