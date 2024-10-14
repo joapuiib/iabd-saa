@@ -1,224 +1,72 @@
 ---
 template: document.html
-title: Visualització de les dades amb Plotnine
-icon: material/book-open-variant
-comments: true
-tags:
-    - plotnine
-    - visualització de dades
-    - gràfics
+title: Exercicis amb Plotnine
+icon: material/pencil-outline
 ---
 
-## Visualització de les dades amb Plotnine
-[__`plotnine`__](https://plotnine.org)
-és una llibreria de Python que permet crear gràfics de dades
-de manera senzilla i elegant, inspirada en la llibreria de R `ggplot2`.
+## Exercicis amb Plotnine
+A partir del conjunt de dades
+[120 years of Olympic history: athletes and results](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results){:target="_blank"},
+realitza els següents exercicis amb la llibreria `plotnine`.
 
-Altres llibreries de Python per a la visualització de dades són:
-
-- [`matplotlib`](https://matplotlib.org)
-- [`seaborn`](https://seaborn.pydata.org)
-
-## Instal·lació
-Per instal·lar la llibreria `plotnine` amb `pip`:
-
-```bash
-pip install plotnine
-```
-
-## Importació
-Per importar la llibreria `plotnine`:
-
-```python
-from plotnine import *
-```
-
-## Utilització
-La llibreria es basa en diferents objectes per a la creació de gràfics:
-
-- `ggplot`: objecte principal que conté les dades i les capes del gràfic.
-- `aes`: objecte que defineix les variables estètiques del gràfic.
-- `geom`: objecte que defineix la geometria del gràfic.
-- `theme`: objecte que defineix el tema del gràfic.
-
-!!! docs
-    Documentació oficial de [`plotnine`](https://plotnine.org/reference/#creating-a-plot){:target="_blank"}
-
-!!! example
-    ```python
-    from plotnine import ggplot, geom_point, aes
-    from plotnine.data import mtcars
-
-    print("Dades `mtcars`:")
-    print(mtcars)
-
-    plot = (
-        ggplot(mtcars)
-        + aes("wt", "mpg", color="factor(gear)")
-        + geom_point()
-    )
-
-    plot.show()
-    ```
-
-    ![Exemple bàsic amb plotnine](img/figure_mtcars_basic.png)
-    /// figure-caption
-    Exemple bàsic amb `plotnine`.
-    ///
-
-    1. Creació d'un objecte `ggplot` amb les dades `mtcars`.
-    2. Definició de les variables estètiques amb `aes`.
-        - Sobre l'eix X: `wt` (pes del vehicle).
-        - Sobre l'eix Y: `mpg` (consum del vehicle).
-        - Color: `gear` (nombre de marxes).
-    3. Definició de la geometria amb `geom_point`.
-        - Cada punt representa un vehicle.
-
-### Estètica (`aes`)
-L'estètica control les propietats visuals d'una gràfica.
-Aquestes funcions controlen com es mostren i distribueixen les dades (i els càlculs basats en aquestes).
-
-La funció principal per a definir l'estètica és `aes`.
-
-```python
-aes(x, y, **kwargs)
-```
-
-- `x`: dades utilitzades per a l'eix X.
-- `y`: dades utilitzades per a l'eix Y.
+### Exercici 1: Medalles de Xina
+#### Exercici 1.a
+Crea un gràfic de barres que mostre el nombre de medalles guanyades pels atletes de la Xina en cada esport.
 
 
-!!! info
-    Els paràmetres `x` i `y` poden rebre múltiples tipus de dades. Podeu consultar-ho a la documentació oficial.
+#### Exercici 1.b
+Modifica el gràfic anterior perquè es diferencien les medalles canviant el color segons el tipus.
 
-!!! docs
-    Documentació oficial de la [`aes`](https://plotnine.org/reference/aes.html#plotnine.aes){:target="_blank"}.
+#### Exercici 1.c
+Fes les modificacions necessàries perquè el gràfic de l'exercici anterior quede semblant a aquest:
 
-Altres paràmetres comuns són:
-
-- `color`: color dels elements.
-- `fill`: color de fons dels elements.
+![Medalles de Xina](img/exercicis/plotnine_exercici1.png)
 
 
-### Geometria (`geom`)
-La geometria controla el format amb que es presenten les dades.
+### Exercici 2: Medalles de Rússia
+#### Exercici 2.a
+Crea un gràfic de barres apilades que mostre la
+distribució de les medalles guanyades pels atletes de Rússia per any i gènere.
 
-!!! docs
-    Documentació oficial de la [geometria](https://plotnine.org/reference/#geoms){:target="_blank"}.
+Crea els gràfics separats en dues columnes.
 
-`plotnine` ofereix diferents tipus de geometries, que venen definides per funcions amb el prefix `geom_`.
-Podeu consultar la llista completa a la documentació oficial.
+#### Exercici 2.b
+Modifica el gràfic anterior per mostrar els gràfics en 2 files separades.
 
-Els tipus de geometries més comuns són:
+#### Exercici 2.c
+Modifica el gràfic anterior per mostrar les columnes de medallistes homes i dones en el mateix gràfic.
 
-- [`geom_point`](https://plotnine.org/reference/geom_point.html#plotnine.geom_point){:target="_blank"}: punts.
-- [`geom_line`](https://plotnine.org/reference/geom_line.html#plotnine.geom_line){:target="_blank"}: línies.
-- [`geom_bar`](https://plotnine.org/reference/geom_bar.html#plotnine.geom_bar){:target="_blank"}: barres.
-- [`geom_boxplot`](https://plotnine.org/reference/geom_boxplot.html#plotnine.geom_boxplot){:target="_blank"}: diagrama de caixes.
+#### Exercici 2.d
+Elimina les medalles guanyades abans de 1994 del gràfic anterior.
 
-!!! example "Exemple amb punts"
-    La [Figura 1](#__figure-caption_1) mostra un exemple bàsic amb `geom_point`.
+#### Exercici 2.e
+Fes les modificacions necessàries perquè el gràfic de l'exercici anterior quede semblant a aquest:
 
-!!! example "Exemple amb línies"
-    !!! info
-        La funció `factor()` converteix una variable numèrica en una variable categòrica.
+@TODO
 
-    ```python
-    plot = (
-        ggplot(mtcars)
-        + aes("wt", "mpg", color="factor(gear)")
-        + geom_line()
-    )
 
-    plot.show()
-    ```
+### Exercici 3: Participació als Jocs Olímpics
+#### Exercici 3.a
+Crea un gràfic de línies que mostre com ha evolucionat
+la quantitat de participants als Jocs Olímpics al llarg dels anys similar al següent:
 
-    ![Exemple amb línies](img/figure_mtcars_linies.png)
-    /// figure-caption
-    Exemple bàsic amb `geom_line`.
-    ///
+@TODO
 
-!!! example "Exemple amb barres"
-    ```python
-    bar_plot = (
-        ggplot(mtcars)
-        + aes(x='factor(cyl)', fill='factor(gear)')
-        + geom_bar()
-    )
 
-    bar_plot.show()
-    ```
+#### Exercici 3.b
 
-    ![Exemple amb barres](img/figure_mtcars_barres.png)
-    /// figure-caption
-    Exemple bàsic amb `geom_bar`.
-    ///
+!!! question
+    Per què creus que ixen eixos dents de serra en el gràfic anterior?
 
-### Títol i etiquetes
-Es pot especificar el títol del gràfic amb la funció
-[`ggtitle`](https://plotnine.org/reference/ggtitle.html#plotnine.ggtitle){:target="_blank"}.
+Arregla les dades perquè mostren dades amb més rellevància estadística:
 
-!!! docs
-    Documentació oficial de la [funció `ggtitle`](https://plotnine.org/reference/ggtitle.html#plotnine.ggtitle){:target="_blank"}.
+@TODO
 
-També es pot afegir etiquetes als eixos X i Y amb les funcions:
 
-- [`labs`](https://plotnine.org/reference/labs.html#plotnine.labs){:target="_blank"}: Permet especificar el títol i les etiquetes dels eixos X i Y i altres elements.
-- [`xlab`](https://plotnine.org/reference/xlab.html#plotnine.xlab){:target="_blank"}: etiqueta de l'eix X.
-- [`ylab`](https://plotnine.org/reference/ylab.html#plotnine.ylab){:target="_blank"}: etiqueta de l'eix Y.
+### Exercici 4: Participació femenina
+Tria 5 esports i mostra la evolució de la participació femenina al llarg dels anys amb un gràfic:
 
-!!! example "Exemple amb títol i etiquetes"
-    ```python
-    plot = (
-        ggplot(mtcars)
-        + aes("wt", "mpg", color="factor(gear)")
-        + geom_point()
-        + labs(title="Consum (wt) vs Pes (mpg)",
-               x="Pes en lliures",
-               y="Consum en milles per galó",
-               color="Nombre de marxes"
-        )
-    )
-
-    plot.show()
-    ```
-
-    ![Exemple amb títol i etiquetes](img/figure_mtcars_etiquetes.png)
-    /// figure-caption
-    Exemple amb títol i etiquetes.
-    ///
-
-### Temes
-Es poden utilitzar diferents temes per a personalitzar l'aparença del gràfic.
-
-!!! docs
-    Documentació oficial dels [temes](https://plotnine.org/reference/#themes){:target="_blank"}.
-
-Per a utilitzar un tema, s'ha d'afegir la funció `theme` al gràfic.
-
-!!! example "Exemple amb títol i etiquetes"
-    ```python
-    plot = (
-        ggplot(mtcars)
-        + aes("wt", "mpg", color="factor(gear)")
-        + geom_point()
-        + labs(title="Consum (wt) vs Pes (mpg)",
-               x="Pes en lliures",
-               y="Consum en milles per galó",
-               color="Nombre de marxes"
-        )
-        + theme_dark()
-    )
-
-    plot.show()
-    ```
-
-    ![Exemple amb tema fosc](img/figure_mtcars_dark.png)
-    /// figure-caption
-    Exemple amb tema fosc.
-    ///
-
+@TODO
 
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
-- [Documentació oficial de `plotnine`](https://plotnine.org){:target="_blank"}
