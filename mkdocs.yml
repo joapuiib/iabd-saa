@@ -64,7 +64,7 @@ theme:
 plugins:
   - alias
   - awesome-pages # Navegació
-  - drawio_file
+  - drawio
   - glightbox
   - macros
   - material/search
