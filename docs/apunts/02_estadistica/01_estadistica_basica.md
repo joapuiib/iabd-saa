@@ -193,8 +193,8 @@ $$
 
     $$
     \sigma^2 = \frac{1}{5} ((20-46)^2 + (20-46)^2 + (50-46)^2 + (60-46)^2 + (80-46)^2) \\
-    \sigma^2 = \frac{1}{5} (676 + 676 + 16 + 196 + 1296) \\
-    \sigma^2 = \frac{2856}{5} = 571.2
+    \sigma^2 = \frac{1}{5} (676 + 676 + 16 + 196 + 1156) \\
+    \sigma^2 = \frac{2720}{5} = 544
     $$
 
 !!! example "Exemple amb Pandas"
@@ -227,7 +227,7 @@ $$
     Donades les edats d'un grup de persones $X = \{ 20, 20, 50, 60, 80 \}$, la desviació estàndard és:
 
     $$
-    \sigma = \sqrt{571.2} = 23.9
+    \sigma = \sqrt{544} = 23.32
     $$
 
 !!! example "Exemple amb Pandas"
