@@ -41,7 +41,7 @@ if [ $INSTALL_VENV -eq 1 ]; then
     ./venv/bin/pip install -r requirements.txt
 fi
 
-COMMAND="serve --quiet"
+COMMAND="serve"
 if [ $BUILD -eq 1 ]; then
     COMMAND="build"
 fi

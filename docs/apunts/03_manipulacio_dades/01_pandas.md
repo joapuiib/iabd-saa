@@ -367,7 +367,7 @@ indicant la llista de les etiquetes.
     ```python
     # Accedir a les columnes 'marca' i 'km' del DataFrame cotxes_df
     print("Columnes 'marca' i 'km' del DataFrame cotxes_df")
-    print(cotxes_df[['marca', 'km']].head(2))
+    print(cotxes_df\[['marca', 'km']].head(2))
     ```
     /// html | div.result
     ```text
@@ -385,7 +385,7 @@ Es pot accedir a les dades d'una fila del `DataFrame` amb la funció
 El primer paràmetre de la funció `loc` és l'índex de la fila (no necessàriament numèric) o una condició.
 
 - `df.loc[n]`: Accedeix a la fila amb índex `n`.
-- `df.loc[[n1, n2, ...]]`: Accedeix a les files amb índexs `n1`, `n2`, ...
+- `df.loc\[[n1, n2, ...]]`: Accedeix a les files amb índexs `n1`, `n2`, ...
 - `df.loc[n:m]`: Accedeix a les files amb índexs de `n` a `m`.
 - `df.loc[condicio]`: Accedeix a les files que compleixen la condició.
 
@@ -403,7 +403,7 @@ El segon paràmetre de la funció `loc` és l'etiqueta de la columna que volem o
 
     # Accedir a les files amb índex 0 i 2 del DataFrame cotxes_df
     print("Files amb índex 0 i 2 del DataFrame cotxes_df")
-    print(cotxes_df.loc[[0, 2]])
+    print(cotxes_df.loc\[[0, 2]])
     print()
 
     # Accedir a les files amb índex 0 i 2 i a les columnes 'marca' i 'km' del DataFrame cotxes_df
