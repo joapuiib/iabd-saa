@@ -50,7 +50,7 @@ Fes les modificacions necessàries perquè el gràfic de l'exercici anterior que
 Crea un gràfic de línies que mostre com ha evolucionat
 la quantitat de participants als Jocs Olímpics al llarg dels anys similar al següent:
 
-@TODO
+![Participació als Jocs Olímpics](img/exercicis/plotnine_exercici3a.png)
 
 
 #### Exercici 3.b
@@ -60,13 +60,13 @@ la quantitat de participants als Jocs Olímpics al llarg dels anys similar al se
 
 Arregla les dades perquè mostren dades amb més rellevància estadística:
 
-@TODO
+![Participació als Jocs Olímpics](img/exercicis/plotnine_exercici3b.png)
 
 
 ### Exercici 4: Participació femenina
 Tria 5 esports i mostra la evolució de la participació femenina al llarg dels anys amb un gràfic:
 
-@TODO
+![Participació femenina](img/exercicis/plotnine_exercici4.png)
 
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
