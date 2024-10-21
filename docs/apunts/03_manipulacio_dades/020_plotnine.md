@@ -63,6 +63,7 @@ La llibreria es basa en diferents objectes per a la creació de gràfics:
 
     ![Exemple bàsic amb plotnine](img/figure_mtcars_basic.png)
     /// figure-caption
+        attrs: { id: "figure-exemple-basic" }
     Exemple bàsic amb `plotnine`.
     ///
 
@@ -117,7 +118,7 @@ Els tipus de geometries més comuns són:
 - [`geom_boxplot`](https://plotnine.org/reference/geom_boxplot.html#plotnine.geom_boxplot){:target="_blank"}: diagrama de caixes.
 
 !!! example "Exemple amb punts"
-    La [Figura 1](#__figure-caption_1) mostra un exemple bàsic amb `geom_point`.
+    La [Figura 1](#figure-exemple-basic) mostra un exemple bàsic amb `geom_point`.
 
 !!! example "Exemple amb línies"
     !!! info

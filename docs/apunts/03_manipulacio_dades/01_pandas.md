@@ -594,7 +594,7 @@ df['nom_columna'].mean()
 `pandas` permet agrupar les dades segons els valors d'una o més columnes, mitjançant el mètode
 [`df.groupby()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html){:target="_blank"}.
 
-Després, és possible aplicar [funcions d'agregació](#funcions-dagregació) per a obtindre
+Després, és possible aplicar [funcions d'agregació](#funcions-dagregacio) per a obtindre
 informació de les dades agrupades.
 
 !!! example
