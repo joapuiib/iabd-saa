@@ -43,7 +43,7 @@ print(df)
 print()
 
 # Crear un DataFrame a partir d'un fitxer CSV
-cotxes_df = pd.read_csv('cotxes.csv')
+cotxes_df = pd.read_csv('../../files/ud3/cotxes.csv')
 print("DataFrame a partir d'un fitxer CSV")
 print(cotxes_df)
 print()
@@ -54,7 +54,7 @@ persones_df = pd.DataFrame({
     'edat': [25, 30, 35],
     'ciutat': ['València', 'Mislata', 'Alboraia']
 })
-persones_df.to_csv('persones.csv', index=False)
+persones_df.to_csv('../../files/ud3/persones.csv', index=False)
 
 # Mostrar informació bàsica del DataFrame cotxes_df
 print("Informació bàsica del DataFrame cotxes_df")

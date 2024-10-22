@@ -3,13 +3,14 @@ template: document.html
 title: Manipulació de dades amb Pandas
 icon: material/book-open-variant
 comments: true
+alias: pandas
 tags:
-    - python
     - pandas
+    - manipulació de dades
 ---
 
 
-## Introducció a Pandas
+## Manipulació de dades amb Pandas
 [__`pandas`__](https://pandas.pydata.org/) és una llibreria de Python que proporciona
 estructures de dades (`Series` i `DataFrame`) i eines per a l'anàlisi de dades.
 
@@ -594,7 +595,7 @@ df['nom_columna'].mean()
 `pandas` permet agrupar les dades segons els valors d'una o més columnes, mitjançant el mètode
 [`df.groupby()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html){:target="_blank"}.
 
-Després, és possible aplicar [funcions d'agregació](#funcions-dagregació) per a obtindre
+Després, és possible aplicar [funcions d'agregació](#funcions-dagregacio) per a obtindre
 informació de les dades agrupades.
 
 !!! example
@@ -649,12 +650,12 @@ df.dropna(inplace=True)
 
 
 ## Codi font
-- [cotxes.csv](../../files/ud3/cotxes.csv){: download="cotxes.csv"}
-- [exemples_pandas.py](../../files/ud3/exemples_pandas.py){: download="exemples_pandas.py"}
+- [cotxes.csv](../../files/files/ud3/cotxes.csv){: download="cotxes.csv"}
+- [pandas_example.py](../../files/ud3//examples/pandas_example.py){: download="pandas_example.py"}
 
     /// collapse-code
     ```python
-    --8<-- "docs/files/ud3/exemples_pandas.py"
+    --8<-- "docs/files/ud3/examples/pandas_example.py"
     ```
     ///
 
