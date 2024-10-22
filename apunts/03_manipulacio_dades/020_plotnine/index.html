@@ -14,9 +14,11 @@
         <link rel="prev" href="../01_pandas/">
       
       
+        <link rel="next" href="../021_exercicis_plotnine/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -84,6 +86,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#visualitzacio-de-les-dades-amb-plotnine" class="md-skip">
+          Salta el contingut
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -788,6 +795,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -863,6 +874,21 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    Visualització de les dades amb Plotnine
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -877,6 +903,171 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visualitzacio-de-les-dades-amb-plotnine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualització de les dades amb Plotnine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importació
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilitzacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilització
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilització">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estetica-aes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estètica (aes)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometria-geom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometria (geom)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#titol-i-etiquetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Títol i etiquetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codi-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      Codi font
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <a href="../021_exercicis_plotnine/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.06 9 .94.94L5.92 19H5v-.92zm3.6-6c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29m-3.6 3.19L3 17.25V21h3.75L17.81 9.94z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    Exercicis amb Plotnine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <a href="../03_preparacio_dades/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    Preparació de les dades
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -915,6 +1106,110 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visualitzacio-de-les-dades-amb-plotnine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualització de les dades amb Plotnine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instal·lació
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importació
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilitzacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilització
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilització">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estetica-aes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estètica (aes)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometria-geom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometria (geom)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#titol-i-etiquetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Títol i etiquetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codi-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      Codi font
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -925,6 +1220,29 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
+    
+      
+<nav class="md-tags" >
+  
+    
+    
+    
+      <span class="md-tag">plotnine</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">visualització de dades</span>
+    
+  
+    
+    
+    
+      <span class="md-tag">gràfics</span>
+    
+  
+</nav>
     
     
 
@@ -963,7 +1281,7 @@
 <div class="cover__background">
 
 <!-- rectangle vertical -->
-<svg xmlns="http://www.w3.org/2000/svg" width="25" height="" style="height: 100%">
+<svg xmlns="http://www.w3.org/2000/svg" width="25" style="height: 100%">
   <rect width="25" height="100%" class="" style="fill:var(--md-primary-fg-color--dark);"/>
 </svg>
 
@@ -1238,7 +1556,267 @@
 
 
     
-    
+    <h2 id="visualitzacio-de-les-dades-amb-plotnine">Visualització de les dades amb Plotnine<a class="headerlink" href="#visualitzacio-de-les-dades-amb-plotnine" title="Permanent link">&para;</a></h2>
+<p><a href="https://plotnine.org"><strong><code>plotnine</code></strong></a>
+és una llibreria de Python que permet crear gràfics de dades
+de manera senzilla i elegant, inspirada en la llibreria de R <code>ggplot2</code>.</p>
+<p>Altres llibreries de Python per a la visualització de dades són:</p>
+<ul>
+<li><a href="https://matplotlib.org"><code>matplotlib</code></a></li>
+<li><a href="https://seaborn.pydata.org"><code>seaborn</code></a></li>
+</ul>
+<h2 id="installacio">Instal·lació<a class="headerlink" href="#installacio" title="Permanent link">&para;</a></h2>
+<p>Per instal·lar la llibreria <code>plotnine</code> amb <code>pip</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>plotnine
+</span></code></pre></div>
+<h2 id="importacio">Importació<a class="headerlink" href="#importacio" title="Permanent link">&para;</a></h2>
+<p>Per importar la llibreria <code>plotnine</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span>
+</span></code></pre></div>
+<h2 id="utilitzacio">Utilització<a class="headerlink" href="#utilitzacio" title="Permanent link">&para;</a></h2>
+<p>La llibreria es basa en diferents objectes per a la creació de gràfics:</p>
+<ul>
+<li><code>ggplot</code>: objecte principal que conté les dades i les capes del gràfic.</li>
+<li><code>aes</code>: objecte que defineix les variables estètiques del gràfic.</li>
+<li><code>geom</code>: objecte que defineix la geometria del gràfic.</li>
+<li><code>theme</code>: objecte que defineix el tema del gràfic.</li>
+</ul>
+<div class="admonition docs">
+<p class="admonition-title">Documentació</p>
+<p>Documentació oficial de <a href="https://plotnine.org/reference/#creating-a-plot" target="_blank"><code>plotnine</code></a></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="n">ggplot</span><span class="p">,</span> <span class="n">geom_point</span><span class="p">,</span> <span class="n">aes</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">plotnine.data</span> <span class="kn">import</span> <span class="n">mtcars</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dades `mtcars`:&quot;</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">plot</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="n">ggplot</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="o">+</span> <span class="n">aes</span><span class="p">(</span><span class="s2">&quot;wt&quot;</span><span class="p">,</span> <span class="s2">&quot;mpg&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;factor(gear)&quot;</span><span class="p">)</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">)</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<figure id="figure-exemple-basic">
+<p><a class="glightbox" href="../img/figure_mtcars_basic.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Exemple bàsic amb plotnine" src="../img/figure_mtcars_basic.png" /></a></p>
+<figcaption>
+<p><span class="caption-prefix">Figura 1.</span> Exemple bàsic amb <code>plotnine</code>.</p>
+</figcaption>
+</figure>
+<ol class="fancylists-decimal" type="1">
+<li>Creació d'un objecte <code>ggplot</code> amb les dades <code>mtcars</code>.</li>
+<li>Definició de les variables estètiques amb <code>aes</code>.<ul>
+<li>Sobre l'eix X: <code>wt</code> (pes del vehicle).</li>
+<li>Sobre l'eix Y: <code>mpg</code> (consum del vehicle).</li>
+<li>Color: <code>gear</code> (nombre de marxes).</li>
+</ul>
+</li>
+<li>Definició de la geometria amb <code>geom_point</code>.<ul>
+<li>Cada punt representa un vehicle.</li>
+</ul>
+</li>
+</ol>
+</div>
+<h3 id="estetica-aes">Estètica (<code>aes</code>)<a class="headerlink" href="#estetica-aes" title="Permanent link">&para;</a></h3>
+<p>L'estètica control les propietats visuals d'una gràfica.
+Aquestes funcions controlen com es mostren i distribueixen les dades (i els càlculs basats en aquestes).</p>
+<p>La funció principal per a definir l'estètica és <code>aes</code>.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></code></pre></div>
+<ul>
+<li><code>x</code>: dades utilitzades per a l'eix X.</li>
+<li><code>y</code>: dades utilitzades per a l'eix Y.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Els paràmetres <code>x</code> i <code>y</code> poden rebre múltiples tipus de dades. Podeu consultar-ho a la documentació oficial.</p>
+</div>
+<div class="admonition docs">
+<p class="admonition-title">Documentació</p>
+<p>Documentació oficial de la <a href="https://plotnine.org/reference/aes.html#plotnine.aes" target="_blank"><code>aes</code></a>.</p>
+</div>
+<p>Altres paràmetres comuns són:</p>
+<ul>
+<li><code>color</code>: color dels elements.</li>
+<li><code>fill</code>: color de fons dels elements.</li>
+</ul>
+<h3 id="geometria-geom">Geometria (<code>geom</code>)<a class="headerlink" href="#geometria-geom" title="Permanent link">&para;</a></h3>
+<p>La geometria controla el format amb que es presenten les dades.</p>
+<div class="admonition docs">
+<p class="admonition-title">Documentació</p>
+<p>Documentació oficial de la <a href="https://plotnine.org/reference/#geoms" target="_blank">geometria</a>.</p>
+</div>
+<p><code>plotnine</code> ofereix diferents tipus de geometries, que venen definides per funcions amb el prefix <code>geom_</code>.
+Podeu consultar la llista completa a la documentació oficial.</p>
+<p>Els tipus de geometries més comuns són:</p>
+<ul>
+<li><a href="https://plotnine.org/reference/geom_point.html#plotnine.geom_point" target="_blank"><code>geom_point</code></a>: punts.</li>
+<li><a href="https://plotnine.org/reference/geom_line.html#plotnine.geom_line" target="_blank"><code>geom_line</code></a>: línies.</li>
+<li><a href="https://plotnine.org/reference/geom_bar.html#plotnine.geom_bar" target="_blank"><code>geom_bar</code></a>: barres.</li>
+<li><a href="https://plotnine.org/reference/geom_boxplot.html#plotnine.geom_boxplot" target="_blank"><code>geom_boxplot</code></a>: diagrama de caixes.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemple amb punts</p>
+<p>La <a href="#figure-exemple-basic">Figura 1</a> mostra un exemple bàsic amb <code>geom_point</code>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple amb línies</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>La funció <code>factor()</code> converteix una variable numèrica en una variable categòrica.</p>
+</div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">plot</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">ggplot</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="o">+</span> <span class="n">aes</span><span class="p">(</span><span class="s2">&quot;wt&quot;</span><span class="p">,</span> <span class="s2">&quot;mpg&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;factor(gear)&quot;</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="o">+</span> <span class="n">geom_line</span><span class="p">()</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<figure id="__figure-caption_2">
+<p><a class="glightbox" href="../img/figure_mtcars_linies.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Exemple amb línies" src="../img/figure_mtcars_linies.png" /></a></p>
+<figcaption>
+<p><span class="caption-prefix">Figura 2.</span> Exemple bàsic amb <code>geom_line</code>.</p>
+</figcaption>
+</figure>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple amb barres</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">bar_plot</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">ggplot</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="o">+</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;factor(cyl)&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;factor(gear)&#39;</span><span class="p">)</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">bar_plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<figure id="__figure-caption_3">
+<p><a class="glightbox" href="../img/figure_mtcars_barres.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Exemple amb barres" src="../img/figure_mtcars_barres.png" /></a></p>
+<figcaption>
+<p><span class="caption-prefix">Figura 3.</span> Exemple bàsic amb <code>geom_bar</code>.</p>
+</figcaption>
+</figure>
+</div>
+<h3 id="titol-i-etiquetes">Títol i etiquetes<a class="headerlink" href="#titol-i-etiquetes" title="Permanent link">&para;</a></h3>
+<p>Es pot especificar el títol del gràfic amb la funció
+<a href="https://plotnine.org/reference/ggtitle.html#plotnine.ggtitle" target="_blank"><code>ggtitle</code></a>.</p>
+<div class="admonition docs">
+<p class="admonition-title">Documentació</p>
+<p>Documentació oficial de la <a href="https://plotnine.org/reference/ggtitle.html#plotnine.ggtitle" target="_blank">funció <code>ggtitle</code></a>.</p>
+</div>
+<p>També es pot afegir etiquetes als eixos X i Y amb les funcions:</p>
+<ul>
+<li><a href="https://plotnine.org/reference/labs.html#plotnine.labs" target="_blank"><code>labs</code></a>: Permet especificar el títol i les etiquetes dels eixos X i Y i altres elements.</li>
+<li><a href="https://plotnine.org/reference/xlab.html#plotnine.xlab" target="_blank"><code>xlab</code></a>: etiqueta de l'eix X.</li>
+<li><a href="https://plotnine.org/reference/ylab.html#plotnine.ylab" target="_blank"><code>ylab</code></a>: etiqueta de l'eix Y.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemple amb títol i etiquetes</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">plot</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">ggplot</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="o">+</span> <span class="n">aes</span><span class="p">(</span><span class="s2">&quot;wt&quot;</span><span class="p">,</span> <span class="s2">&quot;mpg&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;factor(gear)&quot;</span><span class="p">)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="o">+</span> <span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Consum (wt) vs Pes (mpg)&quot;</span><span class="p">,</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>           <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Pes en lliures&quot;</span><span class="p">,</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>           <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Consum en milles per galó&quot;</span><span class="p">,</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>           <span class="n">color</span><span class="o">=</span><span class="s2">&quot;Nombre de marxes&quot;</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="p">)</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="p">)</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<figure id="__figure-caption_4">
+<p><a class="glightbox" href="../img/figure_mtcars_etiquetes.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Exemple amb títol i etiquetes" src="../img/figure_mtcars_etiquetes.png" /></a></p>
+<figcaption>
+<p><span class="caption-prefix">Figura 4.</span> Exemple amb títol i etiquetes.</p>
+</figcaption>
+</figure>
+</div>
+<h3 id="temes">Temes<a class="headerlink" href="#temes" title="Permanent link">&para;</a></h3>
+<p>Es poden utilitzar diferents temes per a personalitzar l'aparença del gràfic.</p>
+<div class="admonition docs">
+<p class="admonition-title">Documentació</p>
+<p>Documentació oficial dels <a href="https://plotnine.org/reference/#themes" target="_blank">temes</a>.</p>
+</div>
+<p>Per a utilitzar un tema, s'ha d'afegir la funció <code>theme</code> al gràfic.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple amb títol i etiquetes</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">plot</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">ggplot</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="o">+</span> <span class="n">aes</span><span class="p">(</span><span class="s2">&quot;wt&quot;</span><span class="p">,</span> <span class="s2">&quot;mpg&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;factor(gear)&quot;</span><span class="p">)</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="o">+</span> <span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Consum (wt) vs Pes (mpg)&quot;</span><span class="p">,</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>           <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Pes en lliures&quot;</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>           <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Consum en milles per galó&quot;</span><span class="p">,</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>           <span class="n">color</span><span class="o">=</span><span class="s2">&quot;Nombre de marxes&quot;</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="p">)</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="o">+</span> <span class="n">theme_dark</span><span class="p">()</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="p">)</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<figure id="__figure-caption_5">
+<p><a class="glightbox" href="../img/figure_mtcars_dark.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Exemple amb tema fosc" src="../img/figure_mtcars_dark.png" /></a></p>
+<figcaption>
+<p><span class="caption-prefix">Figura 5.</span> Exemple amb tema fosc.</p>
+</figcaption>
+</figure>
+</div>
+<h2 id="codi-font">Codi font<a class="headerlink" href="#codi-font" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><a download="plotnine_example.py" href="../../../files/ud3/examples/plotnine_example.py">plotnine_example.py</a></p>
+<div class="collapse-code"><input checked="checked" id="__collapse0" name="__collapse0" type="checkbox" /><div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="ch">#!/usr/bin/env python</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kn">from</span> <span class="nn">plotnine</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="kn">from</span> <span class="nn">plotnine.data</span> <span class="kn">import</span> <span class="n">mtcars</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dades `mtcars`:&quot;</span><span class="p">)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">plot</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="n">ggplot</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    <span class="o">+</span> <span class="n">aes</span><span class="p">(</span><span class="s2">&quot;wt&quot;</span><span class="p">,</span> <span class="s2">&quot;mpg&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;factor(gear)&quot;</span><span class="p">)</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    <span class="o">+</span> <span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Consum (wt) vs Pes (mpg)&quot;</span><span class="p">,</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>           <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Pes en lliures&quot;</span><span class="p">,</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>           <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Consum en milles per galó&quot;</span><span class="p">,</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>           <span class="n">color</span><span class="o">=</span><span class="s2">&quot;Nombre de marxes&quot;</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>    <span class="p">)</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>    <span class="o">+</span> <span class="n">theme_dark</span><span class="p">()</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="p">)</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="n">line_plot</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>    <span class="n">ggplot</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>    <span class="o">+</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;wt&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;mpg&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;factor(gear)&#39;</span><span class="p">)</span>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>    <span class="o">+</span> <span class="n">geom_line</span><span class="p">()</span>
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="p">)</span>
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="n">line_plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>
+</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="n">bar_plot</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>    <span class="n">ggplot</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span>
+</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>    <span class="o">+</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;factor(cyl)&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;factor(gear)&#39;</span><span class="p">)</span>
+</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>    <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span>
+</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="p">)</span>
+</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>
+</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="n">bar_plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<div class="code-footer"><label class="expand" for="__collapse0" tabindex="0"></label><label class="collapse" for="__collapse0" tabindex="0"></label></div>
+</div>
+</li>
+</ul>
+<h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://cesguiro.es/" target="_blank">Material del mòdul "Sistemes d'Aprenentatge Automàtic"</a> de César Guijarro Rosaleny</li>
+<li><a href="https://plotnine.org" target="_blank">Documentació oficial de <code>plotnine</code></a></li>
+</ul>
     
 
 
@@ -1259,7 +1837,7 @@
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">25 de setembre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">22 d’octubre del 2024</span>
   </span>
 
     
@@ -1367,6 +1945,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -1400,6 +1980,22 @@
             </div>
           </a>
         
+        
+          
+          <a href="../021_exercicis_plotnine/" class="md-footer__link md-footer__link--next" aria-label="Següent: Exercicis amb Plotnine">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Següent
+              </span>
+              <div class="md-ellipsis">
+                Exercicis amb Plotnine
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
@@ -1466,7 +2062,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.code.copy", "content.code.annotate", "content.tooltips", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.tabs", "toc.follow"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.tabs", "toc.follow"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
     
     
     
