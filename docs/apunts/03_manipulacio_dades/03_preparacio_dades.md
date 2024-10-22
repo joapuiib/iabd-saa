@@ -37,10 +37,39 @@ A més, podem utilitzar els següents mètodes
 per obtindre més informació:
 
 - `describe()`: proporciona estadístiques descriptives del conjunt de dades.
+    - `count`: nombre de valors no nuls.
+    - `mean`: mitjana dels valors.
+    - `std`: desviació estàndard dels valors.
+    - `min`: valor mínim.
+    - `25%`: primer quartil.
+    - `50%`: mediana.
+    - `75%`: tercer quartil.
+    - `max`: valor màxim.
 - `shape`: proporciona el nombre de files i columnes del conjunt de dades.
 
 ??? example "Exemple: `describe()` i `shape` adults-dataset"
     @TODO
+
+### Anàlisi visual de les dades
+
+### Valors nuls
+Un dels problemes més comuns en les dades són els valors nuls,
+ja que la majoria de models no permeten treballar amb valors no numèrics.
+
+Podem identificar els valors nuls amb el mètode `isnull()`.
+
+??? example "Exemple: `isnull()` adults-dataset"
+    @TODO `isnull().sum()`
+
+En aquest cas, podem tractar-los de tres maneres diferents:
+
+- Eliminar les files amb valors nuls.
+- Eliminar la columna amb valors nuls.
+- Inferir els valors nuls.
+
+Depenent de la tipologia de les dades, una opció serà més adequada que una altra.
+
+@TODO Exemples de com tractar els valors nuls
 
 
 ## Bibliografia
