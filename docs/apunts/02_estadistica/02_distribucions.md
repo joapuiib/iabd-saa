@@ -381,6 +381,9 @@ std_normal_dist.cdf(z)
     ///
 
 ## Distribució conjunta i mostral
+!!! info "Curiositat"
+    -[CIS: ¿Cómo se hacen las encuestas?](https://www.cis.es/ca/estudios/preguntas-frecuentes/como-se-hacen-las-encuestas/){:target="_blank"}
+
 ### Distribució conjunta
 La __distribució conjunta__ és la distribució de probabilitat de tots
 els possibles valors d'una variable aleatòria en una població.
