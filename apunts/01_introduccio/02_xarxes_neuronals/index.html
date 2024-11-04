@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
@@ -950,6 +950,8 @@ Lloc web en construcció!
       
         
       
+        
+      
     
     
       
@@ -1080,6 +1082,32 @@ Lloc web en construcció!
   
   <span class="md-ellipsis">
     Preparació de les dades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <a href="../../03_manipulacio_dades/04_analisi_visual/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    Anàlisi visual de les dades
   </span>
   
 
@@ -1632,36 +1660,39 @@ en els últims anys.</p>
 <p>Les xarxes neuronals estan compostes per <strong>neurones artificials</strong>, que són
 l'element bàsic d'aquest model. La neurona artificial esta inspirada en
 la neurona natural, que és la cèl·lula bàsica del cervell dels animals.</p>
-<figure id="figure-1">
-    <a class="glightbox" href="../img/neurona.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/neurona.png" alt="Neurona natural"></a>
-    <figcaption class="attribution">Mauro Lanari, Wikimedia Commons</figcaption>
-    <figcaption>FIgura 1: Neurona natural</figcaption>
-</figure>
-
+<p><a class="glightbox" href="../img/neurona.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Neurona natural" src="../img/neurona.png" /></a>
+/// attribution
+Mauro Lanari, Wikimedia Commons
+///
+/// figure-caption
+Neurona natural
+///</p>
 <p>La <strong>neurona artificial</strong>, també anomenada <strong>perceptró</strong>, és
 la unitat bàsica d'una xarxa neuronal. Aquesta rep un <strong>conjunt d'entrades</strong>
 (<em>inputs</em>), que són ponderades per uns <strong>pesos</strong> (<em>weights</em>) i sumades
-amb un <strong>sesg</strong> (<em>bias</em>).</p>
+amb un <strong>biaix</strong> (<em>sesgo</em> o <em>bias</em>).</p>
 <p>L'<strong>eixida</strong> (<em>output</em>) de la neurona es calcula aplicant una <strong>funció
 d'activació</strong> a la suma ponderada de les entrades.</p>
-<figure id="figure-2">
-    <a class="glightbox" href="../img/perceptron.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/perceptron.png" alt="Perceptró"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 2: Perceptró</figcaption>
-</figure>
-
+<p><a class="glightbox" href="../img/perceptron.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Perceptró" src="../img/perceptron.png" /></a>
+/// attribution
+Autor desconegut
+///
+/// figure-caption
+Perceptró
+///</p>
 <p>L'eixida d'un perceptró es linear respecte a les entrades, per tant, no
 podria resoldre problemes no lineals. Per evitar aquesta limitació,
 s'han afegit les <strong>funcions d'activació</strong>, que permeten a les xarxes
 neuronals resoldre problemes més complexos.</p>
 <p>Les <strong>funcions d'activació</strong> són funcions no lineals que s'apliquen a
 abans de l'eixida de la neurona.</p>
-<figure id="figure-3">
-    <a class="glightbox" href="../img/activation.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/activation.jpeg" alt="Funcions d'activació"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 3: Funcions d'activació</figcaption>
-</figure>
-
+<p><a class="glightbox" href="../img/activation.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Funcions d'activació" src="../img/activation.jpeg" /></a>
+/// attribution
+Autor desconegut
+///
+/// figure-caption
+Funcions d'activació
+///</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>Existeixes moltes funcions d'activació, que caldrà seleccionar
@@ -1675,17 +1706,18 @@ de neurones entre sí.</p>
 dades, i per tant, resoldre problemes més complicats.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>Realment, el que defineix el <abbr title="Deep Neural Networks">DNN</abbr> no és el nombre de capes, siní el
+<p>Realment, el que defineix el <abbr title="Deep Neural Networks">DNN</abbr> no és el nombre de capes, sinó el
 processament de les dades de manera jeràrquica. Cada capa extrau característiques
 més abstractes de les dades que la capa anterior arribant
 a la resposta final.</p>
 </div>
-<figure id="figure-4">
-    <a class="glightbox" href="../img/deep-learning-process.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/deep-learning-process.png" alt="Procés d'una xarxa neuronal profunda"></a>
-    <figcaption class="attribution">https://wwww.quantamagazine.org</figcaption>
-    <figcaption>Figura 4: Procés d'una xarxa neuronal profunda</figcaption>
-</figure>
-
+<p><a class="glightbox" href="../img/dnn.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Deep Neural Networks" src="../img/dnn.png" /></a>
+/// attribution
+<a href="https://wwww.quantamagazine.org">https://wwww.quantamagazine.org</a>
+///
+/// figure-caption
+Procés d'una xarxa neuronal profunda
+///</p>
 <p>La primera capa s'anomena <strong>capa d'entrada</strong>, que tindrà tantes neurones
 com entrades tinguen les nostres dades.</p>
 <div class="admonition example">
@@ -1703,18 +1735,19 @@ com entrades tinguen les nostres dades.</p>
 tindrà tantes neurones com resultats esperem obtindre.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<p>En el problema anterior, l'exida que esperem és el preu de la casa.</p>
+<p>En el problema anterior, l'eixida que esperem és el preu de la casa.</p>
 <p>Per tant, la capa d'eixida tindria una sola neurona.</p>
 </div>
-<p>Les capes intermèdies s'anomenen <strong>capa ocultes</strong> que estan connctades entre sí,
+<p>Les capes intermèdies s'anomenen <strong>capa ocultes</strong> que estan connectades entre sí,
 de manera que l'eixida d'una capa és l'entrada de la següent. El nombre de neurones
 en aquestes capes depèn del problema a resoldre.</p>
-<figure id="figure-5">
-    <a class="glightbox" href="../img/dnn.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/dnn.png" alt="Xarxa neuronal profunda"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 5: Xarxa neuronal profunda</figcaption>
-</figure>
-
+<p><a class="glightbox" href="../img/dnn.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Xarxa neuronal profunda" src="../img/dnn.png" /></a>
+/// attribution
+Autor desconegut
+///
+/// figure-caption
+Xarxa neuronal profunda
+///</p>
 <h3 id="retropropagacio-backpropagation">Retropropagació (backpropagation)<a class="headerlink" href="#retropropagacio-backpropagation" title="Permanent link">&para;</a></h3>
 <p>La <strong>retropropagació (<em>backpropagation</em>)</strong> és un algoritme d'aprenentatge
 supervisat que s'utilitza per entrenar xarxes neuronals.</p>
@@ -1726,12 +1759,13 @@ per minimitzar l'error entre l'eixida de la xarxa i l'eixida esperada.</p>
 <li>Es compara l'eixida de la xarxa amb l'eixida esperada, i es calcula l'<strong>error</strong>.</li>
 <li>L'error es propaga cap enrere a través de la xarxa, ajustant els pesos de les connexions.</li>
 </ul>
-<figure id="figure-6">
-    <a class="glightbox" href="../img/backpropagation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/backpropagation.png" alt="Retropropagació"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 6: Retropropagació</figcaption>
-</figure>
-
+<p><a class="glightbox" href="../img/backpropagation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Retropropagació" src="../img/backpropagation.png" /></a>
+/// attribution
+Autor desconegut
+///
+/// figure-caption
+Retropropagació
+///</p>
 <p>Aquest procés es repeteix moltes vegades de manera iterativa, reduint
 l'error de la xarxa fins a arribar a un valor acceptable.</p>
 <div class="admonition note">
@@ -1749,12 +1783,13 @@ imatges.</p>
 <p>Les primeres capes d'una <abbr title="Convolutional Neural Networks">CNN</abbr> són <strong>capes de convolució</strong>, que apliquen
 s'encarreguen d'extraure característiques de xicotetes regions de la
 imatge (lines, curves, textures, etc.).</p>
-<figure id="figure-7">
-    <a class="glightbox" href="../img/cnn.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/cnn.jpg" alt="Xarxa neuronal convolucional"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 7: Xarxa neuronal convolucional</figcaption>
-</figure>
-
+<p><a class="glightbox" href="../img/cnn.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Xarxa neuronal convolucional" src="../img/cnn.jpg" /></a>
+/// attribution
+Autor desconegut
+///
+/// figure-caption
+Xarxa neuronal convolucional
+///</p>
 <h3 id="xarxes-neuronals-recurrents-rnn">Xarxes neuronals recurrents (<abbr title="Recurrent Neural Networks">RNN</abbr>)<a class="headerlink" href="#xarxes-neuronals-recurrents-rnn" title="Permanent link">&para;</a></h3>
 <p>Les <strong>xarxes neuronals recurrents (<em>Recurrent Neural Networks o <abbr title="Recurrent Neural Networks">RNN</abbr></em>)</strong>
 són un tipus de xarxes neuronals dissenyades per a processar seqüències
@@ -1762,12 +1797,13 @@ de dades, com textos, temps, etc.</p>
 <p>Aquest tipus de xarxes tenen <strong>connexions cícliques</strong> entre les neurones,
 de manera que l'eixida de la xarxa pot ser utilitzada com a entrada en
 la següent iteració.</p>
-<figure id="figure-8">
-    <a class="glightbox" href="../img/rnn.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/rnn.png" alt="Xarxa neuronal recurrent"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 8: Xarxa neuronal recurrent</figcaption>
-</figure>
-
+<p><a class="glightbox" href="../img/rnn.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Xarxa neuronal recurrent" src="../img/rnn.png" /></a>
+/// attribution
+Autor desconegut
+///
+/// figure-caption
+Xarxa neuronal recurrent
+///</p>
 <h3 id="xarxes-neuronals-generatives-adversaries-gan">Xarxes neuronals generatives adversàries (GAN)<a class="headerlink" href="#xarxes-neuronals-generatives-adversaries-gan" title="Permanent link">&para;</a></h3>
 <p>Les <strong>xarxes neuronals generatives adversàries (<em>Generative Adversarial Networks o GAN</em>)</strong>
 són un tipus de xarxes neuronals dissenyades per a generar dades noves
@@ -1779,30 +1815,31 @@ a partir de dades existents.</p>
     i les dades generades pel generador.</li>
 </ul>
 <p>La tasca del generador és enganyar el discriminador, i la tasca del
-discriminador és diferençiar entre les dades reals i les dades generades.</p>
+discriminador és diferenciar entre les dades reals i les dades generades.</p>
 <p>Quan el discriminador descarta les dades generades pel generador, aquest
 aprén de l'error i millora la seua capacitat per a generar dades noves.</p>
 <p>En canvi, quan el discriminador no pot distingir entre les dades reals i
 les dades generades, el discriminador aprén de l'error i millora la seua
 capacitat per a distingir entre les dades reals i les dades generades.</p>
-<figure id="figure-9">
-    <a class="glightbox" href="../img/gan.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/gan.png" alt="Xarxa neuronal generativa adversària"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 9: Xarxa neuronal generativa adversària</figcaption>
-</figure>
-
+<p><a class="glightbox" href="../img/gan.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Xarxa neuronal generativa adversària" src="../img/gan.png" /></a>
+/// attribution
+Autor desconegut
+///
+/// figure-caption
+Xarxa neuronal generativa adversària
+///</p>
 <h2 id="recursos-addicionals">Recursos addicionals<a class="headerlink" href="#recursos-addicionals" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=MRIv2IwFTPg&amp;list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ" target="_blank">¿Qué es una Red Neuronal? Parte 1 : La Neurona | DotCSV</a></li>
-<li><a href="https://www.youtube.com/watch?v=uwbHOpp9xkc&amp;list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ&amp;index=2" target="_blank">¿Qué es una Red Neuronal? Parte 2 : La Red | DotCSV</a></li>
-<li><a href="https://www.youtube.com/watch?v=FVozZVUNOOA&amp;list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ&amp;index=3" target="_blank">Jugando con Redes Neuronales - Parte 2.5 | DotCSV</a></li>
-<li><a href="https://www.youtube.com/watch?v=eNIqz_noix8&amp;list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ&amp;index=4" target="_blank">¿Qué es una Red Neuronal? Parte 3 : Backpropagation | DotCSV</a></li>
+<li><a class="spell-ignore" href="https://www.youtube.com/watch?v=MRIv2IwFTPg&amp;list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ" target="_blank">¿Qué es una Red Neuronal? Parte 1 : La Neurona | DotCSV</a></li>
+<li><a class="spell-ignore" href="https://www.youtube.com/watch?v=uwbHOpp9xkc&amp;list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ&amp;index=2" target="_blank">¿Qué es una Red Neuronal? Parte 2 : La Red | DotCSV</a></li>
+<li><a class="spell-ignore" href="https://www.youtube.com/watch?v=FVozZVUNOOA&amp;list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ&amp;index=3" target="_blank">Jugando con Redes Neuronales - Parte 2.5 | DotCSV</a></li>
+<li><a class="spell-ignore" href="https://www.youtube.com/watch?v=eNIqz_noix8&amp;list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ&amp;index=4" target="_blank">¿Qué es una Red Neuronal? Parte 3 : Backpropagation | DotCSV</a></li>
 <li><a href="https://www.youtube.com/watch?v=8L11aMN5KY8" target="_blank">A Friendly Introduction to Generative Adversarial Networks (GANs)</a></li>
 </ul>
 <h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://cesguiro.es/">Material del mòdul "Sistemes d'Aprenentatge Automàtic"</a> de César Guijarro Rosaleny</li>
-<li>Retropropagacio, Wikipedia: <a href="https://ca.wikipedia.org/wiki/Retropropagaci%C3%B3">https://ca.wikipedia.org/wiki/Retropropagaci%C3%B3</a></li>
+<li>Retropropagació, Wikipedia: <a href="https://ca.wikipedia.org/wiki/Retropropagaci%C3%B3">https://ca.wikipedia.org/wiki/Retropropagaci%C3%B3</a></li>
 </ul>
     
 
@@ -1824,7 +1861,7 @@ capacitat per a distingir entre les dades reals i les dades generades.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">8 d’octubre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 de novembre del 2024</span>
   </span>
 
     

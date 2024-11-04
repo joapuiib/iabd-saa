@@ -1,10 +1,14 @@
+[data-md-color-scheme=slate] {
+    --md-shadow-z1: 0 0.4rem 0.5rem #0001, 0 0 0.05rem #0004;
+    --md-shadow-z2: 0 0.4rem 0.5rem #0004, 0 0 0.05rem #0006;
+    --md-shadow-z3: 0 0.4rem 0.5rem #0008, 0 0 0.05rem #000a;
+}
 [data-md-color-primary=brown] {
     --md-typeset-a-color: #c1775c;
 }
 
 .md-main__inner {
     max-width: 84rem;
-    padding: 0 1.5rem;
 }
 
 .md-nav__title svg {
@@ -28,6 +32,18 @@
 
 .md-typeset figcaption {
   color: var(--md-default-fg-color--light);
+}
+
+.md-typeset figure.shadow > p img,
+.md-typeset figure.shadow > p svg {
+    border-radius: 0.2rem;
+    box-shadow: var(--md-shadow-z2);
+}
+
+.md-typeset figure.no-shadow > p > img,
+.md-typeset figure.no-shadow > p > svg {
+    border-radius: revert-layer;
+    box-shadow: revert-layer;
 }
 
 .md-typeset figure.attribution {
