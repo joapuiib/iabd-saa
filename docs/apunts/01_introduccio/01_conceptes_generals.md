@@ -49,10 +49,10 @@ La més estesa és la de John McCarthy (1995):
     > Artificial Intelligence is the science and engineering of making intelligent machines.
 
 Hi ha molts programes que es comporten de manera intel·ligent,
-però hui en dia es dóna molta importància a les següents característiques:
+però hui en dia es dona molta importància a les següents característiques:
 
-- __Capacitat d'aprenentatge__: Les màquines poden apendre i millorar el seu rendiment (semblant a com ho fem els humans).
-- __Autonomia__: Les màquines poden prendre decisions i realitzar tasques en entors complexos sense la intervenció humana.
+- __Capacitat d'aprenentatge__: Les màquines poden aprendre i millorar el seu rendiment (semblant a com ho fem els humans).
+- __Autonomia__: Les màquines poden prendre decisions i realitzar tasques en entorns complexos sense la intervenció humana.
 - __Adaptabilitat__: Les màquines poden adaptar-se a nous entorns i situacions.
 
 ### Exemples d'ús de la IA
@@ -176,7 +176,7 @@ Alguns exemples de classificació són:
 - __Reconeixement de veu__: classificar les paraules pronunciades en diferents categories.
 
 #### Regressió
-En un problema de __regressió__, el model ha de predir un valor numèric (valors contínus)
+En un problema de __regressió__, el model ha de predir un valor numèric (valors continus)
 a partir de les dades d'entrada.
 
 Durant el procés d'entrenament, el model aprén a predir aquest valor numèric a partir de les característiques
@@ -190,7 +190,7 @@ de les dades d'entrenament.G
 
 Alguns exemples de regressió són:
 
-- __Preu d'una casa__: predir el preu d'una casa a partir de les seves característiques (_m², nº habitacions, ..._).
+- __Preu d'una casa__: predir el preu d'una casa a partir de les seves característiques (_m², nombre d'habitacions, ..._).
 - __Assegurances, crèdits, hipoteques...__: predir el risc associat a un client.
 - __Sistemes de recomanació__: predir la puntuació que un usuari donarà a un producte o l'interès que tindrà en ell.
 
@@ -339,7 +339,7 @@ L'Aprenentatge Automàtic és una eina molt potent, però també difícil d'util
 
 Alguns dels principals problemes són:
 
-- __Cantitat insuficient de dades__: per a entrenar un model amb precisió, és necessari un conjunt de dades gran
+- __Quantitat insuficient de dades__: per a entrenar un model amb precisió, és necessari un conjunt de dades gran
     que represente correctament el problema.
 - __Dades de baixa qualitat__: si les dades tenen errors, valors atípics i soroll, difícilment el model
     podrà fer prediccions correctes.
@@ -380,8 +380,8 @@ de les dades de prova comença a empitjorar.
 </figure>
 
 ## Recursos addicionals
-- [¿Qué es el Machine Learning? | DotCSV](https://www.youtube.com/watch?v=KytW151dpqU)
-- [¿Qué es el Aprendizaje Supervisado y No Supervisado? | DotCSV](https://www.youtube.com/watch?v=oT3arRRB2Cw)
+- [¿Qué es el Machine Learning? | DotCSV](https://www.youtube.com/watch?v=KytW151dpqU){.spell-ignore}
+- [¿Qué es el Aprendizaje Supervisado y No Supervisado? | DotCSV](https://www.youtube.com/watch?v=oT3arRRB2Cw){.spell-ignore}
 
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/) de César Guijarro Rosaleny

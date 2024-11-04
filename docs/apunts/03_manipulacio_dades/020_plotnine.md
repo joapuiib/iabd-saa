@@ -220,7 +220,7 @@ Per a utilitzar un tema, s'ha d'afegir la funció `theme` al gràfic.
     ///
 
 ## Codi font
-- [plotnine_example.py](../../files/ud3//examples/plotnine_example.py){: download="plotnine_example.py"}
+- [`plotnine_example.py`](../../files/ud3//examples/plotnine_example.py){: download="plotnine_example.py"}
 
     /// collapse-code
     ```python

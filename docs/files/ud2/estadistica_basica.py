@@ -37,7 +37,7 @@ print("Moda de cada columna:")
 print(mode)
 
 variance = df.var()
-print("Variança de cada columna:")
+print("Variància de cada columna:")
 print(variance)
 
 std = df.std()

@@ -8,7 +8,7 @@ tags:
 ---
 
 ## Distribucions de probabilitat
-En probabilitats i estadistica, una __distibució de probabilitat__ és una funció que indica la probabilitat que una __variable aleatòria__ prenga un valor determinat.
+En probabilitats i estadística, una __distribució de probabilitat__ és una funció que indica la probabilitat que una __variable aleatòria__ prenga un valor determinat.
 
 Una __variable aleatòria__ és una funció que assigna un valor numèric a cada resultat possible d'un __experiment aleatori__.
 
@@ -25,7 +25,7 @@ Una __variable aleatòria__ és una funció que assigna un valor numèric a cada
 
     $$X((i,j)) = i+j$$
 
-    Els valors posibles de la variable aleatòria $X$ són:
+    Els valors possibles de la variable aleatòria $X$ són:
 
     $$X = \{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12\}$$
 
@@ -34,7 +34,7 @@ Una distribució de probabilitat és __discreta__ si la variable aleatòria és 
 si la variable aleatòria pren valors en un conjunt __finit o numerable__.
 
 !!! example "Catan"
-    En l'example anterior, la variable aleatòria $X$ és discreta, ja que pren valors en un conjunt finit.
+    En l'exemple anterior, la variable aleatòria $X$ és discreta, ja que pren valors en un conjunt finit.
 
     Per calcular la distribució de probabilitat de la variable aleatòria $X$,
     hem de calcular la probabilitat de cada valor possible de la variable aleatòria.
@@ -85,7 +85,7 @@ $$P(X = x) = \begin{cases}
     0 & \text{altrament}
 \end{cases}$$
 
-O escrit com a fòrmula, on $x \in \{0, 1\}$:
+O escrit com a fórmula, on $x \in \{0, 1\}$:
 
 $$P(X = x) = p^x \cdot (1 - p)^{1-x}$$
 
@@ -96,7 +96,7 @@ $$P(X = x) = p^x \cdot (1 - p)^{1-x}$$
 
 #### Distribució binomial
 La __distribució binomial__ és una distribució de probabilitat discreta que modela
-el nomre d'èxits en una seqüència de $n$ experiments amb una probabilitat d'èxit $p$.
+el nombre d'èxits en una seqüència de $n$ experiments amb una probabilitat d'èxit $p$.
 
 $$X \sim B(n, p)$$
 
@@ -229,7 +229,7 @@ $$
 #### Distribució normal
 La __distribució normal__ és una distribució de probabilitat contínua que modela
 variables aleatòries que segueixen una distribució simètrica al voltant d'un valor mitjà,
-on existeiex poc valors extrems i molts valors prop del mitjà.
+on existeix poc valors extrems i molts valors prop del mitjà.
 
 És el model més comú en estadística, ja que existeixen moltes variables associades
 a fenòmens naturals que segueixen aquesta distribució.
@@ -382,14 +382,14 @@ std_normal_dist.cdf(z)
 
 ## Distribució conjunta i mostral
 !!! info "Curiositat"
-    -[CIS: ¿Cómo se hacen las encuestas?](https://www.cis.es/ca/estudios/preguntas-frecuentes/como-se-hacen-las-encuestas/){:target="_blank"}
+    -[CIS: ¿Cómo se hacen las encuestas?](https://www.cis.es/ca/estudios/preguntas-frecuentes/como-se-hacen-las-encuestas/){: .spell-ignore target="_blank"}
 
 ### Distribució conjunta
 La __distribució conjunta__ és la distribució de probabilitat de tots
 els possibles valors d'una variable aleatòria en una població.
 
 En la pràctica, la distribució poblacional és desconeguda, ja que no es molt
-dificil o impossible obtenir tots els valors d'una població.
+difícil o impossible obtenir tots els valors d'una població.
 
 !!! example "Edats d'una població"
     Donada una població de 10000 persones, la distribució de les edats és la següent.
@@ -423,7 +423,7 @@ a la distribució la distribució poblacional.
     Realitzem tres mostres de 10, 100 i 1000 persones de la població anterior.
 
     Vegem com varien les mitjanes i les desviacions estàndard de les mostres,
-    que segons augmenta el tamany de la mostra, s'assemblen més a la distribució poblacional.
+    que segons augmenta la mida de la mostra, s'assemblen més a la distribució poblacional.
 
     ```python
     # Distribució mostral I (agafem 1 mostra de 10 dades)
@@ -549,7 +549,7 @@ En general, és impossible provar que una afirmació és certa al 100%, ja que c
 
 Per tant, el que es fa és __contrastar hipòtesis__ sobre la població, on es tracta de comprovar si una afirmació és probable o no.
 
-Aquest procés tracta de pendre una decisió sobre dues hipòtesis:
+Aquest procés tracta de prendre una decisió sobre dues hipòtesis:
 
 - __Hipòtesi nul·la ($H_0$)__: És la hipòtesi que s'accepta provisionalment.
 - __Hipòtesi alternativa ($H_1$)__: És la hipòtesi contrària.
@@ -589,7 +589,7 @@ Aquest procés tracta de pendre una decisió sobre dues hipòtesis:
     ```
     ///
 
-    ![Regions d'accetació i rebuig](img/hypothesis_test.png){: .center style="max-height: 300px"}
+    ![Regions d'acceptació i rebuig](img/hypothesis_test.png){: .center style="max-height: 300px"}
 
     El següent pas és calcular la `z-score` de la mitjana de la mostra, que ens indicarà si la mitjana de la mostra
     és dins de la regió d'acceptació o de rebuig.
@@ -667,7 +667,7 @@ Aquest procés tracta de pendre una decisió sobre dues hipòtesis:
     Per tant, si el valor p és molt baix, podem rebutjar la hipòtesi nul·la.
 
 ## Codi font
-- [normal.py](../../files/ud2/normal.py){: download="normal.py"}
+- [`normal.py`](../../files/ud2/normal.py){: download="normal.py"}
 
     /// collapse-code
     ```python
@@ -675,8 +675,8 @@ Aquest procés tracta de pendre una decisió sobre dues hipòtesis:
     ```
     ///
 
-- [generated_edats.csv](../../files/ud2/generated_edats.csv){: download="generated_edats.csv"}
-- [distribucio_mostral.py](../../files/ud2/distribucio_mostral.py){: download="distribucio_mostral.py"}
+- [`generated_edats.csv`](../../files/ud2/generated_edats.csv){: download="generated_edats.csv"}
+- [`distribucio_mostral.py`](../../files/ud2/distribucio_mostral.py){: download="distribucio_mostral.py"}
 
     /// collapse-code
     ```python
@@ -684,7 +684,7 @@ Aquest procés tracta de pendre una decisió sobre dues hipòtesis:
     ```
     ///
 
-- [contrast_hipotesi.py](../../files/ud2/contrast_hipotesi.py){: download="contrast_hipotesi.py"}
+- [`contrast_hipotesi.py`](../../files/ud2/contrast_hipotesi.py){: download="contrast_hipotesi.py"}
 
     /// collapse-code
     ```python

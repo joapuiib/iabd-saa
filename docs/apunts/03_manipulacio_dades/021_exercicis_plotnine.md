@@ -42,7 +42,7 @@ Elimina les medalles guanyades abans de 1994 del gràfic anterior.
 #### Exercici 2.e
 Fes les modificacions necessàries perquè el gràfic de l'exercici anterior quede semblant a aquest:
 
-![Medalles de Rúsia](img/exercicis/plotnine_exercici2.png)
+![Medalles de Rússia](img/exercicis/plotnine_exercici2.png)
 
 
 ### Exercici 3: Participació als Jocs Olímpics

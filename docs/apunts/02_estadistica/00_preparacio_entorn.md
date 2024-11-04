@@ -5,7 +5,7 @@ icon: fontawesome/solid/list-check
 comments: true
 tags:
     - python
-    - pycharm
+    - PyCharm
 ---
 
 ## Objectius
@@ -83,12 +83,12 @@ i executeu la següent comanda:
     ```
 
 ## Execució de codi
-En Python, el codi està estrucurat en mòduls, que són directoris amb un fitxer `__init__.py`.
+En Python, el codi està estructurat en mòduls, que són directoris amb un fitxer `__init__.py`.
 Podeu crear un mòdul amb __Botó dret > New > Python Package__.
 
 - Crea el mòdul `ud2`.
 
-Després, còpia l'exemple [exemple_python.py](../../files/ud2/exemple_python.py){: download=exemple_python.py}
+Després, còpia l'exemple [`exemple_python.py`](../../files/ud2/exemple_python.py){: download=exemple_python.py}
 a aquest mòdul.
 
 /// collapse-code

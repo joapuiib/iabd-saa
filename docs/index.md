@@ -4,7 +4,7 @@ hide:
     - navigation
 comments: true
 ---
-# :material-robot-happy: SAA: Sistemes d'Aprenentatge Automàtic
+# :material-robot-happy: SAA – Sistemes d'Aprenentatge Automàtic
 
 Benvinguts als apunts del Mòdul Professional __Sistemes d'Aprenentatge Automàtic__
 que pertany al Curs d'Especialització __IABD: Intel·ligència Artificial i Big Data__.

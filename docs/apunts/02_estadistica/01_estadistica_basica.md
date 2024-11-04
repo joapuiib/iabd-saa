@@ -8,13 +8,13 @@ tags:
 ---
 
 ## Estadística bàsica
-L'__aprenentatge automàtic__ està basat en models matemàtics i estàditics.
+L'__aprenentatge automàtic__ està basat en models matemàtics i estadístics.
 Per això, és important tindre una base sòlida en estadística per entendre el funcionament dels algoritmes d'aprenentatge automàtic
 i analitzar els resultats obtinguts.
 
 L'__estadística__ és una disciplina que estudia la recopilació, anàlisi i interpretació de dades.
 
-En aquests apunts veurem operacions bàsiques com la __mitjana__, la __mediana__, la __moda__, la __desviació estàndard__ i la __variança__.
+En aquests apunts veurem operacions bàsiques com la __mitjana__, la __mediana__, la __moda__, la __desviació estàndard__ i la __variància__.
 
 ## Mitjana aritmètica ($\bar{X}$)
 
@@ -176,8 +176,8 @@ La __moda__ és el valor que més vegades apareix en una mostra.
     ```
     ///
 
-## Variança ($\sigma^2$)
-La __variança__ és una mesura de la dispersió dels valors d'una mostra respecte a la mitjana.
+## Variància ($\sigma^2$)
+La __variància__ és una mesura de la dispersió dels valors d'una mostra respecte a la mitjana.
 
 Es calcula com la mitjana dels quadrats de les diferències entre cada valor i la mitjana.
 
@@ -189,7 +189,7 @@ $$
     Les diferències són elevades al quadrat per a que siguen sempre positives.
 
 !!! example
-    Donades les edats d'un grup de persones $X = \{ 20, 20, 50, 60, 80 \}$, la variança és:
+    Donades les edats d'un grup de persones $X = \{ 20, 20, 50, 60, 80 \}$, la variància és:
 
     $$
     \sigma^2 = \frac{1}{5} ((20-46)^2 + (20-46)^2 + (50-46)^2 + (60-46)^2 + (80-46)^2) \\
@@ -200,12 +200,12 @@ $$
 !!! example "Exemple amb Pandas"
     ```python
     variance = df.var()
-    print("Variança de cada columna:")
+    print("Variància de cada columna:")
     print(variance)
     ```
     /// html | div.result
     ```text
-    Variança de cada columna:
+    Variància de cada columna:
     A    312.7
     B    521.7
     C     48.7
@@ -215,7 +215,7 @@ $$
     ///
 
 ## Desviació estàndard ($\sigma$)
-La __desviació estàndard__ és la arrel quadrada de la variança.
+La __desviació estàndard__ és la arrel quadrada de la variància.
 Mesura la dispersió dels valors respecte a la mitjana,
 però indica la dispersió en les mateixes unitats que els valors.
 
@@ -412,7 +412,7 @@ La [__matriu de covariància__](https://ca.wikipedia.org/wiki/Matriu_de_covari%C
 és una taula que conté les covariàncies entre totes les parelles de variables d'un conjunt de dades.
 
 En Python, podem utilitzar la funció [`cov()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.cov.html){:target="_blank"}
-de Pandas per a calcular la covariància entre les __columnes__ d'un DataFrame.
+de Pandas per a calcular la covariància entre les __columnes__ d'un `DataFrame`.
 
 Per defecte, `cov()` utilitza el grau de llibertat `ddof` igual a 1.
 
@@ -477,8 +477,8 @@ La __correlació de Pearson__ és la covariància calculada
 a partir de les unitats tipificades de les dues variables.
 
 Aquesta mesura funciona bé amb variables quantitatives que tenen una
-[[distribucions#distribucio-normal|distibució normal]]{:target="_blank"}
-o similar. És més sensible als valors extremos que les altres dues alternatives.
+[[distribucions#distribucio-normal|distribució normal]]{:target="_blank"}
+o similar. És més sensible als valors extrems que les altres dues alternatives.
 
 $$
 r_{xy} = S(z_x, z_y)
@@ -556,7 +556,7 @@ on $d_i$ és la diferència entre les posicions de les dues variables.
 
 !!! example "Correlació de Spearman"
     Utilitzant les dades $X = \{5, 2\}$ i $Y = \{7, 9\}$ que corresponen
-    a les columnes 0 i 2 del DataFrame.
+    a les columnes 0 i 2 del `DataFrame`.
 
     Les posicions de les variables ordenades són:
 
@@ -598,7 +598,7 @@ on:
 
 
 ## Codi font
-- [estadistica_basica.py](../../files/ud2/estadistica_basica.py){: download="estadistica_basica.py"}
+- [`estadistica_basica.py`](../../files/ud2/estadistica_basica.py){: download="estadistica_basica.py"}
 
     /// collapse-code
     ```python
@@ -606,7 +606,7 @@ on:
     ```
     ///
 
-- [quantils.py](../../files/ud2/quantils.py){: download="quantils.py"}
+- [`quantils.py`](../../files/ud2/quantils.py){: download="quantils.py"}
 
     /// collapse-code
     ```python
@@ -614,7 +614,7 @@ on:
     ```
     ///
 
-- [covariancia.py](../../files/ud2/covariancia.py){: download="covariancia.py"}
+- [`covariancia.py`](../../files/ud2/covariancia.py){: download="covariancia.py"}
 
     /// collapse-code
     ```python

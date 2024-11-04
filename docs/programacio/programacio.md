@@ -3,7 +3,7 @@ template: programacio.html
 title: Programació didàctica
 subtitle:
 - "5072 - Sistemes d'Aprenentatge Automàtic"
-- "Curs d'especialitazció: Intel·ligència Artificial i Big Data"
+- "Curs d'especialització: Intel·ligència Artificial i Big Data"
 icon: material/book
 alias: programacio
 # title: "IABD - Sistemes d'Aprenentatge Automàtic"
@@ -59,7 +59,7 @@ Les propostes de millora del curs anterior i les accions realitzades són les se
 
 - __Incorporar conceptes d'estadística bayesiana, sobretot en les mètriques dels models de classificació.__
 
-    En la mesura del possible, es tractarà d'introduïr algun concepte d'estadística bayesiana.
+    En la mesura del possible, es tractarà d'introduir algun concepte d'estadística bayesiana.
 
 ## 2. Marc normatiu
 - [Llei Orgànica 3/2022, de 31 de març, d'ordenació i integració de la Formació
@@ -166,7 +166,7 @@ Les línies d'actuació en el procés d'ensenyament-aprenentatge que permeten as
 ## 7. Metodologia didàctica
 Aquest mòdul és sobretot pràctic.
 Considerem que la manera millor manera d’aprendre és realitzant
-i resolguent els problemes de manera pràctica.
+i resolent els problemes de manera pràctica.
 
 Es realitzaran breus explicacions dels continguts combinats
 amb molts exemples resolts, afavorint la participació activa
@@ -240,7 +240,7 @@ Els resultats d'aprenentatge i els seus corresponents criteris d'avaluació del 
 </figure>
 
 #### 8.2.1. Avaluació contínua
-L’avaluació es realitzarà amb els següents instruments d'avaliació:
+L’avaluació es realitzarà amb els següents instruments d'avaluació:
 
 - __Exàmens__: Exàmens de caràcter pràctic sobre 
     els continguts de cada avaluació.
@@ -264,7 +264,7 @@ poden donar lloc a la incoació d'un procediment disciplinari i a l'aplicació, 
 ##### Qualificació
 La __nota de cada avaluació ($A_i$)__ es calcularà de la següent manera:
 
-- __Nota de l'examen ($E_i$):__ Nota de l'exàmen realitzat
+- __Nota de l'examen ($E_i$):__ Nota de l'examen realitzat
     en l'avaluació. Comptara un __{{ examens }}%__.
 - __Nota de pràctiques ($P_i$):__ Nota mitjana de les 
     pràctiques realitzades en l’avaluació.
@@ -289,7 +289,7 @@ $$
 M = \frac{A_1 + A_2}{2}\\\
 $$
 
-Per norma general les notes s'arredoniran amb la fòrmula general: __>.5__.
+Per norma general les notes s'arredoniran amb la fórmula general: __>.5__.
 No obstant això, en l'interval $[4, 5)$ la nota s'arredonirà a 5 sols a partir de 4.75.
 
 
@@ -302,14 +302,14 @@ cada avaluació suspesa per separat.
 També es permet que estudiants que hagen aprovat un trimestre, es presenten
 a per millorar la seua nota. En aquest cas, la nota de la convocatòria ordinària
 serà la que es té en compte (on es pot donar el cas que baixe la nota o no s'aprove).
-Es donarà l'opció de no entregar la examen si es creu que aquesta empijorarà
-el resltat anterior.
+Es donarà l'opció de no entregar la examen si es creu que aquesta empitjorarà
+el resultat anterior.
 
 En la convocatòria, es mantindran les notes de les avaluacions
-__aprovades__ en l'avalaució contínua. Per a superar la convocatòria ordinària:
+__aprovades__ en l'avaluació contínua. Per a superar la convocatòria ordinària:
 
 - La mitjana total de les notes de les avaluacions ha de ser __superior o igual a 5__.
-- La nota de cada avalucio ha de ser __superior o igual a 5__.
+- La nota de cada avaluació ha de ser __superior o igual a 5__.
 
 
 #### 8.2.3 Convocatòria extraordinària
@@ -345,7 +345,7 @@ Per poder superar el mòdul, l’alumnat haurà de:
 - Pissarra
 - Plataforma educativa: __Aules__: Publicació de material, continguts, activitats, correccions i rúbriques.
 - Ordinadors amb Windows.
-- Accès a internet.
+- Accés a internet.
 - Correu corporatiu.
 - Entorns de desenvolupament integrats: __PyCharm__, __Google Colab__.
 - Eines de control de versions: __Git__
