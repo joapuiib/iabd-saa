@@ -354,19 +354,19 @@ A més, és important conéixer els problemes que ens podem trobar en el procés
 - __Sobreajustament (*Overfitting*)__: el model s'ajusta massa bé a les dades d'entrenament i no pot generalitzar
     correctament el problema.
 
-- __Subajustament (*Underfitting*)__: el model no s'ajusta prou bé a les dades d'entrenament i no pot fer prediccions
+- __Infraajustament (*Underfitting*)__: el model no s'ajusta prou bé a les dades d'entrenament i no pot fer prediccions
     correctes.
 
 <figure id="figure-16">
     <img src="../img/overfitting.png" alt="Overfitting and Underfitting">
     <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 16: Sobreajustament i Subajustament</figcaption>
+    <figcaption>Figura 16: Sobreajustament i Infraajustament</figcaption>
 </figure>
 
 Mesurant el rendiment del model amb les dades de prova, podem determinar si el model pateix d'aquests problemes:
 
 - Si el model té un mal rendiment amb les dades d'entrenament i les dades de prova, probablement estiguem davant
-    un cas de subajustament.
+    un cas d'infraajustament.
 - Si el model té un bon rendiment amb les dades d'entrenament i un mal rendiment amb les dades de prova, probablement
     estiguem davant un cas de sobreajustament.
 
@@ -376,7 +376,7 @@ de les dades de prova comença a empitjorar.
 <figure id="figure-17">
     <img src="../img/overfitting-validation.png" alt="Overfitting and Underfitting validation">
     <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 17: Validació Sobreajustament i Subajustament</figcaption>
+    <figcaption>Figura 17: Validació Sobreajustament i Infraajustament</figcaption>
 </figure>
 
 ## Recursos addicionals

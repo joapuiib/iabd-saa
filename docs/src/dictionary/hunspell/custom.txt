@@ -11,6 +11,7 @@ Colab
 Convolutional
 CSV
 d'
+d'infraajustament
 DNN
 DotCSV
 FOKUS
@@ -21,6 +22,7 @@ Guijarro
 Huawei
 IABD
 IABD-SAA
+infraajustament
 JSON
 l'
 Lanari
@@ -43,7 +45,6 @@ sesgo
 sobreajustament
 SoftCatalà
 Spearman
-subajustament
 UD
 underfitting
 Virtualenv
