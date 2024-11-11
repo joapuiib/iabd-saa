@@ -197,7 +197,7 @@ Es poden utilitzar diferents temes per a personalitzar l'aparença del gràfic.
 
 Per a utilitzar un tema, s'ha d'afegir la funció `theme` al gràfic.
 
-!!! example "Exemple amb títol i etiquetes"
+!!! example "Exemple amb el tema fosc"
     ```python
     plot = (
         ggplot(mtcars)
