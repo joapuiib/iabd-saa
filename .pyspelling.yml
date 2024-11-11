@@ -1,5 +1,5 @@
 spellchecker: hunspell
-jobs: 4
+jobs: 8
 
 matrix:
   - name: mkdocs
@@ -16,8 +16,9 @@ matrix:
           - 'span.keys'
           - '.arithmatex, .md-nav__link, .md-footer-custom-text, .md-source__repository, .headerlink, .md-icon'
           - 'span.filename'
-          - '.md-author'
           - '.spell-ignore'
+          - '.md-footer__link--prev'
+          - '.md-footer__link--next'
       - pyspelling.filters.url:
     sources:
       - site/**/*.html
@@ -26,4 +27,4 @@ matrix:
       d: ca_ES_valencia,en_US
     dictionary:
       wordlists:
-      - docs/src/dictionary/hunspell/custom.txt
+      - hunspell/custom.txt
