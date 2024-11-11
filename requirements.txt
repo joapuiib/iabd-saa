@@ -1,2 +1,2 @@
-mkdocs-material-joapuiib~=1.3
-pymdown-extensions @ git+https://github.com/facelessuser/pymdown-extensions@main
+mkdocs-material-joapuiib~=1.8
+mkdocs-static-i18n @ git+https://github.com/joapuiib/mkdocs-static-i18n@develop
