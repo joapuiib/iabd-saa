@@ -49,3 +49,6 @@ UD
 underfitting
 Virtualenv
 Wikimedia
+IQR
+Seaborn
+inter-quartile

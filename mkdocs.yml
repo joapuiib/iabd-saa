@@ -108,13 +108,17 @@ markdown_extensions:
   - pymdownx.blocks.html
   - pymdownx.blocks.caption:
       auto: true
-      auto_level: 1
       types:
         - caption
         - name: figure-caption
           prefix: "Figura {}."
+        - name: shadow-figure-caption
+          prefix: "Figura {}."
+          classes: shadow
         - name: "table-caption"
           prefix: "Taula {}."
+        - name: attribution
+          classes: attribution
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
