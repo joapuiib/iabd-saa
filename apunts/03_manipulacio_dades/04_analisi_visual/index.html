@@ -1009,6 +1009,81 @@ Lloc web en construcció!
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Anàlisi visual de les dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distribucio-de-les-columnes-respecte-a-les-etiquetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribució de les columnes respecte a les etiquetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histograma-de-les-columnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histograma de les columnes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacio-entre-les-columnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relació entre les columnes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relació entre les columnes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fronteres-de-decisio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fronteres de decisió
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlacio-entre-les-columnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlació entre les columnes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-caixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama de caixa
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -1067,6 +1142,81 @@ Lloc web en construcció!
   <a href="#analisi-visual-de-les-dades" class="md-nav__link">
     <span class="md-ellipsis">
       Anàlisi visual de les dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anàlisi visual de les dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#distribucio-de-les-columnes-respecte-a-les-etiquetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribució de les columnes respecte a les etiquetes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histograma-de-les-columnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histograma de les columnes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacio-entre-les-columnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relació entre les columnes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relació entre les columnes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fronteres-de-decisio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fronteres de decisió
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlacio-entre-les-columnes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlació entre les columnes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrama-de-caixa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama de caixa
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
     </span>
   </a>
   
@@ -1400,6 +1550,152 @@ Lloc web en construcció!
 
     
     <h2 id="analisi-visual-de-les-dades">Anàlisi visual de les dades<a class="headerlink" href="#analisi-visual-de-les-dades" title="Permanent link">&para;</a></h2>
+<p>Un anàlisi visual de les dades és una procés que ens pot resultar útil per
+entendre millor les dades amb les que estem treballant.</p>
+<p>Cal tindre en compte que per poder representar les dades en un gràfic,
+sols podem representar dues dimensions. No existeix cap gràfic que ens
+permeta representar tota la informació possible, però podem fer combinacions
+per trobar relacions i patrons en les dades.</p>
+<div class="admonition prep">
+<p class="admonition-title">Instal·lació de dependències</p>
+<p>Aquest material utilitza les següents llibreries de Python
+per a la visualització de les dades:</p>
+<div class="language-text highlight"><span class="filename">requirements.txt</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>matplotlib
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>seaborn
+</span></code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</span></code></pre></div>
+</div>
+<h3 id="distribucio-de-les-columnes-respecte-a-les-etiquetes">Distribució de les columnes respecte a les etiquetes<a class="headerlink" href="#distribucio-de-les-columnes-respecte-a-les-etiquetes" title="Permanent link">&para;</a></h3>
+<p>En els algorismes d'aprenentatge automàtic supervisat, utilitzem les etiquetes
+per indicar l'eixida esperada del model. Una bona manera de començar a entendre
+les dades és veure com es distribueixen les dades respecte a les etiquetes.</p>
+<div class="admonition warning">
+<p class="admonition-title">Advertència</p>
+<p>Aquesta visualització sols és vàlida per les columnes <strong>numèriques</strong>.</p>
+</div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">df_numerics</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">])</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">column</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df_numerics</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">df_numerics</span><span class="p">[</span><span class="n">column</span><span class="p">],</span> <span class="n">hue</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;income&#39;</span><span class="p">],</span> <span class="n">fill</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="n">figure</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<div class="result">
+<figure id="__figure-caption_1">
+<figcaption>
+<p><span class="caption-prefix">Figura 1.</span> Distribució de densitat de les columnes respecte a les etiquetes</p>
+</figcaption>
+<p><a class="glightbox" href="../img/analisi/densitat_etiquetes.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Distribució de densitat de les columnes respecte a les etiquetes" src="../img/analisi/densitat_etiquetes.png" /></a></p>
+</figure>
+</div>
+<h3 id="histograma-de-les-columnes">Histograma de les columnes<a class="headerlink" href="#histograma-de-les-columnes" title="Permanent link">&para;</a></h3>
+<p>Un histograma ens permet veure la distribució de les dades d'una sola columna.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">figure</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">column</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">axes</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">column</span><span class="p">],</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">figure</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<div class="result">
+<figure id="__figure-caption_2">
+<figcaption>
+<p><span class="caption-prefix">Figura 2.</span> Histograma de les columnes</p>
+</figcaption>
+<p><a class="glightbox" href="../img/analisi/histograma.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Histograma de les columnes" src="../img/analisi/histograma.png" /></a></p>
+</figure>
+</div>
+<h3 id="relacio-entre-les-columnes">Relació entre les columnes<a class="headerlink" href="#relacio-entre-les-columnes" title="Permanent link">&para;</a></h3>
+<p>Per veure la relació entre les columnes, podem utilitzar un gràfic de dispersió.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">n_samples_to_plot</span> <span class="o">=</span> <span class="mi">5000</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;education-num&#39;</span><span class="p">,</span> <span class="s1">&#39;hours-per-week&#39;</span><span class="p">]</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">_</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">[:</span><span class="n">n_samples_to_plot</span><span class="p">],</span> <span class="nb">vars</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>                 <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;income&quot;</span><span class="p">,</span> <span class="n">plot_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">},</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>                 <span class="n">height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">diag_kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">diag_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;bins&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">})</span>
+</span></code></pre></div>
+<div class="result">
+<figure id="__figure-caption_3">
+<figcaption>
+<p><span class="caption-prefix">Figura 3.</span> Relació entre les columnes</p>
+</figcaption>
+<p><a class="glightbox" href="../img/analisi/pairplot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Relació entre les columnes" src="../img/analisi/pairplot.png" /></a></p>
+</figure>
+</div>
+<h4 id="fronteres-de-decisio">Fronteres de decisió<a class="headerlink" href="#fronteres-de-decisio" title="Permanent link">&para;</a></h4>
+<p>Fixem-nos en el gràfic de les columnes <code>age</code> i <code>hours-per-week</code></p>
+<figure id="__figure-caption_3_1">
+<figcaption>
+<p><span class="caption-prefix">Figura 3.1.</span> Relació entre les columnes <code>age</code> i <code>hours-per-week</code></p>
+</figcaption>
+<p><a class="glightbox" href="../img/analisi/hours-week.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Relació entre les columnes age i hours-per-week" src="../img/analisi/hours-week.png" /></a></p>
+</figure>
+<p>En aquest cas, podríem començar a establir fronteres de decisió per
+establir si una persona guanya més de 50K o no.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Aquest procés és el que tractarem de realitzar d'una manera automàtica
+mitjançant els <strong>algorismes d'aprenentatge automàtic</strong>.</p>
+</div>
+<figure id="__figure-caption_3_2">
+<figcaption>
+<p><span class="caption-prefix">Figura 3.2.</span> Fronteres de decisió</p>
+</figcaption>
+<p><a class="glightbox" href="../img/analisi/fronteres.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Fronteres de decisió" src="../img/analisi/fronteres.png" /></a></p>
+</figure>
+<h3 id="correlacio-entre-les-columnes">Correlació entre les columnes<a class="headerlink" href="#correlacio-entre-les-columnes" title="Permanent link">&para;</a></h3>
+<p>Podem obtindre i visualitzar la matriu de correlació entre diferents columnes.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">corr_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;pearson&#39;</span><span class="p">)</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr_df</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="result">
+<figure id="__figure-caption_4">
+<figcaption>
+<p><span class="caption-prefix">Figura 4.</span> Matriu de correlació</p>
+</figcaption>
+<p><a class="glightbox" href="../img/analisi/corr.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Matriu de correlació" src="../img/analisi/corr.png" /></a></p>
+</figure>
+</div>
+<h3 id="diagrama-de-caixa">Diagrama de caixa<a class="headerlink" href="#diagrama-de-caixa" title="Permanent link">&para;</a></h3>
+<p>Els <strong>diagrames de caixa o <em>box plots</em></strong> són una manera de representar gràficament
+les dades numèriques a través dels seus quartils.</p>
+<figure id="__figure-caption_5">
+<p><a class="glightbox" href="../img/analisi/box.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Caixa dels diagrames de caixa" src="../img/analisi/box.png" /></a></p>
+<figcaption>
+<p><span class="caption-prefix">Figura 5.</span> Caixa dels diagrames de caixa</p>
+</figcaption>
+</figure>
+<p>Els <strong>limits superior <span class="arithmatex">\(L_s\)</span> i inferior <span class="arithmatex">\(L_i\)</span></strong> es calculen amb l'<strong>amplitud interquartílica (IQR o <em>inter-quartile range</em>)</strong>.</p>
+<div class="arithmatex">\[ IQR = Q_3 - Q_1 \]</div>
+<div class="admonition docs">
+<p class="admonition-title">Documentació</p>
+<ul>
+<li><a href="https://ca.wikipedia.org/wiki/Diagrama_de_caixa" target="_blank">Viquipèdia, Diagrama de caixa</a></li>
+<li><a href="https://seaborn.pydata.org/generated/seaborn.boxplot.html" target="_blank">Documentació de Seaborn, <code>boxplot</code></a></li>
+<li><a href="https://seaborn.pydata.org/tutorial/categorical.html#boxplots" target="_blank">Tutorials de Seaborn, <code>boxplot</code></a></li>
+</ul>
+</div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;income&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;income&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="result">
+<figure id="__figure-caption_6">
+<figcaption>
+<p><span class="caption-prefix">Figura 6.</span> Diagrama de caixa</p>
+</figcaption>
+<p><a class="glightbox" href="../img/analisi/boxplot.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Diagrama de caixa" src="../img/analisi/boxplot.png" /></a></p>
+</figure>
+</div>
+<h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://cesguiro.es/" target="_blank">Material del mòdul "Sistemes d'Aprenentatge Automàtic"</a> de César Guijarro Rosaleny</li>
+</ul>
     
 
 
@@ -1420,7 +1716,7 @@ Lloc web en construcció!
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 de novembre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">13 de novembre del 2024</span>
   </span>
 
     
