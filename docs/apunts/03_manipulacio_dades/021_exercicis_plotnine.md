@@ -9,6 +9,9 @@ A partir del conjunt de dades
 [120 years of Olympic history: athletes and results](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results){:target="_blank"},
 realitza els següents exercicis amb la llibreria `plotnine`.
 
+!!! info
+    Podeu descarregar-se el dataset desde [aquest enllaç](https://raw.githubusercontent.com/cstorm125/information_value/refs/heads/master/data/120-years-of-olympic-history-athletes-and-results/athlete_events.csv){:target="_blank"}.
+
 ### Exercici 1: Medalles de Xina
 #### Exercici 1.a
 Crea un gràfic de barres que mostre el nombre de medalles guanyades pels atletes de la Xina en cada esport.
