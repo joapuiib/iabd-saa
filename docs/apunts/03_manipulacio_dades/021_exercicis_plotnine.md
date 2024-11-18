@@ -25,6 +25,14 @@ Fes les modificacions necessàries perquè el gràfic de l'exercici anterior que
 
 ![Medalles de Xina](img/exercicis/plotnine_exercici1.png)
 
+#### Exercici 1.d
+Modifica el gràfic anterior per orderna els esports segons el nombre de medalles guanyades,
+seguint el següent criteri:
+
+- Ordenar descendenment segons el nombre de medalles d'or.
+- En cas d'empat, ordenar descendentment segons el nombre de medalles de plata.
+- En cas d'empat, ordenar descendentment segons el nombre de medalles de bronze.
+- En cas d'empat, ordenar alfabèticament segons el nom de l'esport.
 
 ### Exercici 2: Medalles de Rússia
 #### Exercici 2.a
