@@ -65,4 +65,43 @@ plot = (
     )
 )
 
+"""
+Ordenar els esport segons el nombre de medalles guanyades
+"""
+
+medal_order = CategoricalDtype(categories=['Gold', 'Silver', 'Bronze'], ordered=True)
+df['Medal'] = df['Medal'].astype(medal_order)
+
+sport_order = CategoricalDtype(
+    categories=df.groupby('Sport').agg(
+        Gold = ('Medal', lambda x: (x == 'Gold').sum()),
+        Silver = ('Medal', lambda x: (x == 'Silver').sum()),
+        Bronze = ('Medal', lambda x: (x == 'Bronze').sum())
+    ).sort_values(
+        by=['Gold', 'Silver', 'Bronze'],
+        ascending=False
+    ).index,
+    ordered=True
+)
+df['Sport'] = df['Sport'].astype(sport_order)
+
+
+plot = (
+    ggplot(df)
+    + aes(x='Sport', fill='Medal')
+    + geom_bar(position=position_stack(reverse=True))
+    + theme(axis_text_x=element_text(rotation=45, hjust=1))
+    + scale_fill_manual(
+        values={
+            'Gold': '#FFD700',
+            'Silver': '#C0C0C0',
+            'Bronze': '#CD7F32'
+        }
+    )
+    + labs(title='Medalles guanyades pels atletes de la Xina en cada esport',
+           x='Esport',
+           y='Nombre de medalles'
+    )
+)
+
 plot.show()
