@@ -82,6 +82,9 @@ plot = (
         y='Nombre de medalles',
         fill='Gènere'
     )
+    + scale_x_continuous(
+        breaks=sorted(df['Year'].unique()),
+    )
     + scale_fill_manual(
         values={
             'M': '#93c47d',
