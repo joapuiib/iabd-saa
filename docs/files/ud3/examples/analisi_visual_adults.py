@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 
 from urllib.request import urlopen
-from io import BytesIO
-from zipfile import ZipFile
 import pandas as pd
 import os
-from sklearn.preprocessing import OrdinalEncoder, LabelEncoder, OneHotEncoder
+from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder
 from plotnine import *
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -47,9 +45,11 @@ def densitat_etiquetes():
 def histograma():
     figure=plt.figure(figsize = (15, 20))
 
-    for i, column in enumerate(df.columns, 1):
+    df_objects = df.select_dtypes(include=['object'])
+
+    for i, column in enumerate(df_objects.columns, 1):
         axes = figure.add_subplot(5,3,i)
-        sns.histplot(x = df[column], ax = axes)
+        sns.histplot(x = df_objects[column], ax = axes, hue=df['income'], multiple='dodge')
         axes.tick_params(axis='x', rotation=45)
         for label in axes.get_xticklabels():
             label.set_ha('right')  # Align labels to the right
@@ -81,9 +81,10 @@ def boxplot():
     sns.boxplot(x='income', y ='age', hue='income', data = df)
 
 
+densitat_etiquetes()
 # histograma()
 # relacions_variable()
 # scatterplot()
 # matriu_correlacio()
-boxplot()
+# boxplot()
 plt.show()

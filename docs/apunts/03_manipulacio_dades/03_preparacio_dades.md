@@ -364,6 +364,9 @@ que s'indica amb un `1` si el valor és d'aquella categoria i `0` si no ho és.
     ```
     ///
 
+## Codi font
+!load_file ud3/examples/preparacio_adults.py
+
 
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny

@@ -60,12 +60,17 @@ Distribució de densitat de les columnes respecte a les etiquetes
 Un histograma ens permet veure la distribució de les dades d'una sola columna.
 
 ```python
+df_objects = df.select_dtypes(include=['object'])
 figure=plt.figure(figsize = (15, 20))
- 
-for i, column in enumerate(df.columns, 1):
-    axes = figure.add_subplot(8,2,i)
-    sns.histplot(x = df[column], ax = axes)
+
+for i, column in enumerate(df_objects.columns, 1):
+    axes = figure.add_subplot(3,3,i)
+    sns.histplot(x = df_objects[column], ax = axes, hue=df['income'], multiple='dodge')
+    axes.tick_params(axis='x', rotation=45)
+    for label in axes.get_xticklabels():
+        label.set_ha('right')  # Align labels to the right
     figure.tight_layout()
+
 plt.show()
 ```
 /// html | div.result
@@ -158,6 +163,9 @@ sns.boxplot(x='income', y ='age', hue='income', data=df)
 Diagrama de caixa
 ////
 ///
+
+## Codi font
+!load_file ud3/examples/analisi_visual_adults.py
 
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
