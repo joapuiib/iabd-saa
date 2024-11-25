@@ -1,11 +1,8 @@
 #!/usr/bin/env python
 
 from urllib.request import urlopen
-from io import BytesIO
-from zipfile import ZipFile
 import pandas as pd
 import os
-from sklearn.preprocessing import OrdinalEncoder, LabelEncoder, OneHotEncoder
 
 
 def download(url, filepath):
@@ -64,8 +61,7 @@ print("Categorical columns:")
 print(df.select_dtypes(include='object').columns, "\n")
 
 # Assignem un valor '?' als valors nuls
-# df.loc[df['workclass'].isnull(), 'workclass'] = '?'
-
+df.loc[df['workclass'].isnull(), 'workclass'] = '?'
 
 workclass_oe = OrdinalEncoder()
 df['workclass_oe'] = workclass_oe.fit_transform(df[['workclass']])
