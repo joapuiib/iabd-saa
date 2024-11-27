@@ -61,7 +61,7 @@ La llibreria es basa en diferents objectes per a la creació de gràfics:
     plot.show()
     ```
 
-    ![Exemple bàsic amb plotnine](img/figure_mtcars_basic.png)
+    ![Exemple bàsic amb plotnine](img/plotnine/figure_mtcars_basic.png)
     /// figure-caption
         attrs: { id: "figure-exemple-basic" }
     Exemple bàsic amb `plotnine`.
@@ -134,7 +134,7 @@ Els tipus de geometries més comuns són:
     plot.show()
     ```
 
-    ![Exemple amb línies](img/figure_mtcars_linies.png)
+    ![Exemple amb línies](img/plotnine/figure_mtcars_linies.png)
     /// figure-caption
     Exemple bàsic amb `geom_line`.
     ///
@@ -150,7 +150,7 @@ Els tipus de geometries més comuns són:
     bar_plot.show()
     ```
 
-    ![Exemple amb barres](img/figure_mtcars_barres.png)
+    ![Exemple amb barres](img/plotnine/figure_mtcars_barres.png)
     /// figure-caption
     Exemple bàsic amb `geom_bar`.
     ///
@@ -184,7 +184,7 @@ També es pot afegir etiquetes als eixos X i Y amb les funcions:
     plot.show()
     ```
 
-    ![Exemple amb títol i etiquetes](img/figure_mtcars_etiquetes.png)
+    ![Exemple amb títol i etiquetes](img/plotnine/figure_mtcars_etiquetes.png)
     /// figure-caption
     Exemple amb títol i etiquetes.
     ///
@@ -214,20 +214,65 @@ Per a utilitzar un tema, s'ha d'afegir la funció `theme` al gràfic.
     plot.show()
     ```
 
-    ![Exemple amb tema fosc](img/figure_mtcars_dark.png)
+    ![Exemple amb tema fosc](img/plotnine/figure_mtcars_dark.png)
     /// figure-caption
     Exemple amb tema fosc.
     ///
 
-## Codi font
-- [`plotnine_example.py`](../../files/ud3//examples/plotnine_example.py){: download="plotnine_example.py"}
+### Múltiples gràfics (facets)
+Els gràfics poden ser dividits en diferents subgràfics segons els valors d'una variable
+amb dues funcions:
 
-    /// collapse-code
+- [`facet_wrap`](https://plotnine.org/reference/facet_wrap.html#plotnine.facet_wrap){:target="_blank"}: divideix el gràfic en subgràfics en funció d'una variable.
+- [`facet_grid`](https://plotnine.org/reference/facet_grid.html#plotnine.facet_grid){:target="_blank"}: divideix el gràfic en subgràfics en funció de dues o més variables.
+
+!!! example "Exemple amb `facet_wrap`"
     ```python
-    --8<-- "docs/files/ud3/examples/plotnine_example.py"
+    facet_plot = (
+        ggplot(mtcars)
+        + aes("wt", "mpg", color="factor(gear)")
+        + geom_point()
+        + facet_wrap("gear")
+        + labs(title="Consum (wt) vs Pes (mpg)",
+            x="Pes en lliures",
+            y="Consum en milles per galó",
+            color="Nombre de marxes"
+        )
+    )
+    facet_plot.show()
     ```
+
+    ![Diferents gràfics per nombre de marxes](img/plotnine/figure_mtcars_facetwrap.png)
+    /// figure-caption
+    Diferents gràfics per nombre de marxes.
     ///
+
+!!! example "Exemple amb `facet_grid`"
+    ```python
+    facet_grid_plot = (
+        ggplot(mtcars)
+        + aes("wt", "mpg", color="factor(gear)")
+        + geom_point()
+        + facet_grid("gear", "cyl", labeller="label_both")
+        + labs(title="Consum (wt) vs Pes (mpg)",
+               x="Pes en lliures",
+               y="Consum en milles per galó",
+               color="Nombre de marxes"
+        )
+    )
+    facet_grid_plot.show()
+    ```
+
+    ![Diferents gràfics per nombre de marxes i cilindres](img/plotnine/figure_mtcars_facetgrid.png)
+    /// figure-caption
+    Diferents gràfics per nombre de marxes i cilindres.
+    ///
+
+## Codi font
+!load_file ud3/examples/plotnine_example.py
 
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
 - [Documentació oficial de `plotnine`](https://plotnine.org){:target="_blank"}
+- [StackOverflow: What's the difference between facet_wrap() and facet_grid() in ggplot2?](https://stackoverflow.com/questions/20457905/whats-the-difference-between-facet-wrap-and-facet-grid-in-ggplot2)
+{.spell-ignore}
