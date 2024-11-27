@@ -10,7 +10,7 @@ A partir del conjunt de dades
 realitza els següents exercicis amb la llibreria `plotnine`.
 
 !!! info
-    Podeu descarregar-se el dataset desde [aquest enllaç](https://raw.githubusercontent.com/cstorm125/information_value/refs/heads/master/data/120-years-of-olympic-history-athletes-and-results/athlete_events.csv){:target="_blank"}.
+    Podeu descarregar-se el dataset des de [aquest enllaç](https://raw.githubusercontent.com/cstorm125/information_value/refs/heads/master/data/120-years-of-olympic-history-athletes-and-results/athlete_events.csv){:target="_blank"}.
 
 ### Exercici 1: Medalles de Xina
 #### Exercici 1.a
@@ -28,10 +28,10 @@ Fes les modificacions necessàries perquè el gràfic de l'exercici anterior que
 ///
 
 #### Exercici 1.d
-Modifica el gràfic anterior per orderna els esports segons el nombre de medalles guanyades,
+Modifica el gràfic anterior per ordenar els esports segons el nombre de medalles guanyades,
 seguint el següent criteri:
 
-- Ordenar descendenment segons el nombre de medalles d'or.
+- Ordenar descendentment segons el nombre de medalles d'or.
 - En cas d'empat, ordenar descendentment segons el nombre de medalles de plata.
 - En cas d'empat, ordenar descendentment segons el nombre de medalles de bronze.
 - En cas d'empat, ordenar alfabèticament segons el nom de l'esport.

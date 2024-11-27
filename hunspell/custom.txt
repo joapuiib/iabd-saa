@@ -23,6 +23,8 @@ Huawei
 IABD
 IABD-SAA
 infraajustament
+inter-quartile
+IQR
 JSON
 l'
 Lanari
@@ -41,14 +43,14 @@ PyCharm
 RL
 RNN
 SAA
+Seaborn
 sesgo
 sobreajustament
 SoftCatalà
 Spearman
+subgràfic
+subgràfics
 UD
 underfitting
 Virtualenv
 Wikimedia
-IQR
-Seaborn
-inter-quartile
