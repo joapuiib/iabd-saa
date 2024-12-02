@@ -30,8 +30,10 @@ l'
 Lanari
 Machina
 macOS
+MAE
 Miñarro
 MkDocs
+MSE
 ñ
 NN
 numpy
@@ -41,6 +43,7 @@ PCA
 plotnine
 PyCharm
 RL
+RMSE
 RNN
 SAA
 Seaborn
