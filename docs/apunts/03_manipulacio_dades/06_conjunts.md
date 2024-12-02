@@ -8,7 +8,7 @@ comments: true
 
 ## Conjunts de dades
 L'objectiu dels models d'__aprenentatge automàtic__ es trobar patrons
-en les dades de manera autòmatica per tal de fer prediccions o pendre
+en les dades de manera automàtica per tal de fer prediccions o prendre
 decisions.
 
 Per aconseguir aquest objectiu, és necessari disposar de dades
@@ -44,7 +44,7 @@ la taxa d'aprenentatge, nombre de capes de la xarxa neuronal, etc.)
 per tal de millorar el seu rendiment. També ajuda a detectar
 problemes com l'__sobreajustament__ (_overfitting_).
 
-![Sobreeajustament i infrajustmanet](img/conjunts/overfitting.png)
+![Sobreajustament i infraajustament](img/conjunts/overfitting.png)
 /// attribution
 Autor desconegut
 ///
@@ -98,7 +98,7 @@ aquest pot donar la falsa impressió que el model és millor del que realment
 La divisió de les dades en conjunts es pot realitzar amb diverses llibreries
 de Python, com ara `scikit-learn` o `pandas`.
 
-Una consideració important és assegurar la reproducibilitat de la divisió
+Una consideració important és assegurar la reproductibilitat de la divisió
 de les dades, per la qual cosa és recomanable fixar la __llavor (_seed_)__
 del generador de nombres aleatoris.
 
