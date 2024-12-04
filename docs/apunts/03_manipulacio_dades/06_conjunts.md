@@ -104,45 +104,22 @@ del generador de nombres aleatoris.
 
 === "`scikit-learn`"
     ```python
-    import pandas as pd
+    --8<-- "docs/files/ud3/examples/conjunt_dades.py:import_pandas"
 
-    from sklearn.model_selection import train_test_split
+    --8<-- "docs/files/ud3/examples/conjunt_dades.py:import_sklearn"
 
-
-    df = pd.read_csv('data.csv')
-
-    train_df, val_test_df = train_test_split(X, y, test_size=0.3, random_state=42)
-    validation_df, test_df = train_test_split(val_test_df, test_size=0.5, random_state=42)
-
-    print(f'Train set: {train_df.shape}")
-    print(f'Validation set: {validation_df.shape}")
-    print(f'Test set: {test_df.shape}")
+    --8<-- "docs/files/ud3/examples/conjunt_dades.py:sklearn"
     ```
 
 === "`pandas`"
     ```python
-    import pandas as pd
+    --8<-- "docs/files/ud3/examples/conjunt_dades.py:import_pandas"
 
-
-    df = pd.read_csv('data.csv')
-    df_shuffled = df.sample(frac=1, random_state=42).reset_index(drop=True)
-
-    train_size = 0.7
-    validation_size = 0.15
-    test_size = 0.15
-
-    train_end = int(len(df_shuffled) * train_size)
-    validation_end = train_end + int(len(df_shuffled) * validation_size)
-
-    train_df = df_shuffled.iloc[:train_end]
-    validation_df = df_shuffled.iloc[train_end:validation_end]
-    test_df = df_shuffled.iloc[validation_end:]
-
-    print(f'Train set: {train_df.shape}")
-    print(f'Validation set: {validation_df.shape}")
-    print(f'Test set: {test_df.shape}")
+    --8<-- "docs/files/ud3/examples/conjunt_dades.py:pandas"
     ```
 
+## Codi font
+!load_file "ud3/examples/conjunt_dades.py"
 
 ## Bibliografia
 /// html | div.spell-ignore
