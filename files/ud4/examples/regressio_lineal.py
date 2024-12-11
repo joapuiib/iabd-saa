@@ -68,11 +68,20 @@ fig = plt.figure(figsize=(10, 7))
 ax = fig.add_subplot(111, projection='3d')
 
 # Dades reals: scatter plot
-ax.scatter(X_test['hores_estudiades'], X_test['motivacio'], Y_test, color='blue', label='Dades Reals')
+ax.scatter(X_train['hores_estudiades'], X_train['motivacio'], Y_train, color='green', label='Conjunt d\'entrenament')
+ax.scatter(X_test['hores_estudiades'], X_test['motivacio'], Y_test, color='blue', label='Conjunt de prova')
 
 # Crear una graella per a les variables independents
-x1_range = np.linspace(X_test['hores_estudiades'].min(), X_test['hores_estudiades'].max(), 10)
-x2_range = np.linspace(X_test['motivacio'].min(), X_test['motivacio'].max(), 10)
+x1_range = np.linspace(
+    min(X_test['hores_estudiades'].min(), X_train['hores_estudiades'].min()),
+    max(X_test['hores_estudiades'].max(), X_train['hores_estudiades'].max()),
+    10,
+)
+x2_range = np.linspace(
+    min(X_test['motivacio'].min(), X_train['motivacio'].min()),
+    max(X_test['motivacio'].max(), X_train['motivacio'].max()),
+    10,
+)
 x1_grid, x2_grid = np.meshgrid(x1_range, x2_range)
 
 # Predicció dels valors de Y per a la graella (plane de regressió)
