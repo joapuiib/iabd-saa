@@ -2,6 +2,7 @@
 
 # --8<-- [start:dades]
 import pandas as pd
+import numpy as np
 
 Y = pd.Series([50, 60, 70, 80])
 pred_Y = pd.Series([52, 58, 68, 85])
@@ -37,9 +38,9 @@ print(f'RMSE with pandas: {rmse:.2f}')
 # --8<-- [end:rmse_pandas]
 
 # --8<-- [start:rmse_sklearn]
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import root_mean_squared_error
 
-rmse = np.sqrt(mean_squared_error(Y, pred_Y))
+rmse = root_mean_squared_error(Y, pred_Y)
 print(f'RMSE with sklearn: {rmse:.2f}')
 # --8<-- [end:rmse_sklearn]
 
