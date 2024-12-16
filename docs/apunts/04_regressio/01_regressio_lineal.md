@@ -8,12 +8,16 @@ alias: regressio-lineal
 
 *[MAE]: Mean Absolute Error
 *[MSE]: Mean Squared Error
+*[RMSE]: Root Mean Squared Error
 
 
 ## Regressió lineal
 La __regressió lineal__ és un mètode estadístic que intenta modelar
-la relació entre un conjunt de variables independents (característiques o _features_)
-i una variable dependent (objectiu o _target_) mitjançant una __funció lineal__.
+la relació entre un conjunt de variables independents $X$ (característiques o _features_)
+i una variable dependent $Y$ (objectiu o _target_) mitjançant una __funció lineal__.
+
+Quan només hi ha una variable independent, es parla de __regressió lineal simple__.
+En canvi, quan hi ha més d'una variable independent, es parla de __regressió lineal múltiple__.
 
 Aquest model lineal es pot expressar com:
 
@@ -33,7 +37,7 @@ millor s'ajusten a les dades.
 Una vegada s'ha obtingut el model, pot ser utilitzat per fer prediccions
 sobre noves dades.
 
-???+ example "Exemple de regressió lineal"
+???+ example "Exemple de regressió lineal simple"
     Donades les dades:
 
     /// html | div.columns
@@ -87,7 +91,7 @@ que determinen com de bé s'ajusta el model a les dades i com de precises són l
     ///
 
 
-### Error absolut mitjà (MAE)
+### MAE – Error absolut mitjà
 L'__error absolut mitjà (Mean Absolute Error o MAE)__ és la mitjana de les diferències
 absolutes entre les prediccions ($\hat{y}$) i els valors reals ($y$).
 
@@ -115,7 +119,7 @@ Quan més xicotet siga el MAE, millor serà el model.
 És fàcil d'interpretar ja que està expressat en les mateixes
 que la variable dependent.
 
-### Error quadràtic mitjà (MSE)
+### MSE – Error quadràtic mitjà
 L'__error quadràtic mitjà (Mean Squared Error o MSE)__ és la mitjana de les diferències
 elevades al quadrat entre les prediccions ($\hat{y}$) i els valors reals ($y$).
 
@@ -143,7 +147,7 @@ en la mesura.
     MSE: 9.25
     ```
 
-### Arrel de l'error quadràtic mitjà (RMSE)
+### RMSE – Arrel de l'error quadràtic mitjà
 L'__arrel de l'error quadràtic mitjà (Root Mean Squared Error o RMSE)__ és la
 arrel quadrada del MSE.
 
@@ -168,7 +172,7 @@ ja que expressada en les mateixes unitats que la variable dependent.
     RMSE: 3.04
     ```
 
-### Coeficient de determinació
+### R² – Coeficient de determinació
 El __coeficient de determinació ($R^2$)__ és una mesura que indica com de bé
 s'ajusta el model als valors reals.
 
@@ -280,10 +284,13 @@ Podem visualitzar el model de regressió lineal amb una gràfica.
 ```python
 --8<-- "docs/files/ud4/examples/regressio_lineal.py:plot"
 ```
+/// html | div.result
 
 ![Gràfica 3D del model de regressió lineal respecte al conjunt de test](img/lineal/resultat_regressio_lineal.png)
-/// figure-caption
+//// figure-caption
 Gràfica 3D del model de regressió lineal respecte al conjunt de test.
+////
+
 ///
 
 ## Codi font
