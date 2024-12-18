@@ -300,7 +300,6 @@ Gràfica 3D del model de regressió lineal respecte al conjunt de test.
 /// html | div.spell-ignore
 ## Recursos addicionals
 - [Regresión Lineal y Mínimos Cuadrados Ordinarios | DotCSV](https://www.youtube.com/watch?v=k964_uNn3l0){:target="_blank"}
-{.spell-ignore}
 
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic" de César Guijarro](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
