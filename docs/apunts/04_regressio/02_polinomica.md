@@ -69,7 +69,7 @@ millor s'ajusten a les dades.
     --8<-- "docs/files/ud4/examples/regressio_polinomica.py:dades"
     ```
 
-    ![Dades generades a partir del polinomi](img/polinomica/dades_regressio_polinomica.png)
+    ![Dades generades a partir del polinomi](img/polinomica/dades.png)
     /// figure-caption
     Dades generades a partir del polinomi
     ///
@@ -83,12 +83,12 @@ millor s'ajusten a les dades.
     ```
     /// html | div.result
     ```text
-    RMSE linear: 18075491.24
-    R^2 linear: 0.48
+    RMSE linear: 12671123.84
+    R^2 linear: 0.50
     ```
     ///
 
-    ![Regressió lineal](img/polinomica/regressio_lineal.png)
+    ![Regressió lineal](img/polinomica/lineal.png)
     /// figure-caption
     Regressió lineal
     ///
@@ -137,8 +137,8 @@ obtingut.
 ```
 /// html | div.result
 ```
-Coeficients: [-5.87635004  5.00160649  0.10233048]
-Intercept: -93.53697809192136
+Coeficients: [-1.63821771  5.24145621  0.09552926]
+Intercept: -362.88402429981306
 ```
 ///
 
@@ -163,8 +163,8 @@ Una vegada entrenat, podem fer prediccions amb el model i avaluar-lo.
 ```
 /// html | div.result
 ```
-RMSE polinòmica: 817158.83
-R2 polinòmica: 0.98
+RMSE polinòmica: 642049.3
+R2 polinòmica: 0.97
 ```
 ///
 
@@ -176,7 +176,7 @@ Podem visualitzar el model de regressió lineal amb una gràfica.
 ```
 /// html | div.result
 
-![Model de regressió polinòmica](img/polinomica/regressio_polinomica.png)
+![Model de regressió polinòmica](img/polinomica/polinomica.png)
 //// figure-caption
 Model de regressió polinòmica
 ////
