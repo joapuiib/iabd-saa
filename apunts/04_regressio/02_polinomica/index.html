@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../01_conceptes_generals/">
+        <link rel="prev" href="../01_lineal/">
       
       
-        <link rel="next" href="../../02_estadistica/00_preparacio_entorn/">
+        <link rel="next" href="../03_arbres_decisio/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Xarxes neuronals - IABD-SAA: Sistemes d'aprenentatge automàtic</title>
+        <title>Regressió polinòmica - IABD-SAA: Sistemes d'aprenentatge automàtic</title>
       
     
     
@@ -76,11 +76,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Xarxes neuronals - IABD-SAA: Sistemes d'aprenentatge automàtic" >
+        <meta  property="og:title"  content="Regressió polinòmica - IABD-SAA: Sistemes d'aprenentatge automàtic" >
       
         <meta  property="og:description"  content="None" >
       
-        <meta  property="og:image"  content="./assets/images/social/apunts/01_introduccio/02_xarxes_neuronals.png" >
+        <meta  property="og:image"  content="./assets/images/social/apunts/04_regressio/02_polinomica.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -92,11 +92,11 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Xarxes neuronals - IABD-SAA: Sistemes d'aprenentatge automàtic" >
+        <meta  name="twitter:title"  content="Regressió polinòmica - IABD-SAA: Sistemes d'aprenentatge automàtic" >
       
         <meta  name="twitter:description"  content="None" >
       
-        <meta  name="twitter:image"  content="./assets/images/social/apunts/01_introduccio/02_xarxes_neuronals.png" >
+        <meta  name="twitter:image"  content="./assets/images/social/apunts/04_regressio/02_polinomica.png" >
       
     
     
@@ -123,7 +123,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#xarxes-neuronals" class="md-skip">
+        <a href="#regressio-polinomica" class="md-skip">
           Salta el contingut
         </a>
       
@@ -180,7 +180,7 @@ Lloc web en construcció!
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Xarxes neuronals
+              Regressió polinòmica
             
           </span>
         </div>
@@ -581,10 +581,8 @@ Lloc web en construcció!
                 
   
   
-    
   
   
-  
     
     
       
@@ -598,11 +596,11 @@ Lloc web en construcció!
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -618,7 +616,7 @@ Lloc web en construcció!
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -635,7 +633,7 @@ Lloc web en construcció!
   
     <li class="md-nav__item">
       
-      <a href="../01_conceptes_generals/" class="md-nav__link">
+      <a href="../../01_introduccio/01_conceptes_generals/" class="md-nav__link">
         
   
   
@@ -657,32 +655,11 @@ Lloc web en construcció!
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
+    <li class="md-nav__item">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
-  
-  
-  <span class="md-ellipsis">
-    Xarxes neuronals
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="../../01_introduccio/02_xarxes_neuronals/" class="md-nav__link">
         
   
   
@@ -695,136 +672,6 @@ Lloc web en construcció!
   
 
       </a>
-      
-        
-
-
-
-
-
-<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Taula de continguts
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#xarxes-neuronals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Xarxes Neuronals
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Xarxes Neuronals">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#perceptro" class="md-nav__link">
-    <span class="md-ellipsis">
-      Perceptró
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#xarxes-neuronals-profundes-dnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Xarxes neuronals profundes (DNN)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Xarxes neuronals profundes (DNN)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#retropropagacio-backpropagation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Retropropagació (backpropagation)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipus-de-xarxes-neuronals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipus de xarxes neuronals
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tipus de xarxes neuronals">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#xarxes-neuronals-convolucionals-cnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Xarxes neuronals convolucionals (CNN)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xarxes-neuronals-recurrents-rnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Xarxes neuronals recurrents (RNN)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xarxes-neuronals-generatives-adversaries-gan" class="md-nav__link">
-    <span class="md-ellipsis">
-      Xarxes neuronals generatives adversàries (GAN)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recursos-addicionals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Recursos addicionals
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bibliografia" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bibliografia
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1226,8 +1073,10 @@ Lloc web en construcció!
                 
   
   
+    
   
   
+  
     
     
       
@@ -1243,11 +1092,11 @@ Lloc web en construcció!
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
@@ -1263,7 +1112,7 @@ Lloc web en construcció!
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1280,7 +1129,7 @@ Lloc web en construcció!
   
     <li class="md-nav__item">
       
-      <a href="../../04_regressio/01_lineal/" class="md-nav__link">
+      <a href="../01_lineal/" class="md-nav__link">
         
   
   
@@ -1302,11 +1151,32 @@ Lloc web en construcció!
                 
   
   
+    
   
   
-    <li class="md-nav__item">
+  
+    <li class="md-nav__item md-nav__item--active">
       
-      <a href="../../04_regressio/02_polinomica/" class="md-nav__link">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    Regressió polinòmica
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1319,6 +1189,115 @@ Lloc web en construcció!
   
 
       </a>
+      
+        
+
+
+
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#regressio-polinomica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regressió polinòmica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-de-regressio-polinomica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model de regressió polinòmica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model de regressió polinòmica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacio-del-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació del model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrenament-del-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrenament del model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coeficients-del-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coeficients del model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prediccio-i-avaluacio-amb-el-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicció i avaluació amb el model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualitzacio-del-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualització del model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codi-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      Codi font
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1332,7 +1311,7 @@ Lloc web en construcció!
   
     <li class="md-nav__item">
       
-      <a href="../../04_regressio/03_arbres_decisio/" class="md-nav__link">
+      <a href="../03_arbres_decisio/" class="md-nav__link">
         
   
   
@@ -1394,19 +1373,64 @@ Lloc web en construcció!
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#xarxes-neuronals" class="md-nav__link">
+  <a href="#regressio-polinomica" class="md-nav__link">
     <span class="md-ellipsis">
-      Xarxes Neuronals
+      Regressió polinòmica
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Xarxes Neuronals">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-de-regressio-polinomica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model de regressió polinòmica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model de regressió polinòmica">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#perceptro" class="md-nav__link">
+  <a href="#creacio-del-model" class="md-nav__link">
     <span class="md-ellipsis">
-      Perceptró
+      Creació del model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrenament-del-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrenament del model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coeficients-del-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coeficients del model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prediccio-i-avaluacio-amb-el-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicció i avaluació amb el model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualitzacio-del-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualització del model
     </span>
   </a>
   
@@ -1418,75 +1442,9 @@ Lloc web en construcció!
 </li>
       
         <li class="md-nav__item">
-  <a href="#xarxes-neuronals-profundes-dnn" class="md-nav__link">
+  <a href="#codi-font" class="md-nav__link">
     <span class="md-ellipsis">
-      Xarxes neuronals profundes (DNN)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Xarxes neuronals profundes (DNN)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#retropropagacio-backpropagation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Retropropagació (backpropagation)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tipus-de-xarxes-neuronals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tipus de xarxes neuronals
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tipus de xarxes neuronals">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#xarxes-neuronals-convolucionals-cnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Xarxes neuronals convolucionals (CNN)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xarxes-neuronals-recurrents-rnn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Xarxes neuronals recurrents (RNN)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xarxes-neuronals-generatives-adversaries-gan" class="md-nav__link">
-    <span class="md-ellipsis">
-      Xarxes neuronals generatives adversàries (GAN)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recursos-addicionals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Recursos addicionals
+      Codi font
     </span>
   </a>
   
@@ -1525,65 +1483,6 @@ Lloc web en construcció!
     <tbody><tr><td>
 
 
-    
-      
-<nav class="md-tags" >
-  
-    
-    
-    
-      <span class="md-tag">xarxes neuronals</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">neural networks (NN)</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">aprenentatge profund</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">deep learning</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">deep neural networks (DNN)</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">backpropagation</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">perceptró</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">xarxes neuronals convolucionals (CNN)</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">xarxes neuronals recurrents (RNN)</span>
-    
-  
-</nav>
     
     
 
@@ -1860,7 +1759,7 @@ Lloc web en construcció!
   
 
 
-<h1>Xarxes neuronals</h1>
+<h1>Regressió polinòmica</h1>
 
 
 
@@ -1897,235 +1796,265 @@ Lloc web en construcció!
 
 
     
-    <h2 id="xarxes-neuronals">Xarxes Neuronals<a class="headerlink" href="#xarxes-neuronals" title="Permanent link">&para;</a></h2>
-<p>Les <strong>xarxes neuronals (<em>neural networks o <abbr title="Neural Networks">NN</abbr></em>)</strong> són un model
-computacional inspirat en el funcionament del cervell dels organismes
-vius: un conjunt de neurones interconnectades entre sí, que s'activen
-quan reben un estímul i treballen col·lectivament per resoldre un
-problema.</p>
-<p>Aquest model ha revolucionat el camp del Aprenentatge Automàtica (<abbr title="Machine Learning">ML</abbr>)
-en els últims anys.</p>
-<h3 id="perceptro">Perceptró<a class="headerlink" href="#perceptro" title="Permanent link">&para;</a></h3>
-<p>Les xarxes neuronals estan compostes per <strong>neurones artificials</strong>, que són
-l'element bàsic d'aquest model. La neurona artificial esta inspirada en
-la neurona natural, que és la cèl·lula bàsica del cervell dels animals.</p>
+    <h2 id="regressio-polinomica">Regressió polinòmica<a class="headerlink" href="#regressio-polinomica" title="Permanent link">&para;</a></h2>
+<p>La <strong>regressió polinòmica</strong> és un model de regressió que intenta ajustar les dades
+que no segueixen una relació lineal mitjançant un <strong>polinomi</strong>.</p>
+<p>Un pàmetre important en la regressió polinòmica és el <strong>grau del polinomi</strong>,
+que determina el nombre de coeficients per cada variable independent
+que tindrà el model.</p>
+<p>La fórmula general d'un polinomi de grau <span class="arithmatex">\(n\)</span> per a una variable independent <span class="arithmatex">\(X_1\)</span> és:</p>
+<div class="arithmatex">\[
+Y = w_0 + w_1 X_1 + w_2 X_1^2 + \ldots + w_n X_1^n
+\]</div>
+<p>on:</p>
+<ul>
+<li><span class="arithmatex">\(Y\)</span> és la variable dependent (objectiu o <em>target</em>),</li>
+<li><span class="arithmatex">\(X_1\)</span> és la variable independent (característica o <em>feature</em>),</li>
+<li><span class="arithmatex">\(w_0, w_1, w_2, \ldots, w_n\)</span> són els coeficients o pesos del model.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemple de formula de grau 2</p>
+<p>La fórmula d'un polinomi de grau 2 és amb una variable independent <span class="arithmatex">\(X_1\)</span> és:</p>
+<div class="arithmatex">\[
+Y = w_0 + w_1 X_1 + w_2 X_1^2
+\]</div>
+</div>
+<p>En cas de tindre dues variables independents <span class="arithmatex">\(X_1\)</span> i <span class="arithmatex">\(X_2\)</span>, la fórmula general d'un polinomi de grau <span class="arithmatex">\(n\)</span> és:</p>
+<div class="arithmatex">\[
+Y = w_0 + w_1 X_1 + w_2 X_2 + w_3 X_1^2 + w_4 X_1X_2 + w_5 X_2^2 + \ldots + w_n X_1^n + w_{n+1} X_1^{n-1}X_2 + \ldots + w_{2n} X_2^n
+\]</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple de formula de grau 2 amb dues variables</p>
+<p>La fórmula d'un polinomi de grau 2 amb dues variables independents <span class="arithmatex">\(X_1\)</span> i <span class="arithmatex">\(X_2\)</span> és:</p>
+<div class="arithmatex">\[
+Y = w_0 + w_1 X_1 + w_2 X_2 + w_3 X_1^2 + w_4 X_1X_2 + w_5 X_2^2
+\]</div>
+</div>
+<p>L'objectiu de la regressió polinòmica és trobar els valors dels coeficients que
+millor s'ajusten a les dades.</p>
+<details class="prep" open="open">
+<summary>Preparació de les dades</summary>
+<p>A partir del polinomi:</p>
+<div class="arithmatex">\[
+Y = -100 - 5X + 5X^2 + 0.1X^3
+\]</div>
+<p>Anem a generar un conjunt de dades que s'ajusten a aquest polinomi
+amb una lleugera desviació.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">return</span> <span class="o">-</span><span class="mi">100</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.1</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">n_samples</span> <span class="o">=</span> <span class="mi">100</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">Y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Convertim X en una matriu de 1 columna</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">)))</span> <span class="c1"># Ordenem les dades de test per visualitzar-les correctament</span>
+</span></code></pre></div>
 <figure id="__figure-caption_1">
-<figure class="attribution">
-<p><a class="glightbox" href="../img/neurona.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Neurona natural" src="../img/neurona.png" /></a></p>
+<p><a class="glightbox" href="../img/polinomica/dades.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Dades generades a partir del polinomi" src="../img/polinomica/dades.png" /></a></p>
 <figcaption>
-<p>Mauro Lanari, Wikimedia Commons</p>
+<p><span class="caption-prefix">Figura 1.</span> Dades generades a partir del polinomi</p>
 </figcaption>
 </figure>
-<figcaption>
-<p><span class="caption-prefix">Figura 1.</span> Neurona natural</p>
-</figcaption>
-</figure>
-<p>La <strong>neurona artificial</strong>, també anomenada <strong>perceptró</strong>, és
-la unitat bàsica d'una xarxa neuronal. Aquesta rep un <strong>conjunt d'entrades</strong>
-(<em>inputs</em>), que són ponderades per uns <strong>pesos</strong> (<em>weights</em>) i sumades
-amb un <strong>biaix</strong> (<em>sesgo</em> o <em>bias</em>).</p>
-<p>L'<strong>eixida</strong> (<em>output</em>) de la neurona es calcula aplicant una <strong>funció
-d'activació</strong> a la suma ponderada de les entrades.</p>
+</details>
+<details class="failure" open="open">
+<summary>Regressió lineal</summary>
+<p>Si intentem ajustar les dades amb un model de regressió lineal,
+obtenim un model incapaç de generalitzar les dades de manera correcta.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_squared_error</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">r2_score</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">pred_Y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">rmse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">)</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">)</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSE linear: </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;R^2 linear: </span><span class="si">{</span><span class="n">r2</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="result">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>RMSE linear: 12671123.84
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>R^2 linear: 0.50
+</span></code></pre></div>
+</div>
 <figure id="__figure-caption_2">
-<figure class="attribution">
-<p><a class="glightbox" href="../img/perceptron.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Perceptró" src="../img/perceptron.png" /></a></p>
+<p><a class="glightbox" href="../img/polinomica/lineal.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Regressió lineal" src="../img/polinomica/lineal.png" /></a></p>
 <figcaption>
-<p>Autor desconegut</p>
+<p><span class="caption-prefix">Figura 2.</span> Regressió lineal</p>
 </figcaption>
 </figure>
-<figcaption>
-<p><span class="caption-prefix">Figura 2.</span> Perceptró</p>
-</figcaption>
-</figure>
-<p>L'eixida d'un perceptró es linear respecte a les entrades, per tant, no
-podria resoldre problemes no lineals. Per evitar aquesta limitació,
-s'han afegit les <strong>funcions d'activació</strong>, que permeten a les xarxes
-neuronals resoldre problemes més complexos.</p>
-<p>Les <strong>funcions d'activació</strong> són funcions no lineals que s'apliquen a
-abans de l'eixida de la neurona.</p>
+</details>
+<h2 id="model-de-regressio-polinomica">Model de regressió polinòmica<a class="headerlink" href="#model-de-regressio-polinomica" title="Permanent link">&para;</a></h2>
+<p>Els models de regressió polinòmica són capaços
+de trobar la relació no lineal entre les variables
+mitjançant un polinomi.</p>
+<p>Utilitzant la llibreria <code>scikit-learn</code> podem crear un model
+de regressió polinòmica de manera senzilla.</p>
+<h3 id="creacio-del-model">Creació del model<a class="headerlink" href="#creacio-del-model" title="Permanent link">&para;</a></h3>
+<p>Per crear un model de regressió polinòmica amb <code>scikit-learn</code> podem
+utilitzarem les següents classes i mètodes:</p>
+<ul>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html"><code>PolynomialFeatures</code></a>: Classe que genera noves característiques polinòmiques donat un grau.</li>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html"><code>LinearRegression</code></a>: Classe que implementa la regressió lineal.</li>
+<li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.make_pipeline.html"><code>make_pipeline</code></a>: Funció que crea una seqüència de transformacions a un estimador.</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">PolynomialFeatures</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.pipeline</span><span class="w"> </span><span class="kn">import</span> <span class="n">make_pipeline</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">degree</span> <span class="o">=</span> <span class="mi">3</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">polynomial_features</span> <span class="o">=</span> <span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="n">degree</span><span class="p">,</span> <span class="n">include_bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">model</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span><span class="n">polynomial_features</span><span class="p">,</span> <span class="n">LinearRegression</span><span class="p">())</span>
+</span></code></pre></div>
+<h3 id="entrenament-del-model">Entrenament del model<a class="headerlink" href="#entrenament-del-model" title="Permanent link">&para;</a></h3>
+<p>Per entrenar el model amb les dades, utilitzem el mètode <code>fit</code> de la classe <code>LinearRegression</code>.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="coeficients-del-model">Coeficients del model<a class="headerlink" href="#coeficients-del-model" title="Permanent link">&para;</a></h3>
+<p>Una vegada s'ha entrenat el model, podem obtenir els coeficients del polinomi
+obtingut.</p>
+<ul>
+<li><code>coef_</code>: coeficients de les variables independents.</li>
+<li><code>intercept_</code>: terme independent de la recta.</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Coeficients: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">named_steps</span><span class="p">[</span><span class="s2">&quot;linearregression&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">coef_</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Intercept: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">named_steps</span><span class="p">[</span><span class="s2">&quot;linearregression&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">intercept_</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="result">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Coeficients: [-1.63821771  5.24145621  0.09552926]
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Intercept: -362.88402429981306
+</span></code></pre></div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Polinomi original</label><label for="__tabbed_1_2">Polinomi regressió polinòmica</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+Y = -100 - 5X + 5X^2 + 0.1X^3
+\]</div>
+</div>
+<div class="tabbed-block">
+<div class="arithmatex">\[
+Y = -93.54 - 5.88X + 5.00X^2 + 0.10X^3
+\]</div>
+</div>
+</div>
+</div>
+<h3 id="prediccio-i-avaluacio-amb-el-model">Predicció i avaluació amb el model<a class="headerlink" href="#prediccio-i-avaluacio-amb-el-model" title="Permanent link">&para;</a></h3>
+<p>Una vegada entrenat, podem fer prediccions amb el model i avaluar-lo.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">pred_Y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">rmse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">)</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">)</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSE polinòmica: </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;R^2 polinòmica: </span><span class="si">{</span><span class="n">r2</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="result">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>RMSE polinòmica: 642049.3
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>R2 polinòmica: 0.97
+</span></code></pre></div>
+</div>
+<h3 id="visualitzacio-del-model">Visualització del model<a class="headerlink" href="#visualitzacio-del-model" title="Permanent link">&para;</a></h3>
+<p>Podem visualitzar el model de regressió lineal amb una gràfica.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<div class="result">
 <figure id="__figure-caption_3">
-<figure class="attribution">
-<p><a class="glightbox" href="../img/activation.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Funcions d'activació" src="../img/activation.jpeg" /></a></p>
+<p><a class="glightbox" href="../img/polinomica/polinomica.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Model de regressió polinòmica" src="../img/polinomica/polinomica.png" /></a></p>
 <figcaption>
-<p>Autor desconegut</p>
+<p><span class="caption-prefix">Figura 3.</span> Model de regressió polinòmica</p>
 </figcaption>
 </figure>
-<figcaption>
-<p><span class="caption-prefix">Figura 3.</span> Funcions d'activació</p>
-</figcaption>
-</figure>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Existeixes moltes funcions d'activació, que caldrà seleccionar
-segons el problema a resoldre.</p>
 </div>
-<h2 id="xarxes-neuronals-profundes-dnn">Xarxes neuronals profundes (<abbr title="Deep Neural Networks">DNN</abbr>)<a class="headerlink" href="#xarxes-neuronals-profundes-dnn" title="Permanent link">&para;</a></h2>
-<p>Les <strong>xarxes neuronals profundes (<em>Deep Neural Networks o <abbr title="Deep Neural Networks">DNN</abbr></em>)</strong> són
-un tipus de xarxes neuronals, en les quals es connecten múltiples capes
-de neurones entre sí.</p>
-<p>Aquesta estructura permet modelar relacions més complexes entre les
-dades, i per tant, resoldre problemes més complicats.</p>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Realment, el que defineix el <abbr title="Deep Neural Networks">DNN</abbr> no és el nombre de capes, sinó el
-processament de les dades de manera jeràrquica. Cada capa extrau característiques
-més abstractes de les dades que la capa anterior arribant
-a la resposta final.</p>
+<h2 id="codi-font">Codi font<a class="headerlink" href="#codi-font" title="Permanent link">&para;</a></h2>
+<div class="collapse-code"><input checked="checked" id="__collapse0" name="__collapse0" type="checkbox" /><div class="language-py highlight" data-download="1"><span class="filename">regressio_polinomica.py</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="ch">#!/usr/bin/env python</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="k">return</span> <span class="o">-</span><span class="mi">100</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.1</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="n">n_samples</span> <span class="o">=</span> <span class="mi">100</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">)</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="n">Y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Convertim X en una matriu de 1 columna</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">)))</span> <span class="c1"># Ordenem les dades de test per visualitzar-les correctament</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_squared_error</span>
+</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">r2_score</span>
+</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>
+</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>
+</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="n">pred_Y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>
+</span><span id="__span-10-34"><a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="n">rmse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">)</span>
+</span><span id="__span-10-35"><a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">)</span>
+</span><span id="__span-10-36"><a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSE linear: </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-10-37"><a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;R^2 linear: </span><span class="si">{</span><span class="n">r2</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-10-38"><a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a>
+</span><span id="__span-10-39"><a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</span><span id="__span-10-40"><a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+</span><span id="__span-10-41"><a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+</span><span id="__span-10-42"><a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-10-43"><a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a>
+</span><span id="__span-10-44"><a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">PolynomialFeatures</span>
+</span><span id="__span-10-45"><a id="__codelineno-10-45" name="__codelineno-10-45" href="#__codelineno-10-45"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.pipeline</span><span class="w"> </span><span class="kn">import</span> <span class="n">make_pipeline</span>
+</span><span id="__span-10-46"><a id="__codelineno-10-46" name="__codelineno-10-46" href="#__codelineno-10-46"></a>
+</span><span id="__span-10-47"><a id="__codelineno-10-47" name="__codelineno-10-47" href="#__codelineno-10-47"></a><span class="n">degree</span> <span class="o">=</span> <span class="mi">3</span>
+</span><span id="__span-10-48"><a id="__codelineno-10-48" name="__codelineno-10-48" href="#__codelineno-10-48"></a><span class="n">polynomial_features</span> <span class="o">=</span> <span class="n">PolynomialFeatures</span><span class="p">(</span><span class="n">degree</span><span class="o">=</span><span class="n">degree</span><span class="p">,</span> <span class="n">include_bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-10-49"><a id="__codelineno-10-49" name="__codelineno-10-49" href="#__codelineno-10-49"></a><span class="n">model</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span><span class="n">polynomial_features</span><span class="p">,</span> <span class="n">LinearRegression</span><span class="p">())</span>
+</span><span id="__span-10-50"><a id="__codelineno-10-50" name="__codelineno-10-50" href="#__codelineno-10-50"></a>
+</span><span id="__span-10-51"><a id="__codelineno-10-51" name="__codelineno-10-51" href="#__codelineno-10-51"></a><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+</span><span id="__span-10-52"><a id="__codelineno-10-52" name="__codelineno-10-52" href="#__codelineno-10-52"></a>
+</span><span id="__span-10-53"><a id="__codelineno-10-53" name="__codelineno-10-53" href="#__codelineno-10-53"></a>
+</span><span id="__span-10-54"><a id="__codelineno-10-54" name="__codelineno-10-54" href="#__codelineno-10-54"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Coeficients: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">named_steps</span><span class="p">[</span><span class="s2">&quot;linearregression&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">coef_</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-10-55"><a id="__codelineno-10-55" name="__codelineno-10-55" href="#__codelineno-10-55"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Intercept: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">named_steps</span><span class="p">[</span><span class="s2">&quot;linearregression&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">intercept_</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-10-56"><a id="__codelineno-10-56" name="__codelineno-10-56" href="#__codelineno-10-56"></a>
+</span><span id="__span-10-57"><a id="__codelineno-10-57" name="__codelineno-10-57" href="#__codelineno-10-57"></a><span class="n">pred_Y</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</span><span id="__span-10-58"><a id="__codelineno-10-58" name="__codelineno-10-58" href="#__codelineno-10-58"></a>
+</span><span id="__span-10-59"><a id="__codelineno-10-59" name="__codelineno-10-59" href="#__codelineno-10-59"></a><span class="n">rmse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">)</span>
+</span><span id="__span-10-60"><a id="__codelineno-10-60" name="__codelineno-10-60" href="#__codelineno-10-60"></a><span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">)</span>
+</span><span id="__span-10-61"><a id="__codelineno-10-61" name="__codelineno-10-61" href="#__codelineno-10-61"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSE polinòmica: </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-10-62"><a id="__codelineno-10-62" name="__codelineno-10-62" href="#__codelineno-10-62"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;R^2 polinòmica: </span><span class="si">{</span><span class="n">r2</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-10-63"><a id="__codelineno-10-63" name="__codelineno-10-63" href="#__codelineno-10-63"></a>
+</span><span id="__span-10-64"><a id="__codelineno-10-64" name="__codelineno-10-64" href="#__codelineno-10-64"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</span><span id="__span-10-65"><a id="__codelineno-10-65" name="__codelineno-10-65" href="#__codelineno-10-65"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+</span><span id="__span-10-66"><a id="__codelineno-10-66" name="__codelineno-10-66" href="#__codelineno-10-66"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+</span><span id="__span-10-67"><a id="__codelineno-10-67" name="__codelineno-10-67" href="#__codelineno-10-67"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<div class="code-footer"><label class="expand" for="__collapse0" tabindex="0"></label><label class="collapse" for="__collapse0" tabindex="0"></label></div>
 </div>
-<figure id="__figure-caption_4">
-<figure class="attribution">
-<p><a class="glightbox" href="../img/dnn.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Deep Neural Networks" src="../img/dnn.png" /></a></p>
-<figcaption>
-<p><a href="https://wwww.quantamagazine.org">https://wwww.quantamagazine.org</a></p>
-</figcaption>
-</figure>
-<figcaption>
-<p><span class="caption-prefix">Figura 4.</span> Procés d'una xarxa neuronal profunda</p>
-</figcaption>
-</figure>
-<p>La primera capa s'anomena <strong>capa d'entrada</strong>, que tindrà tantes neurones
-com entrades tinguen les nostres dades.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple</p>
-<p>Si volem predir el preu d'una casa, les entrades podrien ser:</p>
-<ul>
-<li>Metres quadrats</li>
-<li>Nombre de dormitoris</li>
-<li>Nombre de banys</li>
-<li>Barri</li>
-</ul>
-<p>En aquest cas, la capa d'entrada tindria 4 neurones.</p>
-</div>
-<p>De la mateixa manera, l'última capa s'anomena <strong>capa d'eixida</strong>, que
-tindrà tantes neurones com resultats esperem obtindre.</p>
-<div class="admonition example">
-<p class="admonition-title">Exemple</p>
-<p>En el problema anterior, l'eixida que esperem és el preu de la casa.</p>
-<p>Per tant, la capa d'eixida tindria una sola neurona.</p>
-</div>
-<p>Les capes intermèdies s'anomenen <strong>capa ocultes</strong> que estan connectades entre sí,
-de manera que l'eixida d'una capa és l'entrada de la següent. El nombre de neurones
-en aquestes capes depèn del problema a resoldre.</p>
-<figure id="__figure-caption_5">
-<figure class="attribution">
-<p><a class="glightbox" href="../img/dnn.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Xarxa neuronal profunda" src="../img/dnn.png" /></a></p>
-<figcaption>
-<p>Autor desconegut</p>
-</figcaption>
-</figure>
-<figcaption>
-<p><span class="caption-prefix">Figura 5.</span> Xarxa neuronal profunda</p>
-</figcaption>
-</figure>
-<h3 id="retropropagacio-backpropagation">Retropropagació (backpropagation)<a class="headerlink" href="#retropropagacio-backpropagation" title="Permanent link">&para;</a></h3>
-<p>La <strong>retropropagació (<em>backpropagation</em>)</strong> és un algoritme d'aprenentatge
-supervisat que s'utilitza per entrenar xarxes neuronals.</p>
-<p>Aquest algoritme ajusta els pesos de les connexions entre les neurones
-per minimitzar l'error entre l'eixida de la xarxa i l'eixida esperada.</p>
-<p>El funcionament és el següent:</p>
-<ul>
-<li>S'envia un conjunt de dades a la xarxa, i es calcula l'eixida de la xarxa.</li>
-<li>Es compara l'eixida de la xarxa amb l'eixida esperada, i es calcula l'<strong>error</strong>.</li>
-<li>L'error es propaga cap enrere a través de la xarxa, ajustant els pesos de les connexions.</li>
-</ul>
-<figure id="__figure-caption_6">
-<figure class="attribution">
-<p><a class="glightbox" href="../img/backpropagation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Retropropagació" src="../img/backpropagation.png" /></a></p>
-<figcaption>
-<p>Autor desconegut</p>
-</figcaption>
-</figure>
-<figcaption>
-<p><span class="caption-prefix">Figura 6.</span> Retropropagació</p>
-</figcaption>
-</figure>
-<p>Aquest procés es repeteix moltes vegades de manera iterativa, reduint
-l'error de la xarxa fins a arribar a un valor acceptable.</p>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>La retropropagació és un algoritme computacionalment intensiu, i
-requereix una gran quantitat de dades per a ser efectiu.</p>
-</div>
-<h2 id="tipus-de-xarxes-neuronals">Tipus de xarxes neuronals<a class="headerlink" href="#tipus-de-xarxes-neuronals" title="Permanent link">&para;</a></h2>
-<p>Hi ha molts tipus de xarxes neuronals, cadascuna dissenyada per a
-resoldre un tipus de problema concret.</p>
-<h3 id="xarxes-neuronals-convolucionals-cnn">Xarxes neuronals convolucionals (<abbr title="Convolutional Neural Networks">CNN</abbr>)<a class="headerlink" href="#xarxes-neuronals-convolucionals-cnn" title="Permanent link">&para;</a></h3>
-<p>Les <strong>xarxes neuronals convolucionals (<em>Convolutional Neural Networks o <abbr title="Convolutional Neural Networks">CNN</abbr></em>)</strong>
-són un tipus de xarxes neuronals especialment dissenyades per a processar
-imatges.</p>
-<p>Les primeres capes d'una <abbr title="Convolutional Neural Networks">CNN</abbr> són <strong>capes de convolució</strong>, que apliquen
-s'encarreguen d'extraure característiques de xicotetes regions de la
-imatge (lines, curves, textures, etc.).</p>
-<figure id="__figure-caption_7">
-<figure class="attribution">
-<p><a class="glightbox" href="../img/cnn.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Xarxa neuronal convolucional" src="../img/cnn.jpg" /></a></p>
-<figcaption>
-<p>Autor desconegut</p>
-</figcaption>
-</figure>
-<figcaption>
-<p><span class="caption-prefix">Figura 7.</span> Xarxa neuronal convolucional</p>
-</figcaption>
-</figure>
-<h3 id="xarxes-neuronals-recurrents-rnn">Xarxes neuronals recurrents (<abbr title="Recurrent Neural Networks">RNN</abbr>)<a class="headerlink" href="#xarxes-neuronals-recurrents-rnn" title="Permanent link">&para;</a></h3>
-<p>Les <strong>xarxes neuronals recurrents (<em>Recurrent Neural Networks o <abbr title="Recurrent Neural Networks">RNN</abbr></em>)</strong>
-són un tipus de xarxes neuronals dissenyades per a processar seqüències
-de dades, com textos, temps, etc.</p>
-<p>Aquest tipus de xarxes tenen <strong>connexions cícliques</strong> entre les neurones,
-de manera que l'eixida de la xarxa pot ser utilitzada com a entrada en
-la següent iteració.</p>
-<figure id="__figure-caption_8">
-<figure class="attribution">
-<p><a class="glightbox" href="../img/rnn.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Xarxa neuronal recurrent" src="../img/rnn.png" /></a></p>
-<figcaption>
-<p>Autor desconegut</p>
-</figcaption>
-</figure>
-<figcaption>
-<p><span class="caption-prefix">Figura 8.</span> Xarxa neuronal recurrent</p>
-</figcaption>
-</figure>
-<h3 id="xarxes-neuronals-generatives-adversaries-gan">Xarxes neuronals generatives adversàries (GAN)<a class="headerlink" href="#xarxes-neuronals-generatives-adversaries-gan" title="Permanent link">&para;</a></h3>
-<p>Les <strong>xarxes neuronals generatives adversàries (<em>Generative Adversarial Networks o GAN</em>)</strong>
-són un tipus de xarxes neuronals dissenyades per a generar dades noves
-a partir de dades existents.</p>
-<p>Aquest tipus de xarxes estan compostes per dues xarxes neuronals:</p>
-<ul>
-<li><strong>Generador</strong>: Aquesta xarxa genera dades noves a partir de dades existents.</li>
-<li><strong>Discriminador</strong>: Aquesta xarxa intenta distingir entre les dades reals
-    i les dades generades pel generador.</li>
-</ul>
-<p>La tasca del generador és enganyar el discriminador, i la tasca del
-discriminador és diferenciar entre les dades reals i les dades generades.</p>
-<p>Quan el discriminador descarta les dades generades pel generador, aquest
-aprén de l'error i millora la seua capacitat per a generar dades noves.</p>
-<p>En canvi, quan el discriminador no pot distingir entre les dades reals i
-les dades generades, el discriminador aprén de l'error i millora la seua
-capacitat per a distingir entre les dades reals i les dades generades.</p>
-<figure id="__figure-caption_9">
-<figure class="attribution">
-<p><a class="glightbox" href="../img/gan.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Xarxa neuronal generativa adversària" src="../img/gan.png" /></a></p>
-<figcaption>
-<p>Autor desconegut</p>
-</figcaption>
-</figure>
-<figcaption>
-<p><span class="caption-prefix">Figura 9.</span> Xarxa neuronal generativa adversària</p>
-</figcaption>
-</figure>
-<h2 id="recursos-addicionals">Recursos addicionals<a class="headerlink" href="#recursos-addicionals" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a class="spell-ignore" href="https://www.youtube.com/watch?v=MRIv2IwFTPg&amp;list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ" target="_blank">¿Qué es una Red Neuronal? Parte 1 : La Neurona | DotCSV</a></li>
-<li><a class="spell-ignore" href="https://www.youtube.com/watch?v=uwbHOpp9xkc&amp;list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ&amp;index=2" target="_blank">¿Qué es una Red Neuronal? Parte 2 : La Red | DotCSV</a></li>
-<li><a class="spell-ignore" href="https://www.youtube.com/watch?v=FVozZVUNOOA&amp;list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ&amp;index=3" target="_blank">Jugando con Redes Neuronales - Parte 2.5 | DotCSV</a></li>
-<li><a class="spell-ignore" href="https://www.youtube.com/watch?v=eNIqz_noix8&amp;list=PL-Ogd76BhmcB9OjPucsnc2-piEE96jJDQ&amp;index=4" target="_blank">¿Qué es una Red Neuronal? Parte 3 : Backpropagation | DotCSV</a></li>
-<li><a href="https://www.youtube.com/watch?v=8L11aMN5KY8" target="_blank">A Friendly Introduction to Generative Adversarial Networks (GANs)</a></li>
-</ul>
+<div class="spell-ignore">
 <h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://cesguiro.es/">Material del mòdul "Sistemes d'Aprenentatge Automàtic"</a> de César Guijarro Rosaleny</li>
-<li>Retropropagació, Wikipedia: <a href="https://ca.wikipedia.org/wiki/Retropropagaci%C3%B3">https://ca.wikipedia.org/wiki/Retropropagaci%C3%B3</a></li>
+<li><a href="https://cesguiro.es/" target="_blank">Material del mòdul "Sistemes d'Aprenentatge Automàtic" de César Guijarro</a> de César Guijarro Rosaleny</li>
+<li><a href="https://ca.wikipedia.org/wiki/Regressi%C3%B3_polin%C3%B2mica" target="_blank">Regressió polinòmica – Viquipèdia</a></li>
+<li><a href="https://data36.com/polynomial-regression-python-scikit-learn/" target="_blank">Polynomial Regression in Python using scikit-learn (with a practical example)</a></li>
 </ul>
+</div>
 
 
     </td></tr></tbody>
@@ -2159,7 +2088,7 @@ capacitat per a distingir entre les dades reals i les dades generades.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 de novembre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">18 de desembre del 2024</span>
   </span>
 
     
@@ -2286,7 +2215,7 @@ capacitat per a distingir entre les dades reals i les dades generades.</p>
       <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
         
           
-          <a href="../01_conceptes_generals/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Introducció a la Intel·ligència Artificial">
+          <a href="../01_lineal/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Regressió lineal">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2296,20 +2225,20 @@ capacitat per a distingir entre les dades reals i les dades generades.</p>
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Introducció a la Intel·ligència Artificial
+                Regressió lineal
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../02_estadistica/00_preparacio_entorn/" class="md-footer__link md-footer__link--next" aria-label="Següent: Preparació de l&#39;entorn">
+          <a href="../03_arbres_decisio/" class="md-footer__link md-footer__link--next" aria-label="Següent: Regressió amb arbres de decisió">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Següent
               </span>
               <div class="md-ellipsis">
-                Preparació de l'entorn
+                Regressió amb arbres de decisió
               </div>
             </div>
             <div class="md-footer__button md-icon">
