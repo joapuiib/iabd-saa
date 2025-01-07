@@ -119,6 +119,8 @@ Arbre de decisió generat pel model.
 /// html | div.spell-ignore
 ## Recursos addicionals
 - [¿Qué es Decision Tree y Random Forest? | MindMachineTV](https://www.youtube.com/watch?v=tYPi6qcCQbg)
+- [Decision Tree - Interpretable machine learning](https://christophm.github.io/interpretable-ml-book/tree.html)
+- [Visualizing and interpreting decision trees - TensorFlow Blog](https://blog.tensorflow.org/2023/06/visualizing-and-interpreting-decision.html)
 
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic" de César Guijarro](https://cesguiro.es/) de César Guijarro Rosaleny	
