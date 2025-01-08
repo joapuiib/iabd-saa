@@ -44,8 +44,8 @@ pred_Y = model.predict(X_test)
 
 rmse = mean_squared_error(Y_test, pred_Y)
 r2 = r2_score(Y_test, pred_Y)
-print(f'RMSE arbre decissió: {rmse:.2f}')
-print(f'R2 arbre decissió: {r2:.2f}')
+print(f'RMSE arbre decisió: {rmse:.2f}')
+print(f'R2 arbre decisió: {r2:.2f}')
 # --8<-- [end:predict]
 
 # --8<-- [start:plot]
