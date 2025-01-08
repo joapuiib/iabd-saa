@@ -49,8 +49,8 @@ for i, (title, model) in enumerate(models.items()):
 
     rmse = root_mean_squared_error(Y_test, pred_Y)
     r2 = r2_score(Y_test, pred_Y)
-    print(f'RMSE tree: {rmse:.2f}')
-    print(f'R^2 tree: {r2:.2f}')
+    print(f'RMSE {title}: {rmse:.2f}')
+    print(f'R^2 {title}: {r2:.2f}')
 
     X_plot = [X.min(), X.max()]
     Y_plot = model.predict(np.array(X_plot).reshape(-1, 1))
