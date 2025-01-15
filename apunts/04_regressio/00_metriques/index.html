@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../../">
+        <link rel="prev" href="../../03_manipulacio_dades/06_conjunts/">
       
       
-        <link rel="next" href="../02_xarxes_neuronals/">
+        <link rel="next" href="../01_lineal/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Introducció a la Intel·ligència Artificial - IABD-SAA: Sistemes d'aprenentatge automàtic</title>
+        <title>Mètriques de regressió - IABD-SAA: Sistemes d'aprenentatge automàtic</title>
       
     
     
@@ -76,11 +76,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Introducció a la Intel·ligència Artificial - IABD-SAA: Sistemes d'aprenentatge automàtic" >
+        <meta  property="og:title"  content="Mètriques de regressió - IABD-SAA: Sistemes d'aprenentatge automàtic" >
       
         <meta  property="og:description"  content="None" >
       
-        <meta  property="og:image"  content="./assets/images/social/apunts/01_introduccio/01_conceptes_generals.png" >
+        <meta  property="og:image"  content="./assets/images/social/apunts/04_regressio/00_metriques.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -92,11 +92,11 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Introducció a la Intel·ligència Artificial - IABD-SAA: Sistemes d'aprenentatge automàtic" >
+        <meta  name="twitter:title"  content="Mètriques de regressió - IABD-SAA: Sistemes d'aprenentatge automàtic" >
       
         <meta  name="twitter:description"  content="None" >
       
-        <meta  name="twitter:image"  content="./assets/images/social/apunts/01_introduccio/01_conceptes_generals.png" >
+        <meta  name="twitter:image"  content="./assets/images/social/apunts/04_regressio/00_metriques.png" >
       
     
     
@@ -123,7 +123,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#que-es-la-intelligencia-artificial" class="md-skip">
+        <a href="#metriques-de-regressio" class="md-skip">
           Salta el contingut
         </a>
       
@@ -180,7 +180,7 @@ Lloc web en construcció!
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introducció a la Intel·ligència Artificial
+              Mètriques de regressió
             
           </span>
         </div>
@@ -581,10 +581,8 @@ Lloc web en construcció!
                 
   
   
-    
   
   
-  
     
     
       
@@ -598,11 +596,11 @@ Lloc web en construcció!
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -618,7 +616,7 @@ Lloc web en construcció!
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -631,32 +629,11 @@ Lloc web en construcció!
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
+    <li class="md-nav__item">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
-  
-  
-  <span class="md-ellipsis">
-    Introducció a la Intel·ligència Artificial
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <a href="../../01_introduccio/01_conceptes_generals/" class="md-nav__link">
         
   
   
@@ -669,241 +646,6 @@ Lloc web en construcció!
   
 
       </a>
-      
-        
-
-
-
-
-
-<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Taula de continguts
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#que-es-la-intelligencia-artificial" class="md-nav__link">
-    <span class="md-ellipsis">
-      Què és la Intel·ligència Artificial?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Què és la Intel·ligència Artificial?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemples-dus-de-la-ia" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exemples d'ús de la IA
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ia-feble-vs-ia-forta" class="md-nav__link">
-    <span class="md-ellipsis">
-      IA feble vs IA forta
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#classificacio-i-conceptes-relacionats" class="md-nav__link">
-    <span class="md-ellipsis">
-      Classificació i conceptes relacionats
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aprenentatge-automatic" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge Automàtic
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Aprenentatge Automàtic">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-supervisat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge Supervisat
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Aprenentatge Supervisat">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#classificacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Classificació
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regressio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Regressió
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-no-supervisat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge No Supervisat
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Aprenentatge No Supervisat">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clustering" class="md-nav__link">
-    <span class="md-ellipsis">
-      Clustering
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reduccio-de-la-dimensionalitat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reducció de la dimensionalitat
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-semisupervisat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge semisupervisat
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-per-reforcament" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge per reforçament
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-per-lots" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge per lots
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-en-linia" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge en línia
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-basat-en-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge basat en models
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-basat-en-instancies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge basat en instàncies
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prova-i-validacio-de-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prova i validació de models
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#principals-problemes-de-laprenentatge-automatic" class="md-nav__link">
-    <span class="md-ellipsis">
-      Principals problemes de l'Aprenentatge Automàtic
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recursos-addicionals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Recursos addicionals
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bibliografia" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bibliografia
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -917,7 +659,7 @@ Lloc web en construcció!
   
     <li class="md-nav__item">
       
-      <a href="../02_xarxes_neuronals/" class="md-nav__link">
+      <a href="../../01_introduccio/02_xarxes_neuronals/" class="md-nav__link">
         
   
   
@@ -1331,8 +1073,10 @@ Lloc web en construcció!
                 
   
   
+    
   
   
+  
     
     
       
@@ -1354,11 +1098,11 @@ Lloc web en construcció!
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
@@ -1374,7 +1118,7 @@ Lloc web en construcció!
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1387,11 +1131,32 @@ Lloc web en construcció!
                 
   
   
+    
   
   
-    <li class="md-nav__item">
+  
+    <li class="md-nav__item md-nav__item--active">
       
-      <a href="../../04_regressio/00_metriques/" class="md-nav__link">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg>
+  
+  
+  <span class="md-ellipsis">
+    Mètriques de regressió
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1404,6 +1169,79 @@ Lloc web en construcció!
   
 
       </a>
+      
+        
+
+
+
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#metriques-de-regressio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mètriques de regressió
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mètriques de regressió">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mae-error-absolut-mitja" class="md-nav__link">
+    <span class="md-ellipsis">
+      MAE – Error absolut mitjà
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mse-error-quadratic-mitja" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSE – Error quadràtic mitjà
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmse-arrel-de-lerror-quadratic-mitja" class="md-nav__link">
+    <span class="md-ellipsis">
+      RMSE – Arrel de l'error quadràtic mitjà
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r2-coeficient-de-determinacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      R² – Coeficient de determinació
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1417,7 +1255,7 @@ Lloc web en construcció!
   
     <li class="md-nav__item">
       
-      <a href="../../04_regressio/01_lineal/" class="md-nav__link">
+      <a href="../01_lineal/" class="md-nav__link">
         
   
   
@@ -1443,7 +1281,7 @@ Lloc web en construcció!
   
     <li class="md-nav__item">
       
-      <a href="../../04_regressio/02_polinomica/" class="md-nav__link">
+      <a href="../02_polinomica/" class="md-nav__link">
         
   
   
@@ -1469,7 +1307,7 @@ Lloc web en construcció!
   
     <li class="md-nav__item">
       
-      <a href="../../04_regressio/03_arbres_decisio/" class="md-nav__link">
+      <a href="../03_arbres_decisio/" class="md-nav__link">
         
   
   
@@ -1495,7 +1333,7 @@ Lloc web en construcció!
   
     <li class="md-nav__item">
       
-      <a href="../../04_regressio/04_gradient/" class="md-nav__link">
+      <a href="../04_gradient/" class="md-nav__link">
         
   
   
@@ -1521,7 +1359,7 @@ Lloc web en construcció!
   
     <li class="md-nav__item">
       
-      <a href="../../04_regressio/05_altres/" class="md-nav__link">
+      <a href="../05_altres/" class="md-nav__link">
         
   
   
@@ -1583,19 +1421,46 @@ Lloc web en construcció!
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-es-la-intelligencia-artificial" class="md-nav__link">
+  <a href="#metriques-de-regressio" class="md-nav__link">
     <span class="md-ellipsis">
-      Què és la Intel·ligència Artificial?
+      Mètriques de regressió
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Què és la Intel·ligència Artificial?">
+    <nav class="md-nav" aria-label="Mètriques de regressió">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exemples-dus-de-la-ia" class="md-nav__link">
+  <a href="#mae-error-absolut-mitja" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemples d'ús de la IA
+      MAE – Error absolut mitjà
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mse-error-quadratic-mitja" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSE – Error quadràtic mitjà
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmse-arrel-de-lerror-quadratic-mitja" class="md-nav__link">
+    <span class="md-ellipsis">
+      RMSE – Arrel de l'error quadràtic mitjà
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r2-coeficient-de-determinacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      R² – Coeficient de determinació
     </span>
   </a>
   
@@ -1603,195 +1468,6 @@ Lloc web en construcció!
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ia-feble-vs-ia-forta" class="md-nav__link">
-    <span class="md-ellipsis">
-      IA feble vs IA forta
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#classificacio-i-conceptes-relacionats" class="md-nav__link">
-    <span class="md-ellipsis">
-      Classificació i conceptes relacionats
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aprenentatge-automatic" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge Automàtic
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Aprenentatge Automàtic">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-supervisat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge Supervisat
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Aprenentatge Supervisat">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#classificacio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Classificació
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regressio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Regressió
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-no-supervisat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge No Supervisat
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Aprenentatge No Supervisat">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clustering" class="md-nav__link">
-    <span class="md-ellipsis">
-      Clustering
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reduccio-de-la-dimensionalitat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reducció de la dimensionalitat
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-semisupervisat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge semisupervisat
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-per-reforcament" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge per reforçament
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-per-lots" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge per lots
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-en-linia" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge en línia
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-basat-en-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge basat en models
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aprenentatge-basat-en-instancies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aprenentatge basat en instàncies
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prova-i-validacio-de-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prova i validació de models
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#principals-problemes-de-laprenentatge-automatic" class="md-nav__link">
-    <span class="md-ellipsis">
-      Principals problemes de l'Aprenentatge Automàtic
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recursos-addicionals" class="md-nav__link">
-    <span class="md-ellipsis">
-      Recursos addicionals
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bibliografia" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bibliografia
-    </span>
-  </a>
   
 </li>
       
@@ -1819,65 +1495,6 @@ Lloc web en construcció!
     <tbody><tr><td>
 
 
-    
-      
-<nav class="md-tags" >
-  
-    
-    
-    
-      <span class="md-tag">aprenentatge automàtic</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">aprenentatge supervisat</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">aprenentatge no supervisat</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">intel·ligència artificial (IA)</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">IA feble</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">IA forta</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">machine learning (ML)</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">overfitting</span>
-    
-  
-    
-    
-    
-      <span class="md-tag">underfitting</span>
-    
-  
-</nav>
     
     
 
@@ -2154,7 +1771,7 @@ Lloc web en construcció!
   
 
 
-<h1>Introducció a la Intel·ligència Artificial</h1>
+<h1>Mètriques de regressió</h1>
 
 
 
@@ -2191,346 +1808,172 @@ Lloc web en construcció!
 
 
     
-    <h2 id="que-es-la-intelligencia-artificial">Què és la Intel·ligència Artificial?<a class="headerlink" href="#que-es-la-intelligencia-artificial" title="Permanent link">&para;</a></h2>
-<p>La <strong>Intel·ligència Artificial (<abbr title="Intel·ligència Artificial">IA</abbr>)</strong> consisteix en un programa informàtic capaç d'executar
-tasques i processos que tradicionalment requerien d'una intel·ligència humana.
-En molts casos, aquests programes són capaços de realitzar les tasques de forma més
-eficient i precisa que els humans.</p>
-<p>No obstant això, no tots el programes que realitzen tasques de manera eficient que
-els humans són considerats <abbr title="Intel·ligència Artificial">IA</abbr>.</p>
-<figure id="figure-1">
-    <a class="glightbox" href="../img/ia-if-meme.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/ia-if-meme.jpeg" alt="" style="max-height: 400px"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 1: Meme sobre la IA</figcaption>
-</figure>
-
-<p>Determinar si un ordinador realment es comporta de manera intel·ligent és complex.
-Hi ha moltes definicions de què és exactament la <abbr title="Intel·ligència Artificial">IA</abbr>.
-La més estesa és la de John McCarthy (1995): </p>
-<div class="admonition quote">
-<p class="admonition-title">Cita</p>
-<p>És la ciència i l'enginyeria de fer màquines intel·ligents.</p>
-<blockquote>
-<p>Artificial Intelligence is the science and engineering of making intelligent machines.</p>
-</blockquote>
+    <h2 id="metriques-de-regressio">Mètriques de regressió<a class="headerlink" href="#metriques-de-regressio" title="Permanent link">&para;</a></h2>
+<p>Les mètriques són mesures que ens permeten avaluar la qualitat d'un model de regressió,
+que determinen com de bé s'ajusta el model a les dades i com de precises són les prediccions.</p>
+<div class="admonition prep">
+<p class="admonition-title">Dades d'exemple</p>
+<div class="columns">
+<table>
+<thead>
+<tr>
+<th>Real (<span class="arithmatex">\(Y\)</span>)</th>
+<th>Predicció (<span class="arithmatex">\(\hat{Y}\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50</td>
+<td>52</td>
+</tr>
+<tr>
+<td>60</td>
+<td>58</td>
+</tr>
+<tr>
+<td>70</td>
+<td>68</td>
+</tr>
+<tr>
+<td>80</td>
+<td>85</td>
+</tr>
+</tbody>
+</table>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">Y</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">])</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">pred_Y</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">52</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">85</span><span class="p">])</span>
+</span></code></pre></div>
 </div>
-<p>Hi ha molts programes que es comporten de manera intel·ligent,
-però hui en dia es dona molta importància a les següents característiques:</p>
-<ul>
-<li><strong>Capacitat d'aprenentatge</strong>: Les màquines poden aprendre i millorar el seu rendiment (semblant a com ho fem els humans).</li>
-<li><strong>Autonomia</strong>: Les màquines poden prendre decisions i realitzar tasques en entorns complexos sense la intervenció humana.</li>
-<li><strong>Adaptabilitat</strong>: Les màquines poden adaptar-se a nous entorns i situacions.</li>
-</ul>
-<h3 id="exemples-dus-de-la-ia">Exemples d'ús de la <abbr title="Intel·ligència Artificial">IA</abbr><a class="headerlink" href="#exemples-dus-de-la-ia" title="Permanent link">&para;</a></h3>
-<p>Alguns exemples d'ús de la <abbr title="Intel·ligència Artificial">IA</abbr> més estesos i fins i tot, quotidians són:</p>
-<ul>
-<li><strong>Reconeixement de veu</strong>: utilitzat en assistents virtuals com Siri, Alexa o Google Assistant.</li>
-<li><strong>Sistemes de recomanació</strong>: Sistemes de recomanació que es basen en les preferències de l'usuari i el contingut consumit:<ul>
-<li><strong>Spotify</strong>: recomana música basant-se en les cançons que més escoltem.</li>
-<li><strong>Serveis de distribució audiovisual (<em>Netflix, HBO, ...</em>)</strong>: recomana sèries i pel·lícules basant-se en les que hem vist.</li>
-<li><strong>Xarxes socials (<em>Instagram, X, Facebook</em>)</strong>: recomanen contingut basant-se en les publicacions que més ens agraden (o fins i tot visualitzem!).</li>
-</ul>
-</li>
-<li><strong>Processament d'imatges</strong>:<ul>
-<li>Aplicacions com Google Photos que permeten cercar imatges per contingut.</li>
-<li>Reconeixement facial (com en les càmeres dels mòbils).</li>
-<li>Sistemes de conducció autònoma.</li>
-<li>Filtratge i classificació d'imatges.</li>
-</ul>
-</li>
-<li><strong>Sistemes de traducció automàtica</strong>: com Google Translate o <a href="https://www.softcatala.org/traductor/">SoftCatalà</a>.</li>
-</ul>
-<h2 id="ia-feble-vs-ia-forta"><abbr title="Intel·ligència Artificial">IA</abbr> feble vs <abbr title="Intel·ligència Artificial">IA</abbr> forta<a class="headerlink" href="#ia-feble-vs-ia-forta" title="Permanent link">&para;</a></h2>
-<p class="annotate">Imagina't un robot o un ordinador que no sols puga fer tasques específiques, sinó que
-també pense i entenga el món exactament com el fem nosaltres, els humans.
-Això es coneix com <strong>intel·ligència artificial forta</strong>(1), que a dia d'avui, sols existeix en la ciència ficció.</p>
-<ol class="fancylists-decimal" type="1">
-<li><a href="https://en.wikipedia.org/wiki/Artificial_general_intelligence">Artificial General Intelligence (AGI)</a></li>
-</ol>
-<p>Aquesta és la <abbr title="Intel·ligència Artificial">IA</abbr> que veiem en pel·lícules com <em>Ex Machina</em>, <em>Her</em>, <em>Blade Runner</em> o llibres com <em>Jo, Robot</em> i altres d'<em>Isaac Asimov</em>.
-Aquest tipus de <abbr title="Intel·ligència Artificial">IA</abbr> és capaç de realitzar qualsevol tasca que un ésser humà puga fer, entenent el món i prenent decisions de manera autònoma.</p>
-<figure id="figure-2">
-    <a class="glightbox" href="../img/strong-ai.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/strong-ai.jpg" alt="" style="max-height: 400px"></a>
-    <figcaption class="attribution">Image via www.vpnsrus.com</figcaption>
-    <figcaption>Figura 2: Intel·ligència Artificial Forta</figcaption>
-</figure>
-
-<p class="annotate">En canvi, la <strong>intel·ligència artificial feble</strong>(1) és el tipus de <abbr title="Intel·ligència Artificial">IA</abbr> que coneixem avui en dia.
-Aquesta és capaç de realitzar tasques específiques de manera molt eficient, però no pot realitzar tasques
-per a les quals no ha estat dissenyada, és a dir, estan <strong>orientades a un objectiu</strong>.</p>
-<ol class="fancylists-decimal" type="1">
-<li><a href="https://en.wikipedia.org/wiki/Artificial_narrow_intelligence">Artificial Narrow Intelligence (ANI)</a></li>
-</ol>
-<figure id="figure-3">
-    <a class="glightbox" href="../img/infografia-editorial-huawei-ia.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/infografia-editorial-huawei-ia.png" alt="" style="max-width: 350px"></a>
-    <figcaption class="attribution">Huawei</figcaption>
-    <figcaption>Figura 3: Comparació entre IA feble i IA forta</figcaption>
-</figure>
-
-<h2 id="classificacio-i-conceptes-relacionats">Classificació i conceptes relacionats<a class="headerlink" href="#classificacio-i-conceptes-relacionats" title="Permanent link">&para;</a></h2>
-<figure id="figure-4">
-    <a class="glightbox" href="../img/ia-venn.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/ia-venn.webp" alt="" style="max-width: 500px"></a>
-    <figcaption class="attribution">VENN diagram of AI, Big Data and Data Science Fraunhofer FOKUS</figcaption>
-    <figcaption>Figura 4: Relació entre IA, Big Data i Data Science</figcaption>
-</figure>
-
-<ul>
-<li><strong>Intel·ligència Artificial (<abbr title="Intel·ligència Artificial">IA</abbr>)</strong>: és la ciència i l'enginyeria de fer màquines intel·ligents.</li>
-<li><strong>Aprenentatge Automàtic (<em>Machine Learning</em> o <em><abbr title="Machine Learning">ML</abbr></em>)</strong>: és una branca de la <abbr title="Intel·ligència Artificial">IA</abbr> que es basa
-    en la idea que les màquines poden aprendre de les dades per si mateixes.</li>
-<li><strong>Xarxes Neuronals (<em>Neural Networks</em> o <em><abbr title="Neural Networks">NN</abbr></em>)</strong>: és un model computacional inspirat en el cervell humà
-    que es basa en la interconnexió de neurones artificials.</li>
-<li><strong>Aprenentatge Profund (<em>Deep Learning</em>)</strong>: és una branca de l'aprenentatge automàtic que es basa en xarxes neuronals
-    profundes (<em>Deep Neural Networks</em> o <em><abbr title="Deep Neural Networks">DNN</abbr></em>).</li>
-</ul>
-<p>Altres conceptes relacionats són:</p>
-<ul>
-<li><strong>Big Data</strong>: és la disciplina que es basa en l'anàlisi de grans volums de dades, que poden ser utilitzats —o no—,
-    en sistemes d'<abbr title="Intel·ligència Artificial">IA</abbr>.</li>
-<li><strong>Data Science</strong>: és la disciplina que es basa en l'anàlisi de dades per a obtenir coneixement i informació útil.</li>
-</ul>
-<h2 id="aprenentatge-automatic">Aprenentatge Automàtic<a class="headerlink" href="#aprenentatge-automatic" title="Permanent link">&para;</a></h2>
-<p>L'<strong>Aprenentatge Automàtic (<em>Machine Learning o <abbr title="Machine Learning">ML</abbr></em>)</strong> és un camp de la <abbr title="Intel·ligència Artificial">IA</abbr>
-que es basa en la idea que les màquines poden aprendre de les dades per si mateixes,
-sense ser programades explícitament per a realitzar una tasca concreta.</p>
-<h3 id="aprenentatge-supervisat">Aprenentatge Supervisat<a class="headerlink" href="#aprenentatge-supervisat" title="Permanent link">&para;</a></h3>
-<p>L'<strong>Aprenentatge Supervisat (<em>Supervised Learning o <abbr title="Supervised Learning">SL</abbr></em>)</strong> és un tipus de <abbr title="Machine Learning">ML</abbr> en el qual
-l'aprenentatge es basa en un conjunt de dades etiquetades, de les quals es coneix el resultat esperat.</p>
-<figure id="figure-5">
-    <a class="glightbox" href="../img/supervised-learning.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/supervised-learning.jpg" alt="Supervised Learning"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 5: Aprenentatge Supervisat</figcaption>
-</figure>
-
-<p>Dins del <abbr title="Supervised Learning">SL</abbr>, trobem dos principals tipus de problemes: <strong>classificació</strong> i <strong>regressió</strong>.</p>
+</div>
+<h3 id="mae-error-absolut-mitja"><abbr title="Mean Absolute Error">MAE</abbr> – Error absolut mitjà<a class="headerlink" href="#mae-error-absolut-mitja" title="Permanent link">&para;</a></h3>
+<p>L'<strong>error absolut mitjà (Mean Absolute Error o <abbr title="Mean Absolute Error">MAE</abbr>)</strong> és la mitjana de les diferències
+absolutes entre les prediccions (<span class="arithmatex">\(\hat{y}\)</span>) i els valors reals (<span class="arithmatex">\(y\)</span>).</p>
+<p>La fórmula per calcular l'error absolut mitjà és:</p>
+<pre class="arithmatex">\[
+MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|
+\]</pre>
 <div class="admonition example">
-<p class="admonition-title">Exemple</p>
-<p>En aquest example de <strong>classificació</strong>, el model ha segut entrenat amb imatges de gats, gossos i gallines,
-indicant-li al model l'animal (<strong>etiqueta</strong>) que apareix en cada imatge.</p>
-<p>El model <strong>aprén</strong> a diferenciar entre aquests animals.</p>
-<p>Després, el model pot ser utilitzat per a predir l'animal en una imatge que no ha vist abans.</p>
+<p class="admonition-title">Càlcul de l'error absolut mitjà</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><code>pandas</code></label><label for="__tabbed_1_2"><code>scikit-learn</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">mae</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Y</span> <span class="o">-</span> <span class="n">pred_Y</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;MAE with pandas: </span><span class="si">{</span><span class="n">mae</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></code></pre></div>
 </div>
-<h4 id="classificacio">Classificació<a class="headerlink" href="#classificacio" title="Permanent link">&para;</a></h4>
-<p>En un problema de <strong>classificació</strong>, el model ha de predir a quina categoria o classe (valors discrets)
-pertany una observació (imatge, text, etc.).</p>
-<p>Durant el procés d'entrenament, el model aprén a diferenciar entre les diferents classes
-a partir de les dades d'entrenament i les etiquetes associades.</p>
-<figure id="figure-6">
-    <a class="glightbox" href="../img/classificacio.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/classificacio.png" alt="Classificació"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 6: Classificació</figcaption>
-</figure>
-
-<figure id="figure-7">
-    <a class="glightbox" href="../img/classification-examples.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/classification-examples.png" alt="Comparació d'algorismes de classificació"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 7: Comparació d'algorismes de classificació</figcaption>
-</figure>
-
-<p>Alguns exemples de classificació són:</p>
-<ul>
-<li><strong>Correu no desitjat</strong>: classificar els correus electrònics en <em>spam</em> o <em>no spam</em>.</li>
-<li><strong>Anàlisi de sentiments</strong>: classificar els textos en <em>positius</em>, <em>negatius</em> o <em>neutres</em> respecte a un tema.</li>
-<li><strong>Classificació d'imatges</strong>: classificar les imatges en diferents categories.<ul>
-<li>Imatge mèdica, reconeixement facial, conducció autònoma, ...</li>
-</ul>
-</li>
-<li><strong>Reconeixement de veu</strong>: classificar les paraules pronunciades en diferents categories.</li>
-</ul>
-<h4 id="regressio">Regressió<a class="headerlink" href="#regressio" title="Permanent link">&para;</a></h4>
-<p>En un problema de <strong>regressió</strong>, el model ha de predir un valor numèric (valors continus)
-a partir de les dades d'entrada.</p>
-<p>Durant el procés d'entrenament, el model aprén a predir aquest valor numèric a partir de les característiques
-de les dades d'entrenament.G</p>
-<figure id="figure-8">
-    <a class="glightbox" href="../img/regressio.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/regressio.png" alt="Regressió"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 8: Regressió</figcaption>
-</figure>
-
-<p>Alguns exemples de regressió són:</p>
-<ul>
-<li><strong>Preu d'una casa</strong>: predir el preu d'una casa a partir de les seves característiques (<em>m², nombre d'habitacions, ...</em>).</li>
-<li><strong>Assegurances, crèdits, hipoteques...</strong>: predir el risc associat a un client.</li>
-<li><strong>Sistemes de recomanació</strong>: predir la puntuació que un usuari donarà a un producte o l'interès que tindrà en ell.</li>
-</ul>
-<h3 id="aprenentatge-no-supervisat">Aprenentatge No Supervisat<a class="headerlink" href="#aprenentatge-no-supervisat" title="Permanent link">&para;</a></h3>
-<p>D'un altre costat, l'<strong>Aprenentatge No Supervisat (<em>Unsupervised Learning o <abbr title="Unsupervised Learning">UNS</abbr></em>)</strong> és un tipus de <abbr title="Machine Learning">ML</abbr> en el qual
-l'aprenentatge es basa en un conjunt de dades sense etiquetar, és a dir, sense saber el resultat esperat.</p>
-<figure id="figure-9">
-    <a class="glightbox" href="../img/unsupervised-learning.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/unsupervised-learning.png" alt="Unsupervised Learning"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 9: Aprenentatge No Supervisat</figcaption>
-</figure>
-
-<p>Dins de l'<abbr title="Unsupervised Learning">UNS</abbr>, trobem dos principals tipus de problemes: <strong>clustering</strong> i <strong>reducció de la dimensionalitat</strong>.</p>
-<h4 id="clustering">Clustering<a class="headerlink" href="#clustering" title="Permanent link">&para;</a></h4>
-<p>En un problema de <strong>clustering</strong>, el model ha de dividir les dades en diferents grups o clústers,
-de manera que les observacions dins d'un mateix clúster siguin similars entre si.</p>
-<p>La <a href="#figure-9">Figure 9</a> mostra un exemple de clustering en el qual les dades són dividides tres clústers.</p>
-<p>Alguns exemples de clustering són:</p>
-<ul>
-<li><strong>Segmentació de clients</strong>: agrupar els clients en diferents segments segons les seves característiques.
-    Pot ser útil per a personalitzar ofertes, campanyes de màrqueting o recomanació de contingut.</li>
-</ul>
-<h4 id="reduccio-de-la-dimensionalitat">Reducció de la dimensionalitat<a class="headerlink" href="#reduccio-de-la-dimensionalitat" title="Permanent link">&para;</a></h4>
-<p>En un problema de <strong>reducció de la dimensionalitat</strong>, el model ha de reduir el nombre de dimensions (característiques)
-de les dades, mantenint la informació més rellevant.</p>
-<p>Aquest tipus de problema és útil per a reduir el temps de càlcul i millorar la precisió dels models.</p>
-<figure id="figure-11">
-    <a class="glightbox" href="../img/dimensionality-reduction.webp" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/dimensionality-reduction.webp" alt="Reducció de la dimensionalitat"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 11: Reducció de la dimensionalitat</figcaption>
-</figure>
-
-<p>Alguns exemples de reducció de la dimensionalitat són:</p>
-<ul>
-<li><strong>Anàlisi de components principals (PCA)</strong>: reduir el nombre de dimensions d'un conjunt de dades.</li>
-<li><strong>Visualització de dades</strong>: reduir les dades a un nombre menor de dimensions per a visualitzar-les en 2D o 3D.</li>
-<li><strong>Reducció de soroll</strong>: eliminar les característiques menys rellevants o redundants.</li>
-</ul>
-<h3 id="aprenentatge-semisupervisat">Aprenentatge semisupervisat<a class="headerlink" href="#aprenentatge-semisupervisat" title="Permanent link">&para;</a></h3>
-<p>De vegades, tenim un conjunt de dades on sols algunes de les observacions estan etiquetades.</p>
-<p>En aquests casos, podem utilitzar l'<strong>Aprenentatge semisupervisat</strong> per a combinar les tècniques de <abbr title="Supervised Learning">SL</abbr> i <abbr title="Unsupervised Learning">UNS</abbr>.</p>
-<figure id="figure-12">
-    <a class="glightbox" href="../img/semi-supervised-learning.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/semi-supervised-learning.png" alt="Semi-supervised Learning"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 12: Aprenentatge semisupervisat</figcaption>
-</figure>
-
-<h3 id="aprenentatge-per-reforcament">Aprenentatge per reforçament<a class="headerlink" href="#aprenentatge-per-reforcament" title="Permanent link">&para;</a></h3>
-<p>L'<strong>Aprenentatge per reforçament (<em>Reinforcement Learning o <abbr title="Reinforcement Learning">RL</abbr></em>)</strong> és un tipus de <abbr title="Machine Learning">ML</abbr> en el qual
-l'aprenentatge es basa en la interacció amb un entorn.</p>
-<p>En aquest tipus d'aprenentatge, un agent (robot, cotxe autònom, etc.) ha de prendre decisions
-per a maximitzar una recompensa a llarg termini. Quan l'agent pren una decisió correcta, rep una recompensa,
-i quan pren una decisió incorrecta, rep un càstig.</p>
-<figure id="figure-13">
-    <a class="glightbox" href="../img/reinforcement-learning.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/reinforcement-learning.png" alt="Reinforcement Learning"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 13: Aprenentatge per reforçament</figcaption>
-</figure>
-
-<h3 id="aprenentatge-per-lots">Aprenentatge per lots<a class="headerlink" href="#aprenentatge-per-lots" title="Permanent link">&para;</a></h3>
-<p>En l'<strong>Aprenentatge per lots (<em>Batch Learning</em>)</strong>, el model és entrenat amb un conjunt de dades fix.</p>
-<p>Si volem actualitzar el model amb noves dades, hem de tornar a entrenar-lo des de zero.</p>
-<figure id="figure-14">
-    <a class="glightbox" href="../img/batch-learning.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/batch-learning.png" alt="Batch Learning"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 14: Aprenentatge per lots</figcaption>
-</figure>
-
-<h3 id="aprenentatge-en-linia">Aprenentatge en línia<a class="headerlink" href="#aprenentatge-en-linia" title="Permanent link">&para;</a></h3>
-<p>En l'<strong>Aprenentatge en línia (<em>Online Learning</em>)</strong>, el model és entrenat amb dades que arriben en temps real.</p>
-<p>Aquest tipus d'aprenentatge és útil quan les dades són massa grans per a ser processades en memòria o quan
-les dades arriben de manera contínua.</p>
-<figure id="figure-15">
-    <a class="glightbox" href="../img/online-learning.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/online-learning.png" alt="Online Learning"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 15: Aprenentatge en línia</figcaption>
-</figure>
-
-<h3 id="aprenentatge-basat-en-models">Aprenentatge basat en models<a class="headerlink" href="#aprenentatge-basat-en-models" title="Permanent link">&para;</a></h3>
-<p>En l'<strong>Aprenentatge basat en models (<em>Model-based Learning</em>)</strong>, existeix un model (normalment matemàtic/estadístic)
-que descriu com les dades són transformades en una predicció.</p>
-<p>Aquest model és entrenat amb les dades d'entrenament i després utilitzat per a fer prediccions.</p>
-<figure id="figure-16">
-    <a class="glightbox" href="../img/model-learning.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/model-learning.png" alt="Model-based Learning"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 16: Aprenentatge basat en models</figcaption>
-</figure>
-
-<h3 id="aprenentatge-basat-en-instancies">Aprenentatge basat en instàncies<a class="headerlink" href="#aprenentatge-basat-en-instancies" title="Permanent link">&para;</a></h3>
-<p>En l'<strong>Aprenentatge basat en instàncies (<em>Instance-based Learning</em>)</strong>, les prediccions
-es basen en la similitud entre les observacions d'entrenament i les noves observacions.</p>
-<p>Aquest tipus d'aprenentatge és útil quan no es pot construir un model matemàtic/estadístic.</p>
-<figure id="figure-17">
-    <a class="glightbox" href="../img/instance-learning.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/instance-learning.png" alt="Instance-based Learning"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 17: Aprenentatge basat en instàncies</figcaption>
-</figure>
-
-<h2 id="prova-i-validacio-de-models">Prova i validació de models<a class="headerlink" href="#prova-i-validacio-de-models" title="Permanent link">&para;</a></h2>
-<p>Una vegada s'ha entrenat un model, és important avaluar la seva precisió i rendiment.</p>
-<p>Per a això, es divideixen les dades en dos conjunts: <strong>dades d'entrenament</strong> i <strong>dades de prova</strong>.</p>
-<ul>
-<li>Les <strong>dades d'entrenament</strong> són utilitzades per a entrenar el model.</li>
-<li>Les <strong>dades de prova</strong> són utilitzades per a avaluar el rendiment del model.</li>
-</ul>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>És molt important que les dades de prova no hagen segut utilitzades en el procés d'entrenament.</p>
-<p>Estem avaluant si el model <strong>generalitza</strong> bé el problema o no, per tant, el model no ha de conéixer les dades de prova.</p>
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_absolute_error</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;MAE with sklearn: </span><span class="si">{</span><span class="n">mae</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></code></pre></div>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Normalment la proporció entre les dades d'entrenament i les dades de prova és de 80%/20% o 70%/30%, respectivament.</p>
 </div>
-<p>Cada tipus de problema té unes mètriques associades per a avaluar la qualitat del model.</p>
-<h2 id="principals-problemes-de-laprenentatge-automatic">Principals problemes de l'Aprenentatge Automàtic<a class="headerlink" href="#principals-problemes-de-laprenentatge-automatic" title="Permanent link">&para;</a></h2>
-<p>L'Aprenentatge Automàtic és una eina molt potent, però també difícil d'utilitzar perquè siga eficient.</p>
-<p>Alguns dels principals problemes són:</p>
+</div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>MAE: 2.75
+</span></code></pre></div>
+</div>
+<p>Quan més xicotet siga el <abbr title="Mean Absolute Error">MAE</abbr>, millor serà el model.
+És fàcil d'interpretar ja que està expressat en les mateixes
+que la variable dependent.</p>
+<h3 id="mse-error-quadratic-mitja"><abbr title="Mean Squared Error">MSE</abbr> – Error quadràtic mitjà<a class="headerlink" href="#mse-error-quadratic-mitja" title="Permanent link">&para;</a></h3>
+<p>L'<strong>error quadràtic mitjà (Mean Squared Error o <abbr title="Mean Squared Error">MSE</abbr>)</strong> és la mitjana de les diferències
+elevades al quadrat entre les prediccions (<span class="arithmatex">\(\hat{y}\)</span>) i els valors reals (<span class="arithmatex">\(y\)</span>).</p>
+<p>La fórmula per calcular l'error quadràtic mitjà és:</p>
+<pre class="arithmatex">\[
+MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+\]</pre>
+<p>El <abbr title="Mean Squared Error">MSE</abbr> és més sensible als errors grans que el <abbr title="Mean Absolute Error">MAE</abbr>, ja que eleva al quadrat
+les diferències. Això fa que els errors més grans tinguin un pes més gran
+en la mesura.</p>
+<div class="admonition example">
+<p class="admonition-title">Càlcul de l'error quadràtic mitjà</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><code>pandas</code></label><label for="__tabbed_2_2"><code>scikit-learn</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">mse</span> <span class="o">=</span> <span class="p">((</span><span class="n">Y</span> <span class="o">-</span> <span class="n">pred_Y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;MSE with pandas: </span><span class="si">{</span><span class="n">mse</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_squared_error</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">)</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;MSE with sklearn: </span><span class="si">{</span><span class="n">mse</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>MSE: 9.25
+</span></code></pre></div>
+</div>
+<h3 id="rmse-arrel-de-lerror-quadratic-mitja"><abbr title="Root Mean Squared Error">RMSE</abbr> – Arrel de l'error quadràtic mitjà<a class="headerlink" href="#rmse-arrel-de-lerror-quadratic-mitja" title="Permanent link">&para;</a></h3>
+<p>L'<strong>arrel de l'error quadràtic mitjà (Root Mean Squared Error o <abbr title="Root Mean Squared Error">RMSE</abbr>)</strong> és la
+arrel quadrada del <abbr title="Mean Squared Error">MSE</abbr>.</p>
+<pre class="arithmatex">\[
+RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
+\]</pre>
+<p>Aquesta mètrica és equivalent al <abbr title="Mean Squared Error">MSE</abbr> però més fàcil d'interpretar,
+ja que expressada en les mateixes unitats que la variable dependent.</p>
+<div class="admonition example">
+<p class="admonition-title">Càlcul de l'arrel de l'error quadràtic mitjà</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><code>pandas</code></label><label for="__tabbed_3_2"><code>scikit-learn</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(((</span><span class="n">Y</span> <span class="o">-</span> <span class="n">pred_Y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSE with pandas: </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">root_mean_squared_error</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">rmse</span> <span class="o">=</span> <span class="n">root_mean_squared_error</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">)</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;RMSE with sklearn: </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>RMSE: 3.04
+</span></code></pre></div>
+</div>
+<h3 id="r2-coeficient-de-determinacio">R² – Coeficient de determinació<a class="headerlink" href="#r2-coeficient-de-determinacio" title="Permanent link">&para;</a></h3>
+<p>El <strong>coeficient de determinació (<span class="arithmatex">\(R^2\)</span>)</strong> és una mesura que indica com de bé
+s'ajusta el model als valors reals.</p>
+<p>El coeficient de determinació pot prendre valors entre 0 i 1, sent 1 el millor valor
+possible. Un valor de 0 indica que el model no s'ajusta als valors reals.</p>
+<p>El coeficient de determinació es pot calcular com:</p>
+<pre class="arithmatex">\[
+R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}
+\]</pre>
+<p>On:</p>
 <ul>
-<li><strong>Quantitat insuficient de dades</strong>: per a entrenar un model amb precisió, és necessari un conjunt de dades gran
-    que represente correctament el problema.</li>
-<li><strong>Dades de baixa qualitat</strong>: si les dades tenen errors, valors atípics i soroll, difícilment el model
-    podrà fer prediccions correctes.</li>
-<li>
-<p><strong>Dades d'entrenament no representatives</strong>: per poder generalitzar correctament el problema, és crucial
-    que les dades d'entrenament representen correctament el problema.</p>
-<p>Si utilitzem un conjunt de dades que no és representatiu, el model no podrà fer prediccions correctes i
-ens trobarem en un cas de <strong>mostra esbiaixada</strong>.</p>
-</li>
+<li><span class="arithmatex">\(y_i\)</span> són els valors reals.</li>
+<li><span class="arithmatex">\(\hat{y}_i\)</span> són les prediccions del model.</li>
+<li><span class="arithmatex">\(\bar{y}\)</span> és la mitjana dels valors reals.</li>
 </ul>
-<p>A més, és important conéixer els problemes que ens podem trobar en el procés d'entrenament:</p>
-<ul>
-<li>
-<p><strong>Sobreajustament (<em>Overfitting</em>)</strong>: el model s'ajusta massa bé a les dades d'entrenament i no pot generalitzar
-    correctament el problema.</p>
-</li>
-<li>
-<p><strong>Infraajustament (<em>Underfitting</em>)</strong>: el model no s'ajusta prou bé a les dades d'entrenament i no pot fer prediccions
-    correctes.</p>
-</li>
-</ul>
-<figure id="figure-16">
-    <a class="glightbox" href="../img/overfitting.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/overfitting.png" alt="Overfitting and Underfitting"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 16: Sobreajustament i Infraajustament</figcaption>
-</figure>
-
-<p>Mesurant el rendiment del model amb les dades de prova, podem determinar si el model pateix d'aquests problemes:</p>
-<ul>
-<li>Si el model té un mal rendiment amb les dades d'entrenament i les dades de prova, probablement estiguem davant
-    un cas d'infraajustament.</li>
-<li>Si el model té un bon rendiment amb les dades d'entrenament i un mal rendiment amb les dades de prova, probablement
-    estiguem davant un cas de sobreajustament.</li>
-</ul>
-<p>El moment de parar l'entrenament del model és quan aquest té un bon rendiment amb les dades d'entrenament i la validació
-de les dades de prova comença a empitjorar.</p>
-<figure id="figure-17">
-    <a class="glightbox" href="../img/overfitting-validation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/overfitting-validation.png" alt="Overfitting and Underfitting validation"></a>
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 17: Validació Sobreajustament i Infraajustament</figcaption>
-</figure>
-
-<h2 id="recursos-addicionals">Recursos addicionals<a class="headerlink" href="#recursos-addicionals" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a class="spell-ignore" href="https://www.youtube.com/watch?v=KytW151dpqU">¿Qué es el Machine Learning? | DotCSV</a></li>
-<li><a class="spell-ignore" href="https://www.youtube.com/watch?v=oT3arRRB2Cw">¿Qué es el Aprendizaje Supervisado y No Supervisado? | DotCSV</a></li>
-</ul>
-<h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://cesguiro.es/">Material del mòdul "Sistemes d'Aprenentatge Automàtic"</a> de César Guijarro Rosaleny</li>
-<li>Material del curs "Iniciació a la Intel·ligència Artificial amb Python" impartit per David Campoy Miñarro</li>
-<li><a href="https://en.wikipedia.org/wiki/Artificial_general_intelligence">Artificial general intelligence, Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Weak_artificial_intelligence">Weak artificial intelligence, Wikipedia</a></li>
-<li><a href="https://ca.wikipedia.org/wiki/Aprenentatge_autom%C3%A0tic">Aprenentatge Automàtic, Viquipèdia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Supervised_learning">Supervised learning, Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Unsupervised_learning">Unsupervised learning, Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Reinforcement_learning">Reinforcement learning, Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Online_machine_learning">Online machine learning, Wikipedia</a></li>
-<li><a href="https://ca.wikipedia.org/wiki/Mostra_esbiaixada">Mostra esbiaixada, Viquipèdia</a></li>
-</ul>
+<div class="admonition example">
+<p class="admonition-title">Càlcul del coeficient de determinació <span class="arithmatex">\(R^2\)</span></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"><code>pandas</code></label><label for="__tabbed_4_2"><code>scikit-learn</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">r2</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">((</span><span class="n">Y</span> <span class="o">-</span> <span class="n">pred_Y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="p">((</span><span class="n">Y</span> <span class="o">-</span> <span class="n">Y</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;R^2 with pandas: </span><span class="si">{</span><span class="n">r2</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">r2_score</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">pred_Y</span><span class="p">)</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;R^2 with sklearn: </span><span class="si">{</span><span class="n">r2</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>R^2: 0.93
+</span></code></pre></div>
+</div>
 
 
     </td></tr></tbody>
@@ -2564,7 +2007,7 @@ de les dades de prova comença a empitjorar.</p>
     <span class="md-icon" title="Darrera actualització">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">4 de novembre del 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">15 de gener del 2025</span>
   </span>
 
     
@@ -2691,7 +2134,7 @@ de les dades de prova comença a empitjorar.</p>
       <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
         
           
-          <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Apunts">
+          <a href="../../03_manipulacio_dades/06_conjunts/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Conjunts de dades">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2701,20 +2144,20 @@ de les dades de prova comença a empitjorar.</p>
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Apunts
+                Conjunts de dades
               </div>
             </div>
           </a>
         
         
           
-          <a href="../02_xarxes_neuronals/" class="md-footer__link md-footer__link--next" aria-label="Següent: Xarxes neuronals">
+          <a href="../01_lineal/" class="md-footer__link md-footer__link--next" aria-label="Següent: Regressió lineal">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Següent
               </span>
               <div class="md-ellipsis">
-                Xarxes neuronals
+                Regressió lineal
               </div>
             </div>
             <div class="md-footer__button md-icon">

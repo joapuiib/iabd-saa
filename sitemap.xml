@@ -85,6 +85,12 @@
         <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/03_manipulacio_dades/06_conjunts/"/>
     </url>
     <url>
+        <loc>Noneapunts/04_regressio/00_metriques/</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ca" href="Noneapunts/04_regressio/00_metriques/"/>
+    </url>
+    <url>
         <loc>Noneapunts/04_regressio/01_lineal/</loc>
         <lastmod>2025-01-15</lastmod>
         <changefreq>daily</changefreq>
