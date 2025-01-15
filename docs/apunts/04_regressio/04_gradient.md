@@ -28,7 +28,7 @@ tracta d'optimitzar i minimitzar.
 
 En el cas de problemes de regressió, trobem les següents funcions de cost:
 
-- `squared_loss`: [[regressio-lineal#mse-error-quadratic-mitja]].
+- `squared_loss`: [[regressio-metriques#mse-error-quadratic-mitja]].
 - `huber`: funció de cost robusta a outliers.
 - `epsilon_insensitive`: funció de cost de [màquina de suport vectorial](https://ca.wikipedia.org/wiki/M%C3%A0quina_de_vector_de_suport).
 
