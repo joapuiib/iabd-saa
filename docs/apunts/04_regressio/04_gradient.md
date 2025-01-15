@@ -67,6 +67,12 @@ Aquest model té els següents hiperparàmetres:
 !!! docs
     Documentació oficial de [`SGDRegressor`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDRegressor.html)
 
+## Codi font
+Aquest exemple utilitza el procés de [[normalitzacio|Normalització]] de les dades
+mitjançant la classe `StandardScaler`, que encara no hem estudiat.
+
+!load_file ud4/examples/descens_gradient.py
+
 /// html | div.spell-ignore
 ## Recursos addicionals
 - [¿Qué es el Descenso del Gradiente? Algoritmo de Inteligencia Artificial | DotCSV
