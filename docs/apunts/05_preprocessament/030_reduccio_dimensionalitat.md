@@ -56,18 +56,26 @@ Dins de les tècniques de selecció de característiques, podem classificar-les 
 
     Aquests mètodes poden ser:
     
-    - __Forward selection__: Comença amb un conjunt buit de característiques i va afegint-ne una a una.
-    - __Backward elimination__: Comença amb totes les característiques i va eliminant-ne una a una.
+    - [__Forward selection__][forward]: Comença amb un conjunt buit de característiques i va afegint-ne una a una.
+    - [__Backward elimination__][backward]: Comença amb totes les característiques i va eliminant-ne una a una.
+    - [__Bidirectional selection__][bidirectional]: Combina els dos mètodes anteriors.
+
+    [forward]: 032_envoltura.md#seleccio-cap-endavant
+    [backward]: 032_envoltura.md#seleccio-cap-enrere
+    [bidirectional]: 032_envoltura.md#seleccio-bidireccional
 
 
 ### Extracció de característiques
 Alguns dels mètodes més comuns d'extracció de característiques numèriques són:
 
-- __PCA (Principal Component Analysis)__: És una tècnica de reducció de dimensionalitat que transforma les característiques originals
+- [__PCA (Principal Component Analysis)__][pca]: És una tècnica de reducció de dimensionalitat que transforma les característiques originals
     en un nou conjunt de característiques no correlacionades anomenades components principals.
 
-- __LDA (Linear Discriminant Analysis)__: És una tècnica de reducció de dimensionalitat que transforma les característiques originals
+- [__LDA (Linear Discriminant Analysis)__][lda]: És una tècnica de reducció de dimensionalitat que transforma les característiques originals
     en un nou conjunt de característiques que maximitzen la separació entre les classes.
+
+[pca]: 033_extraccio.md#pca-principal-component-analysis
+[lda]: 033_extraccio.md#lda-linear-discriminant-analysis
 
 ## Bibliografia
 - [Viquipèdia - Reducció de dimensionalitat](https://ca.wikipedia.org/wiki/Reducci%C3%B3_de_dimensionalitat)

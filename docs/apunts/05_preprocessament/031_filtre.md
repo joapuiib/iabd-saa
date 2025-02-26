@@ -72,6 +72,9 @@ X_train = X_train.drop(columns=to_drop, axis=1)
 X_test = X_test.drop(columns=to_drop, axis=1)
 ```
 
+## Codi font
+!load_file ud5/examples/reduccio_filtres.py
+
 /// html | div.spell-ignore
 ## Bibliografia
 - [Material del mòdul "Sistemes d'Aprenentatge Automàtic" de César Guijarro](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
