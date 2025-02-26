@@ -4,6 +4,6 @@ nav:
     - "UD2: Estadística": 02_estadistica
     - "UD3: Manipulació i visualització de dades": 03_manipulacio_dades
     - "UD4: Regressió": 04_regressio
-    # - "UD5: Normalització i reducció de la dimensionalitat": 05_normalitzacio
+    - "UD5: Preprocessament de les dades": 05_preprocessament
     # - "UD6: Classificació": 06_classificacio
     # - "UD7: Clustering": 07_clustering
