@@ -77,6 +77,8 @@ Alguns dels mètodes més comuns d'extracció de característiques numèriques s
 [pca]: 033_extraccio.md#pca-principal-component-analysis
 [lda]: 033_extraccio.md#lda-linear-discriminant-analysis
 
+/// html | div.spell-ignore
 ## Bibliografia
 - [Viquipèdia - Reducció de dimensionalitat](https://ca.wikipedia.org/wiki/Reducci%C3%B3_de_dimensionalitat)
-- [Stats StackExchange - Should we normalize before using VarianceThreshold in sklearn?](https://stats.stackexchange.com/questions/253920/should-we-normalize-before-using-variancethreshold-in-sklearn)
+- [Stats StackExchange - Should we normalize before using VarianceThreshold in sklearn?](https://stats.stackexchange.com/questions/253920/should-we-normalize-before-using-variancethreshold-in-sklearn
+///
