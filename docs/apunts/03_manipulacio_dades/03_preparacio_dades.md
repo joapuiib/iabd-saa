@@ -7,29 +7,27 @@ comments: true
 ---
 
 ## Preparació de les dades
-Quan treballem en la resolució d'un problema d'aprenentatge automàtic,
-el primer pas fonamental és conèixer les dades amb les quals treballarem
+Quan es treballa en la resolució d'un problema d'aprenentatge automàtic,
+el primer pas fonamental és conèixer les dades amb les quals es treballa
 i preparar-les adequadament.
 
-!!! warning
-    Treballar amb dades sense cap preparació impedirà obtenir resultats
-    satisfactoris en la majoria dels casos.
+!!! warning "Treballar amb dades sense cap preparació impedirà obtindre resultats satisfactoris en la majoria dels casos."
 
-En aquesta secció, veurem com preparar les dades per poder-les utilitzar
+En aquesta secció es mostra com preparar les dades per a poder-les utilitzar
 en els models d'aprenentatge automàtic.
 
 !!! prep "Conjunt de dades `adult-dataset`"
-    En aquests apunts treballarem en el següent conjunt de dades
+    En aquests apunts es treballa amb el següent conjunt de dades:
     [adult-dataset](https://www.kaggle.com/datasets/mlbysoham/adult-dataset){target=_blank}.
 
 ### Informació sobre les dades
-El primer pas és conèixer les dades amb les quals treballarem.
+El primer pas és conèixer les dades amb les quals es treballa.
 
-Podem obtindre informació sobre les dades utilitzant diferents mètodes.
+Es pot obtindre informació sobre les dades amb diferents mètodes.
 
 Els mètodes `head()`, `tail()`, `info()` vists a
-[[pandas#informacio-de-les-dades]]{target=_blank})
-ens permeten obtenir una visió general de les dades.
+[[pandas#informacio-de-les-dades]]{target=_blank}
+permeten obtindre una visió general de les dades.
 
 ??? example "Exemple: `head()`, `tail()` i `info()`"
     
@@ -47,7 +45,7 @@ ens permeten obtenir una visió general de les dades.
     ```
 
     /// html | div.result
-    ```
+    ```text
     Head of the dataset:
        0                  1       2           3   4                    5                   6               7       8        9     10  11  12              13      14
     0  39          State-gov   77516   Bachelors  13        Never-married        Adm-clerical   Not-in-family   White     Male  2174   0  40   United-States   <=50K
@@ -90,8 +88,8 @@ ens permeten obtenir una visió general de les dades.
     ```
     ///
 
-A més, podem utilitzar els següents mètodes
-per obtindre més informació:
+A més, es poden utilitzar els següents mètodes
+per a obtindre més informació:
 
 - `shape`: proporciona el nombre de files i columnes del conjunt de dades.
 - `describe()`: proporciona estadístiques descriptives del conjunt de dades com el nombre de valors no nuls,
@@ -112,7 +110,7 @@ per obtindre més informació:
     ```
 
     /// html | div.result
-    ```
+    ```text
     Shape of the dataset:
     (32561, 15) 
 
@@ -151,20 +149,19 @@ per obtindre més informació:
 Un dels problemes més comuns en les dades són els valors nuls,
 ja que la majoria de models no permeten treballar amb valors no numèrics.
 
-Podem identificar els valors nuls amb el mètode `isnull()`.
+Els valors nuls es poden identificar amb el mètode `isnull()`.
 
 ??? example "Exemple: `isnull()`"
-    !!! warning
-        Hem modificat el conjunt de dades inicial per afegir un valor nul a la columna `age`.
+    !!! warning "S'ha modificat el conjunt de dades inicial per a afegir un valor nul a la columna `age`."
 
     ```python
-    df.loc[50, 'age'] = None # Assignem un valor nul a la columna 'age' de la fila 50
+    df.loc[50, 'age'] = None # Assigna un valor nul a la columna 'age' de la fila 50
 
     print("Number of null values in each column:")
     print(df.isnull().sum(), "\n")
     ```
     /// html | div.result
-    ```
+    ```text
     Number of null values in each column:
     age                  1
     workclass         1836
@@ -186,7 +183,7 @@ Podem identificar els valors nuls amb el mètode `isnull()`.
     ///
 
 
-En aquest cas, podem tractar-los de tres maneres diferents:
+En aquest cas, es poden tractar de tres maneres diferents:
 
 - Eliminar les files amb valors nuls.
 - Eliminar la columna amb valors nuls.
@@ -196,20 +193,20 @@ Depenent de la tipologia de les dades, una opció serà més adequada que una al
 
 #### Eliminar les files amb valors nuls
 En el cas que les files amb valors nuls no siguen significatives
-dins del conjunt de dades, podem eliminar-les.
+dins del conjunt de dades, es poden eliminar.
 
-??? example "Exemple consulta fila amb `age` nul·la"
+??? example "Exemple: Consultar la fila amb `age` nul·la"
     ```python
     print(df[df['age'].isnull()])
     ```
     /// html | div.result
-    ```
+    ```text
         age workclass  fnlwgt     education  education-num      marital-status       occupation relationship   race     sex  capital-gain  capital-loss  hours-per-week native-country income
     50  NaN   Private   32275  Some-college             10  Married-civ-spouse  Exec-managerial         Wife  Other  Female             0             0              40  United-States
     ```
     ///
 
-El mètode `dropna()` ens permet eliminar les files amb valors nuls
+El mètode `dropna()` permet eliminar les files amb valors nuls
 d'un conjunt de dades.
 
 ```python
@@ -219,8 +216,7 @@ df = df.dropna(inplace=False, subset=None)
 - `inplace`: si `True`, el conjunt de dades es modificarà directament.
 - `subset`: llista de columnes on buscar valors nuls.
 
-!!! docs
-    Documentació de pandas sobre el mètode [`dropna()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html){target=_blank}.
+!!! docs "Documentació oficial: [:octicons-link-external-16: `dropna()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html) – pandas"
 
 ??? example "Exemple: Eliminar files amb `age` nul·la"
     ```python
@@ -229,26 +225,25 @@ df = df.dropna(inplace=False, subset=None)
     print(f"Deleted {rows - df.shape[0]} rows with null values in 'age' column")
     ```
     /// html | div.result
-    ```
+    ```text
     Deleted 1 rows with null values in 'age' column
     ```
     ///
 
 #### Eliminar la columna amb valors nuls
 En el cas que la columna amb valors nuls no siga significativa
-dins del conjunt de dades, podem eliminar-la completament.
+dins del conjunt de dades, es pot eliminar completament.
 
-El mètode `drop()` ens permet eliminar una columna d'un conjunt de dades.
+El mètode `drop()` permet eliminar una columna d'un conjunt de dades.
 
 ```python
 df = df.drop(labels, inplace=False)
 ```
 
-!!! docs
-    Documentació de pandas sobre el mètode [`drop()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop.html){target=_blank}.
+!!! docs "Documentació oficial: [:octicons-link-external-16: `drop()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop.html) – pandas"
 
 ??? warning "Eliminació de la columna `workclass`"
-    En aquest cas, haguérem pogut eliminar la columna `workclass` amb valors nuls.
+    En aquest cas, es podria eliminar la columna `workclass`, que té valors nuls.
     ```python
     df.drop(columns='workclass', inplace=True)
     ```
@@ -260,9 +255,9 @@ df = df.drop(labels, inplace=False)
 ## Dades categòriques
 Els models d'aprenentatge automàtic no poden treballar directament
 amb dades categòriques o amb text, per tant, és necessari processar-les
-per poder-les utilitzar.
+per a poder-les utilitzar.
 
-Per identificar les columnes amb dades categòriques, podem utilitzar
+Per a identificar les columnes amb dades categòriques, es pot utilitzar
 el mètode `dtypes` i filtrar les columnes amb el tipus `object`.
 
 ??? example "Exemple: Identificar columnes categòriques"
@@ -271,7 +266,7 @@ el mètode `dtypes` i filtrar les columnes amb el tipus `object`.
     print(df.select_dtypes(include='object').columns)
     ```
     /// html | div.result
-    ```
+    ```text
     Categorical columns:
     Index(['workclass', 'education', 'marital-status', 'occupation',
            'relationship', 'race', 'sex', 'native-country', 'income'],
@@ -279,13 +274,13 @@ el mètode `dtypes` i filtrar les columnes amb el tipus `object`.
     ```
     ///
 
-Per transformar les dades categòriques en dades numèriques,
-podem utilitzar diferents mètodes com:
+Per a transformar les dades categòriques en dades numèriques,
+es poden utilitzar diferents mètodes, com:
 
 - __`OrdinalEncoder` i `LabelEncoder`: transformen les dades categòriques en valors numèrics__.
 
-    La diferència principal és que `OrdinalEncoder` està pensat per transformar les característiques
-    de les dades, mentre que `LabelEncoder` està pensat per transformar les etiquetes (`target`).
+    La diferència principal és que `OrdinalEncoder` està pensat per a transformar les característiques
+    de les dades, mentre que `LabelEncoder` està pensat per a transformar les etiquetes (`target`).
 
     Per aquesta raó, `OrdinalEncoder` permet transformar més d'una columna a la vegada i,
     en canvi, `LabelEncoder` només permet transformar una única columna.
@@ -304,13 +299,11 @@ podem utilitzar diferents mètodes com:
 El `OrdinalEncoder` transforma les dades categòriques en valors ordinals, és a dir,
 assigna un valor numèric a cada categoria.
 
-!!! info
-    `OrdinalEncoder` no suporta valors nuls, per tant, és necessari tractar-los
-    abans de fer la transformació.
+!!! info "`OrdinalEncoder` no admet valors nuls, per tant, cal tractar-los abans de fer la transformació."
 
 ??? example "Exemple: Transformació de `workclass` amb `OrdinalEncoder`"
     ```python
-    # Assignem un valor '?' als valors nuls
+    # Assigna el valor '?' als valors nuls
     df.loc[df['workclass'].isnull(), 'workclass'] = '?'
 
     workclass_oe = OrdinalEncoder()
@@ -339,7 +332,7 @@ assigna un valor numèric a cada categoria.
 
 ### `OneHotEncoder`
 El `OneHotEncoder` transforma les dades categòriques en múltiples columnes binàries,
-que s'indica amb un `1` si el valor és d'aquella categoria i `0` si no ho és.
+on s'indica amb un `1` si el valor és d'aquella categoria i amb un `0` si no ho és.
 
 ??? example "Exemple: Transformació de `sex` amb `OneHotEncoder`"
     ```python
@@ -369,5 +362,5 @@ que s'indica amb un `1` si el valor és d'aquella categoria i `0` si no ho és.
 
 
 ## Bibliografia
-- [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
-- [StackExchange Datascience: Difference between OrdinalEncoder and LabelEncoder](https://datascience.stackexchange.com/questions/39317/difference-between-ordinalencoder-and-labelencoder){: .spell-ignore target="_blank"}
+- [:octicons-link-external-16: Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} – César Guijarro Rosaleny
+- [:octicons-link-external-16: StackExchange Datascience: Difference between OrdinalEncoder and LabelEncoder](https://datascience.stackexchange.com/questions/39317/difference-between-ordinalencoder-and-labelencoder){: .spell-ignore target="_blank"}

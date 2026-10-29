@@ -2,6 +2,7 @@
 template: document.html
 title: Visualització de les dades amb Plotnine
 icon: material/book-open-variant
+alias: plotnine
 comments: true
 tags:
     - plotnine
@@ -20,14 +21,14 @@ Altres llibreries de Python per a la visualització de dades són:
 - [`seaborn`](https://seaborn.pydata.org)
 
 ## Instal·lació
-Per instal·lar la llibreria `plotnine` amb `pip`:
+Per a instal·lar la llibreria `plotnine` amb `pip`:
 
 ```bash
 pip install plotnine
 ```
 
 ## Importació
-Per importar la llibreria `plotnine`:
+Per a importar la llibreria `plotnine`:
 
 ```python
 from plotnine import *
@@ -41,10 +42,9 @@ La llibreria es basa en diferents objectes per a la creació de gràfics:
 - `geom`: objecte que defineix la geometria del gràfic.
 - `theme`: objecte que defineix el tema del gràfic.
 
-!!! docs
-    Documentació oficial de [`plotnine`](https://plotnine.org/reference/#creating-a-plot){:target="_blank"}
+!!! docs "Documentació oficial: [:octicons-link-external-16: `plotnine`](https://plotnine.org/reference/#creating-a-plot) – plotnine"
 
-!!! example
+??? example "Exemple: Gràfic bàsic de punts amb `mtcars`"
     ```python
     from plotnine import ggplot, geom_point, aes
     from plotnine.data import mtcars
@@ -62,10 +62,7 @@ La llibreria es basa en diferents objectes per a la creació de gràfics:
     ```
 
     ![Exemple bàsic amb plotnine](img/plotnine/figure_mtcars_basic.png)
-    /// figure-caption
-        attrs: { id: "figure-exemple-basic" }
-    Exemple bàsic amb `plotnine`.
-    ///
+    /// figure-caption | #figure-exemple-basic : Exemple bàsic amb `plotnine`.
 
     1. Creació d'un objecte `ggplot` amb les dades `mtcars`.
     2. Definició de les variables estètiques amb `aes`.
@@ -76,7 +73,7 @@ La llibreria es basa en diferents objectes per a la creació de gràfics:
         - Cada punt representa un vehicle.
 
 ### Estètica (`aes`)
-L'estètica control les propietats visuals d'una gràfica.
+L'estètica controla les propietats visuals d'un gràfic.
 Aquestes funcions controlen com es mostren i distribueixen les dades (i els càlculs basats en aquestes).
 
 La funció principal per a definir l'estètica és `aes`.
@@ -89,11 +86,9 @@ aes(x, y, **kwargs)
 - `y`: dades utilitzades per a l'eix Y.
 
 
-!!! info
-    Els paràmetres `x` i `y` poden rebre múltiples tipus de dades. Podeu consultar-ho a la documentació oficial.
+!!! info "Els paràmetres `x` i `y` poden rebre múltiples tipus de dades, tal com es pot consultar a la documentació oficial."
 
-!!! docs
-    Documentació oficial de la [`aes`](https://plotnine.org/reference/aes.html#plotnine.aes){:target="_blank"}.
+!!! docs "Documentació oficial: [:octicons-link-external-16: `aes`](https://plotnine.org/reference/aes.html#plotnine.aes) – plotnine"
 
 Altres paràmetres comuns són:
 
@@ -102,13 +97,12 @@ Altres paràmetres comuns són:
 
 
 ### Geometria (`geom`)
-La geometria controla el format amb que es presenten les dades.
+La geometria controla el format amb el qual es presenten les dades.
 
-!!! docs
-    Documentació oficial de la [geometria](https://plotnine.org/reference/#geoms){:target="_blank"}.
+!!! docs "Documentació oficial: [:octicons-link-external-16: Geometries](https://plotnine.org/reference/#geoms) – plotnine"
 
 `plotnine` ofereix diferents tipus de geometries, que venen definides per funcions amb el prefix `geom_`.
-Podeu consultar la llista completa a la documentació oficial.
+La llista completa es pot consultar a la documentació oficial.
 
 Els tipus de geometries més comuns són:
 
@@ -117,12 +111,11 @@ Els tipus de geometries més comuns són:
 - [`geom_bar`](https://plotnine.org/reference/geom_bar.html#plotnine.geom_bar){:target="_blank"}: barres.
 - [`geom_boxplot`](https://plotnine.org/reference/geom_boxplot.html#plotnine.geom_boxplot){:target="_blank"}: diagrama de caixes.
 
-!!! example "Exemple amb punts"
+??? example "Exemple: Geometria de punts"
     La [Figura 1](#figure-exemple-basic) mostra un exemple bàsic amb `geom_point`.
 
-!!! example "Exemple amb línies"
-    !!! info
-        La funció `factor()` converteix una variable numèrica en una variable categòrica.
+??? example "Exemple: Geometria de línies"
+    !!! info "La funció `factor()` converteix una variable numèrica en una variable categòrica."
 
     ```python
     plot = (
@@ -135,11 +128,9 @@ Els tipus de geometries més comuns són:
     ```
 
     ![Exemple amb línies](img/plotnine/figure_mtcars_linies.png)
-    /// figure-caption
-    Exemple bàsic amb `geom_line`.
-    ///
+    /// figure-caption: Exemple bàsic amb `geom_line`.
 
-!!! example "Exemple amb barres"
+??? example "Exemple: Geometria de barres"
     ```python
     bar_plot = (
         ggplot(mtcars)
@@ -151,24 +142,21 @@ Els tipus de geometries més comuns són:
     ```
 
     ![Exemple amb barres](img/plotnine/figure_mtcars_barres.png)
-    /// figure-caption
-    Exemple bàsic amb `geom_bar`.
-    ///
+    /// figure-caption: Exemple bàsic amb `geom_bar`.
 
 ### Títol i etiquetes
 Es pot especificar el títol del gràfic amb la funció
 [`ggtitle`](https://plotnine.org/reference/ggtitle.html#plotnine.ggtitle){:target="_blank"}.
 
-!!! docs
-    Documentació oficial de la [funció `ggtitle`](https://plotnine.org/reference/ggtitle.html#plotnine.ggtitle){:target="_blank"}.
+!!! docs "Documentació oficial: [:octicons-link-external-16: Funció `ggtitle`](https://plotnine.org/reference/ggtitle.html#plotnine.ggtitle) – plotnine"
 
-També es pot afegir etiquetes als eixos X i Y amb les funcions:
+També es poden afegir etiquetes als eixos X i Y amb les funcions:
 
-- [`labs`](https://plotnine.org/reference/labs.html#plotnine.labs){:target="_blank"}: Permet especificar el títol i les etiquetes dels eixos X i Y i altres elements.
+- [`labs`](https://plotnine.org/reference/labs.html#plotnine.labs){:target="_blank"}: permet especificar el títol i les etiquetes dels eixos X i Y i altres elements.
 - [`xlab`](https://plotnine.org/reference/xlab.html#plotnine.xlab){:target="_blank"}: etiqueta de l'eix X.
 - [`ylab`](https://plotnine.org/reference/ylab.html#plotnine.ylab){:target="_blank"}: etiqueta de l'eix Y.
 
-!!! example "Exemple amb títol i etiquetes"
+??? example "Exemple: Títol i etiquetes"
     ```python
     plot = (
         ggplot(mtcars)
@@ -185,19 +173,16 @@ També es pot afegir etiquetes als eixos X i Y amb les funcions:
     ```
 
     ![Exemple amb títol i etiquetes](img/plotnine/figure_mtcars_etiquetes.png)
-    /// figure-caption
-    Exemple amb títol i etiquetes.
-    ///
+    /// figure-caption: Exemple amb títol i etiquetes.
 
 ### Temes
 Es poden utilitzar diferents temes per a personalitzar l'aparença del gràfic.
 
-!!! docs
-    Documentació oficial dels [temes](https://plotnine.org/reference/#themes){:target="_blank"}.
+!!! docs "Documentació oficial: [:octicons-link-external-16: Temes](https://plotnine.org/reference/#themes) – plotnine"
 
 Per a utilitzar un tema, s'ha d'afegir la funció `theme` al gràfic.
 
-!!! example "Exemple amb el tema fosc"
+??? example "Exemple: Tema fosc"
     ```python
     plot = (
         ggplot(mtcars)
@@ -215,9 +200,7 @@ Per a utilitzar un tema, s'ha d'afegir la funció `theme` al gràfic.
     ```
 
     ![Exemple amb tema fosc](img/plotnine/figure_mtcars_dark.png)
-    /// figure-caption
-    Exemple amb tema fosc.
-    ///
+    /// figure-caption: Exemple amb tema fosc.
 
 ### Múltiples gràfics (facets)
 Els gràfics poden ser dividits en diferents subgràfics segons els valors d'una variable
@@ -226,7 +209,7 @@ amb dues funcions:
 - [`facet_wrap`](https://plotnine.org/reference/facet_wrap.html#plotnine.facet_wrap){:target="_blank"}: divideix el gràfic en subgràfics en funció d'una variable.
 - [`facet_grid`](https://plotnine.org/reference/facet_grid.html#plotnine.facet_grid){:target="_blank"}: divideix el gràfic en subgràfics en funció de dues o més variables.
 
-!!! example "Exemple amb `facet_wrap`"
+??? example "Exemple: `facet_wrap`"
     ```python
     facet_plot = (
         ggplot(mtcars)
@@ -243,11 +226,9 @@ amb dues funcions:
     ```
 
     ![Diferents gràfics per nombre de marxes](img/plotnine/figure_mtcars_facetwrap.png)
-    /// figure-caption
-    Diferents gràfics per nombre de marxes.
-    ///
+    /// figure-caption: Diferents gràfics per nombre de marxes.
 
-!!! example "Exemple amb `facet_grid`"
+??? example "Exemple: `facet_grid`"
     ```python
     facet_grid_plot = (
         ggplot(mtcars)
@@ -264,15 +245,13 @@ amb dues funcions:
     ```
 
     ![Diferents gràfics per nombre de marxes i cilindres](img/plotnine/figure_mtcars_facetgrid.png)
-    /// figure-caption
-    Diferents gràfics per nombre de marxes i cilindres.
-    ///
+    /// figure-caption: Diferents gràfics per nombre de marxes i cilindres.
 
 ## Codi font
 !load_file ud3/examples/plotnine_example.py
 
 ## Bibliografia
-- [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
-- [Documentació oficial de `plotnine`](https://plotnine.org){:target="_blank"}
-- [StackOverflow: What's the difference between facet_wrap() and facet_grid() in ggplot2?](https://stackoverflow.com/questions/20457905/whats-the-difference-between-facet-wrap-and-facet-grid-in-ggplot2)
+- [:octicons-link-external-16: Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} – César Guijarro Rosaleny
+- [:octicons-link-external-16: Documentació oficial de `plotnine`](https://plotnine.org){:target="_blank"}
+- [:octicons-link-external-16: StackOverflow: What's the difference between facet_wrap() and facet_grid() in ggplot2?](https://stackoverflow.com/questions/20457905/whats-the-difference-between-facet-wrap-and-facet-grid-in-ggplot2)
 {.spell-ignore}

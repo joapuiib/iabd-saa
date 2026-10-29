@@ -2,6 +2,7 @@
 template: document.html
 title: Preparació de l'entorn
 icon: fontawesome/solid/list-check
+alias: preparacio-entorn
 comments: true
 tags:
     - python
@@ -13,70 +14,62 @@ L'objectiu d'aquest material és configurar l'entorn de desenvolupament
 en ordinadors amb sistema operatiu Windows o distribucions de Linux basades en Debian,
 com Ubuntu o Linux Mint.
 
-En aquest manual s'instal·larà i es configuraran les següent eines:
+En aquest manual s'instal·laran i es configuraran les següents ferramentes:
 
-- [Python 3](https://www.python.org/){target=_blank}: Llenguatge de programació.
-- [PyCharm](https://www.jetbrains.com/pycharm/){target=_blank}: Entorn de desenvolupament integrat.
+- __:simple-python: [Python 3](https://www.python.org/){target=_blank}__: llenguatge de programació.
+- __:simple-pycharm: [PyCharm](https://www.jetbrains.com/pycharm/){target=_blank}__: entorn de desenvolupament integrat.
 
-!!! info
-    Podeu utilitzar l'entorn de desenvolupament que vulgueu,
-    però heu de saber configurar-lo per a Python 3.
-
+!!! info "Es pot utilitzar l'entorn de desenvolupament que es vulga, però cal saber configurar-lo per a Python 3."
     El professorat no donarà suport a altres entorns de desenvolupament.
 
 ## Python 3
-Python 3 està disponible a https://www.python.org/ per a Windows, macOS i Linux.
+Python 3 està disponible a [python.org](https://www.python.org/){target=_blank}
+per a Windows, macOS i Linux.
 
 A Linux, Python 3 ja ve instal·lat per defecte a pràcticament totes les distribucions.
 
 ## PyCharm
-PyCharm està disponible a https://www.jetbrains.com/pycharm/ per a Windows, macOS i Linux.
+PyCharm està disponible a [jetbrains.com](https://www.jetbrains.com/pycharm/){target=_blank}
+per a Windows, macOS i Linux.
 
 Cal descarregar la versió __Community__, que és de codi obert i gratuïta.
 
 ## Creació de projecte
-Per a començar a treballar, heu de crear un projecte a PyCharm.
+Per a començar a treballar, cal crear un projecte a PyCharm. En aquest cas, s'han triat les
+següents opcions:
 
-Jo he triat les següents opcions:
+- __Project type__: Pure Python.
+- __Nom del projecte__: `CognomNom-SAA`.
+- __Location__: per defecte.
+- __Interpreter__: Python 3.12.
+- __Interpreter type__: Virtualenv.
+- __Create Git repository__: sí.
 
-- __Project type__: Pure Python
-- __Nome del projecte__: `CognomNom-SAA`
-- __Location__: Per defecte.
-- __Interpreter__: Python 3.12
-- __Interpreter type__: Virtualenv
-- __Create Git repository__: Sí
+!!! important "S'utilitza un __entorn virtual__ per a aïllar les dependències del projecte respecte de les del sistema."
 
-!!! important
-    S'utilitzara un __entorn virtual__ per a aïllar les dependències del projecte
-    respecte de les del sistema.
-
-!!! tip
-    Vos recomane crear un repositori de :material-git: Git per gestionar el vostre codi.
+!!! recommend "Es recomana crear un repositori de :material-git: Git per a gestionar el codi del projecte."
 
 ![Creació de projecte](../img/entorn/pycharm_creacio_projecte.png)
 
 ## Instal·lació de dependències
-En aquest mòdul farem servir les llibreries especificades al fitxer `requirements.txt`,
-que hauràs de situar a l'arrel del projecte.
+En aquest mòdul es faran servir les llibreries especificades al fitxer `requirements.txt`,
+que cal situar a l'arrel del projecte.
 
 ```txt title="requirements.txt"
 --8<-- "docs/files/requeriments.txt"
 ```
 
-!!! tip
-    En el meu cas, s'ha situat a `PuigcerverJoan-SAA/requirements.txt`.
+!!! tip "En aquest cas, el fitxer s'ha situat a `PuigcerverJoan-SAA/requirements.txt`."
 
-Per instal·lar les dependències, obriu un terminal a PyCharm
-i executeu la següent comanda:
+Per a instal·lar les dependències, cal obrir un terminal a PyCharm
+i executar la següent ordre:
 
 ```shellconsole
 (.venv) jpuigcerver@fedora:~/PuigcerverJoan-SAA (main) $ pip install -r requirements.txt
 ```
 
-!!! notice
-    Fixeu-vos que el __entorn virtual__ està activat: `(.venv)`.
-
-    Si no ho està, el podeu activar amb la següent comanda:
+!!! note "Cal comprovar que l'__entorn virtual__ està activat: `(.venv)`."
+    Si no ho està, es pot activar amb la següent ordre:
 
     ```shellconsole
     jpuigcerver@fedora:~/PuigcerverJoan-SAA (main) $ source .venv/bin/activate
@@ -84,18 +77,16 @@ i executeu la següent comanda:
 
 ## Execució de codi
 En Python, el codi està estructurat en mòduls, que són directoris amb un fitxer `__init__.py`.
-Podeu crear un mòdul amb __Botó dret > New > Python Package__.
+Es pot crear un mòdul amb __Botó dret > New > Python Package__.
 
 - Crea el mòdul `ud2`.
 
-Després, còpia l'exemple [`exemple_python.py`](../../files/ud2/exemple_python.py){: download=exemple_python.py}
+Després, copia l'exemple [`exemple_python.py`](../../files/ud2/exemple_python.py){: download=exemple_python.py}
 a aquest mòdul.
 
-/// collapse-code
 ```python
 --8<-- "docs/files/ud2/exemple_python.py"
 ```
-///
 
-Tracta d'executar el codi amb :intellij-run: Run. Comprova la consola
-per veure si s'ha executat correctament.
+Executa el codi amb :intellij-run: Run i comprova la consola
+per a vore si s'ha executat correctament.

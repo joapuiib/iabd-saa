@@ -13,7 +13,7 @@ L'__algorisme del gradient descendent__ és un mètode iteratiu
 d'optimització que permet trobar el mínim d'una funció.
 
 Aquest algorisme es basa en utilitzar la derivada de la funció
-de cost per trobar la direcció en la qual la funció de cost
+de cost per a trobar la direcció en la qual la funció de cost
 descendeix més ràpidament.
 
 Aquest algorisme és molt útil ja que permet la utilització de diferents
@@ -26,13 +26,13 @@ els valors predits pel model i els valors reals de les dades.
 Aquesta funció és la que l'algorisme del gradient descendent
 tracta d'optimitzar i minimitzar.
 
-En el cas de problemes de regressió, trobem les següents funcions de cost:
+En el cas de problemes de regressió, es disposa de les següents funcions de cost:
 
 - `squared_loss`: [[regressio-metriques#mse-error-quadratic-mitja]].
 - `huber`: funció de cost robusta a outliers.
 - `epsilon_insensitive`: funció de cost de [màquina de suport vectorial](https://ca.wikipedia.org/wiki/M%C3%A0quina_de_vector_de_suport).
 
-## Regulització
+## Regularització
 La __regularització__ és un mètode que permet evitar el sobreajustament
 dels models de regressió.
 
@@ -64,12 +64,11 @@ Aquest model té els següents hiperparàmetres:
 - `max_iter`: nombre màxim d'iteracions (_per defecte_: `1000`).
 - `shuffle`: barreja les dades a cada iteració (_per defecte_: `True`).
 
-!!! docs
-    Documentació oficial de [`SGDRegressor`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDRegressor.html)
+!!! docs "Documentació oficial: [:octicons-link-external-16: `SGDRegressor`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDRegressor.html) – scikit-learn"
 
 ## Codi font
 Aquest exemple utilitza el procés de [[normalitzacio|Normalització]] de les dades
-mitjançant la classe `StandardScaler`, que encara no hem estudiat.
+mitjançant la classe `StandardScaler`, que encara no s'ha estudiat.
 
 !load_file ud4/examples/descens_gradient.py
 
@@ -82,7 +81,7 @@ mitjançant la classe `StandardScaler`, que encara no hem estudiat.
 
 
 ## Bibliografia
-- [Algorisme del gradient descendent – Viquipèdia](https://ca.wikipedia.org/wiki/Algorisme_del_gradient_descendent)
-- [1.5. Stochastic Gradient Descent – scikit-learn](https://scikit-learn.org/stable/modules/sgd.html)
-- [Huber loss - Wikipedia](https://en.wikipedia.org/wiki/Huber_loss)
+- [:octicons-link-external-16: Algorisme del gradient descendent](https://ca.wikipedia.org/wiki/Algorisme_del_gradient_descendent) – Viquipèdia
+- [:octicons-link-external-16: 1.5. Stochastic Gradient Descent](https://scikit-learn.org/stable/modules/sgd.html) – scikit-learn
+- [:octicons-link-external-16: Huber loss](https://en.wikipedia.org/wiki/Huber_loss) – Wikipedia
 ///

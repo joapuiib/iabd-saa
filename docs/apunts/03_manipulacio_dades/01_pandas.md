@@ -12,23 +12,23 @@ tags:
 
 ## Manipulació de dades amb Pandas
 [__`pandas`__](https://pandas.pydata.org/) és una llibreria de Python que proporciona
-estructures de dades (`Series` i `DataFrame`) i eines per a l'anàlisi de dades.
+estructures de dades (`Series` i `DataFrame`) i ferramentes per a l'anàlisi de dades.
 
 Existeixen altres llibreries que proporcionen ferramentes semblants, com [`numpy`](https://numpy.org/),
-però en aquest cas, els seus casos d'ús son diferents.
+però, en aquest cas, els seus casos d'ús són diferents.
 
 ## Instal·lació
-Pots instal·lar la llibreria `pandas` amb `pip`:
+Es pot instal·lar la llibreria `pandas` amb `pip`:
 
 ```bash
 pip install pandas
 ```
 
 ## Importació
-Per utilitzar `pandas`, cal importar la llibreria abans:
+Per a utilitzar `pandas`, cal importar la llibreria abans:
 
 ```python
-import pandas as pd# (1)!
+import pandas as pd  # (1)!
 ```
 
 1. `pd` és un alias que es fa servir com a prefix per a accedir a les funcions de `pandas`.
@@ -42,7 +42,7 @@ import pandas as pd# (1)!
 ### `Series`
 `Series` és un array unidimensional etiquetat, que pot contindre
 dades de qualsevol tipus (números, cadenes de caràcters, objectes, etc.).
-Les etiquetes son referenciades com a `index`.
+Les etiquetes es referencien com a `index`.
 
 La sintaxi bàsica per a crear una `Series` és la següent:
 
@@ -50,16 +50,14 @@ La sintaxi bàsica per a crear una `Series` és la següent:
 s = pd.Series(data, index=index)
 ```
 
-- `data`: Dades de la `Series`, que pot ser una llista, un diccionari, un array de `numpy`, un valor escalar, etc.
-- `index`: Etiquetes de la `Series`. La mida de `index` ha de coincidir amb la mida de `data`.
+- `data`: dades de la `Series`, que pot ser una llista, un diccionari, un array de `numpy`, un valor escalar, etc.
+- `index`: etiquetes de la `Series`. La mida de `index` ha de coincidir amb la mida de `data`.
 
-!!! info
-    Si no s'especifica `index`, es crea un índex numèric de 0 a `len(data) - 1`.
+!!! info "Si no s'especifica `index`, es crea un índex numèric de 0 a `len(data) - 1`."
 
-!!! docs
-    Capítol __"2.2.1 `Series`"__ del llibre [Practical Tutorial on Data Manipulation with Numpy and Pandas in Python][llibre-pandas]{:target="_blank"}.
+!!! docs "Documentació: [:octicons-link-external-16: Capítol 2.2.1 `Series`][llibre-pandas] – Practical Tutorial on Data Manipulation with Numpy and Pandas in Python"
 
-!!! example
+??? example "Exemple: `Series`"
     ```python
     import pandas as pd
 
@@ -121,23 +119,21 @@ La sintaxi bàsica per a crear un `DataFrame` és la següent:
 df = pd.DataFrame(data, index=index, columns=columns)
 ```
 
-- `data`: Dades del `DataFrame`, que poden ser:
+- `data`: dades del `DataFrame`, que poden ser:
 
     - Un diccionari de llistes, arrays de `numpy`, `Series`, etc.
     - Un array bidimensional de `numpy`.
     - Un altre `DataFrame`.
 
-- `index`: Etiquetes de les __files__ del `DataFrame`. La mida de `index` ha de coincidir amb el nombre de files de `data`.
+- `index`: etiquetes de les __files__ del `DataFrame`. La mida de `index` ha de coincidir amb el nombre de files de `data`.
 
-- `columns`: Etiquetes de les __columnes__ del `DataFrame`. La mida de `columns` ha de coincidir amb el nombre de columnes de `data`.
+- `columns`: etiquetes de les __columnes__ del `DataFrame`. La mida de `columns` ha de coincidir amb el nombre de columnes de `data`.
 
-!!! info
-    Si no s'especifica `index` o `columns`, es creen índexs numèrics de a partir de 0.
+!!! info "Si no s'especifica `index` o `columns`, es creen índexs numèrics a partir de 0."
 
-!!! docs
-    Capítol __"2.2.2 `DataFrame`"__ del llibre [Practical Tutorial on Data Manipulation with Numpy and Pandas in Python][llibre-pandas]{:target="_blank"}.
+!!! docs "Documentació: [:octicons-link-external-16: Capítol 2.2.2 `DataFrame`][llibre-pandas] – Practical Tutorial on Data Manipulation with Numpy and Pandas in Python"
 
-!!! example
+??? example "Exemple: `DataFrame`"
     ```python
     # Crear un DataFrame amb una llista
     a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -185,17 +181,16 @@ df = pd.DataFrame(data, index=index, columns=columns)
 `pandas` permet llegir i escriure dades de diferents formats,
 com ara CSV o JSON.
 
-!!! docs
-    Capítol __"2.4. IO Tools"__ del llibre [Practical Tutorial on Data Manipulation with Numpy and Pandas in Python][llibre-pandas]{:target="_blank"}.
+!!! docs "Documentació: [:octicons-link-external-16: Capítol 2.4. IO Tools][llibre-pandas] – Practical Tutorial on Data Manipulation with Numpy and Pandas in Python"
 
 ### Carregar dades
-Per carregar dades, es fa servir la funció `read_<tipus>()`,
+Per a carregar dades, es fa servir la funció `read_<tipus>()`,
 on `<tipus>` pot ser `csv`, `json` o altres.
 
 En el cas de carregar dades d'un fitxer CSV, es fa servir la funció
 [`read_csv()`](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html){:target="_blank"}.
 
-!!! example "Carregar dades d'un fitxer CSV"
+??? example "Exemple: Carregar dades d'un fitxer CSV"
 
     ```python
     # Crear un DataFrame a partir d'un fitxer CSV
@@ -219,16 +214,14 @@ En el cas de carregar dades d'un fitxer CSV, es fa servir la funció
     ///
 
 ### Guardar dades
-Per guardar dades, es fa servir la funció `to_<tipus>()`,
+Per a guardar dades, es fa servir la funció `to_<tipus>()`,
 on `<tipus>` pot ser `csv`, `json` o altres.
 
 En el cas de guardar dades en un fitxer CSV, es fa servir la funció
 [`to_csv()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html){:target="_blank"}.
 
-!!! example "Guardar dades en un fitxer CSV"
-    !!! info
-        `index=False` evita que s'afegisca
-        una columna amb l'índex de les files (0, 1, 2, ...).
+??? example "Exemple: Guardar dades en un fitxer CSV"
+    !!! info "`index=False` evita que s'afegisca una columna amb l'índex de les files (0, 1, 2, ...)."
 
     ```python
     # Guardar un DataFrame en un fitxer CSV
@@ -257,7 +250,7 @@ El mètode [`df.info()`](https://pandas.pydata.org/docs/reference/api/pandas.Dat
 mostra informació bàsica del `DataFrame`,
 com ara el nombre de files, columnes, tipus de dades, etc.
 
-!!! example
+??? example "Exemple: `info()`"
     ```python
     # Mostrar informació bàsica del DataFrame cotxes_df
     print("Informació bàsica del DataFrame cotxes_df")
@@ -280,12 +273,12 @@ com ara el nombre de files, columnes, tipus de dades, etc.
     ///
 
 El mètode [`df.head()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.head.html){:target="_blank"}
-les primeres files del `DataFrame`.
+mostra les primeres files del `DataFrame`.
 
 - El paràmetre `n` indica el nombre de files a mostrar,
     que per defecte és 5.
 
-!!! example
+??? example "Exemple: `head()`"
     ```python
     # Mostrar les primeres files del DataFrame cotxes_df
     print("Primeres files del DataFrame cotxes_df")
@@ -293,7 +286,6 @@ les primeres files del `DataFrame`.
     ```
     /// html | div.result
     ```text
-    Primeres files del DataFrame cotxes_df
     Primeres files del DataFrame cotxes_df
         marca     km data_matriculacio
     0        Ford  39031        08/12/2000
@@ -305,12 +297,12 @@ les primeres files del `DataFrame`.
     ///
 
 El mètode [`df.tail()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.tail.html){:target="_blank"}
-les últimes files del `DataFrame`.
+mostra les últimes files del `DataFrame`.
 
 - El paràmetre `n` indica el nombre de files a mostrar,
     que per defecte és 5.
 
-!!! example
+??? example "Exemple: `tail()`"
     ```python
     # Mostrar les últimes files del DataFrame cotxes_df
     print("Últimes files del DataFrame cotxes_df")
@@ -337,7 +329,7 @@ Es pot accedir a les dades d'una columna del `DataFrame` de dues maneres:
 
 En cas que s'accedisca a una sola columna, el resultat és una `Series`.
     
-!!! example
+??? example "Exemple: Accés a una columna"
     ```python
     # Accedir a la columna 'marca' del DataFrame cotxes_df
     print("Columna 'marca' del DataFrame cotxes_df")
@@ -364,7 +356,7 @@ En cas que s'accedisca a una sola columna, el resultat és una `Series`.
 També es pot accedir a més d'una columna del `DataFrame` utilitzant l'operador `[]`,
 indicant la llista de les etiquetes.
 
-!!! example
+??? example "Exemple: Accés a diverses columnes"
     ```python
     # Accedir a les columnes 'marca' i 'km' del DataFrame cotxes_df
     print("Columnes 'marca' i 'km' del DataFrame cotxes_df")
@@ -385,17 +377,17 @@ Es pot accedir a les dades d'una fila del `DataFrame` amb la funció
 
 El primer paràmetre de la funció `loc` és l'índex de la fila (no necessàriament numèric) o una condició.
 
-- `df.loc[n]`: Accedeix a la fila amb índex `n`.
-- `df.loc\[[n1, n2, ...]]`: Accedeix a les files amb índexs `n1`, `n2`, ...
-- `df.loc[n:m]`: Accedeix a les files amb índexs de `n` a `m`.
-- `df.loc[condicio]`: Accedeix a les files que compleixen la condició.
+- `df.loc[n]`: accedeix a la fila amb índex `n`.
+- `df.loc\[[n1, n2, ...]]`: accedeix a les files amb índexs `n1`, `n2`, ...
+- `df.loc[n:m]`: accedeix a les files amb índexs de `n` a `m`.
+- `df.loc[condicio]`: accedeix a les files que compleixen la condició.
 
-El segon paràmetre de la funció `loc` és l'etiqueta de la columna que volem obtindre.
+El segon paràmetre de la funció `loc` és l'etiqueta de la columna que es vol obtindre.
 
-- `df.loc[param1, 'columna']`: Accedeix a la columna `columna` de la fila especificada.
-- `df.loc[param1, ['columna1', 'columna2']]`: Accedeix a les columnes `columna1` i `columna2` de la fila especificada.
+- `df.loc[param1, 'columna']`: accedeix a la columna `columna` de la fila especificada.
+- `df.loc[param1, ['columna1', 'columna2']]`: accedeix a les columnes `columna1` i `columna2` de la fila especificada.
 
-!!! example
+??? example "Exemple: Accés a les files per índex"
     ```python
     # Accedir a la fila amb índex 0 del DataFrame cotxes_df
     print("Fila amb índex 0 del DataFrame cotxes_df")
@@ -442,14 +434,14 @@ en compte de l'índex (que pot ser numèric o no).
 
 ### Accés condicional
 Es pot accedir a les dades del `DataFrame` utilitzant condicions lògiques,
-que permet filtrar les dades.
+la qual cosa permet filtrar les dades.
 
-Utilitzem l'operador `[]` amb una condició per a filtrar les dades.
+Per a filtrar les dades, s'utilitza l'operador `[]` amb una condició.
 
-!!! example
+??? example "Exemple: Accés condicional"
     ```python
     # Filtrar els cotxes amb 'km' major que 70000
-    print("Cotxes amb més de 100000 km")
+    print("Cotxes amb més de 70000 km")
     print(cotxes_df.loc[cotxes_df['km'] > 70000])
     print()
 
@@ -460,7 +452,7 @@ Utilitzem l'operador `[]` amb una condició per a filtrar les dades.
     ```
     /// html | div.result
     ```text
-    Cotxes amb més de 100000 km
+    Cotxes amb més de 70000 km
                marca     km data_matriculacio
     26  Mercedes  72868        04/06/2001
     50      Audi  70279        19/01/2001
@@ -485,8 +477,7 @@ df['nom_columna'] = 10
 df['nom_columna'] = df['nom_columna'] * 2
 ```
 
-!!! important
-    Si la columna especificada no existeix, es crea una columna nova.
+!!! important "Si la columna especificada no existeix, es crea una columna nova."
 
 ### Eliminar una columna
 Es pot eliminar una columna del `DataFrame` amb el mètode [`df.drop()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html){:target="_blank"}.
@@ -499,10 +490,8 @@ df.drop(columns=['nom_columna'], inplace=True)
 df.drop('nom_columna', axis=1, inplace=True)
 ```
 
-!!! info
-    El paràmetre `inplace=True` fa que la modificació es realitze sobre el mateix `DataFrame`.
-
-    En cas de especificar `inplace=False` (per defecte),
+!!! info "El paràmetre `inplace=True` fa que la modificació es realitze sobre el mateix `DataFrame`."
+    En cas d'especificar `inplace=False` (per defecte),
     el mètode `drop` retorna un nou `DataFrame` amb la modificació.
 
 ### Modificar una fila
@@ -514,7 +503,6 @@ df.loc[0] = ['nou_valor', 100, '01/01/2022']
 ```
 
 ### Eliminar una fila
-
 Es pot eliminar una fila del `DataFrame` amb el mètode [`df.drop()`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html){:target="_blank"}
 utilitzant el paràmetre `axis=0` (per defecte).
 
@@ -522,8 +510,6 @@ utilitzant el paràmetre `axis=0` (per defecte).
 # Eliminar la fila amb índex 0
 df.drop(0, axis=0, inplace=True)
 ```
-
-
 
 ### Modificar una cel·la
 Es pot modificar una cel·la concreta del `DataFrame` amb el mètode [`df.loc[]`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html){:target="_blank"},
@@ -546,8 +532,7 @@ files = pd.DataFrame()
 df = pd.concat([df, files], axis=0)
 ```
 
-!!! info
-    També es poden afegir columnes amb `axis=1`.
+!!! info "També es poden afegir columnes amb `axis=1`."
 
 
 ## Funcions d'agregació
@@ -598,7 +583,7 @@ df['nom_columna'].mean()
 Després, és possible aplicar [funcions d'agregació](#funcions-dagregacio) per a obtindre
 informació de les dades agrupades.
 
-!!! example
+??? example "Exemple: Agrupació de les dades"
     ```python
     # Agrupar les dades per la columna 'marca' i calcular la mitjana dels 'km'
     mean = cotxes_df.groupby('marca')['km'].mean()
@@ -653,26 +638,24 @@ df.dropna(inplace=True)
 - [`cotxes.csv`](../../files/files/ud3/cotxes.csv){: download="cotxes.csv"}
 - [`pandas_example.py`](../../files/ud3//examples/pandas_example.py){: download="pandas_example.py"}
 
-    /// collapse-code
     ```python
     --8<-- "docs/files/ud3/examples/pandas_example.py"
     ```
-    ///
 
 ## Bibliografia i recursos addicionals
-- [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
-- [Documentació oficial de Pandas](https://pandas.pydata.org/docs/){:target="_blank"}
+- [:octicons-link-external-16: Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} – César Guijarro Rosaleny
+- [:octicons-link-external-16: Documentació oficial de Pandas](https://pandas.pydata.org/docs/){:target="_blank"}
 - [Llibre "pandas: powerful Python data analysis toolkit"][llibre-pandas]{:target="_blank"}
-- [Practical Tutorial on Data Manipulation with Numpy and Pandas in Python](https://www.hackerearth.com/practice/machine-learning/data-manipulation-visualisation-r-python/tutorial-data-manipulation-numpy-pandas-python/tutorial/){: .spell-ignore target="_blank"}
-- [12 Amazing Pandas & NumPy Functions](https://towardsdatascience.com/12-amazing-pandas-numpy-functions-22e5671a45b8?gi=443f0701b52d){: .spell-ignore target="_blank"}
-- [Cleaning Your Data Using Pandas](https://medium.com/geekculture/cleaning-your-data-using-pandas-ffbe21ccea81){: .spell-ignore target="_blank"}
-- [Pandas Data Wrangling Cheat Sheet 2021](https://towardsdatascience.com/pandas-data-wrangling-cheat-sheet-2021-cf70f577bcdd){: .spell-ignore target="_blank"}
-- [Análisis Exploratorio de Datos (EDA) con pandas_profiling](https://medium.com/tacosdedatos/an%C3%A1lisis-exploratorio-de-datos-eda-con-pandas-profiling-cf6c19caa8aa){: .spell-ignore target="_blank"}
-- [Error-free import of CSV files using Pandas DataFrame](https://towardsdatascience.com/how-to-import-csv-files-using-pandas-dataframe-error-free-62da3c31393c){: .spell-ignore target="_blank"}
-- [10 Tricks for Converting Numbers and Strings to Datetime in Pandas](https://towardsdatascience.com/10-tricks-for-converting-numbers-and-strings-to-datetime-in-pandas-82a4645fc23d){: .spell-ignore target="_blank"}
-- [Be a more efficient data analyst, a comprehensive guide to pandas](https://manojsaini18.medium.com/be-a-more-efficient-data-analyst-a-comprehensive-guide-to-pandas-63ea057bf828){: .spell-ignore target="_blank"}
-- [Differences Between concat(), merge() and join() with Python](https://pub.towardsai.net/differences-between-concat-merge-and-join-with-python-1a6541abc08d){: .spell-ignore target="_blank"}
-- [Simple ways to manipulate datetime variables with pandas](https://towardsdatascience.com/simple-ways-to-manipulate-datetime-variables-with-pandas-cfe9e8d36d24){: .spell-ignore target="_blank"}
+- [:octicons-link-external-16: Practical Tutorial on Data Manipulation with Numpy and Pandas in Python](https://www.hackerearth.com/practice/machine-learning/data-manipulation-visualisation-r-python/tutorial-data-manipulation-numpy-pandas-python/tutorial/){: .spell-ignore target="_blank"}
+- [:octicons-link-external-16: 12 Amazing Pandas & NumPy Functions](https://towardsdatascience.com/12-amazing-pandas-numpy-functions-22e5671a45b8?gi=443f0701b52d){: .spell-ignore target="_blank"}
+- [:octicons-link-external-16: Cleaning Your Data Using Pandas](https://medium.com/geekculture/cleaning-your-data-using-pandas-ffbe21ccea81){: .spell-ignore target="_blank"}
+- [:octicons-link-external-16: Pandas Data Wrangling Cheat Sheet 2021](https://towardsdatascience.com/pandas-data-wrangling-cheat-sheet-2021-cf70f577bcdd){: .spell-ignore target="_blank"}
+- [:octicons-link-external-16: Análisis Exploratorio de Datos (EDA) con pandas_profiling](https://medium.com/tacosdedatos/an%C3%A1lisis-exploratorio-de-datos-eda-con-pandas-profiling-cf6c19caa8aa){: .spell-ignore target="_blank"}
+- [:octicons-link-external-16: Error-free import of CSV files using Pandas DataFrame](https://towardsdatascience.com/how-to-import-csv-files-using-pandas-dataframe-error-free-62da3c31393c){: .spell-ignore target="_blank"}
+- [:octicons-link-external-16: 10 Tricks for Converting Numbers and Strings to Datetime in Pandas](https://towardsdatascience.com/10-tricks-for-converting-numbers-and-strings-to-datetime-in-pandas-82a4645fc23d){: .spell-ignore target="_blank"}
+- [:octicons-link-external-16: Be a more efficient data analyst, a comprehensive guide to pandas](https://manojsaini18.medium.com/be-a-more-efficient-data-analyst-a-comprehensive-guide-to-pandas-63ea057bf828){: .spell-ignore target="_blank"}
+- [:octicons-link-external-16: Differences Between concat(), merge() and join() with Python](https://pub.towardsai.net/differences-between-concat-merge-and-join-with-python-1a6541abc08d){: .spell-ignore target="_blank"}
+- [:octicons-link-external-16: Simple ways to manipulate datetime variables with pandas](https://towardsdatascience.com/simple-ways-to-manipulate-datetime-variables-with-pandas-cfe9e8d36d24){: .spell-ignore target="_blank"}
 
 
 [llibre-pandas]: https://pandas.pydata.org/pandas-docs/version/1.4.4/pandas.pdf

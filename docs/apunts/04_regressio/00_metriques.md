@@ -12,7 +12,7 @@ alias: regressio-metriques
 
 
 ## Mètriques de regressió
-Les mètriques són mesures que ens permeten avaluar la qualitat d'un model de regressió,
+Les mètriques són mesures que permeten avaluar la qualitat d'un model de regressió,
 que determinen com de bé s'ajusta el model a les dades i com de precises són les prediccions.
 
 !!! prep "Dades d'exemple"
@@ -38,13 +38,13 @@ que determinen com de bé s'ajusta el model a les dades i com de precises són l
 L'__error absolut mitjà (Mean Absolute Error o MAE)__ és la mitjana de les diferències
 absolutes entre les prediccions ($\hat{y}$) i els valors reals ($y$).
 
-La fórmula per calcular l'error absolut mitjà és:
+La fórmula per a calcular l'error absolut mitjà és:
 
 ```math
 MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|
 ```
 
-!!! example "Càlcul de l'error absolut mitjà"
+??? example "Exemple: Càlcul de l'error absolut mitjà"
     === "`pandas`"
         ```python
         --8<-- "docs/files/ud4/examples/metriques_regressio.py:mae_pandas"
@@ -54,29 +54,29 @@ MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|
         --8<-- "docs/files/ud4/examples/metriques_regressio.py:mae_sklearn"
         ```
 
-    ```
+    ```text
     MAE: 2.75
     ```
 
 Quan més xicotet siga el MAE, millor serà el model.
 És fàcil d'interpretar ja que està expressat en les mateixes
-que la variable dependent.
+unitats que la variable dependent.
 
 ### MSE – Error quadràtic mitjà
 L'__error quadràtic mitjà (Mean Squared Error o MSE)__ és la mitjana de les diferències
 elevades al quadrat entre les prediccions ($\hat{y}$) i els valors reals ($y$).
 
-La fórmula per calcular l'error quadràtic mitjà és:
+La fórmula per a calcular l'error quadràtic mitjà és:
 
 ```math
 MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
 ```
 
 El MSE és més sensible als errors grans que el MAE, ja que eleva al quadrat
-les diferències. Això fa que els errors més grans tinguin un pes més gran
+les diferències. Això fa que els errors més grans tinguen un pes més gran
 en la mesura.
 
-!!! example "Càlcul de l'error quadràtic mitjà"
+??? example "Exemple: Càlcul de l'error quadràtic mitjà"
     === "`pandas`"
         ```python
         --8<-- "docs/files/ud4/examples/metriques_regressio.py:mse_pandas"
@@ -86,22 +86,22 @@ en la mesura.
         --8<-- "docs/files/ud4/examples/metriques_regressio.py:mse_sklearn"
         ```
 
-    ```
+    ```text
     MSE: 9.25
     ```
 
 ### RMSE – Arrel de l'error quadràtic mitjà
-L'__arrel de l'error quadràtic mitjà (Root Mean Squared Error o RMSE)__ és la
-arrel quadrada del MSE.
+L'__arrel de l'error quadràtic mitjà (Root Mean Squared Error o RMSE)__ és l'arrel
+quadrada del MSE.
 
 ```math
 RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
 ```
 
 Aquesta mètrica és equivalent al MSE però més fàcil d'interpretar,
-ja que expressada en les mateixes unitats que la variable dependent.
+ja que està expressada en les mateixes unitats que la variable dependent.
 
-!!! example "Càlcul de l'arrel de l'error quadràtic mitjà"
+??? example "Exemple: Càlcul de l'arrel de l'error quadràtic mitjà"
     === "`pandas`"
         ```python
         --8<-- "docs/files/ud4/examples/metriques_regressio.py:rmse_pandas"
@@ -111,7 +111,7 @@ ja que expressada en les mateixes unitats que la variable dependent.
         --8<-- "docs/files/ud4/examples/metriques_regressio.py:rmse_sklearn"
         ```
 
-    ```
+    ```text
     RMSE: 3.04
     ```
 
@@ -135,7 +135,7 @@ On:
 - $\bar{y}$ és la mitjana dels valors reals.
 
 
-!!! example "Càlcul del coeficient de determinació $R^2$"
+??? example "Exemple: Càlcul del coeficient de determinació $R^2$"
     === "`pandas`"
         ```python
         --8<-- "docs/files/ud4/examples/metriques_regressio.py:r2_pandas"
@@ -145,6 +145,6 @@ On:
         --8<-- "docs/files/ud4/examples/metriques_regressio.py:r2_sklearn"
         ```
 
-    ```
+    ```text
     R^2: 0.93
     ```

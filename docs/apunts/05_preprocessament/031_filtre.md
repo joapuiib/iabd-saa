@@ -11,8 +11,8 @@ Els __mètodes de filtre__ són una tècnica de reducció de dimensionalitat
 basada en la selecció de característiques que analitzen la relevància de
 les característiques a partir d'una funció sobre les dades.
 
-### Umbral de variància
-L'__umbral de variància__ és una tècnica de filtre __univariada__ que es
+### Llindar de variància
+El __llindar de variància__ és una tècnica de filtre __univariada__ que es
 basa en eliminar les característiques amb baixa variància,
 ja que aquestes no aporten informació rellevant al model.
 
@@ -28,11 +28,11 @@ constant_filter.transform(X_test)
 El paràmetre `threshold` indica el valor de la variància per sobre del qual
 les característiques seran considerades.
 
-- Si `threshold=0`, es eliminaran les característiques amb variància zero.
-- Si `threshold` és un valor diferent de zero, es eliminaran les característiques amb variància inferior a aquest valor.
+- Si `threshold=0`, s'eliminaran les característiques amb variància zero.
+- Si `threshold` és un valor diferent de zero, s'eliminaran les característiques amb variància inferior a aquest valor.
    
    En aquest cas, és important normalitzar les dades mitjançant `MinMaxScaler`
-   per evitar que l'escala afecte al càlcul de la variància.
+   per a evitar que l'escala afecte el càlcul de la variància.
 
 
 ### Basada en correlació
@@ -40,7 +40,7 @@ La selecció de característiques basada en correlació és una tècnica de filt
 __multivariada__ que elimina les característiques amb alta correlació,
 ja que aquestes aporten la mateixa informació al model.
 
-Per eliminar les característiques amb alta correlació, cal seguir els següents passos:
+Per a eliminar les característiques amb alta correlació, cal seguir els següents passos:
 
 1. Obtindre la matriu de correlació de les característiques.
 
@@ -56,8 +56,8 @@ corr_matrix = X_train.corr().abs()
 upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(np.bool))
 ```
 
-3. Trobar les característiques amb una correlació superior a un determinat umbral,
-   que seran les que eliminarem.
+3. Trobar les característiques amb una correlació superior a un determinat llindar,
+   que seran les que s'eliminaran.
 
 ```python
 corr_threshold = 0.7
@@ -77,5 +77,5 @@ X_test = X_test.drop(columns=to_drop, axis=1)
 
 /// html | div.spell-ignore
 ## Bibliografia
-- [Material del mòdul "Sistemes d'Aprenentatge Automàtic" de César Guijarro](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
+- [:octicons-link-external-16: Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} – César Guijarro Rosaleny
 ///

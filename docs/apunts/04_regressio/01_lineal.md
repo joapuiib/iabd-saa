@@ -34,10 +34,10 @@ on:
 L'objectiu de la regressió lineal és trobar els valors dels coeficients que
 millor s'ajusten a les dades.
 
-Una vegada s'ha obtingut el model, pot ser utilitzat per fer prediccions
+Una vegada obtingut el model, es pot utilitzar per a fer prediccions
 sobre noves dades.
 
-???+ example "Exemple de regressió lineal simple"
+???+ example "Exemple: Regressió lineal simple"
     Donades les dades:
 
     /// html | div.columns
@@ -64,46 +64,43 @@ sobre noves dades.
     $$
 
     ![Gràfica de la regressió lineal](img/lineal/lineal.png){: style="max-height: 300px;"}
-    /// figure-caption
-    Recta de regressió lineal.
-    ///
+    /// figure-caption: Recta de regressió lineal.
 
 
 ## Models de regressió lineal
 Els models de regressió són algoritmes que permeten trobar la recta
 que millor s'ajusta a les dades.
 
-Utilitzant la llibreria `scikit-learn` podem crear models de regressió
+Amb la llibreria `scikit-learn` es poden crear models de regressió
 lineal de manera senzilla.
 
 !!! prep "Dades d'exemple"
-    Utilitzarem un conjunt de dades on es tracta de predir la nota d'un examen
-    a partir de les hores d'estudi i nivell de motivació.
+    S'utilitza un conjunt de dades per a predir la nota d'un examen
+    a partir de les hores d'estudi i el nivell de motivació.
 
     ```python
     --8<-- "docs/files/ud4/examples/regressio_lineal.py:dades"
     ```
 
 ### Creació del model
-Per crear un model de regressió lineal amb `scikit-learn` podem
+Per a crear un model de regressió lineal amb `scikit-learn`, es pot
 utilitzar la classe `LinearRegression`.
 
-!!! docs
-    - [`LinearRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html){:target="_blank"}
+!!! docs "Documentació oficial: [:octicons-link-external-16: `LinearRegression`](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) – scikit-learn"
 
 ```python
 --8<-- "docs/files/ud4/examples/regressio_lineal.py:creacio_model"
 ```
 
 ### Entrenament del model
-Per entrenar el model amb les dades, utilitzem el mètode `fit` de la classe `LinearRegression`.
+Per a entrenar el model amb les dades, s'utilitza el mètode `fit` de la classe `LinearRegression`.
 
 ```python
 --8<-- "docs/files/ud4/examples/regressio_lineal.py:fit"
 ```
 
 ### Coeficients del model
-Un cop entrenat el model, podem obtenir els coeficients de la recta.
+Una vegada entrenat el model, es poden obtindre els coeficients de la recta.
 
 - `coef_`: coeficients de les variables independents.
 - `intercept_`: terme independent de la recta.
@@ -112,27 +109,27 @@ Un cop entrenat el model, podem obtenir els coeficients de la recta.
 --8<-- "docs/files/ud4/examples/regressio_lineal.py:params"
 ```
 /// html | div.result
-```
+```text
 Coeficients: [1.54284641 0.57396092]
 Intercept: 8.0617676396745
 ```
 ///
 
 ### Predicció amb el model
-Per fer prediccions amb el model entrenat, utilitzem el mètode `predict`.
+Per a fer prediccions amb el model entrenat, s'utilitza el mètode `predict`.
 
 ```python
 --8<-- "docs/files/ud4/examples/regressio_lineal.py:predict"
 ```
 
 ### Avaluació del model
-Per avaluar el model, podem utilitzar les mètriques de regressió.
+Per a avaluar el model, es poden utilitzar les mètriques de regressió.
 
 ```python
 --8<-- "docs/files/ud4/examples/regressio_lineal.py:eval"
 ```
 /// html | div.result
-```
+```text
 MAE: 4.19
 MSE: 27.56
 RMSE: 5.25
@@ -141,7 +138,7 @@ R^2: 0.58
 ///
 
 ### Visualització del model
-Podem visualitzar el model de regressió lineal amb una gràfica.
+El model de regressió lineal es pot visualitzar amb un gràfic.
 
 ```python
 --8<-- "docs/files/ud4/examples/regressio_lineal.py:plot"
@@ -161,9 +158,9 @@ Gràfica 3D del model de regressió lineal respecte al conjunt de test.
     
 /// html | div.spell-ignore
 ## Recursos addicionals
-- [Regresión Lineal y Mínimos Cuadrados Ordinarios | DotCSV](https://www.youtube.com/watch?v=k964_uNn3l0){:target="_blank"}
+- [:octicons-link-external-16: Regresión Lineal y Mínimos Cuadrados Ordinarios](https://www.youtube.com/watch?v=k964_uNn3l0){:target="_blank"} – DotCSV
 
 ## Bibliografia
-- [Material del mòdul "Sistemes d'Aprenentatge Automàtic" de César Guijarro](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
-- [Regressió lineal – Viquipèdia](https://ca.wikipedia.org/wiki/Regressi%C3%B3_lineal){:target="_blank"}
+- [:octicons-link-external-16: Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} – César Guijarro Rosaleny
+- [:octicons-link-external-16: Regressió lineal](https://ca.wikipedia.org/wiki/Regressi%C3%B3_lineal){:target="_blank"} – Viquipèdia
 ///

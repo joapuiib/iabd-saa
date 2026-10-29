@@ -13,7 +13,7 @@ a les característiques amb valors més grans.
 
 Per això, és important __normalitzar__ les dades abans d'aplicar un algoritme d'aprenentatge automàtic.
 
-La llibraría `scikit-learn` proporciona diverses tècniques de normalització
+La llibreria `scikit-learn` proporciona diverses tècniques de normalització
 a través del mòdul `sklearn.preprocessing`.
 
 ### `MinMaxScaler`
@@ -24,10 +24,8 @@ $$
 X_{\text{norm}} = \frac{X - X_{\text{min}}}{X_{\text{max}} - X_{\text{min}}}
 $$
 
-??? example
-    Donades les dades d'entrada $X = [1, 2, 3, 4, 5]$,
-
-    La normalització queda com:
+??? example "Exemple: Normalització amb `MinMaxScaler`"
+    Donades les dades d'entrada $X = [1, 2, 3, 4, 5]$, la normalització queda com:
 
     $$
     X_{\text{norm}} = \frac{X - 1}{5 - 1} = \left[0, 0.25, 0.5, 0.75, 1\right]
@@ -59,10 +57,8 @@ $$
 X_{\text{norm}} = \frac{X - \mu}{\sigma}
 $$
 
-??? example
-    Donades les dades d'entrada $X = [1, 2, 3, 4, 5]$, on $\mu = 3$ i $\sigma = 1.41$,
-
-    La normalització queda com:
+??? example "Exemple: Normalització amb `StandardScaler`"
+    Donades les dades d'entrada $X = [1, 2, 3, 4, 5]$, on $\mu = 3$ i $\sigma = 1.41$, la normalització queda com:
 
     $$
     X_{\text{norm}} = \frac{X - 3}{1.41} = \left[-1.41, -0.71, 0, 0.71, 1.41\right]
@@ -83,5 +79,5 @@ X_test_norm = scaler.transform(X_test)
 
 /// html | div.spell-ignore
 ## Bibliografia
-- [Material del mòdul "Sistemes d'Aprenentatge Automàtic" de César Guijarro](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
+- [:octicons-link-external-16: Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} – César Guijarro Rosaleny
 ///

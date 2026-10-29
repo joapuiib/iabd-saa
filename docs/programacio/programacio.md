@@ -1,9 +1,10 @@
 ---
 template: programacio.html
 title: Programació didàctica
-subtitle:
-- "5072 - Sistemes d'Aprenentatge Automàtic"
-- "Curs d'especialització: Intel·ligència Artificial i Big Data"
+cover:
+  subtitle:
+    - "5072 - Sistemes d'Aprenentatge Automàtic"
+    - "Curs d'especialització: Intel·ligència Artificial i Big Data"
 icon: material/book
 alias: programacio
 # title: "IABD - Sistemes d'Aprenentatge Automàtic"
@@ -233,11 +234,9 @@ Els resultats d'aprenentatge i els seus corresponents criteris d'avaluació del 
 
 ### 8.2. Procediments i instruments de qualificació
 
-<figure id="figure-1">
-    <img src="../img/diagrama_convocatories.png" alt="Diagrama de convocatòries">
-    <figcaption class="attribution">CIPFP Mislata</figcaption>
-    <figcaption>Figura 1: Diagrama de convocatòries</figcaption>
-</figure>
+![Diagrama de convocatòries](img/diagrama_convocatories.png)
+/// attribution: CIPFP Mislata
+/// figure-caption | #figure-1 : Diagrama de convocatòries
 
 #### 8.2.1. Avaluació contínua
 L’avaluació es realitzarà amb els següents instruments d'avaluació:
@@ -265,16 +264,16 @@ poden donar lloc a la incoació d'un procediment disciplinari i a l'aplicació, 
 La __nota de cada avaluació ($A_i$)__ es calcularà de la següent manera:
 
 - __Nota de l'examen ($E_i$):__ Nota de l'examen realitzat
-    en l'avaluació. Comptara un __{{ examens }}%__.
+    en l'avaluació. Comptarà un __{{ examens }} %__.
 - __Nota de pràctiques ($P_i$):__ Nota mitjana de les 
     pràctiques realitzades en l’avaluació.
-    Comptarà un __{{ practiques }}%__.
+    Comptarà un __{{ practiques }} %__.
 
 $$
 A_i = 0.4 \times E_i + 0.6 \times P_i
 $$
 
-Perquè un alumne supere una avaluació, la qualificació 
+Perquè l'alumnat supere una avaluació, la qualificació 
 d’aquesta ha de ser igual o superior a 5.
 
 $$
@@ -290,19 +289,19 @@ M = \frac{A_1 + A_2}{2}\\\
 $$
 
 Per norma general les notes s'arredoniran amb la fórmula general: __>.5__.
-No obstant això, en l'interval $[4, 5)$ la nota s'arredonirà a 5 sols a partir de 4.75.
+No obstant això, en l'interval $[4, 5)$ la nota s'arredonirà a 5 només a partir de 4,75.
 
 
 #### 8.2.2. Convocatòria ordinària
-Abans de finalitzar el curs, els alumnes amb alguna avaluació
-suspesa tenen el dret a presentar-se a la examen de convocatòria
-ordinària. Aquesta examen té com a objectiu superar
+Abans de finalitzar el curs, l'alumnat amb alguna avaluació
+suspesa té el dret a presentar-se a l'examen de convocatòria
+ordinària. Aquest examen té com a objectiu superar
 cada avaluació suspesa per separat.
 
-També es permet que estudiants que hagen aprovat un trimestre, es presenten
-a per millorar la seua nota. En aquest cas, la nota de la convocatòria ordinària
+També es permet que l'alumnat que haja aprovat un trimestre es presente
+per a millorar la seua nota. En aquest cas, la nota de la convocatòria ordinària
 serà la que es té en compte (on es pot donar el cas que baixe la nota o no s'aprove).
-Es donarà l'opció de no entregar la examen si es creu que aquesta empitjorarà
+Es donarà l'opció de no entregar l'examen si es creu que aquesta empitjorarà
 el resultat anterior.
 
 En la convocatòria, es mantindran les notes de les avaluacions
@@ -348,17 +347,17 @@ Per poder superar el mòdul, l’alumnat haurà de:
 - Accés a internet.
 - Correu corporatiu.
 - Entorns de desenvolupament integrats: __PyCharm__, __Google Colab__.
-- Eines de control de versions: __Git__
+- Ferramentes de control de versions: __Git__
 - Llocs d'allotjament de repositoris Git: __GitHub__
 
 
 ## 10. Activitats complementàries i extraescolars
-No s'ha contemplat cap activitat complementaria específica per aquest mòdul professional.
+No s'ha contemplat cap activitat complementària específica per a aquest mòdul professional.
 
 
 ## 11. Temes transversals
 Els temes transversals a tractar al mòdul professional al llarg del curs estan relacionats
-amb el desenvolupament de les capacitats de relacions socials i comunicatives dels alumnes,
+amb el desenvolupament de les capacitats de relacions socials i comunicatives de l'alumnat,
 enteses com un complement necessari i important a incloure en qualsevol titulació de tipus tècnica.
 
 Els temes transversals concrets a tractar són els següents:
@@ -377,11 +376,11 @@ es garantirà l'accessibilitat a tots els mitjans comuns.
 
 Accions que es portaran a terme:
 
-- Elaboració d'__exercicis complementaris__ per aquells estudiants que ho precisen,
+- Elaboració d'__exercicis complementaris__ per a l'alumnat que ho precise,
     tant de suport com d'aprofundiment en la matèria.
 - Estimulació del treball en grup de manera remota. La composició dels grups
-    serà supervisada pel docent per aconseguir grups amb nivells heterogenis.
-- Facilitar la accessibilitat dels materials i recursos didàctics.
+    serà supervisada pel docent per a aconseguir grups amb nivells heterogenis.
+- Facilitar l'accessibilitat dels materials i recursos didàctics.
 - Flexibilització en les temporitzacions de les activitats
     (realització d'exàmens, entrega de pràctiques, treball personal, etc.).
 

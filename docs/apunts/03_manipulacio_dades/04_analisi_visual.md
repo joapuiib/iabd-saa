@@ -7,13 +7,12 @@ comments: true
 ---
 
 ## Anàlisi visual de les dades
-Un anàlisi visual de les dades és una procés que ens pot resultar útil per
-entendre millor les dades amb les que estem treballant.
+Una anàlisi visual de les dades és un procés que pot resultar útil per a
+entendre millor les dades amb les quals es treballa.
 
-Cal tindre en compte que per poder representar les dades en un gràfic,
-sols podem representar dues dimensions. No existeix cap gràfic que ens
-permeta representar tota la informació possible, però podem fer combinacions
-per trobar relacions i patrons en les dades.
+Cal tindre en compte que en un gràfic només es poden representar dues dimensions.
+No existeix cap gràfic que permeta representar tota la informació possible,
+però es poden fer combinacions per a trobar relacions i patrons en les dades.
 
 !!! prep "Instal·lació de dependències"
     Aquest material utilitza les següents llibreries de Python
@@ -30,12 +29,11 @@ per trobar relacions i patrons en les dades.
     ```
 
 ### Distribució de les columnes respecte a les etiquetes
-En els algorismes d'aprenentatge automàtic supervisat, utilitzem les etiquetes
-per indicar l'eixida esperada del model. Una bona manera de començar a entendre
-les dades és veure com es distribueixen les dades respecte a les etiquetes.
+En els algorismes d'aprenentatge automàtic supervisat, s'utilitzen les etiquetes
+per a indicar l'eixida esperada del model. Una bona manera de començar a entendre
+les dades és vore com es distribueixen les dades respecte a les etiquetes.
 
-!!! warning
-    Aquesta visualització sols és vàlida per les columnes __numèriques__.
+!!! warning "Aquesta visualització només és vàlida per a les columnes __numèriques__."
 
 ```python
 df_numerics = df.select_dtypes(include = ['float64', 'int64'])
@@ -57,7 +55,7 @@ Distribució de densitat de les columnes respecte a les etiquetes
 ///
 
 ### Histograma de les columnes
-Un histograma ens permet veure la distribució de les dades d'una sola columna.
+Un histograma ens permet vore la distribució de les dades d'una sola columna.
 
 ```python
 df_objects = df.select_dtypes(include=['object'])
@@ -82,7 +80,7 @@ Histograma de les columnes
 ///
 
 ### Relació entre les columnes
-Per veure la relació entre les columnes, podem utilitzar un gràfic de dispersió.
+Per a vore la relació entre les columnes, es pot utilitzar un gràfic de dispersió.
 
 ```python
 n_samples_to_plot = 5000
@@ -100,28 +98,22 @@ Relació entre les columnes
 ///
 
 #### Fronteres de decisió
-Fixem-nos en el gràfic de les columnes `age` i `hours-per-week`
+Cal fixar-se en el gràfic de les columnes `age` i `hours-per-week`:
 
 ![Relació entre les columnes age i hours-per-week](img/analisi/hours-week.png)
-/// figure-caption | < ^1
-Relació entre les columnes `age` i `hours-per-week`
-///
+/// figure-caption | < ^1 : Relació entre les columnes `age` i `hours-per-week`
 
-En aquest cas, podríem començar a establir fronteres de decisió per
-establir si una persona guanya més de 50K o no.
+En aquest cas, es podrien començar a establir fronteres de decisió per
+a determinar si una persona guanya més de 50K o no.
 
-!!! important
-    Aquest procés és el que tractarem de realitzar d'una manera automàtica
-    mitjançant els __algorismes d'aprenentatge automàtic__.
+!!! important "Aquest procés és el que es tracta de realitzar de manera automàtica mitjançant els __algorismes d'aprenentatge automàtic__."
 
 ![Fronteres de decisió](img/analisi/fronteres.png)
-/// figure-caption | < ^1
-Fronteres de decisió
-///
+/// figure-caption | < ^1 : Fronteres de decisió
 
 
 ### Correlació entre les columnes
-Podem obtindre i visualitzar la matriu de correlació entre diferents columnes.
+Es pot obtindre i visualitzar la matriu de correlació entre diferents columnes.
 
 ```python
 corr_df = df.corr(method='pearson')
@@ -141,18 +133,16 @@ Els __diagrames de caixa o *box plots*__ són una manera de representar gràfica
 les dades numèriques a través dels seus quartils.
 
 ![Caixa dels diagrames de caixa](img/analisi/box.png)
-/// figure-caption
-Caixa dels diagrames de caixa
-///
+/// figure-caption: Caixa dels diagrames de caixa
 
-Els __limits superior $L_s$ i inferior $L_i$__ es calculen amb l'__amplitud interquartílica (IQR o _inter-quartile range_)__.
+Els __límits superior $L_s$ i inferior $L_i$__ es calculen amb l'__amplitud interquartílica (IQR o _inter-quartile range_)__.
 
 $$ IQR = Q_3 - Q_1 $$
 
-!!! docs
-    - [Viquipèdia, Diagrama de caixa](https://ca.wikipedia.org/wiki/Diagrama_de_caixa){:target="_blank"}
-    - [Documentació de Seaborn, `boxplot`](https://seaborn.pydata.org/generated/seaborn.boxplot.html){:target="_blank"}
-    - [Tutorials de Seaborn, `boxplot`](https://seaborn.pydata.org/tutorial/categorical.html#boxplots){:target="_blank"}
+!!! docs "Documentació sobre el diagrama de caixa"
+    - [:octicons-link-external-16: Diagrama de caixa](https://ca.wikipedia.org/wiki/Diagrama_de_caixa) – Viquipèdia
+    - [:octicons-link-external-16: `boxplot`](https://seaborn.pydata.org/generated/seaborn.boxplot.html) – Seaborn
+    - [:octicons-link-external-16: Gràfics categòrics: `boxplot`](https://seaborn.pydata.org/tutorial/categorical.html#boxplots) – Seaborn
 
 ```python
 sns.boxplot(x='income', y ='age', hue='income', data=df)
@@ -168,4 +158,4 @@ Diagrama de caixa
 !load_file ud3/examples/analisi_visual_adults.py
 
 ## Bibliografia
-- [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
+- [:octicons-link-external-16: Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} – César Guijarro Rosaleny

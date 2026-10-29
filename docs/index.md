@@ -2,14 +2,21 @@
 title: Inici
 hide:
     - navigation
+    - toc
 comments: true
+landing: true
 ---
-# :material-robot-happy: SAA – Sistemes d'Aprenentatge Automàtic
 
-Benvinguts als apunts del Mòdul Professional __Sistemes d'Aprenentatge Automàtic__
-que pertany al Curs d'Especialització __IABD: Intel·ligència Artificial i Big Data__.
+/// html | div.landing-hero
+IABD: Intel·ligència Artificial i Big Data
+{ .eyebrow }
 
-En aquest lloc web podeu trobar:
+# :material-robot-happy: SAA: Sistemes d'Aprenentatge Automàtic
 
-- [Programacions Didàctiques](./programacio/index.md) del mòdul.
-- [Apunts](./apunts/index.md) de les diferents unitats del mòdul, així com els exercicis i pràctiques.
+Lloc web amb apunts, exercicis i recursos didàctics del mòdul professional.
+{ .subtitle }
+
+[Apunts del mòdul](./apunts/index.md){ .md-button .md-button--primary }
+[Programació didàctica](./programacio/index.md){ .md-button }
+{ .actions }
+///

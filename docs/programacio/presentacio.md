@@ -6,7 +6,7 @@ icon: material/presentation
 
 ## Sistemes d'Aprenentatge Automàtic
 
-### Curs d'especialitazció: Intel·ligència Artificial i Big Data
+### Curs d'especialització: Intel·ligència Artificial i Big Data
 
 #### Curs 2024-2025
 
@@ -37,7 +37,7 @@ __4 hores setmanals__
 
 - __UD1__: Introducció a la Intel·ligència Artificial
 - __UD2__: Estadística
-- __UD3__: Manipulació i visualicació de dades
+- __UD3__: Manipulació i visualització de dades
 - __UD4__: Regressió
 
 
@@ -52,14 +52,14 @@ __4 hores setmanals__
 ---
 
 ## Avaluació i qualificació
-- Exàmens (40%)
-- Pràctiques (60%)
+- Exàmens (40 %)
+- Pràctiques (60 %)
     - S'han d'entregar en temps i forma.
     - Han de ser originals.
 
 __En cas contrari, la qualificació serà de 0.__
 
-> Per més informació, consulta la <a href="../programacio/" target="_blank">Programació didàctica</a>
+> Per a més informació, consulta la <a href="../programacio/" target="_blank">Programació didàctica</a>
 
 ---
 
@@ -76,7 +76,7 @@ __En cas contrari, la qualificació serà de 0.__
 ---
 
 ## Ordinària
-- Exàmen de cada avaluació per separat.
+- Examen de cada avaluació per separat.
 - Pot presentar-se tot l'alumnat.
 - Es mantenen les avaluacions superades.
 - La qualificació de cada avaluació major o igual a 5.
@@ -87,7 +87,7 @@ __En cas contrari, la qualificació serà de 0.__
 
 ## Extraordinària
 - Examen de cada avaluació per separat.
-- Es mantenen les avalucions superades.
+- Es mantenen les avaluacions superades.
 - La qualificació ha de ser major o igual a 5.
 
 <a href="../programacio/#823-convocatoria-extraordinaria" target="_blank">Programació didàctica: Avaluació extraordinària</a>

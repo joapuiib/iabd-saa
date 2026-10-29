@@ -12,10 +12,10 @@ En probabilitats i estadística, una __distribució de probabilitat__ és una fu
 
 Una __variable aleatòria__ és una funció que assigna un valor numèric a cada resultat possible d'un __experiment aleatori__.
 
-!!! example "Variable aleatòria: Catan"
+??? example "Exemple: Variable aleatòria (Catan)"
     En el joc de taula Catan, el resultat de llançar dos daus és una variable aleatòria.
 
-    Considerem l'__experiència aleatòria__ del llançament de dos daus. El conjunt de resultats possibles és:
+    Es considera l'__experiment aleatori__ del llançament de dos daus. El conjunt de resultats possibles és:
 
     $$\Omega = \{(1,1), (1,2), \ldots, (1,6), (2,1), (2,2), \ldots, (5,6), (6,6)\}$$
 
@@ -33,11 +33,11 @@ Una __variable aleatòria__ és una funció que assigna un valor numèric a cada
 Una distribució de probabilitat és __discreta__ si la variable aleatòria és també discreta, és a dir,
 si la variable aleatòria pren valors en un conjunt __finit o numerable__.
 
-!!! example "Catan"
+??? example "Exemple: Catan"
     En l'exemple anterior, la variable aleatòria $X$ és discreta, ja que pren valors en un conjunt finit.
 
-    Per calcular la distribució de probabilitat de la variable aleatòria $X$,
-    hem de calcular la probabilitat de cada valor possible de la variable aleatòria.
+    Per a calcular la distribució de probabilitat de la variable aleatòria $X$,
+    cal calcular la probabilitat de cada valor possible de la variable aleatòria.
 
     El nombre total de resultats possibles és $6 \times 6 = 36$.
 
@@ -64,7 +64,7 @@ si la variable aleatòria pren valors en un conjunt __finit o numerable__.
     ```
 
 #### Distribució de Bernoulli
-La __distribució de Bernoulli__ és una distribució de probabilitat discreta que modela 
+La __distribució de Bernoulli__ és una distribució de probabilitat discreta que modela
 un experiment aleatori amb dos possibles resultats: __èxit o fracàs__.
 
 - Quan és __èxit__, la variable aleatòria pren el valor 1.
@@ -89,7 +89,7 @@ O escrit com a fórmula, on $x \in \{0, 1\}$:
 
 $$P(X = x) = p^x \cdot (1 - p)^{1-x}$$
 
-!!! example "Llançament d'una moneda"
+??? example "Exemple: Llançament d'una moneda"
     En el llançament d'una moneda equilibrada, la variable aleatòria $X$ que indica si el resultat
     és cara o creu és una variable de Bernoulli, on $p = q = 0.5$.
 
@@ -102,7 +102,7 @@ $$X \sim B(n, p)$$
 
 És a dir, la distribució binomial modela el nombre de vegades que es repeteix un esdeveniment de Bernoulli.
 
-La funció de probabilitat de la distribució binomial és la probabilitat de obtindre exactament $k$ èxits
+La funció de probabilitat de la distribució binomial és la probabilitat d'obtindre exactament $k$ èxits
 en $n$ experiments:
 
 $$P(X = k) = \binom{n}{k} \cdot p^k \cdot (1 - p)^{n-k}$$
@@ -112,16 +112,16 @@ nombre de combinacions en què es poden escollir $k$ elements d'un conjunt de $n
 
 $$\binom{n}{k} = \frac{n!}{k! \cdot (n-k)!}$$
 
-!!! example "Dau igual a 6"
+??? example "Exemple: Dau igual a 6"
     En el llançament d'un dau equilibrat, la variable aleatòria $X$ que indica si el resultat
     és un 6 és una variable de Bernoulli, on $p = \frac{1}{6}$.
 
-    Si llancem el dau 10 vegades, la variable aleatòria $Y$ que indica el nombre de vegades que ha sortit un 6
+    Si es llança el dau 10 vegades, la variable aleatòria $Y$ que indica el nombre de vegades que ha sortit un 6
     és una variable binomial amb $n = 10$ i $p = \frac{1}{6}$.
 
     $$X \sim B(10, \frac{1}{6})$$
 
-    La probabilitat de no treure cap 6 és:
+    La probabilitat de no traure cap 6 és:
 
     $$P(Y = 0) = \binom{10}{0} \cdot \left(\frac{1}{6}\right)^0 \cdot \left(1 - \frac{1}{6}\right)^{10} \approx 0.16151$$
 
@@ -136,7 +136,7 @@ $$\binom{n}{k} = \frac{n!}{k! \cdot (n-k)!}$$
 #### Distribució de Poisson
 La __distribució de Poisson__ és una distribució de probabilitat discreta que modela
 el nombre d'ocurrències d'un esdeveniment en un interval de temps o espai, sempre
-i quan aquestes ocurrències siguin independents i la seva freqüència siga constant
+que aquestes ocurrències siguen independents i la seua freqüència siga constant
 independentment del temps des de l'última ocurrència.
 
 La funció de probabilitat de la distribució de Poisson és:
@@ -146,7 +146,7 @@ $$P(X = k) = \frac{\lambda^k \cdot e^{-\lambda}}{k!}$$
 on $\lambda$ és la mitjana del nombre (o el nombre esperat) d'ocurrències
 en l'interval.
 
-!!! example "Central 112"
+??? example "Exemple: Central 112"
     La central d'emergències 112 rep una mitjana de 5 trucades per minut.
 
     La variable aleatòria $X$ que indica el nombre de trucades que rep la central en un minut
@@ -182,12 +182,11 @@ Una distribució de probabilitat és __contínua__ si la variable aleatòria és
 si la variable aleatòria pren valors en un conjunt __no numerable__ (infinit) de valors.
 
 En aquest cas, la funció de probabilitat és una __funció de densitat de probabilitat__,
-que indica la probabilitat que la variable aleatòria prengui un valor en un interval.
+que indica la probabilitat que la variable aleatòria prenga un valor en un interval.
 
 $$P(a \leq X \leq b) = \int_a^b f(x) \, dx$$
 
-!!! note
-    La probabilitat que la variable aleatòria prenga un valor exacte és sempre zero.
+!!! note "La probabilitat que la variable aleatòria prenga un valor exacte és sempre zero."
 
 #### Distribució uniforme contínua
 La __distribució uniforme contínua__ és una distribució de probabilitat contínua que modela
@@ -217,7 +216,7 @@ $$
 ![Distribució uniforme contínua acumulat](img/uniform_distribution_accumulated.png){: .center style="max-height: 300px"}
 
 
-!!! example "Fabricació de llapis"
+??? example "Exemple: Fabricació de llapis"
     En una fàbrica de llapis, la longitud dels llapis és una variable aleatòria contínua
     que segueix una distribució uniforme en l'interval $[10, 20]$ cm.
 
@@ -229,13 +228,13 @@ $$
 #### Distribució normal
 La __distribució normal__ és una distribució de probabilitat contínua que modela
 variables aleatòries que segueixen una distribució simètrica al voltant d'un valor mitjà,
-on existeix poc valors extrems i molts valors prop del mitjà.
+on hi ha pocs valors extrems i molts valors prop del valor mitjà.
 
 És el model més comú en estadística, ja que existeixen moltes variables associades
 a fenòmens naturals que segueixen aquesta distribució.
 
 Aquesta distribució es caracteritza per una _campana de Gauss_ a partir d'un __valor mitjà $\mu$__,
-sobre el qual el 50% dels valors queda a cada costat, i una __desviació estàndard $\sigma$__.
+sobre el qual el 50 % dels valors queda a cada costat, i una __desviació estàndard $\sigma$__.
 
 $$X \sim N(\mu, \sigma)$$
 
@@ -245,13 +244,13 @@ $$f(x) = \frac{1}{\sigma \sqrt{2\pi}} \cdot e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
 
 ![Distribució normal](img/normal.png){: .center style="max-height: 300px"}
 
-Alguna de les propietats de la distribució normal són:
+Algunes de les propietats de la distribució normal són:
 
 - La mitjana, la mediana i la moda coincideixen.
 - És simètrica respecte al valor mitjà.
-    - L'interval $[\mu - \sigma, \mu + \sigma]$ conté el 68.27% dels valors.
-    - L'interval $[\mu - 2\sigma, \mu + 2\sigma]$ conté el 95.45% dels valors.
-    - L'interval $[\mu - 3\sigma, \mu + 3\sigma]$ conté el 99.73% dels valors.
+    - L'interval $[\mu - \sigma, \mu + \sigma]$ conté el 68,27 % dels valors.
+    - L'interval $[\mu - 2\sigma, \mu + 2\sigma]$ conté el 95,45 % dels valors.
+    - L'interval $[\mu - 3\sigma, \mu + 3\sigma]$ conté el 99,73 % dels valors.
 
 
 A partir de la versió 3.8 de Python, la llibreria estàndard `statistics` inclou la classe
@@ -259,7 +258,7 @@ A partir de la versió 3.8 de Python, la llibreria estàndard `statistics` inclo
 que permet treballar amb distribucions normals.
 
 
-!!! example "Alçada d'una població"
+??? example "Exemple: Alçada d'una població"
     L'alçada d'una població segueix una distribució normal amb una mitjana de 170 cm i una desviació estàndard de 10 cm.
 
     ```mermaid
@@ -270,10 +269,7 @@ que permet treballar amb distribucions normals.
         line [0.044318, 0.175283, 0.539910, 1.295176, 2.419707, 3.520653, 3.989423, 3.520653, 2.419707, 1.295176, 0.539910, 0.175283, 0.044318]
     ```
 
-    !!! note
-        Aquest càlcul es pot fer mitjançant 
-        [[estadistica-basica#unitat-tipificada-standard-score|__unitats tipificades (standard-score)__]]{: target="_blank"}
-        i la [__taula de la distribució normal__](https://en.wikipedia.org/wiki/Standard_normal_table#Cumulative_(less_than_Z)){:target="_blank"}.
+    !!! note "Aquest càlcul es pot fer mitjançant les [[estadistica-basica#unitat-tipificada-standard-score|__unitats tipificades (standard-score)__]] i la [__taula de la distribució normal__](https://en.wikipedia.org/wiki/Standard_normal_table#Cumulative_(less_than_Z))."
 
     La probabilitat que una persona triada a l'atzar tinga una alçada entre 160 i 180 cm és:
 
@@ -304,12 +300,12 @@ que permet treballar amb distribucions normals.
     ///
 
 #### Distribució normal estàndard
-La __distribució normal estàndard__ és cas especial d'una distribució normal, que té una mitjana $\mu = 0$
+La __distribució normal estàndard__ és un cas especial de la distribució normal, que té una mitjana $\mu = 0$
 i una desviació estàndard $\sigma = 1$.
 
 $$X \sim N(0, 1)$$
 
-A Python, inicialitzar una distribució normal estàndard es fa amb la classe `NormalDist` sense paràmetres.
+En Python, es pot inicialitzar una distribució normal estàndard amb la classe `NormalDist` sense paràmetres.
 
 ```python
 from statistics import NormalDist
@@ -318,20 +314,18 @@ std_normal_dist = NormalDist() # mu=0, sigma=1
 ```
 
 Aquesta distribució és molt important en estadística, ja que permet calcular
-la probabilitat acumulada de qualsevol distribució normal utilitzant les 
+la probabilitat acumulada de qualsevol distribució normal utilitzant les
 [[estadistica-basica#unitat-tipificada-standard-score|__unitats tipificades (standard-score)__]]{: target="_blank"}
-i consultat la [__taula de la distribució normal__](https://en.wikipedia.org/wiki/Standard_normal_table#Cumulative_(less_than_Z)){:target="_blank"}.
+i consultant la [__taula de la distribució normal__](https://en.wikipedia.org/wiki/Standard_normal_table#Cumulative_(less_than_Z)){:target="_blank"}.
 
 Aquesta taula indica la __probabilitat acumulada__ de trobar un valor menor que $z$
 en una distribució normal estàndard.
 
 $$P(Z \leq z)$$
 
-<figure>
-    <img src="../img/normal_cdf.jpg" alt="CDF de la distribució normal estàndard" style="max-height: 300px">
-    <figcaption class="attribution">www.a-levelmathstutor.com</figcaption>
-    <figcaption>CDF de la distribució normal estàndard</figcaption>
-</figure>
+![CDF de la distribució normal estàndard](img/normal_cdf.jpg){ style="max-height: 300px" }
+/// attribution: www.a-levelmathstutor.com
+/// figure-caption: CDF de la distribució normal estàndard
 
 El mètode [`cdf`](https://docs.python.org/3.8/library/statistics.html?highlight=normaldist#statistics.NormalDist.cdf){:target="_blank"}
 de la classe `NormalDist` permet calcular la probabilitat acumulada
@@ -341,8 +335,8 @@ de trobar un valor menor o igual que $z$ en una distribució normal.
 std_normal_dist.cdf(z)
 ```
 
-!!! example "Càlcul de probabilitats alçada d'una població"
-    Calculem la probabilitat que una persona tinga una alçada entre 160 i 180 cm.
+??? example "Exemple: Càlcul de probabilitats de l'alçada d'una població"
+    Es calcula la probabilitat que una persona tinga una alçada entre 160 i 180 cm.
 
     1. Per a $x = 160$ cm:
 
@@ -353,11 +347,11 @@ std_normal_dist.cdf(z)
         $$z_2 = \frac{180 - 170}{10} = 1$$
     
     Utilitzant les unitats tipificades $z_1 = -1$ i $z_2 = 1$,
-    podem calcular la probabilitat acumulada de trobar un valor entre $z_1$ i $z_2$:
+    es pot calcular la probabilitat acumulada de trobar un valor entre $z_1$ i $z_2$:
 
     $$P(-1 \leq Z \leq 1) = P(Z \leq 1) - P(Z \leq -1)$$
 
-    Consultem la taula de la distribució normal estàndard:
+    Es consulta la taula de la distribució normal estàndard:
 
     $$P(Z \leq 1) = 0.8413$$
 
@@ -382,17 +376,17 @@ std_normal_dist.cdf(z)
 
 ## Distribució conjunta i mostral
 !!! info "Curiositat"
-    -[CIS: ¿Cómo se hacen las encuestas?](https://www.cis.es/ca/estudios/preguntas-frecuentes/como-se-hacen-las-encuestas/){: .spell-ignore target="_blank"}
+    - [:octicons-link-external-16: ¿Cómo se hacen las encuestas?](https://www.cis.es/ca/estudios/preguntas-frecuentes/como-se-hacen-las-encuestas/){: .spell-ignore } – CIS
 
 ### Distribució conjunta
 La __distribució conjunta__ és la distribució de probabilitat de tots
 els possibles valors d'una variable aleatòria en una població.
 
-En la pràctica, la distribució poblacional és desconeguda, ja que no es molt
-difícil o impossible obtenir tots els valors d'una població.
+En la pràctica, la distribució poblacional és desconeguda, ja que és molt
+difícil o impossible obtindre tots els valors d'una població.
 
-!!! example "Edats d'una població"
-    Donada una població de 10000 persones, la distribució de les edats és la següent.
+??? example "Exemple: Edats d'una població"
+    Donada una població de 10 000 persones, la distribució de les edats és la següent.
 
     ```python
     # Distribució conjunta (totes les dades)
@@ -419,10 +413,10 @@ obtindre tots els valors d'una població és molt difícil o impossible.
 Normalment, quan major és la mida de la mostra, més s'assembla
 a la distribució la distribució poblacional.
 
-!!! example "Mostres en edats d'una població"
-    Realitzem tres mostres de 10, 100 i 1000 persones de la població anterior.
+??? example "Exemple: Mostres en edats d'una població"
+    Es realitzen tres mostres de 10, 100 i 1000 persones de la població anterior.
 
-    Vegem com varien les mitjanes i les desviacions estàndard de les mostres,
+    S'observa com varien les mitjanes i les desviacions estàndard de les mostres,
     que segons augmenta la mida de la mostra, s'assemblen més a la distribució poblacional.
 
     ```python
@@ -478,10 +472,10 @@ calculada a partir de les mitjanes de __distribucions mostrals__.
 Segons el [__teorema del límit central__](https://ca.wikipedia.org/wiki/Teorema_del_l%C3%ADmit_central),
 aquesta distribució s'assembla més a la __distribució conjunta__ a mesura que s'utilitzen més mostres.
 
-!!! example "Mitjana de mostres en edats d'una població"
-    Realitzem tres grups de mostres de 1, 10 i 100 grups de 10 persones de la població anterior.
+??? example "Exemple: Mitjana de mostres en edats d'una població"
+    Es realitzen tres grups de mostres de 1, 10 i 100 grups de 10 persones de la població anterior.
 
-    Vegem com varien les mitjanes i les desviacions estàndard de les mostres,
+    S'observa com varien les mitjanes i les desviacions estàndard de les mostres,
     que segons augmenta el nombre de mostres, s'assemblen més a la distribució poblacional.
 
     ```python
@@ -545,20 +539,20 @@ aquesta distribució s'assembla més a la __distribució conjunta__ a mesura que
 ## Contrast d'hipòtesis
 En molts estudis estadístics, l'objectiu és comprovar si una afirmació sobre una població és certa o no.
 
-En general, és impossible provar que una afirmació és certa al 100%, ja que caldria conèixer tots els valors de la població.
+En general, és impossible provar que una afirmació és certa al 100 %, ja que caldria conèixer tots els valors de la població.
 
 Per tant, el que es fa és __contrastar hipòtesis__ sobre la població, on es tracta de comprovar si una afirmació és probable o no.
 
 Aquest procés tracta de prendre una decisió sobre dues hipòtesis:
 
-- __Hipòtesi nul·la ($H_0$)__: És la hipòtesi que s'accepta provisionalment.
-- __Hipòtesi alternativa ($H_1$)__: És la hipòtesi contrària.
+- __Hipòtesi nul·la ($H_0$)__: és la hipòtesi que s'accepta provisionalment.
+- __Hipòtesi alternativa ($H_1$)__: és la hipòtesi contrària.
 
 
-!!! example "Hores d'esport a la setmana"
+??? example "Exemple: Hores d'esport a la setmana"
     Un estudi afirma que la població dedica més de 5 hores setmana a fer esport, amb una desviació estàndard de 4 hores.
 
-    Sospitem que aquesta afirmació és falsa, i volem contrastar-la amb una mostra de 20 persones.
+    Es sospita que aquesta afirmació és falsa i es vol contrastar amb una mostra de 20 persones.
 
     $$X = \{7, 6, 4, 3, 1, 9, 8, 7, 3, 1, 1,0, 9, 4, 3, 2, 1, 5, 5, 6, 4\}$$
 
@@ -567,12 +561,12 @@ Aquest procés tracta de prendre una decisió sobre dues hipòtesis:
     - $H_0 = \mu \geq 5$: La mitjana de les hores d'esport és major o igual a 5.
     - $H_1 = \mu < 5$: La mitjana de les hores d'esport és menor que 5.
 
-    Per comprovar-ho, primer hem de triar un [__nivell de significació__ $\alpha$](https://ca.wikipedia.org/wiki/Significaci%C3%B3_estad%C3%ADstica){:target="_blank"},
+    Per a comprovar-ho, primer cal triar un [__nivell de significació__ $\alpha$](https://ca.wikipedia.org/wiki/Significaci%C3%B3_estad%C3%ADstica){:target="_blank"},
     que marcarà els límits entre la regió d'__acceptació__ i la regió de __rebuig__.
 
     Un valor comú és $\alpha = 0.05$.
 
-    Calculem la `z-score` de $\alpha$, que marcarà el límit de la regió de rebuig en una [distribució normal estàndard](#distribucio-normal-estandard).
+    Es calcula la `z-score` de $\alpha$, que marcarà el límit de la regió de rebuig en una [distribució normal estàndard](#distribucio-normal-estandard).
 
     ```python
     #!/usr/bin/env python3
@@ -591,12 +585,10 @@ Aquest procés tracta de prendre una decisió sobre dues hipòtesis:
 
     ![Regions d'acceptació i rebuig](img/hypothesis_test.png){: .center style="max-height: 300px"}
 
-    El següent pas és calcular la `z-score` de la mitjana de la mostra, que ens indicarà si la mitjana de la mostra
+    El següent pas és calcular la `z-score` de la mitjana de la mostra, que indicarà si la mitjana de la mostra
     és dins de la regió d'acceptació o de rebuig.
 
-    !!! note
-        S'utilitza la [desviació estàndard de la mostra](https://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean){:target="_blank"}.
-
+    !!! note "S'utilitza la [desviació estàndard de la mostra](https://en.wikipedia.org/wiki/Standard_error#Standard_error_of_the_mean)."
         $$\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}$$
 
         Per tant, el càlcul de la `z-score` de la mitjana de la mostra és:
@@ -625,9 +617,9 @@ Aquest procés tracta de prendre una decisió sobre dues hipòtesis:
     ```
     ///
 
-    Per últim, comparem la `z-score` de la mitjana de la mostra amb la `z-score` de $\alpha$.
+    Per últim, es compara la `z-score` de la mitjana de la mostra amb la `z-score` de $\alpha$.
 
-    Si la `z-score` de la mitjana de la mostra és menor que la `z-score` de $\alpha$, rebutgem la hipòtesi nul·la.
+    Si la `z-score` de la mitjana de la mostra és menor que la `z-score` de $\alpha$, es rebutja la hipòtesi nul·la.
 
     ```python
     # Comprovació de la hipòtesi
@@ -650,59 +642,50 @@ Aquest procés tracta de prendre una decisió sobre dues hipòtesis:
     Com que la $Z_{\bar{X}}$
     i el [valor p](https://ca.wikipedia.org/wiki/Valor_p){:target="_blank"}
     són majors que la de $Z_\alpha$ i $\alpha$ respectivament,
-    acceptem la hipòtesi nul·la, és a dir, la mitjana de les hores d'esport és major o igual a 5.
+    s'accepta la hipòtesi nul·la, és a dir, la mitjana de les hores d'esport és major o igual a 5.
 
-!!! warning
-    Existeixen moltes proves estadístiques de contrast d'hipòtesis,
-    segons les dades i la naturalesa del problema.
+!!! warning "Existeixen moltes proves estadístiques de contrast d'hipòtesis, segons les dades i la naturalesa del problema."
 
-!!! danger
-    El [valor p](https://ca.wikipedia.org/wiki/Valor_p){:target="_blank"} no indica el percentatge de certesa de la hipòtesi.
+!!! danger "El [valor p](https://ca.wikipedia.org/wiki/Valor_p) no indica el percentatge de certesa de la hipòtesi."
 
-    En l'exemple anterior, no podem afirmar amb un 90.3% de certesa que la mitjana de les hores d'esport és major o igual a 5,
+    En l'exemple anterior, no es pot afirmar amb un 90,3 % de certesa que la mitjana de les hores d'esport és major o igual a 5.
 
-    Realment, el valor p indica la probabilitat de trobar la mitjana que hem obtingut
+    Realment, el valor p indica la probabilitat de trobar la mitjana obtinguda
     ^^__assumint que la hipòtesi nul·la és certa__^^.
 
-    Per tant, si el valor p és molt baix, podem rebutjar la hipòtesi nul·la.
+    Per tant, si el valor p és molt baix, es pot rebutjar la hipòtesi nul·la.
 
 ## Codi font
 - [`normal.py`](../../files/ud2/normal.py){: download="normal.py"}
 
-    /// collapse-code
     ```python
     --8<-- "docs/files/ud2/normal.py"
     ```
-    ///
 
 - [`generated_edats.csv`](../../files/ud2/generated_edats.csv){: download="generated_edats.csv"}
 - [`distribucio_mostral.py`](../../files/ud2/distribucio_mostral.py){: download="distribucio_mostral.py"}
 
-    /// collapse-code
     ```python
     --8<-- "docs/files/ud2/distribucio_mostral.py"
     ```
-    ///
 
 - [`contrast_hipotesi.py`](../../files/ud2/contrast_hipotesi.py){: download="contrast_hipotesi.py"}
 
-    /// collapse-code
     ```python
     --8<-- "docs/files/ud2/contrast_hipotesi.py"
     ```
-    ///
 
 ## Bibliografia
-- [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/) de César Guijarro Rosaleny
-- [Distribució de probabilitat, Viquipèdia](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_probabilitat)
-- [Variable aleatòria, Viquipèdia](https://ca.wikipedia.org/wiki/Variable_aleat%C3%B2ria)
-- [Distribució de Bernoulli, Viquipèdia](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_Bernoulli)
-- [Distribució binomial, Viquipèdia](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_binomial)
-- [Distribució de Poisson, Viquipèdia](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_Poisson)
-- [Distribució uniforme contínua, Viquipèdia](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_uniforme_cont%C3%ADnua)
-- [Distribució normal, Viquipèdia](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_normal)
-- [Joint Probability Distribution, Wikipedia](https://en.wikipedia.org/wiki/Joint_probability_distribution)
-- [Sampling Distribution, Wikipedia](https://en.wikipedia.org/wiki/Sampling_distribution)
-- [Teorema del límit central, Viquipèdia](https://ca.wikipedia.org/wiki/Teorema_del_l%C3%ADmit_central)
-- [Significació estadística, Viquipèdia](https://ca.wikipedia.org/wiki/Significaci%C3%B3_estad%C3%ADstica)
-- [Valor p, Viquipèdia](https://ca.wikipedia.org/wiki/Valor_p)
+- [:octicons-link-external-16: Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/) – César Guijarro Rosaleny
+- [:octicons-link-external-16: Distribució de probabilitat](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_probabilitat) – Viquipèdia
+- [:octicons-link-external-16: Variable aleatòria](https://ca.wikipedia.org/wiki/Variable_aleat%C3%B2ria) – Viquipèdia
+- [:octicons-link-external-16: Distribució de Bernoulli](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_Bernoulli) – Viquipèdia
+- [:octicons-link-external-16: Distribució binomial](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_binomial) – Viquipèdia
+- [:octicons-link-external-16: Distribució de Poisson](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_de_Poisson) – Viquipèdia
+- [:octicons-link-external-16: Distribució uniforme contínua](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_uniforme_cont%C3%ADnua) – Viquipèdia
+- [:octicons-link-external-16: Distribució normal](https://ca.wikipedia.org/wiki/Distribuci%C3%B3_normal) – Viquipèdia
+- [:octicons-link-external-16: Joint Probability Distribution](https://en.wikipedia.org/wiki/Joint_probability_distribution) – Wikipedia
+- [:octicons-link-external-16: Sampling Distribution](https://en.wikipedia.org/wiki/Sampling_distribution) – Wikipedia
+- [:octicons-link-external-16: Teorema del límit central](https://ca.wikipedia.org/wiki/Teorema_del_l%C3%ADmit_central) – Viquipèdia
+- [:octicons-link-external-16: Significació estadística](https://ca.wikipedia.org/wiki/Significaci%C3%B3_estad%C3%ADstica) – Viquipèdia
+- [:octicons-link-external-16: Valor p](https://ca.wikipedia.org/wiki/Valor_p) – Viquipèdia

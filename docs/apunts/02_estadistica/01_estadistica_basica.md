@@ -9,12 +9,12 @@ tags:
 
 ## Estadística bàsica
 L'__aprenentatge automàtic__ està basat en models matemàtics i estadístics.
-Per això, és important tindre una base sòlida en estadística per entendre el funcionament dels algoritmes d'aprenentatge automàtic
+Per això, és important tindre una base sòlida en estadística per a entendre el funcionament dels algoritmes d'aprenentatge automàtic
 i analitzar els resultats obtinguts.
 
 L'__estadística__ és una disciplina que estudia la recopilació, anàlisi i interpretació de dades.
 
-En aquests apunts veurem operacions bàsiques com la __mitjana__, la __mediana__, la __moda__, la __desviació estàndard__ i la __variància__.
+Aquests apunts presenten operacions bàsiques com la __mitjana__, la __mediana__, la __moda__, la __desviació estàndard__ i la __variància__.
 
 ## Mitjana aritmètica ($\bar{X}$)
 
@@ -24,7 +24,7 @@ $$
 \bar{X} = \frac{1}{N} \sum_{i=1}^{N} x_i
 $$
 
-!!! example
+??? example "Exemple: Mitjana aritmètica"
     Donades les edats d'un grup de persones $X = \{ 20, 20, 50, 60, 80 \}$, la mitjana aritmètica és:
 
     $$
@@ -32,7 +32,7 @@ $$
     $$
     
 
-!!! example "Exemple amb Pandas"
+??? example "Exemple: Mitjana aritmètica amb Pandas"
     ```python
     import pandas as pd
 
@@ -60,28 +60,28 @@ $$
         A   B   C   D
     0  12   5  20  14
     1   4   2  16   3
-    2   5  54   7  17
-    3  44   3   3   2
-    4   1   2   8   6
+    2   5  54   7  14
+    3  44   3   3   3
+    4   1   2   8  14
     Mitjana de cada columna:
     A    13.2
     B    13.2
     C    10.8
-    D    10.2
+    D     9.6
     dtype: float64
     Mitjana de cada fila:
     0    12.75
     1     6.25
-    2    20.75
-    3    13.00
+    2    20.00
+    3    13.25
     4     6.25
     dtype: float64
     ```
     ///
 
-!!! example "Exemple mitjana d'una fila"
-    Amb l'anterior `DataFrame`, podem utilitzar la funció [`iloc`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html){:target="_blank"}
-    per seleccionar una fila i calcular la mitjana dels seus valors.
+??? example "Exemple: Mitjana d'una fila"
+    Amb l'anterior `DataFrame`, es pot utilitzar la funció [`iloc`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html){:target="_blank"}
+    per a seleccionar una fila i calcular la mitjana dels seus valors.
 
     ```python
     mean = df.iloc[0].mean()
@@ -93,9 +93,10 @@ $$
     Mitjana de la primera fila:
     12.75
     ```
+    ///
 
-!!! example "Exemple mitjana d'una columna"
-    De la mateixa manera, podem calcular la mitjana d'una columna.
+??? example "Exemple: Mitjana d'una columna"
+    De la mateixa manera, es pot calcular la mitjana d'una columna.
 
     ```python
     mean = df.loc[:,"A"].mean()
@@ -118,14 +119,14 @@ Per a calcular la mediana, primer s'ordenen els valors de la mostra de menor a m
 - Si la mostra té un nombre imparell de valors, la mediana és el valor central.
 - Si la mostra té un nombre parell de valors, la mediana és la mitjana aritmètica dels dos valors centrals.
 
-!!! example
+??? example "Exemple: Mediana"
     Donades les edats d'un grup de persones $X = \{ 20, 20, 50, 60, 80 \}$, la mediana és:
 
     $$
     \tilde{X} = 50
     $$
 
-!!! example "Exemple amb Pandas"
+??? example "Exemple: Mediana amb Pandas"
     ```python
     median = df.median()
     print("Mediana de cada columna:")
@@ -145,20 +146,17 @@ Per a calcular la mediana, primer s'ordenen els valors de la mostra de menor a m
 ## Moda
 La __moda__ és el valor que més vegades apareix en una mostra.
 
-!!! example
+??? example "Exemple: Moda"
     Donades les edats d'un grup de persones $X = \{ 20, 20, 50, 60, 80 \}$, la moda és:
 
     $$
     \text{moda}(X) = 20
     $$
 
-!!! note
-    El mètode [`mode()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mode.html){:target="_blank"}
-    de Pandas retorna la moda de cada columna.
-
+!!! note "El mètode [`mode()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mode.html) de Pandas retorna la moda de cada columna."
     Si hi ha més d'una moda, el mètode retorna totes les modes.
 
-!!! example "Exemple amb Pandas"
+??? example "Exemple: Moda amb Pandas"
     ```python
     mode = df.mode()
     print("Moda de cada columna:")
@@ -168,8 +166,8 @@ La __moda__ és el valor que més vegades apareix en una mostra.
     ```text
     Moda de cada columna:
         A    B   C     D
-    0   1  2.0   3   3.0
-    1   4  NaN   7  14.0
+    0   1  2.0   3  14.0
+    1   4  NaN   7   NaN
     2   5  NaN   8   NaN
     3  12  NaN  16   NaN
     4  44  NaN  20   NaN
@@ -185,10 +183,9 @@ $$
 \sigma^2 = \frac{1}{N} \sum_{i=1}^{N} (x_i - \bar{X})^2
 $$
 
-!!! note
-    Les diferències són elevades al quadrat per a que siguen sempre positives.
+!!! note "Les diferències s'eleven al quadrat perquè siguen sempre positives."
 
-!!! example
+??? example "Exemple: Variància"
     Donades les edats d'un grup de persones $X = \{ 20, 20, 50, 60, 80 \}$, la variància és:
 
     $$
@@ -197,7 +194,7 @@ $$
     \sigma^2 = \frac{2720}{5} = 544
     $$
 
-!!! example "Exemple amb Pandas"
+??? example "Exemple: Variància amb Pandas"
     ```python
     variance = df.var()
     print("Variància de cada columna:")
@@ -209,13 +206,13 @@ $$
     A    312.7
     B    521.7
     C     48.7
-    D     44.7
+    D     36.3
     dtype: float64
     ```
     ///
 
 ## Desviació estàndard ($\sigma$)
-La __desviació estàndard__ és la arrel quadrada de la variància.
+La __desviació estàndard__ és l'arrel quadrada de la variància.
 Mesura la dispersió dels valors respecte a la mitjana,
 però indica la dispersió en les mateixes unitats que els valors.
 
@@ -223,14 +220,14 @@ $$
 \sigma = \sqrt{\sigma^2} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \bar{X})^2}
 $$
 
-!!! example
+??? example "Exemple: Desviació estàndard"
     Donades les edats d'un grup de persones $X = \{ 20, 20, 50, 60, 80 \}$, la desviació estàndard és:
 
     $$
     \sigma = \sqrt{544} = 23.32
     $$
 
-!!! example "Exemple amb Pandas"
+??? example "Exemple: Desviació estàndard amb Pandas"
     ```python
     std = df.std()
     print("Desviació estàndard de cada columna:")
@@ -242,7 +239,7 @@ $$
     A    17.683325
     B    22.840753
     C     6.978539
-    D     6.685806
+    D     6.024948
     dtype: float64
     ```
     ///
@@ -255,11 +252,11 @@ que una proporció determinada de valors queda a cada costat del quantil.
 Els quantils més importants són els __quartils__, __decils__ i __percentils__.
 
 ### Percentils
-Els __percentils__ divideixen la mostra en cent parts iguals, cadascuna amb el 1% dels valors.
+Els __percentils__ divideixen la mostra en cent parts iguals, cadascuna amb l'1 % dels valors.
 
 És una de les mesures més utilitzades en estadística per a comparar valors.
 
-!!! example "Quartils en Pandas"
+??? example "Exemple: Percentils en Pandas"
     ```python
     import numpy as np
     import pandas as pd
@@ -291,15 +288,13 @@ Els __percentils__ divideixen la mostra en cent parts iguals, cadascuna amb el 1
 ### Quartils
 Els __quartils__ divideixen la mostra en quatre parts iguals.
 
-Per tant, obtenim tres punts de tall: $Q_1$, $Q_2$ i $Q_3$, corresponents als percentils 25%, 50% i 75%.
+Per tant, s'obtenen tres punts de tall: $Q_1$, $Q_2$ i $Q_3$, corresponents als percentils 25 %, 50 % i 75 %.
 
-<figure id=figure-1>
-    <img src="../img/quartils.png" alt="Quartils">
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 1: Quartils</figcaption>
-</figure>
+![Quartils](img/quartils.png)
+/// attribution: Autor desconegut
+/// figure-caption | #figure-1 : Quartils
 
-!!! example "Quartils en Pandas"
+??? example "Exemple: Quartils en Pandas"
     ```python
     quartils = df.quantile([0.25, 0.5, 0.75])
     print("Quartils:")
@@ -317,15 +312,13 @@ Per tant, obtenim tres punts de tall: $Q_1$, $Q_2$ i $Q_3$, corresponents als pe
 
 
 ### Decils
-Els __decils__ divideixen la mostra en deu parts iguals, cadascuna amb el 10% dels valors.
+Els __decils__ divideixen la mostra en deu parts iguals, cadascuna amb el 10 % dels valors.
 
-<figure id=figure-2>
-    <img src="../img/decils.png" alt="Decils">
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 2: Decils</figcaption>
-</figure>
+![Decils](img/decils.png)
+/// attribution: Autor desconegut
+/// figure-caption | #figure-2 : Decils
 
-!!! example "Decils en Pandas"
+??? example "Exemple: Decils en Pandas"
     ```python
     percentils = df.quantile(np.arange(0.1, 1, 0.1))
     print("Decils:")
@@ -349,10 +342,10 @@ Els __decils__ divideixen la mostra en deu parts iguals, cadascuna amb el 10% de
 
 ## Unitat tipificada (standard-score)
 La __unitat tipificada (*standard-score o z-score*)__
-és una mesura que serveix per comparar una observació
+és una mesura que serveix per a comparar una observació
 dins d'una distribució estadística.
 
-Aquesta unitat indiquen el nombre de desviacions típiques
+Aquesta unitat indica el nombre de desviacions típiques
 que una observació està per damunt o per davall de la mitjana.
 
 És molt útil per a comparar observacions de diferents distribucions,
@@ -362,13 +355,13 @@ La unitat tipificada es calcula com:
 
 $$z = \frac{x - \mu}{\sigma}$$
 
-!!! example 
+??? example "Exemple: Unitat tipificada (standard-score)"
     Donada la població de persones $X={20,20,50,60,80}$:
 
     - La mitjana és $\mu = 46$.
-    - La desviació estàndard és $\sigma = 23.9$.
+    - La desviació estàndard és $\sigma = 23.32$.
 
-    Per cada observació de la població, calculem la unitat tipificada:
+    Per a cada observació de la població, es calcula la unitat tipificada:
 
     $$
     z_i = \frac{x_i - \mu}{\sigma}
@@ -377,7 +370,7 @@ $$z = \frac{x - \mu}{\sigma}$$
     La població amb les seues unitats tipificades és:
 
     $$
-    Z = \{ -1.087, -1.087, 0.1673, 0.5858, 1.4226 \}
+    Z = \{ -1.115, -1.115, 0.172, 0.600, 1.458 \}
     $$
 
 
@@ -396,27 +389,23 @@ Aquesta mesura indica si les dues variables són independents o si tenen una rel
 - Si $S_{XY} \lt 0$ és __negativa__, les dues variables són __inversament proporcionals__.
 - Si $S_{XY} \approx 0$ és __zero__, les dues variables són __independents__.
 
-<figure id=figure-3>
-    <img src="../img/cov_positiu.png" alt="Dues variables directament proporcionals">
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 3: Dues variables directament proporcionals</figcaption>
-</figure>
+![Dues variables directament proporcionals](img/cov_positiu.png)
+/// attribution: Autor desconegut
+/// figure-caption | #figure-3 : Dues variables directament proporcionals
 
-<figure id=figure-4>
-    <img src="../img/cov_negatiu.png" alt="Dues variables inversament proporcionals">
-    <figcaption class="attribution">Autor desconegut</figcaption>
-    <figcaption>Figura 4: Dues variables inversament proporcionals</figcaption>
-</figure>
+![Dues variables inversament proporcionals](img/cov_negatiu.png)
+/// attribution: Autor desconegut
+/// figure-caption | #figure-4 : Dues variables inversament proporcionals
 
 La [__matriu de covariància__](https://ca.wikipedia.org/wiki/Matriu_de_covari%C3%A0ncia)
 és una taula que conté les covariàncies entre totes les parelles de variables d'un conjunt de dades.
 
-En Python, podem utilitzar la funció [`cov()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.cov.html){:target="_blank"}
+En Python, es pot utilitzar la funció [`cov()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.cov.html){:target="_blank"}
 de Pandas per a calcular la covariància entre les __columnes__ d'un `DataFrame`.
 
 Per defecte, `cov()` utilitza el grau de llibertat `ddof` igual a 1.
 
-!!! example "Covariància en Python"
+??? example "Exemple: Covariància en Python"
     ```python
     import pandas as pd
 
@@ -497,13 +486,13 @@ $$
 r_{xy} = \frac{S_{XY}}{\sigma_X \sigma_Y}
 $$
 
-Aquesta fórmula pots ser interpretada com la covariància dividida
+Aquesta fórmula pot interpretar-se com la covariància dividida
 pel producte de les desviacions estàndard de les dues variables.
 
-En Python, podem utilitzar la funció [`corr()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html){:target="_blank"}
+En Python, es pot utilitzar la funció [`corr()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html){:target="_blank"}
 amb l'argument `method='pearson'` (valor per defecte) per a calcular la correlació de Pearson.
 
-!!! example "Correlació de Pearson en Python"
+??? example "Exemple: Correlació de Pearson en Python"
     ```python
     corr = df.corr()
     print("Correlació de Pearson:")
@@ -519,10 +508,7 @@ amb l'argument `method='pearson'` (valor per defecte) per a calcular la correlac
     ```
     ///
 
-    !!! info
-        `NaN` indica que no es pot calcular la correlació
-        quan una de les variables té desviació estàndard zero,
-        és a dir, és constant.
+    !!! info "`NaN` indica que no es pot calcular la correlació quan una de les variables té desviació estàndard zero, és a dir, és constant."
 
 ### Correlació de Spearman
 La __correlació de Spearman__ $\rho$ (rho) és una mesura de la relació
@@ -538,7 +524,7 @@ $$
 
 on $d_i$ és la diferència entre les posicions de les dues variables.
 
-!!! example "Correlació de Spearman en Python"
+??? example "Exemple: Correlació de Spearman en Python"
     ```python
     spearman = df.corr(method='spearman')
     print("Correlació de Spearman:")
@@ -554,7 +540,7 @@ on $d_i$ és la diferència entre les posicions de les dues variables.
     ```
     ///
 
-!!! example "Correlació de Spearman"
+??? example "Exemple: Correlació de Spearman"
     Utilitzant les dades $X = \{5, 2\}$ i $Y = \{7, 9\}$ que corresponen
     a les columnes 0 i 2 del `DataFrame`.
 
@@ -580,7 +566,7 @@ La __correlació de Kendall__ $\tau$ (tau) és una mesura de la relació
 que utilitza __els rangs__ de les variables per a calcular la correlació.
 
 Aquesta mesura és preferible a la de Spearman quan hi ha molt poques dades
-i a més hi ha molts empats.
+i, a més, molts empats.
 
 La fórmula de la correlació de Kendall és:
 
@@ -593,45 +579,38 @@ on:
 - $C$ és el nombre de parelles concordants.
 - $D$ és el nombre de parelles discordants.
 
-!!! info
-    Vegeu el vídeo [Kendall's Tau Easily Explained](https://www.youtube.com/watch?v=Pm8KV5f3JM0&t=3s){:target="_blank"} per a una explicació detallada.
+!!! info "Vegeu el vídeo [Kendall's Tau Easily Explained](https://www.youtube.com/watch?v=Pm8KV5f3JM0&t=3s) per a una explicació detallada."
 
 
 ## Codi font
 - [`estadistica_basica.py`](../../files/ud2/estadistica_basica.py){: download="estadistica_basica.py"}
 
-    /// collapse-code
     ```python
     --8<-- "docs/files/ud2/estadistica_basica.py"
     ```
-    ///
 
 - [`quantils.py`](../../files/ud2/quantils.py){: download="quantils.py"}
 
-    /// collapse-code
     ```python
     --8<-- "docs/files/ud2/quantils.py"
     ```
-    ///
 
 - [`covariancia.py`](../../files/ud2/covariancia.py){: download="covariancia.py"}
 
-    /// collapse-code
     ```python
     --8<-- "docs/files/ud2/covariancia.py"
     ```
-    ///
 
 ## Recursos addicionals
-- [Kendall's Tau Easily Explained](https://www.youtube.com/watch?v=Pm8KV5f3JM0&t=3s){:target="_blank"}
+- [:octicons-link-external-16: Kendall's Tau Easily Explained](https://www.youtube.com/watch?v=Pm8KV5f3JM0&t=3s){:target="_blank"}
 
 ## Bibliografia
-- [Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
-- [Quantil, Viquipèdia](https://ca.wikipedia.org/wiki/Quantil){:target="_blank"}
-- [Covalència, Viquipèdia](https://ca.wikipedia.org/wiki/Covari%C3%A0ncia){:target="_blank"}
-- [Matriu de covariància, Viquipèdia](https://ca.wikipedia.org/wiki/Matriu_de_covari%C3%A0ncia){:target="_blank"}
-- [Correlació, Viquipèdia](https://ca.wikipedia.org/wiki/Correlaci%C3%B3){:target="_blank"}
-- [Correlació de Pearson, Viquipèdia](https://ca.wikipedia.org/wiki/Coeficient_de_correlaci%C3%B3_de_Pearson){:target="_blank"}
-- [Correlació de Spearman, Viquipèdia](https://ca.wikipedia.org/wiki/Coeficient_de_correlaci%C3%B3_de_Spearman){:target="_blank"}
-- [Kendall rank correlation coefficient, Wikipedia](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient){:target="_blank"}
-- [A comparison of the Pearson and Spearman correlation](https://support.minitab.com/en-us/minitab/help-and-how-to/statistics/basic-statistics/supporting-topics/correlation-and-covariance/a-comparison-of-the-pearson-and-spearman-correlation-methods/){:target="_blank"}
+- [:octicons-link-external-16: Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} – César Guijarro Rosaleny
+- [:octicons-link-external-16: Quantil](https://ca.wikipedia.org/wiki/Quantil){:target="_blank"} – Viquipèdia
+- [:octicons-link-external-16: Covariància](https://ca.wikipedia.org/wiki/Covari%C3%A0ncia){:target="_blank"} – Viquipèdia
+- [:octicons-link-external-16: Matriu de covariància](https://ca.wikipedia.org/wiki/Matriu_de_covari%C3%A0ncia){:target="_blank"} – Viquipèdia
+- [:octicons-link-external-16: Correlació](https://ca.wikipedia.org/wiki/Correlaci%C3%B3){:target="_blank"} – Viquipèdia
+- [:octicons-link-external-16: Correlació de Pearson](https://ca.wikipedia.org/wiki/Coeficient_de_correlaci%C3%B3_de_Pearson){:target="_blank"} – Viquipèdia
+- [:octicons-link-external-16: Correlació de Spearman](https://ca.wikipedia.org/wiki/Coeficient_de_correlaci%C3%B3_de_Spearman){:target="_blank"} – Viquipèdia
+- [:octicons-link-external-16: Kendall rank correlation coefficient](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient){:target="_blank"} – Wikipedia
+- [:octicons-link-external-16: A comparison of the Pearson and Spearman correlation](https://support.minitab.com/en-us/minitab/help-and-how-to/statistics/basic-statistics/supporting-topics/correlation-and-covariance/a-comparison-of-the-pearson-and-spearman-correlation-methods/){:target="_blank"}

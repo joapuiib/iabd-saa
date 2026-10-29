@@ -47,16 +47,16 @@ característiques en cada pas.
 
 
 Aquest mètode també es pot implementar amb la classe `SequentialFeatureSelector`
-de `mlxtend`, utilitzant el paràmetre floating=True`.
+de `mlxtend`, utilitzant el paràmetre `floating=True`.
 
-- `forward=True` i `floating=True`: Selecció cap endavant amb possibilitat
+- `forward=True` i `floating=True`: selecció cap endavant amb possibilitat
     d'eliminar característiques seleccionades.
 
 ```python
 --8<-- "docs/files/ud5/examples/reduccio_envoltura.py:bidirectional_forward"
 ```
 
-- `forward=False` i `floating=True`: Selecció cap enrere amb possibilitat
+- `forward=False` i `floating=True`: selecció cap enrere amb possibilitat
     de tornar a afegir característiques eliminades.
 
 ```python
@@ -68,7 +68,7 @@ de `mlxtend`, utilitzant el paràmetre floating=True`.
 
 /// html | div.spell-ignore
 ## Bibliografia
-- [Material del mòdul "Sistemes d'Aprenentatge Automàtic" de César Guijarro](https://cesguiro.es/){:target="_blank"} de César Guijarro Rosaleny
-- [w3schools - Data Science - Regression Table: P-Value](https://www.w3schools.com/datascience/ds_linear_regression_pvalue.asp){:target="_blank"}
-- [`mlxtemd` - `SequentialFeatureSelector`: The popular forward and backward feature selection approaches](https://rasbt.github.io/mlxtend/user_guide/feature_selection/SequentialFeatureSelector/){:target="_blank"}
+- [:octicons-link-external-16: Material del mòdul "Sistemes d'Aprenentatge Automàtic"](https://cesguiro.es/){:target="_blank"} – César Guijarro Rosaleny
+- [:octicons-link-external-16: w3schools - Data Science - Regression Table: P-Value](https://www.w3schools.com/datascience/ds_linear_regression_pvalue.asp){:target="_blank"}
+- [:octicons-link-external-16: `mlxtend` - `SequentialFeatureSelector`: The popular forward and backward feature selection approaches](https://rasbt.github.io/mlxtend/user_guide/feature_selection/SequentialFeatureSelector/){:target="_blank"}
 ///
