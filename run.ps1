@@ -47,7 +47,7 @@ if ($BUILD) {
 }
 
 # print args
-Print-GreenText "./venv/Scripts/mkdocs $COMMAND $COMMAND_ARGS"
+Print-GreenText "./venv/Scripts/properdocs $COMMAND $COMMAND_ARGS"
 
-# Run the mkdocs command with any additional arguments
-./venv/Scripts/mkdocs $COMMAND $COMMAND_ARGS
+# Run the properdocs command with any additional arguments
+./venv/Scripts/properdocs $COMMAND $COMMAND_ARGS

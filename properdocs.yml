@@ -1,9 +1,6 @@
-# Social configuration
-# site_name: ""
-
 site_name: "IABD-SAA: Sistemes d'aprenentatge automàtic"
 site_author: "Joan Puigcerver Ibáñez"
-site_email: "j.puigcerveribanez@edu.gva.es"
+site_url: https://joapuiib.github.io/iabd-saa
 dev_addr: 127.0.0.1:4567
 
   # repo_name: joapuiib/iabd-saa
@@ -28,9 +25,11 @@ exclude_docs: |
 
 theme:
   name: material-joapuiib
+  email: "j.puigcerveribanez@edu.gva.es"
   under_construction: true
   icon:
     logo: material/robot-happy
+  favicon: material/robot-happy
 
   comments:
     repo: joapuiib/fp
@@ -62,20 +61,23 @@ theme:
         name: Canvia a mode clar
 
 plugins:
-  - alias:
-      use_anchor_titles: true
-  - awesome-pages # Navegació
-  - drawio
-  - glightbox
-  - macros
-  - material/search
+  - materialx/search
   - material-joapuiib/enviorment
   - material-joapuiib/functions:
       load_file:
         files_dir: files
-  - material/social:
+  - awesome-nav # Navegació
+  - alias:
+      use_anchor_titles: true
+      use_page_icon: true
+  - drawio:
+      darkmode: true
+  - exclude-search
+  - glightbox
+  - macros
+  - material-joapuiib/social:
       enabled: !ENV [CI, false]
-  - material/tags
+  - materialx/tags
   - i18n:
       languages:
         - locale: ca
@@ -97,6 +99,7 @@ plugins:
             important: Important
             notice: Fixa't
             prep: Preparació
+  - material-joapuiib/slides # Després de i18n i functions, perquè renderitza el markdown ja expandit
   - git-revision-date-localized # Després de i18n o falla
 
 markdown_extensions:
@@ -124,6 +127,7 @@ markdown_extensions:
           prefix: "Taula {}."
         - name: attribution
           classes: attribution
+  - inline_blocks
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
@@ -158,8 +162,3 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 4
-  - material_joapuiib.extensions.collapse_code:
-      expand_text: ''
-      expand_title: ''
-      collapse_text: ''
-      collapse_title: ''
